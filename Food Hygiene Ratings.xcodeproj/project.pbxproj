@@ -17,6 +17,7 @@
 		4D3717CA1E4CCDA000644A0C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717C91E4CCDA000644A0C /* SettingsViewController.swift */; };
 		4D3717CD1E4CCF0400644A0C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717CC1E4CCF0400644A0C /* MapViewController.swift */; };
 		4D3717CF1E4CCF4700644A0C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717CE1E4CCF4700644A0C /* SearchViewController.swift */; };
+		4D3717D21E4CD84F00644A0C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717D11E4CD84F00644A0C /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4D3717C91E4CCDA000644A0C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4D3717CC1E4CCF0400644A0C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4D3717CE1E4CCF4700644A0C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4D3717D11E4CD84F00644A0C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CC5B583BA5627A3C28384D29 /* Pods-Food Hygiene Ratings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Hygiene Ratings.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food Hygiene Ratings/Pods-Food Hygiene Ratings.release.xcconfig"; sourceTree = "<group>"; };
 		CF1B74EDF2A19DE8CCEF55EA /* Pods-Food Hygiene Ratings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Hygiene Ratings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food Hygiene Ratings/Pods-Food Hygiene Ratings.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +53,7 @@
 		4D3717A61E4C7ED100644A0C = {
 			isa = PBXGroup;
 			children = (
+				4D3717D11E4CD84F00644A0C /* Settings.bundle */,
 				4D3717B11E4C7ED100644A0C /* Food Hygiene Ratings */,
 				4D3717B01E4C7ED100644A0C /* Products */,
 				DC75DA60E7AF8005AE9A1F01 /* Pods */,
@@ -69,6 +72,7 @@
 		4D3717B11E4C7ED100644A0C /* Food Hygiene Ratings */ = {
 			isa = PBXGroup;
 			children = (
+				4D3717D01E4CD43300644A0C /* Model */,
 				4D3717C81E4CCCF200644A0C /* Controllers */,
 				4D3717B21E4C7ED100644A0C /* AppDelegate.swift */,
 				4D3717B61E4C7ED100644A0C /* Main.storyboard */,
@@ -89,6 +93,13 @@
 				4D3717CE1E4CCF4700644A0C /* SearchViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4D3717D01E4CD43300644A0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		C0CEA94B6465DDD598BAD4D6 /* Frameworks */ = {
@@ -171,6 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3717D21E4CD84F00644A0C /* Settings.bundle in Resources */,
 				4D3717BD1E4C7ED100644A0C /* LaunchScreen.storyboard in Resources */,
 				4D3717BA1E4C7ED100644A0C /* Assets.xcassets in Resources */,
 				4D3717B81E4C7ED100644A0C /* Main.storyboard in Resources */,
