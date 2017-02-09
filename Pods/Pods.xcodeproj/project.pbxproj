@@ -1,0 +1,1176 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1640FC74A0ACE1D703B9A7738860A064 /* InAppSettingsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E27920B4E2134C7C8590113C185B9190 /* InAppSettingsKit-dummy.m */; };
+		16F437159F45F56E5CE4B9911233EBEB /* IASKTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2C31F614E396C963AD05D3B70611B0 /* IASKTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2167E358A52FE1C105E8FD39A51498D7 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CE0CEB82C00FB4F8CF507A0CE9581A18 /* Base.lproj */; };
+		2367272FB729F671F3842C6FA7C390ED /* IASKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5B65096596ED62E9A235A0A905800 /* IASKTextView.m */; };
+		24337B11FE4ED1EB684AA97F860C6F12 /* IASKSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEB15DCA119F2982B37AECB2CD8143D /* IASKSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CE19EB59E7F5B2A8EEBEB7A5EA126A2 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EEAA4D07D61D17544B963537A3E3B843 /* tr.lproj */; };
+		2D7D03048DBFF4379F7D011925B2FEF4 /* IASKTextViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 97C70F77E89ED93AFBB6E84034A20EF5 /* IASKTextViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3159D7CAFD56B809F40CA3330DA10889 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CC5E1646199280661E0767C5F13247 /* Foundation.framework */; };
+		381A429E9CC6979A1CDF662742C62475 /* IASKMultipleValueSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 583C4B6EE2E7DE7A2E4F770A0E9CD352 /* IASKMultipleValueSelection.m */; };
+		3A092E87C33AEFE16AA5784AC08BA9E9 /* th.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 925D610EAFEB45885DBACF6AB806A022 /* th.lproj */; };
+		419CAA9405DD3DE29BD3278A9B54DB99 /* IASKViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D5993747D45107EE9ECF6EE513A3225 /* IASKViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42FE84DA02ED5089A5126BEF584B4CB1 /* IASKTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 150611D30680753B77BBC3466AA01C41 /* IASKTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47907E746E0287F8774FF5C1B42CD18F /* Pods-Food Hygiene Ratings-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7E37AEF3884430860E1C60C8FF07E1 /* Pods-Food Hygiene Ratings-dummy.m */; };
+		4998C73670492A5B49463B947B65C9B8 /* el.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 12016F641B4A7AD34E491057BCB56CFC /* el.lproj */; };
+		4D210E159BFB94B43BA1DEF818697047 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CB1FFB3FECBDAA6C0A76760C46B99 /* ja.lproj */; };
+		4FEC172D08025B1FF32ECEAF3E58FC2C /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F7C1F8EDCA0B92992CFD5EA40D96C81E /* en.lproj */; };
+		538E3D762166B71A00202E68057991DA /* IASKAppSettingsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E392735492CA66D2DCBD9F28D801F8A /* IASKAppSettingsWebViewController.m */; };
+		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD36214B58FEA56658215D8A11C35A9 /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		551267314E4B8236E9166BB48BE68B36 /* IASKPSSliderSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C23888C30E706632A3F574BEA61B4C25 /* IASKPSSliderSpecifierViewCell.m */; };
+		5522CC4F310DC2DD0C7498E99A659568 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 48B15C7BE1B6146F02A7698874DC5AFD /* nl.lproj */; };
+		6156D7694F10E0ED2212E94CC346B4F8 /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A99C622E4D6EB042C11906A93E4DC244 /* pt-PT.lproj */; };
+		6315ADF2F7932752D872413E2C38603D /* IASKSettingsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2DBF2620EA1F7AA99B494BB0D546C0 /* IASKSettingsStore.m */; };
+		633887E9538AE3FA2B6B9A146CA6602F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CC5E1646199280661E0767C5F13247 /* Foundation.framework */; };
+		65ACE282418027E1EAC0F5BBCD97EC63 /* InAppSettingsKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9118347BA7A81780E30FD54A1D8C133F /* InAppSettingsKit.bundle */; };
+		6622595A38D22163D16FB5015136080D /* InAppSettingsKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8D04C51204C01163F5B1A2A8C21050 /* InAppSettingsKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66CC8DB497CFF35475C0BD0A0C6268B2 /* IASKSettingsStoreFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058E7FBE3ABC8180960689DCE33D99E /* IASKSettingsStoreFile.m */; };
+		6BE3ACBCC4160CA4AE1448CA1089DF32 /* IASKPSTextFieldSpecifierViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 245DB38F25FE818FC8657397917E4C86 /* IASKPSTextFieldSpecifierViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E86A53D9E226CD6427ED079F66E6915 /* IASKPSSliderSpecifierViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C1DA990BC060952E2E5E6327C0FAE10F /* IASKPSSliderSpecifierViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FD57A9390734BFB0949417ECCCB7AEC /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 681C3329E03B46D825A50F3E0CEB7A4F /* sv.lproj */; };
+		703A72D55C393C7FFEE4744F46A9C144 /* IASKSettingsStoreUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 859914B8192133E6B5BD56E4622D2B00 /* IASKSettingsStoreUserDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72109CC4E319106450B8B2E62A7023E3 /* IASKSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = B86175D5CDD78F4DDE8EF30D2BE7B8B9 /* IASKSwitch.m */; };
+		72A0AAEF5DFC21535D630C3185726ABD /* IASKSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D35EB2B55961035EE955D3BF4D4A8F /* IASKSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76C20DF639777387CB2B4112DA673631 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CC5E1646199280661E0767C5F13247 /* Foundation.framework */; };
+		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E780C4CD972522DC183E7DBD80F0B71 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84CF25B1937F8F0419B1648EE39227A5 /* IASKSpecifierValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1740C78E2DB297079EAF1CA288166DC8 /* IASKSpecifierValuesViewController.m */; };
+		88882F4E2DECC41B49087098118FF0D3 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2440E8ED3C217D5C88AFA55ED350D47C /* pt.lproj */; };
+		89E44F583CFACC46E04FE53D117F9C60 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6145178E8519D3A752AE6C5B96779636 /* it.lproj */; };
+		8DDF49E2AC6603769380FBF6F9DE1804 /* IASKAppSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 19C19A254B2D4E0D30255907E6E922A0 /* IASKAppSettingsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E1280CE142EAE5FCCA8A68326F43F8E /* IASKSettingsReader.m in Sources */ = {isa = PBXBuildFile; fileRef = ACAE8123E549F50A1DB5D2901855E1BC /* IASKSettingsReader.m */; };
+		8E9EB88FC32BD9C6355D29D8D88CDC26 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B7780C2942CBC9CBB1C58B2D90D4C1A0 /* fr.lproj */; };
+		9F76E28C973A31CBC3855AA11AC2EA98 /* IASKSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = A770CFC252E813A28F4AAB83448ACED0 /* IASKSlider.m */; };
+		A5DFBD02A5DE4E71F7F9D06680F29C1C /* IASKAppSettingsWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5981AC94803F4B5018CBD0E3963F0895 /* IASKAppSettingsWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA605DE9DAC3AE71C477ED604E11978E /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4E6DDEF34F3E8CFDFC66301872A08A6B /* es.lproj */; };
+		BB06A279BF8EF15106312E8889E1B627 /* IASKSettingsReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 56A56F8E66D74033CE5952E9CB7586F9 /* IASKSettingsReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCE0812BD1D62FD8B086B8F6CF6B9091 /* IASKSettingsStoreFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E2AD50E551F861687DA7F1359ADFE46 /* IASKSettingsStoreFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD27584C06DC726153D3E124CFC7B7EC /* Pods-Food Hygiene Ratings-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0A74C6890303EC7A9876E31855C766B /* Pods-Food Hygiene Ratings-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D2F3EA4E550E8DCA2BCF8474D0B424 /* IASKMultipleValueSelection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6458A5CD08D38FCBE3E092903D8B91D9 /* IASKMultipleValueSelection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9BF447D01F1EFE26399EE6319604B61 /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5410071D779CF2DAF39CF44B35F609EF /* IASKAppSettingsViewController.m */; };
+		D7C1A356BF40055D55294E8F46A108E8 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C87E3AE13950F6D123DD6433E9008 /* ru.lproj */; };
+		D7D57622770F6B36B7D4D27D959DAF0F /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F9C82BE254B8F6004A658034BF8D13E8 /* de.lproj */; };
+		DB6257CDA73706A0690D2C15AB82ACA1 /* IASKSpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 2313CAD89DC7FBBBE0DF8A674BABF336 /* IASKSpecifier.m */; };
+		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7F1D65B8E813A7DD53D7DED33DC1F9 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC545C8BA0F408240259A25DDB8ABA8C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F32A44C64AD9BADC7C56C71C0751F3E /* MessageUI.framework */; };
+		E902BA7E78980241CB2349B329BDCCEC /* IASKSettingsStoreUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBAB121059BDA3A6E44D2CCA2B144E7 /* IASKSettingsStoreUserDefaults.m */; };
+		EA2493BAE7EE4A904BC093415719DD76 /* IASKSettingsStore.h in Headers */ = {isa = PBXBuildFile; fileRef = FA36E161BDEFCCC68E39B33C25266A41 /* IASKSettingsStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4061D80566952A4FD3E087EC0E27713 /* IASKPSTextFieldSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DACB52EC4635DEE6862195B0BE722468 /* IASKPSTextFieldSpecifierViewCell.m */; };
+		F4483B0BB3A0B826532F1B1DCD122374 /* IASKSpecifierValuesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A42CB92162981E341533F17A15A00359 /* IASKSpecifierValuesViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4DE15FF1336171363D8808DF3FABE72 /* IASKTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC31CDD8651387F07B84D1D32E8304 /* IASKTextViewCell.m */; };
+		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AF4DBAA40A1FF517D94F0BE44DE412 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E58A51B33D8319ABB06D39C08E13169E /* GoogleToolboxForMac-dummy.m */; };
+		FCC4E4649FD3B25F953561FE9A77FA02 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 49830EFA9F7D5A2C42F14220E5A4C692 /* IASKTextField.m */; };
+		FD8118550EE928F3613FF589D8CB039C /* IASKSpecifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B7BCEC86029E6A9C174CEC2C71CC1E0 /* IASKSpecifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE944CB7E0D3FC7226B464820F08233A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F492D78EB0EAC7E3FCE5CAACCE3F80E /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0FB6BBE86CE1D924E7B23F604887E06E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00103D6C821BE85971C563025527BA5D;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		C5A1FA3E4D9F553AB91BAD7A07A7AB4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CB67190F0A60F7A033A3E515965C86F;
+			remoteInfo = InAppSettingsKit;
+		};
+		FBE0D4BA15D301BB7ADD8451BC93EAA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA416ED70FC7E091F479F65D981FE8FC;
+			remoteInfo = "InAppSettingsKit-InAppSettingsKit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C8D04C51204C01163F5B1A2A8C21050 /* InAppSettingsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InAppSettingsKit-umbrella.h"; sourceTree = "<group>"; };
+		0CC9F8D04F6E95B15F5FC5C019434F74 /* Pods-Food Hygiene Ratings-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Food Hygiene Ratings-resources.sh"; sourceTree = "<group>"; };
+		0E4239EB73B1088A386908BFD4D286C3 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		0F32A44C64AD9BADC7C56C71C0751F3E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		12016F641B4A7AD34E491057BCB56CFC /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = el.lproj; path = InAppSettingsKit/Resources/el.lproj; sourceTree = "<group>"; };
+		150611D30680753B77BBC3466AA01C41 /* IASKTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKTextField.h; path = InAppSettingsKit/Views/IASKTextField.h; sourceTree = "<group>"; };
+		1740C78E2DB297079EAF1CA288166DC8 /* IASKSpecifierValuesViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSpecifierValuesViewController.m; path = InAppSettingsKit/Controllers/IASKSpecifierValuesViewController.m; sourceTree = "<group>"; };
+		19C19A254B2D4E0D30255907E6E922A0 /* IASKAppSettingsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKAppSettingsViewController.h; path = InAppSettingsKit/Controllers/IASKAppSettingsViewController.h; sourceTree = "<group>"; };
+		1FBAD965132CF8ECEFAEE7E1DB6949D4 /* InAppSettingsKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = InAppSettingsKit.xcconfig; sourceTree = "<group>"; };
+		22BC31CDD8651387F07B84D1D32E8304 /* IASKTextViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKTextViewCell.m; path = InAppSettingsKit/Views/IASKTextViewCell.m; sourceTree = "<group>"; };
+		2313CAD89DC7FBBBE0DF8A674BABF336 /* IASKSpecifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSpecifier.m; path = InAppSettingsKit/Models/IASKSpecifier.m; sourceTree = "<group>"; };
+		23A5A4E86D2E39689DD17DC195DE4317 /* InAppSettingsKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InAppSettingsKit-prefix.pch"; sourceTree = "<group>"; };
+		2440E8ED3C217D5C88AFA55ED350D47C /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = InAppSettingsKit/Resources/pt.lproj; sourceTree = "<group>"; };
+		245DB38F25FE818FC8657397917E4C86 /* IASKPSTextFieldSpecifierViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKPSTextFieldSpecifierViewCell.h; path = InAppSettingsKit/Views/IASKPSTextFieldSpecifierViewCell.h; sourceTree = "<group>"; };
+		266AE7A09B952D53C89B8DBC7F599C5A /* Pods-Food Hygiene Ratings.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Food Hygiene Ratings.modulemap"; sourceTree = "<group>"; };
+		2A8B36D15EBD8E75824454B3B3A677D1 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		2F7F1D65B8E813A7DD53D7DED33DC1F9 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		37B0B38EE982E946ADCBCF32F9A3B249 /* Pods_Food_Hygiene_Ratings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Food_Hygiene_Ratings.framework; path = "Pods-Food Hygiene Ratings.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C1C8C7DBB43F0B0B4906216BB0E6286 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		3CBAB121059BDA3A6E44D2CCA2B144E7 /* IASKSettingsStoreUserDefaults.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSettingsStoreUserDefaults.m; path = InAppSettingsKit/Models/IASKSettingsStoreUserDefaults.m; sourceTree = "<group>"; };
+		3E392735492CA66D2DCBD9F28D801F8A /* IASKAppSettingsWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKAppSettingsWebViewController.m; path = InAppSettingsKit/Controllers/IASKAppSettingsWebViewController.m; sourceTree = "<group>"; };
+		3E780C4CD972522DC183E7DBD80F0B71 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
+		48B15C7BE1B6146F02A7698874DC5AFD /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = InAppSettingsKit/Resources/nl.lproj; sourceTree = "<group>"; };
+		49830EFA9F7D5A2C42F14220E5A4C692 /* IASKTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKTextField.m; path = InAppSettingsKit/Views/IASKTextField.m; sourceTree = "<group>"; };
+		4E6DDEF34F3E8CFDFC66301872A08A6B /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = InAppSettingsKit/Resources/es.lproj; sourceTree = "<group>"; };
+		4F492D78EB0EAC7E3FCE5CAACCE3F80E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4F60EB89C81B554C81A8AE66CEB00DAD /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		528F963280C762AB24D9AAD67F4770C3 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		5410071D779CF2DAF39CF44B35F609EF /* IASKAppSettingsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKAppSettingsViewController.m; path = InAppSettingsKit/Controllers/IASKAppSettingsViewController.m; sourceTree = "<group>"; };
+		56A56F8E66D74033CE5952E9CB7586F9 /* IASKSettingsReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSettingsReader.h; path = InAppSettingsKit/Models/IASKSettingsReader.h; sourceTree = "<group>"; };
+		576359745F0C7EC1DC1F647D701E6B1A /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		583C4B6EE2E7DE7A2E4F770A0E9CD352 /* IASKMultipleValueSelection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKMultipleValueSelection.m; path = InAppSettingsKit/Controllers/IASKMultipleValueSelection.m; sourceTree = "<group>"; };
+		5981AC94803F4B5018CBD0E3963F0895 /* IASKAppSettingsWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKAppSettingsWebViewController.h; path = InAppSettingsKit/Controllers/IASKAppSettingsWebViewController.h; sourceTree = "<group>"; };
+		5C9BBF79D8EDC43F3092F2450BCE6BA3 /* InAppSettingsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = InAppSettingsKit.framework; path = InAppSettingsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F2DBF2620EA1F7AA99B494BB0D546C0 /* IASKSettingsStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSettingsStore.m; path = InAppSettingsKit/Models/IASKSettingsStore.m; sourceTree = "<group>"; };
+		6145178E8519D3A752AE6C5B96779636 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = InAppSettingsKit/Resources/it.lproj; sourceTree = "<group>"; };
+		61D35EB2B55961035EE955D3BF4D4A8F /* IASKSwitch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSwitch.h; path = InAppSettingsKit/Views/IASKSwitch.h; sourceTree = "<group>"; };
+		6356A77F420BA83D4442099F7D501143 /* Pods-Food Hygiene Ratings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Food Hygiene Ratings.release.xcconfig"; sourceTree = "<group>"; };
+		6458A5CD08D38FCBE3E092903D8B91D9 /* IASKMultipleValueSelection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKMultipleValueSelection.h; path = InAppSettingsKit/Controllers/IASKMultipleValueSelection.h; sourceTree = "<group>"; };
+		681C3329E03B46D825A50F3E0CEB7A4F /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = InAppSettingsKit/Resources/sv.lproj; sourceTree = "<group>"; };
+		6D5993747D45107EE9ECF6EE513A3225 /* IASKViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKViewController.h; path = InAppSettingsKit/Controllers/IASKViewController.h; sourceTree = "<group>"; };
+		769B48210018752BB4737D78A5121292 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		7D9C87E3AE13950F6D123DD6433E9008 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = InAppSettingsKit/Resources/ru.lproj; sourceTree = "<group>"; };
+		7E2AD50E551F861687DA7F1359ADFE46 /* IASKSettingsStoreFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSettingsStoreFile.h; path = InAppSettingsKit/Models/IASKSettingsStoreFile.h; sourceTree = "<group>"; };
+		83AF4DBAA40A1FF517D94F0BE44DE412 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
+		859914B8192133E6B5BD56E4622D2B00 /* IASKSettingsStoreUserDefaults.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSettingsStoreUserDefaults.h; path = InAppSettingsKit/Models/IASKSettingsStoreUserDefaults.h; sourceTree = "<group>"; };
+		85CC5E1646199280661E0767C5F13247 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		861724A38B473C7FFFF95F5C3833CB61 /* Pods-Food Hygiene Ratings-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Food Hygiene Ratings-acknowledgements.plist"; sourceTree = "<group>"; };
+		8E4CB1FFB3FECBDAA6C0A76760C46B99 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = InAppSettingsKit/Resources/ja.lproj; sourceTree = "<group>"; };
+		9058E7FBE3ABC8180960689DCE33D99E /* IASKSettingsStoreFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSettingsStoreFile.m; path = InAppSettingsKit/Models/IASKSettingsStoreFile.m; sourceTree = "<group>"; };
+		9118347BA7A81780E30FD54A1D8C133F /* InAppSettingsKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InAppSettingsKit.bundle; path = InAppSettingsKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		925D610EAFEB45885DBACF6AB806A022 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = th.lproj; path = InAppSettingsKit/Resources/th.lproj; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97C70F77E89ED93AFBB6E84034A20EF5 /* IASKTextViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKTextViewCell.h; path = InAppSettingsKit/Views/IASKTextViewCell.h; sourceTree = "<group>"; };
+		9B7BCEC86029E6A9C174CEC2C71CC1E0 /* IASKSpecifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSpecifier.h; path = InAppSettingsKit/Models/IASKSpecifier.h; sourceTree = "<group>"; };
+		9B92F7B8F7179C4F9D271EE3F99420F6 /* Pods-Food Hygiene Ratings-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Food Hygiene Ratings-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9CD36214B58FEA56658215D8A11C35A9 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		A0CD96CE6D3C138E5D8B368CCE0D8F37 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A42CB92162981E341533F17A15A00359 /* IASKSpecifierValuesViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSpecifierValuesViewController.h; path = InAppSettingsKit/Controllers/IASKSpecifierValuesViewController.h; sourceTree = "<group>"; };
+		A4E0D64A24BCC874E83F09F5BE9487F8 /* ResourceBundle-InAppSettingsKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-InAppSettingsKit-Info.plist"; sourceTree = "<group>"; };
+		A770CFC252E813A28F4AAB83448ACED0 /* IASKSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSlider.m; path = InAppSettingsKit/Views/IASKSlider.m; sourceTree = "<group>"; };
+		A99C622E4D6EB042C11906A93E4DC244 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "InAppSettingsKit/Resources/pt-PT.lproj"; sourceTree = "<group>"; };
+		ACAE8123E549F50A1DB5D2901855E1BC /* IASKSettingsReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSettingsReader.m; path = InAppSettingsKit/Models/IASKSettingsReader.m; sourceTree = "<group>"; };
+		B1F5B65096596ED62E9A235A0A905800 /* IASKTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKTextView.m; path = InAppSettingsKit/Views/IASKTextView.m; sourceTree = "<group>"; };
+		B2E9B7FCD327F2C73A81248DC524E01D /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		B7780C2942CBC9CBB1C58B2D90D4C1A0 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = InAppSettingsKit/Resources/fr.lproj; sourceTree = "<group>"; };
+		B86175D5CDD78F4DDE8EF30D2BE7B8B9 /* IASKSwitch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSwitch.m; path = InAppSettingsKit/Views/IASKSwitch.m; sourceTree = "<group>"; };
+		B9D092B679F26B1F878C18A52B690CED /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		C0A74C6890303EC7A9876E31855C766B /* Pods-Food Hygiene Ratings-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Food Hygiene Ratings-umbrella.h"; sourceTree = "<group>"; };
+		C1DA990BC060952E2E5E6327C0FAE10F /* IASKPSSliderSpecifierViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKPSSliderSpecifierViewCell.h; path = InAppSettingsKit/Views/IASKPSSliderSpecifierViewCell.h; sourceTree = "<group>"; };
+		C23888C30E706632A3F574BEA61B4C25 /* IASKPSSliderSpecifierViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKPSSliderSpecifierViewCell.m; path = InAppSettingsKit/Views/IASKPSSliderSpecifierViewCell.m; sourceTree = "<group>"; };
+		C5E8B62CB9651F2BD8B5003AB273CAC4 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		CE0CEB82C00FB4F8CF507A0CE9581A18 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = InAppSettingsKit/Resources/Base.lproj; sourceTree = "<group>"; };
+		DACB52EC4635DEE6862195B0BE722468 /* IASKPSTextFieldSpecifierViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKPSTextFieldSpecifierViewCell.m; path = InAppSettingsKit/Views/IASKPSTextFieldSpecifierViewCell.m; sourceTree = "<group>"; };
+		DCDF3AB07A490E6F9D5EC5BB37E6C8FE /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E27920B4E2134C7C8590113C185B9190 /* InAppSettingsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "InAppSettingsKit-dummy.m"; sourceTree = "<group>"; };
+		E58A51B33D8319ABB06D39C08E13169E /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		EAE56094D3569281B5D175E39C423937 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAEB15DCA119F2982B37AECB2CD8143D /* IASKSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSlider.h; path = InAppSettingsKit/Views/IASKSlider.h; sourceTree = "<group>"; };
+		EC5395DAB5AC6272A4863BA83D564AC6 /* InAppSettingsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = InAppSettingsKit.modulemap; sourceTree = "<group>"; };
+		EEAA4D07D61D17544B963537A3E3B843 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = InAppSettingsKit/Resources/tr.lproj; sourceTree = "<group>"; };
+		EF2C31F614E396C963AD05D3B70611B0 /* IASKTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKTextView.h; path = InAppSettingsKit/Views/IASKTextView.h; sourceTree = "<group>"; };
+		EF3194DCA28C827AE85BD66E90A4FEB6 /* Pods-Food Hygiene Ratings-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Food Hygiene Ratings-frameworks.sh"; sourceTree = "<group>"; };
+		EFCBB57ED10801F3001F4EA36BFD7AF4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F05B5BEE88C540AEFC0609B1E24DC9BA /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		F28DE23473F6E62EB358B944D83BDFDA /* Pods-Food Hygiene Ratings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Food Hygiene Ratings.debug.xcconfig"; sourceTree = "<group>"; };
+		F7C1F8EDCA0B92992CFD5EA40D96C81E /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = InAppSettingsKit/Resources/en.lproj; sourceTree = "<group>"; };
+		F9C82BE254B8F6004A658034BF8D13E8 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = InAppSettingsKit/Resources/de.lproj; sourceTree = "<group>"; };
+		FA36E161BDEFCCC68E39B33C25266A41 /* IASKSettingsStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSettingsStore.h; path = InAppSettingsKit/Models/IASKSettingsStore.h; sourceTree = "<group>"; };
+		FF7E37AEF3884430860E1C60C8FF07E1 /* Pods-Food Hygiene Ratings-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Food Hygiene Ratings-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		472FA95327E80BB1F6F398D616D0283A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C20DF639777387CB2B4112DA673631 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3735A807C728BE1017B3070E3C5BBFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC9AF7A9114E126D9244309549CB2D7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				633887E9538AE3FA2B6B9A146CA6602F /* Foundation.framework in Frameworks */,
+				DC545C8BA0F408240259A25DDB8ABA8C /* MessageUI.framework in Frameworks */,
+				FE944CB7E0D3FC7226B464820F08233A /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3159D7CAFD56B809F40CA3330DA10889 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CB4EA6DBCC0033B5D1F52A95783710C /* Pods-Food Hygiene Ratings */ = {
+			isa = PBXGroup;
+			children = (
+				EFCBB57ED10801F3001F4EA36BFD7AF4 /* Info.plist */,
+				266AE7A09B952D53C89B8DBC7F599C5A /* Pods-Food Hygiene Ratings.modulemap */,
+				9B92F7B8F7179C4F9D271EE3F99420F6 /* Pods-Food Hygiene Ratings-acknowledgements.markdown */,
+				861724A38B473C7FFFF95F5C3833CB61 /* Pods-Food Hygiene Ratings-acknowledgements.plist */,
+				FF7E37AEF3884430860E1C60C8FF07E1 /* Pods-Food Hygiene Ratings-dummy.m */,
+				EF3194DCA28C827AE85BD66E90A4FEB6 /* Pods-Food Hygiene Ratings-frameworks.sh */,
+				0CC9F8D04F6E95B15F5FC5C019434F74 /* Pods-Food Hygiene Ratings-resources.sh */,
+				C0A74C6890303EC7A9876E31855C766B /* Pods-Food Hygiene Ratings-umbrella.h */,
+				F28DE23473F6E62EB358B944D83BDFDA /* Pods-Food Hygiene Ratings.debug.xcconfig */,
+				6356A77F420BA83D4442099F7D501143 /* Pods-Food Hygiene Ratings.release.xcconfig */,
+			);
+			name = "Pods-Food Hygiene Ratings";
+			path = "Target Support Files/Pods-Food Hygiene Ratings";
+			sourceTree = "<group>";
+		};
+		11F6F2DA323EF46BF16D496B7E3F992B /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				55A16E0FA6D5B09E00E4023C1685266F /* Frameworks */,
+			);
+			name = GoogleSymbolUtilities;
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F53B36DCDAFFC7068CADF6A2093A997E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1386E0CBEC26DBD970792711364973D8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B2E9B7FCD327F2C73A81248DC524E01D /* Firebase.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		192F11367CB6C4ED19B6BEAEB08F8266 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				769B48210018752BB4737D78A5121292 /* GoogleToolboxForMac.modulemap */,
+				0E4239EB73B1088A386908BFD4D286C3 /* GoogleToolboxForMac.xcconfig */,
+				E58A51B33D8319ABB06D39C08E13169E /* GoogleToolboxForMac-dummy.m */,
+				C5E8B62CB9651F2BD8B5003AB273CAC4 /* GoogleToolboxForMac-prefix.pch */,
+				3E780C4CD972522DC183E7DBD80F0B71 /* GoogleToolboxForMac-umbrella.h */,
+				A0CD96CE6D3C138E5D8B368CCE0D8F37 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
+			sourceTree = "<group>";
+		};
+		29D78633B3882553A84EF0D3993535DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				576359745F0C7EC1DC1F647D701E6B1A /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36031223BDBF30F6A77D202EF6F8B430 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCDF3AB07A490E6F9D5EC5BB37E6C8FE /* GoogleToolboxForMac.framework */,
+				9118347BA7A81780E30FD54A1D8C133F /* InAppSettingsKit.bundle */,
+				5C9BBF79D8EDC43F3092F2450BCE6BA3 /* InAppSettingsKit.framework */,
+				37B0B38EE982E946ADCBCF32F9A3B249 /* Pods_Food_Hygiene_Ratings.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F6495874C928FB2E818EF812867E05F /* InAppSettingsKit */ = {
+			isa = PBXGroup;
+			children = (
+				19C19A254B2D4E0D30255907E6E922A0 /* IASKAppSettingsViewController.h */,
+				5410071D779CF2DAF39CF44B35F609EF /* IASKAppSettingsViewController.m */,
+				5981AC94803F4B5018CBD0E3963F0895 /* IASKAppSettingsWebViewController.h */,
+				3E392735492CA66D2DCBD9F28D801F8A /* IASKAppSettingsWebViewController.m */,
+				6458A5CD08D38FCBE3E092903D8B91D9 /* IASKMultipleValueSelection.h */,
+				583C4B6EE2E7DE7A2E4F770A0E9CD352 /* IASKMultipleValueSelection.m */,
+				C1DA990BC060952E2E5E6327C0FAE10F /* IASKPSSliderSpecifierViewCell.h */,
+				C23888C30E706632A3F574BEA61B4C25 /* IASKPSSliderSpecifierViewCell.m */,
+				245DB38F25FE818FC8657397917E4C86 /* IASKPSTextFieldSpecifierViewCell.h */,
+				DACB52EC4635DEE6862195B0BE722468 /* IASKPSTextFieldSpecifierViewCell.m */,
+				56A56F8E66D74033CE5952E9CB7586F9 /* IASKSettingsReader.h */,
+				ACAE8123E549F50A1DB5D2901855E1BC /* IASKSettingsReader.m */,
+				FA36E161BDEFCCC68E39B33C25266A41 /* IASKSettingsStore.h */,
+				5F2DBF2620EA1F7AA99B494BB0D546C0 /* IASKSettingsStore.m */,
+				7E2AD50E551F861687DA7F1359ADFE46 /* IASKSettingsStoreFile.h */,
+				9058E7FBE3ABC8180960689DCE33D99E /* IASKSettingsStoreFile.m */,
+				859914B8192133E6B5BD56E4622D2B00 /* IASKSettingsStoreUserDefaults.h */,
+				3CBAB121059BDA3A6E44D2CCA2B144E7 /* IASKSettingsStoreUserDefaults.m */,
+				EAEB15DCA119F2982B37AECB2CD8143D /* IASKSlider.h */,
+				A770CFC252E813A28F4AAB83448ACED0 /* IASKSlider.m */,
+				9B7BCEC86029E6A9C174CEC2C71CC1E0 /* IASKSpecifier.h */,
+				2313CAD89DC7FBBBE0DF8A674BABF336 /* IASKSpecifier.m */,
+				A42CB92162981E341533F17A15A00359 /* IASKSpecifierValuesViewController.h */,
+				1740C78E2DB297079EAF1CA288166DC8 /* IASKSpecifierValuesViewController.m */,
+				61D35EB2B55961035EE955D3BF4D4A8F /* IASKSwitch.h */,
+				B86175D5CDD78F4DDE8EF30D2BE7B8B9 /* IASKSwitch.m */,
+				150611D30680753B77BBC3466AA01C41 /* IASKTextField.h */,
+				49830EFA9F7D5A2C42F14220E5A4C692 /* IASKTextField.m */,
+				EF2C31F614E396C963AD05D3B70611B0 /* IASKTextView.h */,
+				B1F5B65096596ED62E9A235A0A905800 /* IASKTextView.m */,
+				97C70F77E89ED93AFBB6E84034A20EF5 /* IASKTextViewCell.h */,
+				22BC31CDD8651387F07B84D1D32E8304 /* IASKTextViewCell.m */,
+				6D5993747D45107EE9ECF6EE513A3225 /* IASKViewController.h */,
+				F1FFF20245446002A3D377E249C9C4F1 /* Resources */,
+				FAB7FF78AD4A2F40889B4B4511ED3461 /* Support Files */,
+			);
+			name = InAppSettingsKit;
+			path = InAppSettingsKit;
+			sourceTree = "<group>";
+		};
+		4A7C722AA305479808094845C6220A04 /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				9CD36214B58FEA56658215D8A11C35A9 /* GTMDefines.h */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		55A16E0FA6D5B09E00E4023C1685266F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A8B36D15EBD8E75824454B3B3A677D1 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		616B8124B22BF484E882B40BBCFC26AA /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				1386E0CBEC26DBD970792711364973D8 /* Core */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				DE5EBC8F0451FD75DB6715BDB0600B35 /* Pods */,
+				36031223BDBF30F6A77D202EF6F8B430 /* Products */,
+				E6A555CE9220F8934D1B7127DA6FD12D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		86D399C106C125CF61B2DD3AE8BD70E0 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				E147BFDAD7A34CD60523B678F83BC3CB /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		88722B66E9C9B204A8279BDDD26F223B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F05B5BEE88C540AEFC0609B1E24DC9BA /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A18B4931315229CE1EE9899A67F3B186 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				528F963280C762AB24D9AAD67F4770C3 /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B112E57E21F951EB41E5FFD5137D762B /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				29D78633B3882553A84EF0D3993535DA /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		B326BA69502E7B08080E7E704C177F6C /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				4F60EB89C81B554C81A8AE66CEB00DAD /* FIRInstanceID.h */,
+				88722B66E9C9B204A8279BDDD26F223B /* Frameworks */,
+			);
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		C08F3D085AA1D257889792609B5848F5 /* GoogleToolboxForMac */ = {
+			isa = PBXGroup;
+			children = (
+				4A7C722AA305479808094845C6220A04 /* Defines */,
+				E49766B811BF8477A4C7774E9777AE3B /* NSData+zlib */,
+				192F11367CB6C4ED19B6BEAEB08F8266 /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		D92F98E46AD2517DBCF7AEFD32B91C5B /* Google-Mobile-Ads-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				A18B4931315229CE1EE9899A67F3B186 /* Frameworks */,
+			);
+			name = "Google-Mobile-Ads-SDK";
+			path = "Google-Mobile-Ads-SDK";
+			sourceTree = "<group>";
+		};
+		DE5EBC8F0451FD75DB6715BDB0600B35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				616B8124B22BF484E882B40BBCFC26AA /* Firebase */,
+				B112E57E21F951EB41E5FFD5137D762B /* FirebaseAnalytics */,
+				86D399C106C125CF61B2DD3AE8BD70E0 /* FirebaseCore */,
+				B326BA69502E7B08080E7E704C177F6C /* FirebaseInstanceID */,
+				D92F98E46AD2517DBCF7AEFD32B91C5B /* Google-Mobile-Ads-SDK */,
+				F0BE1A9A7D73D8E4B46B7EF8789968EC /* GoogleInterchangeUtilities */,
+				11F6F2DA323EF46BF16D496B7E3F992B /* GoogleSymbolUtilities */,
+				C08F3D085AA1D257889792609B5848F5 /* GoogleToolboxForMac */,
+				3F6495874C928FB2E818EF812867E05F /* InAppSettingsKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E147BFDAD7A34CD60523B678F83BC3CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9D092B679F26B1F878C18A52B690CED /* FirebaseCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E49766B811BF8477A4C7774E9777AE3B /* NSData+zlib */ = {
+			isa = PBXGroup;
+			children = (
+				2F7F1D65B8E813A7DD53D7DED33DC1F9 /* GTMNSData+zlib.h */,
+				83AF4DBAA40A1FF517D94F0BE44DE412 /* GTMNSData+zlib.m */,
+			);
+			name = "NSData+zlib";
+			sourceTree = "<group>";
+		};
+		E6A555CE9220F8934D1B7127DA6FD12D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0CB4EA6DBCC0033B5D1F52A95783710C /* Pods-Food Hygiene Ratings */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E6B9EEAD2C7919B5309545CF977726BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C1C8C7DBB43F0B0B4906216BB0E6286 /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0BE1A9A7D73D8E4B46B7EF8789968EC /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				E6B9EEAD2C7919B5309545CF977726BF /* Frameworks */,
+			);
+			name = GoogleInterchangeUtilities;
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		F1FFF20245446002A3D377E249C9C4F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE0CEB82C00FB4F8CF507A0CE9581A18 /* Base.lproj */,
+				F9C82BE254B8F6004A658034BF8D13E8 /* de.lproj */,
+				12016F641B4A7AD34E491057BCB56CFC /* el.lproj */,
+				F7C1F8EDCA0B92992CFD5EA40D96C81E /* en.lproj */,
+				4E6DDEF34F3E8CFDFC66301872A08A6B /* es.lproj */,
+				B7780C2942CBC9CBB1C58B2D90D4C1A0 /* fr.lproj */,
+				6145178E8519D3A752AE6C5B96779636 /* it.lproj */,
+				8E4CB1FFB3FECBDAA6C0A76760C46B99 /* ja.lproj */,
+				48B15C7BE1B6146F02A7698874DC5AFD /* nl.lproj */,
+				2440E8ED3C217D5C88AFA55ED350D47C /* pt.lproj */,
+				A99C622E4D6EB042C11906A93E4DC244 /* pt-PT.lproj */,
+				7D9C87E3AE13950F6D123DD6433E9008 /* ru.lproj */,
+				681C3329E03B46D825A50F3E0CEB7A4F /* sv.lproj */,
+				925D610EAFEB45885DBACF6AB806A022 /* th.lproj */,
+				EEAA4D07D61D17544B963537A3E3B843 /* tr.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F53B36DCDAFFC7068CADF6A2093A997E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				85CC5E1646199280661E0767C5F13247 /* Foundation.framework */,
+				0F32A44C64AD9BADC7C56C71C0751F3E /* MessageUI.framework */,
+				4F492D78EB0EAC7E3FCE5CAACCE3F80E /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FAB7FF78AD4A2F40889B4B4511ED3461 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC5395DAB5AC6272A4863BA83D564AC6 /* InAppSettingsKit.modulemap */,
+				1FBAD965132CF8ECEFAEE7E1DB6949D4 /* InAppSettingsKit.xcconfig */,
+				E27920B4E2134C7C8590113C185B9190 /* InAppSettingsKit-dummy.m */,
+				23A5A4E86D2E39689DD17DC195DE4317 /* InAppSettingsKit-prefix.pch */,
+				0C8D04C51204C01163F5B1A2A8C21050 /* InAppSettingsKit-umbrella.h */,
+				EAE56094D3569281B5D175E39C423937 /* Info.plist */,
+				A4E0D64A24BCC874E83F09F5BE9487F8 /* ResourceBundle-InAppSettingsKit-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/InAppSettingsKit";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0652D6B9B51ABB932101C381698960DC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD27584C06DC726153D3E124CFC7B7EC /* Pods-Food Hygiene Ratings-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EF2136EDF3C5A6DE23E8ECD1C4B31E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DDF49E2AC6603769380FBF6F9DE1804 /* IASKAppSettingsViewController.h in Headers */,
+				A5DFBD02A5DE4E71F7F9D06680F29C1C /* IASKAppSettingsWebViewController.h in Headers */,
+				C5D2F3EA4E550E8DCA2BCF8474D0B424 /* IASKMultipleValueSelection.h in Headers */,
+				6E86A53D9E226CD6427ED079F66E6915 /* IASKPSSliderSpecifierViewCell.h in Headers */,
+				6BE3ACBCC4160CA4AE1448CA1089DF32 /* IASKPSTextFieldSpecifierViewCell.h in Headers */,
+				BB06A279BF8EF15106312E8889E1B627 /* IASKSettingsReader.h in Headers */,
+				EA2493BAE7EE4A904BC093415719DD76 /* IASKSettingsStore.h in Headers */,
+				BCE0812BD1D62FD8B086B8F6CF6B9091 /* IASKSettingsStoreFile.h in Headers */,
+				703A72D55C393C7FFEE4744F46A9C144 /* IASKSettingsStoreUserDefaults.h in Headers */,
+				24337B11FE4ED1EB684AA97F860C6F12 /* IASKSlider.h in Headers */,
+				FD8118550EE928F3613FF589D8CB039C /* IASKSpecifier.h in Headers */,
+				F4483B0BB3A0B826532F1B1DCD122374 /* IASKSpecifierValuesViewController.h in Headers */,
+				72A0AAEF5DFC21535D630C3185726ABD /* IASKSwitch.h in Headers */,
+				42FE84DA02ED5089A5126BEF584B4CB1 /* IASKTextField.h in Headers */,
+				16F437159F45F56E5CE4B9911233EBEB /* IASKTextView.h in Headers */,
+				2D7D03048DBFF4379F7D011925B2FEF4 /* IASKTextViewCell.h in Headers */,
+				419CAA9405DD3DE29BD3278A9B54DB99 /* IASKViewController.h in Headers */,
+				6622595A38D22163D16FB5015136080D /* InAppSettingsKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */,
+				541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */,
+				DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */;
+			buildPhases = (
+				63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */,
+				F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */,
+				FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleToolboxForMac;
+			productName = GoogleToolboxForMac;
+			productReference = DCDF3AB07A490E6F9D5EC5BB37E6C8FE /* GoogleToolboxForMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8CB67190F0A60F7A033A3E515965C86F /* InAppSettingsKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB8ABE9ED4D3D80444381D9DFFA319CF /* Build configuration list for PBXNativeTarget "InAppSettingsKit" */;
+			buildPhases = (
+				3C87DD49BE80BCE80E4D54AB3FBA2800 /* Sources */,
+				DC9AF7A9114E126D9244309549CB2D7C /* Frameworks */,
+				65699E082BDC3BFD9A0D31D42D485749 /* Resources */,
+				9EF2136EDF3C5A6DE23E8ECD1C4B31E7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B85A75C95D945DF6A59FFBD01F86445 /* PBXTargetDependency */,
+			);
+			name = InAppSettingsKit;
+			productName = InAppSettingsKit;
+			productReference = 5C9BBF79D8EDC43F3092F2450BCE6BA3 /* InAppSettingsKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AE0222BA5923E972E85190CDCA2D6C69 /* Pods-Food Hygiene Ratings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA2BD8494B1E58B5438F857CFF1AE0DB /* Build configuration list for PBXNativeTarget "Pods-Food Hygiene Ratings" */;
+			buildPhases = (
+				C671C4D382DAC4D8358D4BBBF5AB7AC7 /* Sources */,
+				472FA95327E80BB1F6F398D616D0283A /* Frameworks */,
+				0652D6B9B51ABB932101C381698960DC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F7FC79FAADAD125677682F5C93BFB5B /* PBXTargetDependency */,
+				E8BCBF327C8E2E903A7DC309D28F2DE0 /* PBXTargetDependency */,
+			);
+			name = "Pods-Food Hygiene Ratings";
+			productName = "Pods-Food Hygiene Ratings";
+			productReference = 37B0B38EE982E946ADCBCF32F9A3B249 /* Pods_Food_Hygiene_Ratings.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FA416ED70FC7E091F479F65D981FE8FC /* InAppSettingsKit-InAppSettingsKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5C6AB672F1E8A23C8B317127FB1353C /* Build configuration list for PBXNativeTarget "InAppSettingsKit-InAppSettingsKit" */;
+			buildPhases = (
+				6F3A140CA594AED3FF647C3EA0FF4195 /* Sources */,
+				A3735A807C728BE1017B3070E3C5BBFB /* Frameworks */,
+				0806F4DF473CF7F1286E62AFCF5DFC29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "InAppSettingsKit-InAppSettingsKit";
+			productName = "InAppSettingsKit-InAppSettingsKit";
+			productReference = 9118347BA7A81780E30FD54A1D8C133F /* InAppSettingsKit.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 36031223BDBF30F6A77D202EF6F8B430 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */,
+				8CB67190F0A60F7A033A3E515965C86F /* InAppSettingsKit */,
+				FA416ED70FC7E091F479F65D981FE8FC /* InAppSettingsKit-InAppSettingsKit */,
+				AE0222BA5923E972E85190CDCA2D6C69 /* Pods-Food Hygiene Ratings */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0806F4DF473CF7F1286E62AFCF5DFC29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2167E358A52FE1C105E8FD39A51498D7 /* Base.lproj in Resources */,
+				D7D57622770F6B36B7D4D27D959DAF0F /* de.lproj in Resources */,
+				4998C73670492A5B49463B947B65C9B8 /* el.lproj in Resources */,
+				4FEC172D08025B1FF32ECEAF3E58FC2C /* en.lproj in Resources */,
+				BA605DE9DAC3AE71C477ED604E11978E /* es.lproj in Resources */,
+				8E9EB88FC32BD9C6355D29D8D88CDC26 /* fr.lproj in Resources */,
+				89E44F583CFACC46E04FE53D117F9C60 /* it.lproj in Resources */,
+				4D210E159BFB94B43BA1DEF818697047 /* ja.lproj in Resources */,
+				5522CC4F310DC2DD0C7498E99A659568 /* nl.lproj in Resources */,
+				6156D7694F10E0ED2212E94CC346B4F8 /* pt-PT.lproj in Resources */,
+				88882F4E2DECC41B49087098118FF0D3 /* pt.lproj in Resources */,
+				D7C1A356BF40055D55294E8F46A108E8 /* ru.lproj in Resources */,
+				6FD57A9390734BFB0949417ECCCB7AEC /* sv.lproj in Resources */,
+				3A092E87C33AEFE16AA5784AC08BA9E9 /* th.lproj in Resources */,
+				2CE19EB59E7F5B2A8EEBEB7A5EA126A2 /* tr.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65699E082BDC3BFD9A0D31D42D485749 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65ACE282418027E1EAC0F5BBCD97EC63 /* InAppSettingsKit.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C87DD49BE80BCE80E4D54AB3FBA2800 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BF447D01F1EFE26399EE6319604B61 /* IASKAppSettingsViewController.m in Sources */,
+				538E3D762166B71A00202E68057991DA /* IASKAppSettingsWebViewController.m in Sources */,
+				381A429E9CC6979A1CDF662742C62475 /* IASKMultipleValueSelection.m in Sources */,
+				551267314E4B8236E9166BB48BE68B36 /* IASKPSSliderSpecifierViewCell.m in Sources */,
+				F4061D80566952A4FD3E087EC0E27713 /* IASKPSTextFieldSpecifierViewCell.m in Sources */,
+				8E1280CE142EAE5FCCA8A68326F43F8E /* IASKSettingsReader.m in Sources */,
+				6315ADF2F7932752D872413E2C38603D /* IASKSettingsStore.m in Sources */,
+				66CC8DB497CFF35475C0BD0A0C6268B2 /* IASKSettingsStoreFile.m in Sources */,
+				E902BA7E78980241CB2349B329BDCCEC /* IASKSettingsStoreUserDefaults.m in Sources */,
+				9F76E28C973A31CBC3855AA11AC2EA98 /* IASKSlider.m in Sources */,
+				DB6257CDA73706A0690D2C15AB82ACA1 /* IASKSpecifier.m in Sources */,
+				84CF25B1937F8F0419B1648EE39227A5 /* IASKSpecifierValuesViewController.m in Sources */,
+				72109CC4E319106450B8B2E62A7023E3 /* IASKSwitch.m in Sources */,
+				FCC4E4649FD3B25F953561FE9A77FA02 /* IASKTextField.m in Sources */,
+				2367272FB729F671F3842C6FA7C390ED /* IASKTextView.m in Sources */,
+				F4DE15FF1336171363D8808DF3FABE72 /* IASKTextViewCell.m in Sources */,
+				1640FC74A0ACE1D703B9A7738860A064 /* InAppSettingsKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */,
+				F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F3A140CA594AED3FF647C3EA0FF4195 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C671C4D382DAC4D8358D4BBBF5AB7AC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47907E746E0287F8774FF5C1B42CD18F /* Pods-Food Hygiene Ratings-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F7FC79FAADAD125677682F5C93BFB5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = 00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */;
+			targetProxy = 0FB6BBE86CE1D924E7B23F604887E06E /* PBXContainerItemProxy */;
+		};
+		8B85A75C95D945DF6A59FFBD01F86445 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "InAppSettingsKit-InAppSettingsKit";
+			target = FA416ED70FC7E091F479F65D981FE8FC /* InAppSettingsKit-InAppSettingsKit */;
+			targetProxy = FBE0D4BA15D301BB7ADD8451BC93EAA7 /* PBXContainerItemProxy */;
+		};
+		E8BCBF327C8E2E903A7DC309D28F2DE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = InAppSettingsKit;
+			target = 8CB67190F0A60F7A033A3E515965C86F /* InAppSettingsKit */;
+			targetProxy = C5A1FA3E4D9F553AB91BAD7A07A7AB4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		095FF281E69FBDF4AD315086D629F116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FBAD965132CF8ECEFAEE7E1DB6949D4 /* InAppSettingsKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/InAppSettingsKit/InAppSettingsKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/InAppSettingsKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/InAppSettingsKit/InAppSettingsKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = InAppSettingsKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		11FB6E757A1AE2556EC8880F056F2ABD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FBAD965132CF8ECEFAEE7E1DB6949D4 /* InAppSettingsKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/InAppSettingsKit/InAppSettingsKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/InAppSettingsKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/InAppSettingsKit/InAppSettingsKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = InAppSettingsKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		42BB95814CDCCB1006EB7C8CC27FD212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F28DE23473F6E62EB358B944D83BDFDA /* Pods-Food Hygiene Ratings.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Food Hygiene Ratings/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Food Hygiene Ratings/Pods-Food Hygiene Ratings.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Food_Hygiene_Ratings;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5072F58011BFF4686AF3948524E789C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FBAD965132CF8ECEFAEE7E1DB6949D4 /* InAppSettingsKit.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/InAppSettingsKit";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/InAppSettingsKit/ResourceBundle-InAppSettingsKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = InAppSettingsKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5B34DBB4495EA020B8CFB66DFD50ED19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FBAD965132CF8ECEFAEE7E1DB6949D4 /* InAppSettingsKit.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/InAppSettingsKit";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/InAppSettingsKit/ResourceBundle-InAppSettingsKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = InAppSettingsKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		A8F49DBC92300AD783B677CB1AC3A14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6356A77F420BA83D4442099F7D501143 /* Pods-Food Hygiene Ratings.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Food Hygiene Ratings/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Food Hygiene Ratings/Pods-Food Hygiene Ratings.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Food_Hygiene_Ratings;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D60CD877A708870E2BE96B83BA32F883 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E4239EB73B1088A386908BFD4D286C3 /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F066921CBDBDB5F45795E50FBC5AC972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E4239EB73B1088A386908BFD4D286C3 /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB8ABE9ED4D3D80444381D9DFFA319CF /* Build configuration list for PBXNativeTarget "InAppSettingsKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				095FF281E69FBDF4AD315086D629F116 /* Debug */,
+				11FB6E757A1AE2556EC8880F056F2ABD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60CD877A708870E2BE96B83BA32F883 /* Debug */,
+				F066921CBDBDB5F45795E50FBC5AC972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5C6AB672F1E8A23C8B317127FB1353C /* Build configuration list for PBXNativeTarget "InAppSettingsKit-InAppSettingsKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B34DBB4495EA020B8CFB66DFD50ED19 /* Debug */,
+				5072F58011BFF4686AF3948524E789C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA2BD8494B1E58B5438F857CFF1AE0DB /* Build configuration list for PBXNativeTarget "Pods-Food Hygiene Ratings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42BB95814CDCCB1006EB7C8CC27FD212 /* Debug */,
+				A8F49DBC92300AD783B677CB1AC3A14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
