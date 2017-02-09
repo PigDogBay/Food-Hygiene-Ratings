@@ -3,7 +3,7 @@
 //  Food Hygiene Ratings
 //
 //  Created by Mark Bailey on 09/02/2017.
-//  Copyright © 2017 Pig Dog Bay. All rights reserved.
+//  Copyright © 2017 MPD Bailey Technology. All rights reserved.
 //
 
 import UIKit
