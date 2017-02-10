@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0184954B2CA8570451051A22CD6B113F /* Pods-FoodHygieneRatingsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8511C62ECF62C5F5AA9DEED972902B /* Pods-FoodHygieneRatingsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1640FC74A0ACE1D703B9A7738860A064 /* InAppSettingsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E27920B4E2134C7C8590113C185B9190 /* InAppSettingsKit-dummy.m */; };
 		16F437159F45F56E5CE4B9911233EBEB /* IASKTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2C31F614E396C963AD05D3B70611B0 /* IASKTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2167E358A52FE1C105E8FD39A51498D7 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CE0CEB82C00FB4F8CF507A0CE9581A18 /* Base.lproj */; };
@@ -19,7 +20,7 @@
 		3A092E87C33AEFE16AA5784AC08BA9E9 /* th.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 925D610EAFEB45885DBACF6AB806A022 /* th.lproj */; };
 		419CAA9405DD3DE29BD3278A9B54DB99 /* IASKViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D5993747D45107EE9ECF6EE513A3225 /* IASKViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42FE84DA02ED5089A5126BEF584B4CB1 /* IASKTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 150611D30680753B77BBC3466AA01C41 /* IASKTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		47907E746E0287F8774FF5C1B42CD18F /* Pods-Food Hygiene Ratings-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7E37AEF3884430860E1C60C8FF07E1 /* Pods-Food Hygiene Ratings-dummy.m */; };
+		47907E746E0287F8774FF5C1B42CD18F /* Pods-Food Hygiene Ratings-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F571AA07E48EAF7B7587F49D715255D9 /* Pods-Food Hygiene Ratings-dummy.m */; };
 		4998C73670492A5B49463B947B65C9B8 /* el.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 12016F641B4A7AD34E491057BCB56CFC /* el.lproj */; };
 		4D210E159BFB94B43BA1DEF818697047 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CB1FFB3FECBDAA6C0A76760C46B99 /* ja.lproj */; };
 		4FEC172D08025B1FF32ECEAF3E58FC2C /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F7C1F8EDCA0B92992CFD5EA40D96C81E /* en.lproj */; };
@@ -30,7 +31,7 @@
 		6156D7694F10E0ED2212E94CC346B4F8 /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A99C622E4D6EB042C11906A93E4DC244 /* pt-PT.lproj */; };
 		6315ADF2F7932752D872413E2C38603D /* IASKSettingsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2DBF2620EA1F7AA99B494BB0D546C0 /* IASKSettingsStore.m */; };
 		633887E9538AE3FA2B6B9A146CA6602F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CC5E1646199280661E0767C5F13247 /* Foundation.framework */; };
-		65ACE282418027E1EAC0F5BBCD97EC63 /* InAppSettingsKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9118347BA7A81780E30FD54A1D8C133F /* InAppSettingsKit.bundle */; };
+		65ACE282418027E1EAC0F5BBCD97EC63 /* InAppSettingsKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61FB9885B7359492D57CD51C9FD3A8BD /* InAppSettingsKit.bundle */; };
 		6622595A38D22163D16FB5015136080D /* InAppSettingsKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8D04C51204C01163F5B1A2A8C21050 /* InAppSettingsKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66CC8DB497CFF35475C0BD0A0C6268B2 /* IASKSettingsStoreFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058E7FBE3ABC8180960689DCE33D99E /* IASKSettingsStoreFile.m */; };
 		6BE3ACBCC4160CA4AE1448CA1089DF32 /* IASKPSTextFieldSpecifierViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 245DB38F25FE818FC8657397917E4C86 /* IASKPSTextFieldSpecifierViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +45,7 @@
 		84CF25B1937F8F0419B1648EE39227A5 /* IASKSpecifierValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1740C78E2DB297079EAF1CA288166DC8 /* IASKSpecifierValuesViewController.m */; };
 		88882F4E2DECC41B49087098118FF0D3 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2440E8ED3C217D5C88AFA55ED350D47C /* pt.lproj */; };
 		89E44F583CFACC46E04FE53D117F9C60 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6145178E8519D3A752AE6C5B96779636 /* it.lproj */; };
+		8DCE8CCA14A46FB8F5A25A77C6713DC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CC5E1646199280661E0767C5F13247 /* Foundation.framework */; };
 		8DDF49E2AC6603769380FBF6F9DE1804 /* IASKAppSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 19C19A254B2D4E0D30255907E6E922A0 /* IASKAppSettingsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E1280CE142EAE5FCCA8A68326F43F8E /* IASKSettingsReader.m in Sources */ = {isa = PBXBuildFile; fileRef = ACAE8123E549F50A1DB5D2901855E1BC /* IASKSettingsReader.m */; };
 		8E9EB88FC32BD9C6355D29D8D88CDC26 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B7780C2942CBC9CBB1C58B2D90D4C1A0 /* fr.lproj */; };
@@ -52,9 +54,10 @@
 		BA605DE9DAC3AE71C477ED604E11978E /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4E6DDEF34F3E8CFDFC66301872A08A6B /* es.lproj */; };
 		BB06A279BF8EF15106312E8889E1B627 /* IASKSettingsReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 56A56F8E66D74033CE5952E9CB7586F9 /* IASKSettingsReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCE0812BD1D62FD8B086B8F6CF6B9091 /* IASKSettingsStoreFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E2AD50E551F861687DA7F1359ADFE46 /* IASKSettingsStoreFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD27584C06DC726153D3E124CFC7B7EC /* Pods-Food Hygiene Ratings-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0A74C6890303EC7A9876E31855C766B /* Pods-Food Hygiene Ratings-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD27584C06DC726153D3E124CFC7B7EC /* Pods-Food Hygiene Ratings-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E689C699429643C0DE92142F6AE0FE98 /* Pods-Food Hygiene Ratings-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5D2F3EA4E550E8DCA2BCF8474D0B424 /* IASKMultipleValueSelection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6458A5CD08D38FCBE3E092903D8B91D9 /* IASKMultipleValueSelection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9BF447D01F1EFE26399EE6319604B61 /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5410071D779CF2DAF39CF44B35F609EF /* IASKAppSettingsViewController.m */; };
+		D6AC7ACA477F513A82427DC52BFCFC49 /* Pods-FoodHygieneRatingsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F13A20F4DE0931AAE844E17AE8522 /* Pods-FoodHygieneRatingsTests-dummy.m */; };
 		D7C1A356BF40055D55294E8F46A108E8 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C87E3AE13950F6D123DD6433E9008 /* ru.lproj */; };
 		D7D57622770F6B36B7D4D27D959DAF0F /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F9C82BE254B8F6004A658034BF8D13E8 /* de.lproj */; };
 		DB6257CDA73706A0690D2C15AB82ACA1 /* IASKSpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 2313CAD89DC7FBBBE0DF8A674BABF336 /* IASKSpecifier.m */; };
@@ -97,24 +100,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072AD3185F1B4B659630CEF6E1501B88 /* Pods-Food Hygiene Ratings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Food Hygiene Ratings.debug.xcconfig"; sourceTree = "<group>"; };
 		0C8D04C51204C01163F5B1A2A8C21050 /* InAppSettingsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InAppSettingsKit-umbrella.h"; sourceTree = "<group>"; };
-		0CC9F8D04F6E95B15F5FC5C019434F74 /* Pods-Food Hygiene Ratings-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Food Hygiene Ratings-resources.sh"; sourceTree = "<group>"; };
 		0E4239EB73B1088A386908BFD4D286C3 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
 		0F32A44C64AD9BADC7C56C71C0751F3E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 		12016F641B4A7AD34E491057BCB56CFC /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = el.lproj; path = InAppSettingsKit/Resources/el.lproj; sourceTree = "<group>"; };
 		150611D30680753B77BBC3466AA01C41 /* IASKTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKTextField.h; path = InAppSettingsKit/Views/IASKTextField.h; sourceTree = "<group>"; };
 		1740C78E2DB297079EAF1CA288166DC8 /* IASKSpecifierValuesViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSpecifierValuesViewController.m; path = InAppSettingsKit/Controllers/IASKSpecifierValuesViewController.m; sourceTree = "<group>"; };
 		19C19A254B2D4E0D30255907E6E922A0 /* IASKAppSettingsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKAppSettingsViewController.h; path = InAppSettingsKit/Controllers/IASKAppSettingsViewController.h; sourceTree = "<group>"; };
+		1AF165844F0D4BC54B0B0DDCB2F77867 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C8511C62ECF62C5F5AA9DEED972902B /* Pods-FoodHygieneRatingsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodHygieneRatingsTests-umbrella.h"; sourceTree = "<group>"; };
+		1CDECEA1195D785BB1EF5996C7ED10D6 /* Pods_Food_Hygiene_Ratings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Food_Hygiene_Ratings.framework; path = "Pods-Food Hygiene Ratings.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBAD965132CF8ECEFAEE7E1DB6949D4 /* InAppSettingsKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = InAppSettingsKit.xcconfig; sourceTree = "<group>"; };
 		22BC31CDD8651387F07B84D1D32E8304 /* IASKTextViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKTextViewCell.m; path = InAppSettingsKit/Views/IASKTextViewCell.m; sourceTree = "<group>"; };
 		2313CAD89DC7FBBBE0DF8A674BABF336 /* IASKSpecifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSpecifier.m; path = InAppSettingsKit/Models/IASKSpecifier.m; sourceTree = "<group>"; };
 		23A5A4E86D2E39689DD17DC195DE4317 /* InAppSettingsKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InAppSettingsKit-prefix.pch"; sourceTree = "<group>"; };
 		2440E8ED3C217D5C88AFA55ED350D47C /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = InAppSettingsKit/Resources/pt.lproj; sourceTree = "<group>"; };
 		245DB38F25FE818FC8657397917E4C86 /* IASKPSTextFieldSpecifierViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKPSTextFieldSpecifierViewCell.h; path = InAppSettingsKit/Views/IASKPSTextFieldSpecifierViewCell.h; sourceTree = "<group>"; };
-		266AE7A09B952D53C89B8DBC7F599C5A /* Pods-Food Hygiene Ratings.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Food Hygiene Ratings.modulemap"; sourceTree = "<group>"; };
+		267FDDE753161F35466AFB67CB166612 /* Pods-Food Hygiene Ratings.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Food Hygiene Ratings.modulemap"; sourceTree = "<group>"; };
+		2897F1E87959013875F5C19E79B79CA1 /* Pods-Food Hygiene Ratings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Food Hygiene Ratings.release.xcconfig"; sourceTree = "<group>"; };
 		2A8B36D15EBD8E75824454B3B3A677D1 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		2F7F1D65B8E813A7DD53D7DED33DC1F9 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
-		37B0B38EE982E946ADCBCF32F9A3B249 /* Pods_Food_Hygiene_Ratings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Food_Hygiene_Ratings.framework; path = "Pods-Food Hygiene Ratings.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		320408D734EEAC0BAB3306445AC9EE1F /* Pods-FoodHygieneRatingsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodHygieneRatingsTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		376F13A20F4DE0931AAE844E17AE8522 /* Pods-FoodHygieneRatingsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodHygieneRatingsTests-dummy.m"; sourceTree = "<group>"; };
 		3C1C8C7DBB43F0B0B4906216BB0E6286 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
 		3CBAB121059BDA3A6E44D2CCA2B144E7 /* IASKSettingsStoreUserDefaults.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSettingsStoreUserDefaults.m; path = InAppSettingsKit/Models/IASKSettingsStoreUserDefaults.m; sourceTree = "<group>"; };
 		3E392735492CA66D2DCBD9F28D801F8A /* IASKAppSettingsWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKAppSettingsWebViewController.m; path = InAppSettingsKit/Controllers/IASKAppSettingsWebViewController.m; sourceTree = "<group>"; };
@@ -126,34 +134,36 @@
 		4F60EB89C81B554C81A8AE66CEB00DAD /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
 		528F963280C762AB24D9AAD67F4770C3 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		5410071D779CF2DAF39CF44B35F609EF /* IASKAppSettingsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKAppSettingsViewController.m; path = InAppSettingsKit/Controllers/IASKAppSettingsViewController.m; sourceTree = "<group>"; };
+		543DE835286A1C18A315FDF3C12A1CA8 /* Pods-Food Hygiene Ratings-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Food Hygiene Ratings-resources.sh"; sourceTree = "<group>"; };
 		56A56F8E66D74033CE5952E9CB7586F9 /* IASKSettingsReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSettingsReader.h; path = InAppSettingsKit/Models/IASKSettingsReader.h; sourceTree = "<group>"; };
 		576359745F0C7EC1DC1F647D701E6B1A /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		583C4B6EE2E7DE7A2E4F770A0E9CD352 /* IASKMultipleValueSelection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKMultipleValueSelection.m; path = InAppSettingsKit/Controllers/IASKMultipleValueSelection.m; sourceTree = "<group>"; };
 		5981AC94803F4B5018CBD0E3963F0895 /* IASKAppSettingsWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKAppSettingsWebViewController.h; path = InAppSettingsKit/Controllers/IASKAppSettingsWebViewController.h; sourceTree = "<group>"; };
-		5C9BBF79D8EDC43F3092F2450BCE6BA3 /* InAppSettingsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = InAppSettingsKit.framework; path = InAppSettingsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F2DBF2620EA1F7AA99B494BB0D546C0 /* IASKSettingsStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSettingsStore.m; path = InAppSettingsKit/Models/IASKSettingsStore.m; sourceTree = "<group>"; };
 		6145178E8519D3A752AE6C5B96779636 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = InAppSettingsKit/Resources/it.lproj; sourceTree = "<group>"; };
 		61D35EB2B55961035EE955D3BF4D4A8F /* IASKSwitch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSwitch.h; path = InAppSettingsKit/Views/IASKSwitch.h; sourceTree = "<group>"; };
-		6356A77F420BA83D4442099F7D501143 /* Pods-Food Hygiene Ratings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Food Hygiene Ratings.release.xcconfig"; sourceTree = "<group>"; };
+		61FB9885B7359492D57CD51C9FD3A8BD /* InAppSettingsKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InAppSettingsKit.bundle; path = InAppSettingsKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		6458A5CD08D38FCBE3E092903D8B91D9 /* IASKMultipleValueSelection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKMultipleValueSelection.h; path = InAppSettingsKit/Controllers/IASKMultipleValueSelection.h; sourceTree = "<group>"; };
+		67190ACA545274CC97C42897FB26C414 /* Pods-Food Hygiene Ratings-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Food Hygiene Ratings-acknowledgements.plist"; sourceTree = "<group>"; };
 		681C3329E03B46D825A50F3E0CEB7A4F /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = InAppSettingsKit/Resources/sv.lproj; sourceTree = "<group>"; };
 		6D5993747D45107EE9ECF6EE513A3225 /* IASKViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKViewController.h; path = InAppSettingsKit/Controllers/IASKViewController.h; sourceTree = "<group>"; };
 		769B48210018752BB4737D78A5121292 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		783EE2FC0D0AEC08E2601173ED83FA88 /* InAppSettingsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = InAppSettingsKit.framework; path = InAppSettingsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9C87E3AE13950F6D123DD6433E9008 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = InAppSettingsKit/Resources/ru.lproj; sourceTree = "<group>"; };
 		7E2AD50E551F861687DA7F1359ADFE46 /* IASKSettingsStoreFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSettingsStoreFile.h; path = InAppSettingsKit/Models/IASKSettingsStoreFile.h; sourceTree = "<group>"; };
+		80D12BDF16D20F941C21430CF0F5D86A /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AF4DBAA40A1FF517D94F0BE44DE412 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
 		859914B8192133E6B5BD56E4622D2B00 /* IASKSettingsStoreUserDefaults.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSettingsStoreUserDefaults.h; path = InAppSettingsKit/Models/IASKSettingsStoreUserDefaults.h; sourceTree = "<group>"; };
 		85CC5E1646199280661E0767C5F13247 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		861724A38B473C7FFFF95F5C3833CB61 /* Pods-Food Hygiene Ratings-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Food Hygiene Ratings-acknowledgements.plist"; sourceTree = "<group>"; };
 		8E4CB1FFB3FECBDAA6C0A76760C46B99 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = InAppSettingsKit/Resources/ja.lproj; sourceTree = "<group>"; };
 		9058E7FBE3ABC8180960689DCE33D99E /* IASKSettingsStoreFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSettingsStoreFile.m; path = InAppSettingsKit/Models/IASKSettingsStoreFile.m; sourceTree = "<group>"; };
-		9118347BA7A81780E30FD54A1D8C133F /* InAppSettingsKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InAppSettingsKit.bundle; path = InAppSettingsKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		925D610EAFEB45885DBACF6AB806A022 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = th.lproj; path = InAppSettingsKit/Resources/th.lproj; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93C41319A20044835673080DA30443D3 /* Pods-FoodHygieneRatingsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FoodHygieneRatingsTests.modulemap"; sourceTree = "<group>"; };
 		97C70F77E89ED93AFBB6E84034A20EF5 /* IASKTextViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKTextViewCell.h; path = InAppSettingsKit/Views/IASKTextViewCell.h; sourceTree = "<group>"; };
 		9B7BCEC86029E6A9C174CEC2C71CC1E0 /* IASKSpecifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSpecifier.h; path = InAppSettingsKit/Models/IASKSpecifier.h; sourceTree = "<group>"; };
-		9B92F7B8F7179C4F9D271EE3F99420F6 /* Pods-Food Hygiene Ratings-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Food Hygiene Ratings-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9CD36214B58FEA56658215D8A11C35A9 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		9F3745760EE8D834328BCB3059C77C5D /* Pods-FoodHygieneRatingsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodHygieneRatingsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A0CD96CE6D3C138E5D8B368CCE0D8F37 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A42CB92162981E341533F17A15A00359 /* IASKSpecifierValuesViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSpecifierValuesViewController.h; path = InAppSettingsKit/Controllers/IASKSpecifierValuesViewController.h; sourceTree = "<group>"; };
 		A4E0D64A24BCC874E83F09F5BE9487F8 /* ResourceBundle-InAppSettingsKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-InAppSettingsKit-Info.plist"; sourceTree = "<group>"; };
@@ -165,31 +175,43 @@
 		B7780C2942CBC9CBB1C58B2D90D4C1A0 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = InAppSettingsKit/Resources/fr.lproj; sourceTree = "<group>"; };
 		B86175D5CDD78F4DDE8EF30D2BE7B8B9 /* IASKSwitch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSwitch.m; path = InAppSettingsKit/Views/IASKSwitch.m; sourceTree = "<group>"; };
 		B9D092B679F26B1F878C18A52B690CED /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
-		C0A74C6890303EC7A9876E31855C766B /* Pods-Food Hygiene Ratings-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Food Hygiene Ratings-umbrella.h"; sourceTree = "<group>"; };
 		C1DA990BC060952E2E5E6327C0FAE10F /* IASKPSSliderSpecifierViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKPSSliderSpecifierViewCell.h; path = InAppSettingsKit/Views/IASKPSSliderSpecifierViewCell.h; sourceTree = "<group>"; };
 		C23888C30E706632A3F574BEA61B4C25 /* IASKPSSliderSpecifierViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKPSSliderSpecifierViewCell.m; path = InAppSettingsKit/Views/IASKPSSliderSpecifierViewCell.m; sourceTree = "<group>"; };
 		C5E8B62CB9651F2BD8B5003AB273CAC4 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		CC5E80DF8111E92ABEBA3C6F659576E7 /* Pods-FoodHygieneRatingsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodHygieneRatingsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE0CEB82C00FB4F8CF507A0CE9581A18 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = InAppSettingsKit/Resources/Base.lproj; sourceTree = "<group>"; };
 		DACB52EC4635DEE6862195B0BE722468 /* IASKPSTextFieldSpecifierViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKPSTextFieldSpecifierViewCell.m; path = InAppSettingsKit/Views/IASKPSTextFieldSpecifierViewCell.m; sourceTree = "<group>"; };
-		DCDF3AB07A490E6F9D5EC5BB37E6C8FE /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7E1E0895101C303EA9D046CAF04942 /* Pods-Food Hygiene Ratings-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Food Hygiene Ratings-frameworks.sh"; sourceTree = "<group>"; };
+		E037C19E6D93A4ED4A2971B618E827BA /* Pods-FoodHygieneRatingsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodHygieneRatingsTests-frameworks.sh"; sourceTree = "<group>"; };
 		E27920B4E2134C7C8590113C185B9190 /* InAppSettingsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "InAppSettingsKit-dummy.m"; sourceTree = "<group>"; };
 		E58A51B33D8319ABB06D39C08E13169E /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		E689C699429643C0DE92142F6AE0FE98 /* Pods-Food Hygiene Ratings-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Food Hygiene Ratings-umbrella.h"; sourceTree = "<group>"; };
 		EAE56094D3569281B5D175E39C423937 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAEB15DCA119F2982B37AECB2CD8143D /* IASKSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSlider.h; path = InAppSettingsKit/Views/IASKSlider.h; sourceTree = "<group>"; };
 		EC5395DAB5AC6272A4863BA83D564AC6 /* InAppSettingsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = InAppSettingsKit.modulemap; sourceTree = "<group>"; };
+		EE6EA353E2B00D93D58AE6E534949663 /* Pods-FoodHygieneRatingsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodHygieneRatingsTests-resources.sh"; sourceTree = "<group>"; };
+		EEA7084B01CDE403F28B43E82D6ED8A4 /* Pods-FoodHygieneRatingsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodHygieneRatingsTests.release.xcconfig"; sourceTree = "<group>"; };
 		EEAA4D07D61D17544B963537A3E3B843 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = InAppSettingsKit/Resources/tr.lproj; sourceTree = "<group>"; };
 		EF2C31F614E396C963AD05D3B70611B0 /* IASKTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKTextView.h; path = InAppSettingsKit/Views/IASKTextView.h; sourceTree = "<group>"; };
-		EF3194DCA28C827AE85BD66E90A4FEB6 /* Pods-Food Hygiene Ratings-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Food Hygiene Ratings-frameworks.sh"; sourceTree = "<group>"; };
-		EFCBB57ED10801F3001F4EA36BFD7AF4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F05B5BEE88C540AEFC0609B1E24DC9BA /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		F28DE23473F6E62EB358B944D83BDFDA /* Pods-Food Hygiene Ratings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Food Hygiene Ratings.debug.xcconfig"; sourceTree = "<group>"; };
+		F46B34660F985A5EB92A2E2FD48567DB /* Pods-Food Hygiene Ratings-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Food Hygiene Ratings-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F473126F5C53325957286A7E1151775A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F571AA07E48EAF7B7587F49D715255D9 /* Pods-Food Hygiene Ratings-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Food Hygiene Ratings-dummy.m"; sourceTree = "<group>"; };
+		F7257DD26F3D1715273783BBFCEE782C /* Pods_FoodHygieneRatingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodHygieneRatingsTests.framework; path = "Pods-FoodHygieneRatingsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C1F8EDCA0B92992CFD5EA40D96C81E /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = InAppSettingsKit/Resources/en.lproj; sourceTree = "<group>"; };
 		F9C82BE254B8F6004A658034BF8D13E8 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = InAppSettingsKit/Resources/de.lproj; sourceTree = "<group>"; };
 		FA36E161BDEFCCC68E39B33C25266A41 /* IASKSettingsStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSettingsStore.h; path = InAppSettingsKit/Models/IASKSettingsStore.h; sourceTree = "<group>"; };
-		FF7E37AEF3884430860E1C60C8FF07E1 /* Pods-Food Hygiene Ratings-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Food Hygiene Ratings-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		44D51185996688CF432D2F9DD8941157 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DCE8CCA14A46FB8F5A25A77C6713DC1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		472FA95327E80BB1F6F398D616D0283A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,24 +248,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CB4EA6DBCC0033B5D1F52A95783710C /* Pods-Food Hygiene Ratings */ = {
-			isa = PBXGroup;
-			children = (
-				EFCBB57ED10801F3001F4EA36BFD7AF4 /* Info.plist */,
-				266AE7A09B952D53C89B8DBC7F599C5A /* Pods-Food Hygiene Ratings.modulemap */,
-				9B92F7B8F7179C4F9D271EE3F99420F6 /* Pods-Food Hygiene Ratings-acknowledgements.markdown */,
-				861724A38B473C7FFFF95F5C3833CB61 /* Pods-Food Hygiene Ratings-acknowledgements.plist */,
-				FF7E37AEF3884430860E1C60C8FF07E1 /* Pods-Food Hygiene Ratings-dummy.m */,
-				EF3194DCA28C827AE85BD66E90A4FEB6 /* Pods-Food Hygiene Ratings-frameworks.sh */,
-				0CC9F8D04F6E95B15F5FC5C019434F74 /* Pods-Food Hygiene Ratings-resources.sh */,
-				C0A74C6890303EC7A9876E31855C766B /* Pods-Food Hygiene Ratings-umbrella.h */,
-				F28DE23473F6E62EB358B944D83BDFDA /* Pods-Food Hygiene Ratings.debug.xcconfig */,
-				6356A77F420BA83D4442099F7D501143 /* Pods-Food Hygiene Ratings.release.xcconfig */,
-			);
-			name = "Pods-Food Hygiene Ratings";
-			path = "Target Support Files/Pods-Food Hygiene Ratings";
-			sourceTree = "<group>";
-		};
 		11F6F2DA323EF46BF16D496B7E3F992B /* GoogleSymbolUtilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,17 +293,6 @@
 				576359745F0C7EC1DC1F647D701E6B1A /* FirebaseAnalytics.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		36031223BDBF30F6A77D202EF6F8B430 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DCDF3AB07A490E6F9D5EC5BB37E6C8FE /* GoogleToolboxForMac.framework */,
-				9118347BA7A81780E30FD54A1D8C133F /* InAppSettingsKit.bundle */,
-				5C9BBF79D8EDC43F3092F2450BCE6BA3 /* InAppSettingsKit.framework */,
-				37B0B38EE982E946ADCBCF32F9A3B249 /* Pods_Food_Hygiene_Ratings.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		3F6495874C928FB2E818EF812867E05F /* InAppSettingsKit */ = {
@@ -376,8 +369,8 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
 				DE5EBC8F0451FD75DB6715BDB0600B35 /* Pods */,
-				36031223BDBF30F6A77D202EF6F8B430 /* Products */,
-				E6A555CE9220F8934D1B7127DA6FD12D /* Targets Support Files */,
+				8B8D5226D489558A091151835394594E /* Products */,
+				B9BEA02CEF72AD75410FFEC8F3063267 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -398,12 +391,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8B8D5226D489558A091151835394594E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80D12BDF16D20F941C21430CF0F5D86A /* GoogleToolboxForMac.framework */,
+				61FB9885B7359492D57CD51C9FD3A8BD /* InAppSettingsKit.bundle */,
+				783EE2FC0D0AEC08E2601173ED83FA88 /* InAppSettingsKit.framework */,
+				1CDECEA1195D785BB1EF5996C7ED10D6 /* Pods_Food_Hygiene_Ratings.framework */,
+				F7257DD26F3D1715273783BBFCEE782C /* Pods_FoodHygieneRatingsTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A18B4931315229CE1EE9899A67F3B186 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				528F963280C762AB24D9AAD67F4770C3 /* GoogleMobileAds.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACFAB13A9BDFD84BF03CD04810858C72 /* Pods-FoodHygieneRatingsTests */ = {
+			isa = PBXGroup;
+			children = (
+				1AF165844F0D4BC54B0B0DDCB2F77867 /* Info.plist */,
+				93C41319A20044835673080DA30443D3 /* Pods-FoodHygieneRatingsTests.modulemap */,
+				9F3745760EE8D834328BCB3059C77C5D /* Pods-FoodHygieneRatingsTests-acknowledgements.markdown */,
+				320408D734EEAC0BAB3306445AC9EE1F /* Pods-FoodHygieneRatingsTests-acknowledgements.plist */,
+				376F13A20F4DE0931AAE844E17AE8522 /* Pods-FoodHygieneRatingsTests-dummy.m */,
+				E037C19E6D93A4ED4A2971B618E827BA /* Pods-FoodHygieneRatingsTests-frameworks.sh */,
+				EE6EA353E2B00D93D58AE6E534949663 /* Pods-FoodHygieneRatingsTests-resources.sh */,
+				1C8511C62ECF62C5F5AA9DEED972902B /* Pods-FoodHygieneRatingsTests-umbrella.h */,
+				CC5E80DF8111E92ABEBA3C6F659576E7 /* Pods-FoodHygieneRatingsTests.debug.xcconfig */,
+				EEA7084B01CDE403F28B43E82D6ED8A4 /* Pods-FoodHygieneRatingsTests.release.xcconfig */,
+			);
+			name = "Pods-FoodHygieneRatingsTests";
+			path = "Target Support Files/Pods-FoodHygieneRatingsTests";
 			sourceTree = "<group>";
 		};
 		B112E57E21F951EB41E5FFD5137D762B /* FirebaseAnalytics */ = {
@@ -425,6 +448,15 @@
 			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
+		B9BEA02CEF72AD75410FFEC8F3063267 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9F9C3B684E96DAD6C2EEBA8EF79D99B /* Pods-Food Hygiene Ratings */,
+				ACFAB13A9BDFD84BF03CD04810858C72 /* Pods-FoodHygieneRatingsTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		C08F3D085AA1D257889792609B5848F5 /* GoogleToolboxForMac */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +466,24 @@
 			);
 			name = GoogleToolboxForMac;
 			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		C9F9C3B684E96DAD6C2EEBA8EF79D99B /* Pods-Food Hygiene Ratings */ = {
+			isa = PBXGroup;
+			children = (
+				F473126F5C53325957286A7E1151775A /* Info.plist */,
+				267FDDE753161F35466AFB67CB166612 /* Pods-Food Hygiene Ratings.modulemap */,
+				F46B34660F985A5EB92A2E2FD48567DB /* Pods-Food Hygiene Ratings-acknowledgements.markdown */,
+				67190ACA545274CC97C42897FB26C414 /* Pods-Food Hygiene Ratings-acknowledgements.plist */,
+				F571AA07E48EAF7B7587F49D715255D9 /* Pods-Food Hygiene Ratings-dummy.m */,
+				DE7E1E0895101C303EA9D046CAF04942 /* Pods-Food Hygiene Ratings-frameworks.sh */,
+				543DE835286A1C18A315FDF3C12A1CA8 /* Pods-Food Hygiene Ratings-resources.sh */,
+				E689C699429643C0DE92142F6AE0FE98 /* Pods-Food Hygiene Ratings-umbrella.h */,
+				072AD3185F1B4B659630CEF6E1501B88 /* Pods-Food Hygiene Ratings.debug.xcconfig */,
+				2897F1E87959013875F5C19E79B79CA1 /* Pods-Food Hygiene Ratings.release.xcconfig */,
+			);
+			name = "Pods-Food Hygiene Ratings";
+			path = "Target Support Files/Pods-Food Hygiene Ratings";
 			sourceTree = "<group>";
 		};
 		D92F98E46AD2517DBCF7AEFD32B91C5B /* Google-Mobile-Ads-SDK */ = {
@@ -476,14 +526,6 @@
 				83AF4DBAA40A1FF517D94F0BE44DE412 /* GTMNSData+zlib.m */,
 			);
 			name = "NSData+zlib";
-			sourceTree = "<group>";
-		};
-		E6A555CE9220F8934D1B7127DA6FD12D /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0CB4EA6DBCC0033B5D1F52A95783710C /* Pods-Food Hygiene Ratings */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		E6B9EEAD2C7919B5309545CF977726BF /* Frameworks */ = {
@@ -561,6 +603,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		198A02A42D4CFC0F3443E8C2FA59B96F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0184954B2CA8570451051A22CD6B113F /* Pods-FoodHygieneRatingsTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9EF2136EDF3C5A6DE23E8ECD1C4B31E7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -613,7 +663,24 @@
 			);
 			name = GoogleToolboxForMac;
 			productName = GoogleToolboxForMac;
-			productReference = DCDF3AB07A490E6F9D5EC5BB37E6C8FE /* GoogleToolboxForMac.framework */;
+			productReference = 80D12BDF16D20F941C21430CF0F5D86A /* GoogleToolboxForMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2F01096F1E4E3E138E52B6A44E0CDDDF /* Pods-FoodHygieneRatingsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7796530170D23DF78ECF859AA18EE62E /* Build configuration list for PBXNativeTarget "Pods-FoodHygieneRatingsTests" */;
+			buildPhases = (
+				18F02321F11464003FA0F19C2C4A3D2B /* Sources */,
+				44D51185996688CF432D2F9DD8941157 /* Frameworks */,
+				198A02A42D4CFC0F3443E8C2FA59B96F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FoodHygieneRatingsTests";
+			productName = "Pods-FoodHygieneRatingsTests";
+			productReference = F7257DD26F3D1715273783BBFCEE782C /* Pods_FoodHygieneRatingsTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8CB67190F0A60F7A033A3E515965C86F /* InAppSettingsKit */ = {
@@ -632,7 +699,7 @@
 			);
 			name = InAppSettingsKit;
 			productName = InAppSettingsKit;
-			productReference = 5C9BBF79D8EDC43F3092F2450BCE6BA3 /* InAppSettingsKit.framework */;
+			productReference = 783EE2FC0D0AEC08E2601173ED83FA88 /* InAppSettingsKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AE0222BA5923E972E85190CDCA2D6C69 /* Pods-Food Hygiene Ratings */ = {
@@ -651,7 +718,7 @@
 			);
 			name = "Pods-Food Hygiene Ratings";
 			productName = "Pods-Food Hygiene Ratings";
-			productReference = 37B0B38EE982E946ADCBCF32F9A3B249 /* Pods_Food_Hygiene_Ratings.framework */;
+			productReference = 1CDECEA1195D785BB1EF5996C7ED10D6 /* Pods_Food_Hygiene_Ratings.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FA416ED70FC7E091F479F65D981FE8FC /* InAppSettingsKit-InAppSettingsKit */ = {
@@ -668,7 +735,7 @@
 			);
 			name = "InAppSettingsKit-InAppSettingsKit";
 			productName = "InAppSettingsKit-InAppSettingsKit";
-			productReference = 9118347BA7A81780E30FD54A1D8C133F /* InAppSettingsKit.bundle */;
+			productReference = 61FB9885B7359492D57CD51C9FD3A8BD /* InAppSettingsKit.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -688,7 +755,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 36031223BDBF30F6A77D202EF6F8B430 /* Products */;
+			productRefGroup = 8B8D5226D489558A091151835394594E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -696,6 +763,7 @@
 				8CB67190F0A60F7A033A3E515965C86F /* InAppSettingsKit */,
 				FA416ED70FC7E091F479F65D981FE8FC /* InAppSettingsKit-InAppSettingsKit */,
 				AE0222BA5923E972E85190CDCA2D6C69 /* Pods-Food Hygiene Ratings */,
+				2F01096F1E4E3E138E52B6A44E0CDDDF /* Pods-FoodHygieneRatingsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -734,6 +802,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		18F02321F11464003FA0F19C2C4A3D2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6AC7ACA477F513A82427DC52BFCFC49 /* Pods-FoodHygieneRatingsTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C87DD49BE80BCE80E4D54AB3FBA2800 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -806,6 +882,41 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		031D37A06FC92D35B03D535AC8E66118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC5E80DF8111E92ABEBA3C6F659576E7 /* Pods-FoodHygieneRatingsTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FoodHygieneRatingsTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FoodHygieneRatingsTests/Pods-FoodHygieneRatingsTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FoodHygieneRatingsTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		095FF281E69FBDF4AD315086D629F116 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FBAD965132CF8ECEFAEE7E1DB6949D4 /* InAppSettingsKit.xcconfig */;
@@ -872,7 +983,7 @@
 		};
 		42BB95814CDCCB1006EB7C8CC27FD212 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F28DE23473F6E62EB358B944D83BDFDA /* Pods-Food Hygiene Ratings.debug.xcconfig */;
+			baseConfigurationReference = 072AD3185F1B4B659630CEF6E1501B88 /* Pods-Food Hygiene Ratings.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -985,7 +1096,7 @@
 		};
 		A8F49DBC92300AD783B677CB1AC3A14F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6356A77F420BA83D4442099F7D501143 /* Pods-Food Hygiene Ratings.release.xcconfig */;
+			baseConfigurationReference = 2897F1E87959013875F5C19E79B79CA1 /* Pods-Food Hygiene Ratings.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1090,6 +1201,41 @@
 			};
 			name = Debug;
 		};
+		D7F6EF707181CAD7D283A9E02419B48E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEA7084B01CDE403F28B43E82D6ED8A4 /* Pods-FoodHygieneRatingsTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FoodHygieneRatingsTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FoodHygieneRatingsTests/Pods-FoodHygieneRatingsTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FoodHygieneRatingsTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F066921CBDBDB5F45795E50FBC5AC972 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0E4239EB73B1088A386908BFD4D286C3 /* GoogleToolboxForMac.xcconfig */;
@@ -1130,6 +1276,15 @@
 			buildConfigurations = (
 				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
 				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7796530170D23DF78ECF859AA18EE62E /* Build configuration list for PBXNativeTarget "Pods-FoodHygieneRatingsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031D37A06FC92D35B03D535AC8E66118 /* Debug */,
+				D7F6EF707181CAD7D283A9E02419B48E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

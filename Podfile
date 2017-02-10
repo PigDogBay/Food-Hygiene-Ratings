@@ -10,4 +10,8 @@ target 'Food Hygiene Ratings' do
   pod 'Firebase/AdMob'
   pod 'InAppSettingsKit'
 
+  target 'FoodHygieneRatingsTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
 end
