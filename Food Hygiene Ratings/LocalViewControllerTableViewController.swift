@@ -8,7 +8,8 @@
 
 import UIKit
 
-class LocalViewControllerTableViewController: UITableViewController {
+class LocalViewControllerTableViewController: UITableViewController, AppStateChangeObserver {
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,12 @@ class LocalViewControllerTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let model = MainModel.sharedInstance
+        model.addObserver("localView", observer: self)
+        model.findLocalEstablishments()
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -92,4 +98,34 @@ class LocalViewControllerTableViewController: UITableViewController {
     }
     */
 
+    // MARK: - AppStateChangeObserver
+
+    internal func stateChanged(_ newState: AppState) {
+        let model = MainModel.sharedInstance
+        switch newState {
+        case .ready:
+            print("state: Ready")
+        case .requestingLocationAuthorization:
+            print("state: requesting location authorization")
+        case .locating:
+            print("state: locating")
+        case .foundLocation:
+            print("state: found location \(model.location.latitude) \(model.location.longitude)")
+        case .notAuthorizedForLocating:
+            print("state: not authorized for locating")
+        case .errorLocating:
+            print("state: error locating")
+        case .loading:
+            print("state: loading")
+        case .loaded:
+            print("state: loaded")
+            for est in model.localEstablishments{
+                print("\(est.rating.ratingString) \(est.business.name)")
+            }
+        case .error:
+            print("state: error")
+        }
+    }
+    
+    
 }

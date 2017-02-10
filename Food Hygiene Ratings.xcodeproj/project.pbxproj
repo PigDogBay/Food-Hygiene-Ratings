@@ -24,6 +24,9 @@
 		4D3717DA1E4DC23B00644A0C /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717D91E4DC23B00644A0C /* MapMarker.swift */; };
 		4D3717EA1E4DC41300644A0C /* FoodHygieneAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717E91E4DC41300644A0C /* FoodHygieneAPITest.swift */; };
 		4D3717EC1E4DC6D000644A0C /* establishments.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717EB1E4DC6D000644A0C /* establishments.json */; };
+		4D3717F31E4DF0BB00644A0C /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717F21E4DF0BB00644A0C /* MainModel.swift */; };
+		4D5C39051E4E1D0A00707D14 /* IDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C39041E4E1D0A00707D14 /* IDataProvider.swift */; };
+		4D5C39071E4E1D5500707D14 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C39061E4E1D5500707D14 /* DataProvider.swift */; };
 		7BABF4157F21F7A5DBC91DAD /* Pods_FoodHygieneRatingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD130043F8E7BD7EF0121BA /* Pods_FoodHygieneRatingsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +64,9 @@
 		4D3717E31E4DC33000644A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D3717E91E4DC41300644A0C /* FoodHygieneAPITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodHygieneAPITest.swift; sourceTree = "<group>"; };
 		4D3717EB1E4DC6D000644A0C /* establishments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = establishments.json; sourceTree = "<group>"; };
+		4D3717F21E4DF0BB00644A0C /* MainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		4D5C39041E4E1D0A00707D14 /* IDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDataProvider.swift; sourceTree = "<group>"; };
+		4D5C39061E4E1D5500707D14 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		CC5B583BA5627A3C28384D29 /* Pods-Food Hygiene Ratings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Hygiene Ratings.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food Hygiene Ratings/Pods-Food Hygiene Ratings.release.xcconfig"; sourceTree = "<group>"; };
 		CF1B74EDF2A19DE8CCEF55EA /* Pods-Food Hygiene Ratings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Hygiene Ratings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food Hygiene Ratings/Pods-Food Hygiene Ratings.debug.xcconfig"; sourceTree = "<group>"; };
 		EDD130043F8E7BD7EF0121BA /* Pods_FoodHygieneRatingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodHygieneRatingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +146,9 @@
 				4D3717D71E4DC22000644A0C /* WebServiceClient.swift */,
 				4D3717D51E4DC21100644A0C /* FoodHygieneAPI.swift */,
 				4D3717D31E4DC1FC00644A0C /* Establishment.swift */,
+				4D3717F21E4DF0BB00644A0C /* MainModel.swift */,
+				4D5C39041E4E1D0A00707D14 /* IDataProvider.swift */,
+				4D5C39061E4E1D5500707D14 /* DataProvider.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -383,11 +392,14 @@
 				4D3717DA1E4DC23B00644A0C /* MapMarker.swift in Sources */,
 				4D3717D81E4DC22000644A0C /* WebServiceClient.swift in Sources */,
 				4D3717CF1E4CCF4700644A0C /* SearchViewController.swift in Sources */,
+				4D5C39051E4E1D0A00707D14 /* IDataProvider.swift in Sources */,
 				4D3717C51E4CC9E200644A0C /* LocalViewControllerTableViewController.swift in Sources */,
 				4D3717D61E4DC21100644A0C /* FoodHygieneAPI.swift in Sources */,
 				4D3717C71E4CCCE900644A0C /* RootViewController.swift in Sources */,
 				4D3717CA1E4CCDA000644A0C /* SettingsViewController.swift in Sources */,
 				4D3717CD1E4CCF0400644A0C /* MapViewController.swift in Sources */,
+				4D3717F31E4DF0BB00644A0C /* MainModel.swift in Sources */,
+				4D5C39071E4E1D5500707D14 /* DataProvider.swift in Sources */,
 				4D3717B31E4C7ED100644A0C /* AppDelegate.swift in Sources */,
 				4D3717D41E4DC1FC00644A0C /* Establishment.swift in Sources */,
 			);

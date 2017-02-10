@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct Coordinate {
+    let longitude : Double
+    let latitude : Double
+}
+
 enum RatingValue {
     case rating(Int)
     case exempt
@@ -53,18 +58,15 @@ struct Address {
     let line3 : String
     let line4 : String
     let postcode : String
+    let coordinate : Coordinate
     
-    let longitude : Double
-    let latitude : Double
-    
-    init(line1 : String, line2 : String,line3 : String, line4 : String,postcode: String, longitude : Double, latitude : Double){
+    init(line1 : String, line2 : String,line3 : String, line4 : String,postcode: String, coordinate : Coordinate){
         self.line1 = line1
         self.line2 = line2
         self.line3 = line3
         self.line4 = line4
         self.postcode = postcode
-        self.longitude = longitude
-        self.latitude = latitude
+        self.coordinate = coordinate
     }
 }
 

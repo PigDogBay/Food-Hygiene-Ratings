@@ -100,7 +100,8 @@ struct FoodHygieneAPI {
                 return nil
             }
 
-        let address = Address(line1: addressLine1, line2: addressLine2, line3: addressLine3, line4: addressLine4, postcode: postcode, longitude: longitude, latitude: latitude)
+        let coordinate = Coordinate(longitude: longitude, latitude: latitude)
+        let address = Address(line1: addressLine1, line2: addressLine2, line3: addressLine3, line4: addressLine4, postcode: postcode, coordinate: coordinate)
         let ratingValue = parseRating(fromString: ratingString)
         let hygieneScore = scoresJson["Hygiene"] as? Int ?? 0
         let structuralScore = scoresJson["Structural"] as? Int ?? 0
