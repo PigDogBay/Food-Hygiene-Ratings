@@ -10,6 +10,10 @@ import UIKit
 
 class LocalViewControllerTableViewController: UITableViewController, AppStateChangeObserver {
 
+    private let cellId = "establishmentCell"
+    private var model : MainModel {
+        get { return MainModel.sharedInstance}
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,24 +38,25 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        if (model.state == .loaded){
+            return model.localEstablishments.count
+        }
         return 0
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        
+        let est = model.localEstablishments[indexPath.row]
+        cell.textLabel?.text = est.business.name
+        cell.detailTextLabel?.text = est.business.type
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -119,8 +124,8 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
             print("state: loading")
         case .loaded:
             print("state: loaded")
-            for est in model.localEstablishments{
-                print("\(est.rating.ratingString) \(est.business.name)")
+            OperationQueue.main.addOperation {
+                self.tableView.reloadData()
             }
         case .error:
             print("state: error")
