@@ -7,13 +7,31 @@
 //
 
 import UIKit
+import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObserver {
+
+    @IBOutlet weak var mapView: MKMapView!
+
+    //Just over a mile radius
+    let mapRadius : CLLocationDistance = 1000
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        mapView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let model = MainModel.sharedInstance
+        modelToView(state: model.state)
+        model.addObserver("mapView", observer: self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        let model = MainModel.sharedInstance
+        model.removeObserver("mapView")
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +49,71 @@ class MapViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? MapMarker {
+            let identifier = "pin"
+            var view: MKPinAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+                as? MKPinAnnotationView { // 2
+                dequeuedView.annotation = annotation
+                view = dequeuedView
+            } else {
+                // 3
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.canShowCallout = true
+                view.calloutOffset = CGPoint(x: -5, y: 5)
+                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            }
+            view.pinTintColor = annotation.color
+            return view
+        }
+        return nil
+    }
+    
+    internal func stateChanged(_ newState: AppState) {
+        OperationQueue.main.addOperation {
+            self.modelToView(state: newState)
+        }
+    }
+    
+    func modelToView(state : AppState){
+        switch state {
+        case .ready:
+            break
+        case .requestingLocationAuthorization:
+            break
+        case .locating:
+            break
+        case .foundLocation:
+            centreMap()
+        case .notAuthorizedForLocating:
+            break
+        case .errorLocating:
+            break
+        case .loading:
+            break
+        case .loaded:
+            self.loadedState()
+        case .error:
+            break
+        }
+        
+    }
+    
+    func centreMap(){
+        let model = MainModel.sharedInstance
+        let coordinates = CLLocationCoordinate2D(latitude: model.location.latitude, longitude: model.location.longitude)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinates,mapRadius * 2.0, mapRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func loadedState(){
+        centreMap()
+        let markers = MainModel.sharedInstance.localEstablishments.map(){
+            return MapMarker(establishment: $0)
+        }
+        self.mapView.addAnnotations(markers)
+        
+    }
+    
 }
