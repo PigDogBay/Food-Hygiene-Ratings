@@ -50,6 +50,36 @@ struct Rating {
         self.newRatingPending = newRatingPending
         self.scores = scores
     }
+    
+    func getIconName() -> String {
+        
+        switch self.value {
+        case let .rating(value):
+            switch value {
+            case 5:
+                return "icon5Filled"
+            case 4:
+                return "icon4Filled"
+            case 3:
+                return "icon3Filled"
+            case 2:
+                return "icon2Filled"
+            case 1:
+                return "icon1Filled"
+            case 0:
+                return "icon0Filled"
+            default:
+                return "iconUnknown"
+            }
+        case .exempt:
+            return "iconExempt"
+        case .awaitingInspection:
+            return "iconPending"
+        default:
+            return "iconUnknown"
+        }
+    }
+    
 }
 struct Address {
     

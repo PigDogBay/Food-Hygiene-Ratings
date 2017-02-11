@@ -54,6 +54,7 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
         let est = model.localEstablishments[indexPath.row]
         cell.textLabel?.text = est.business.name
         cell.detailTextLabel?.text = est.business.type
+        cell.imageView?.image = UIImage(named: est.rating.getIconName())
 
         return cell
     }
