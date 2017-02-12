@@ -23,11 +23,14 @@ class MapMarker : NSObject, MKAnnotation {
     let title : String?
     let subtitle: String?
     let color : UIColor
+    let fhrsId : Int?
     
     init(establishment : Establishment){
         self.coordinate = CLLocationCoordinate2DMake(establishment.address.coordinate.latitude, establishment.address.coordinate.longitude)
         self.title = establishment.business.name
         self.subtitle = "\(establishment.rating.ratingString): \(establishment.business.type)"
+        
+        self.fhrsId = establishment.business.fhrsId
         
         switch establishment.rating.value {
         case let .rating(stars):
@@ -50,12 +53,4 @@ class MapMarker : NSObject, MKAnnotation {
             color = UIColor.blue
         }
     }
-    
-    init(title: String, subtitle: String, longitude: Double, latitude: Double){
-        self.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
-        self.title = title
-        self.subtitle = subtitle
-        color = UIColor.blue
-    }
-    
 }

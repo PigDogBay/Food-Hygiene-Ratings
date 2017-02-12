@@ -78,6 +78,24 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
         return nil
     }
     
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if let annotation = view.annotation as? MapMarker {
+            showDetails(fhrsId: annotation.fhrsId!)
+        }
+    }
+    func showDetails(fhrsId : Int) {
+        if let navCtrl = self.navigationController
+        {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let webVC = storyboard.instantiateViewController(withIdentifier: "webScene") as? WebViewController {
+                webVC.navTitle = "Web"
+                webVC.url = FoodHygieneAPI.createBusinessUrl(fhrsId: fhrsId)
+                navCtrl.pushViewController(webVC, animated: true)
+            }
+        }
+    }
+    
+    
     internal func stateChanged(_ newState: AppState) {
         OperationQueue.main.addOperation {
             self.modelToView(state: newState)

@@ -30,6 +30,11 @@ struct FoodHygieneAPI {
         return formatter
     }()
     
+    static func createBusinessUrl(fhrsId : Int) -> URL{
+        let urlString = "http://ratings.food.gov.uk/business/en-GB/\(fhrsId)"
+        return URL(string: urlString)!
+    }
+    
     private static func createUrl(category : FoodHygieneCategory, parameters: [String:String]? ) -> URL {
         var components = URLComponents(string: baseUrlString+category.rawValue)!
         var queryItems = [URLQueryItem]()
@@ -79,6 +84,7 @@ struct FoodHygieneAPI {
         guard
             let name = json["BusinessName"] as? String,
             let businessType = json["BusinessType"] as? String,
+            let fhrsId = json["FHRSID"] as? Int,
             let businessTypeId = json["BusinessTypeID"] as? Int,
             let ratingString = json["RatingValue"] as? String,
             let ratingDateString = json["RatingDate"] as? String,
@@ -109,7 +115,7 @@ struct FoodHygieneAPI {
         let scores = Scores(hygiene: hygieneScore, structural: structuralScore, confidenceInManagement: confidenceScore)
         let rating = Rating(value: ratingValue, ratingString: ratingString, date: ratingDate, scores: scores, newRatingPending: newRatingPending)
         
-        let business = Business(name: name, type: businessType, typeId: businessTypeId)
+        let business = Business(name: name, type: businessType, typeId: businessTypeId, fhrsId: fhrsId)
         
         return Establishment(business: business, rating: rating, distance: distance, address: address)
     }

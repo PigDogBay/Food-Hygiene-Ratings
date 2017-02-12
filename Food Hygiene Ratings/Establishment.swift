@@ -121,11 +121,13 @@ struct Business {
     let name : String
     let type : String
     let typeId : Int
+    let fhrsId : Int
     
-    init(name : String, type : String, typeId : Int){
+    init(name : String, type : String, typeId : Int, fhrsId : Int){
         self.name = name
         self.type = type
         self.typeId = typeId
+        self.fhrsId = fhrsId
     }
     
     func isEatingPlace()->Bool {
