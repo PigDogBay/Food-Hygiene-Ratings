@@ -21,6 +21,7 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
     
     override func viewWillAppear(_ animated: Bool) {
         let model = MainModel.sharedInstance
+        stateChanged(model.state)
         model.addObserver("localView", observer: self)
     }
     
@@ -131,6 +132,5 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
             print("state: error")
         }
     }
-    
     
 }

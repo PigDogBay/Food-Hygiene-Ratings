@@ -77,6 +77,28 @@ class MainModel {
             return true
         }
     }
+    func canFindEstablishments() -> Bool {
+        switch self.state {
+        case .ready:
+            return true
+        case .requestingLocationAuthorization:
+            return false
+        case .locating:
+            return false
+        case .foundLocation:
+            return false
+        case .notAuthorizedForLocating:
+            return true
+        case .errorLocating:
+            return true
+        case .loading:
+            return false
+        case .loaded:
+            return true
+        case .error:
+            return true
+        }
+    }
     
     func setLocalEstablishments(establishments : [Establishment]) {
         let foodEst = establishments.filter({$0.business.isEatingPlace()})
@@ -90,4 +112,11 @@ class MainModel {
             dataProvider.findLocalEstablishments()
         }
     }
+    
+    func findEstablishments(){
+        if canFindEstablishments(){
+            dataProvider.fetchEstablishments()
+        }
+    }
+    
 }

@@ -12,6 +12,14 @@ import MapKit
 class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObserver {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBAction func refreshClicked(_ sender: UIBarButtonItem) {
+        let model = MainModel.sharedInstance
+        if model.canFindEstablishments(){
+            let mapCentre = mapView.region.center
+            model.location = Coordinate(longitude: mapCentre.longitude, latitude: mapCentre.latitude)
+            model.findEstablishments()
+        }
+    }
 
     //Just over a mile radius
     let mapRadius : CLLocationDistance = 1000
