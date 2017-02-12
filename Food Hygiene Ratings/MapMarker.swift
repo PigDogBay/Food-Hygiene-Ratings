@@ -51,5 +51,11 @@ class MapMarker : NSObject, MKAnnotation {
         }
     }
     
+    init(title: String, subtitle: String, longitude: Double, latitude: Double){
+        self.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+        self.title = title
+        self.subtitle = subtitle
+        color = UIColor.blue
+    }
     
 }
