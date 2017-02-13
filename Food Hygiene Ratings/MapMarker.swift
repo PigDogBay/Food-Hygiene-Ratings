@@ -25,8 +25,12 @@ class MapMarker : NSObject, MKAnnotation {
     let color : UIColor
     let fhrsId : Int?
     
-    init(establishment : Establishment){
-        self.coordinate = CLLocationCoordinate2DMake(establishment.address.coordinate.latitude, establishment.address.coordinate.longitude)
+    convenience init(establishment : Establishment){
+        let coordinates = CLLocationCoordinate2DMake(establishment.address.coordinate.latitude, establishment.address.coordinate.longitude)
+        self.init(establishment: establishment, coordinates : coordinates)
+    }
+    init(establishment : Establishment, coordinates : CLLocationCoordinate2D){
+        self.coordinate = coordinates
         self.title = establishment.business.name
         self.subtitle = "\(establishment.rating.ratingString): \(establishment.business.type)"
         

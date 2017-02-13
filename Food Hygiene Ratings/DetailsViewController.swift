@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import GoogleMobileAds
+import CoreLocation
 
 class DetailsViewController: UIViewController,MKMapViewDelegate {
 
@@ -39,14 +40,32 @@ class DetailsViewController: UIViewController,MKMapViewDelegate {
     }
     
     func setUpMap(){
-        let coordinates = CLLocationCoordinate2D(latitude: establishment.address.coordinate.latitude, longitude: establishment.address.coordinate.longitude)
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinates,mapRadius * 2.0, mapRadius * 2.0)
-        mapView.setRegion(coordinateRegion, animated: true)
-        let mapMarker = MapMarker(establishment: establishment)
-        mapView.addAnnotation(mapMarker)
         mapView.delegate = self
         
+        //Find more accurate co-ordinates for the business
+        let address = "\(establishment.address.line1),\(establishment.address.line2),\(establishment.address.line3),\(establishment.address.line4),\(establishment.address.postcode)"
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address) {
+            (placemarks, error) -> Void in
+            if error != nil {
+                //use FSA co-ordinates
+                let coords = self.establishment.address.coordinate
+                let coordinates = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
+                self.setMapCoordinates(coordinates: coordinates)
+            } else if let placemark = placemarks?.first {
+                self.setMapCoordinates(coordinates: (placemark.location?.coordinate)!)
+            }
+        }
     }
+    
+    func setMapCoordinates(coordinates : CLLocationCoordinate2D){
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinates ,mapRadius * 2.0, mapRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+        let mapMarker = MapMarker(establishment: establishment, coordinates : coordinates)
+        mapView.addAnnotation(mapMarker)
+    }
+    
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? MapMarker {
             let identifier = "pin"
