@@ -64,7 +64,14 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "segueWeb" {
+        if segue.identifier == "segueDetails" {
+            if let detailsVC = segue.destination as? DetailsViewController {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let est = model.localEstablishments[indexPath.row]
+                    detailsVC.establishment = est
+                }
+            }
+        } else if segue.identifier == "segueWeb" {
             if let webVC = segue.destination as? WebViewController {
                 if let indexPath = tableView.indexPathForSelectedRow {
                     let est = model.localEstablishments[indexPath.row]
@@ -73,6 +80,7 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
                 }
             }
         }
+
         
     }
 

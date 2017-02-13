@@ -136,7 +136,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="CfX-Oz-hDD" kind="show" identifier="segueWeb" id="rKD-vF-MFl"/>
+                                    <segue destination="1fi-WT-Nub" kind="show" identifier="segueDetails" id="6qX-vS-3HI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -211,7 +211,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ngr-fC-sMG" id="YA6-lR-CCU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -226,6 +226,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="211-zU-xWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2782" y="167"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="mXD-Eb-vnJ">
+            <objects>
+                <viewController id="1fi-WT-Nub" customClass="DetailsViewController" customModule="Food_Hygiene_Ratings" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ni4-Xu-oPa"/>
+                        <viewControllerLayoutGuide type="bottom" id="CcS-SK-mtq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pXZ-LW-yaX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HD0-lN-Ezu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="M6y-3f-eF1"/>
+                                </constraints>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-vi-miM" customClass="GADBannerView">
+                                <rect key="frame" x="27" y="617" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="3ZF-IS-Xn7"/>
+                                    <constraint firstAttribute="height" constant="50" id="BgJ-mc-st9"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="e5T-Zk-f4j">
+                                <rect key="frame" x="0.0" y="230" width="375" height="387"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HD0-lN-Ezu" firstAttribute="top" secondItem="Ni4-Xu-oPa" secondAttribute="bottom" id="Ivj-j3-pif"/>
+                            <constraint firstItem="e5T-Zk-f4j" firstAttribute="top" secondItem="HD0-lN-Ezu" secondAttribute="bottom" id="UgL-Wm-SDa"/>
+                            <constraint firstAttribute="trailing" secondItem="e5T-Zk-f4j" secondAttribute="trailing" id="d2V-wC-kXr"/>
+                            <constraint firstItem="HD0-lN-Ezu" firstAttribute="leading" secondItem="pXZ-LW-yaX" secondAttribute="leading" id="erz-np-uDO"/>
+                            <constraint firstItem="FTu-vi-miM" firstAttribute="centerX" secondItem="pXZ-LW-yaX" secondAttribute="centerX" id="nK1-5K-ozI"/>
+                            <constraint firstItem="FTu-vi-miM" firstAttribute="top" secondItem="e5T-Zk-f4j" secondAttribute="bottom" id="oXn-nG-8ir"/>
+                            <constraint firstAttribute="trailing" secondItem="HD0-lN-Ezu" secondAttribute="trailing" id="r70-gj-4qh"/>
+                            <constraint firstItem="CcS-SK-mtq" firstAttribute="top" secondItem="FTu-vi-miM" secondAttribute="bottom" id="rR3-te-hR8"/>
+                            <constraint firstItem="e5T-Zk-f4j" firstAttribute="leading" secondItem="pXZ-LW-yaX" secondAttribute="leading" id="vBw-7V-9m7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="tuB-ka-U47">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="dNA-72-8iJ">
+                            <connections>
+                                <action selector="shareActionClicked:" destination="1fi-WT-Nub" id="fZ2-MQ-RRl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="adBanner" destination="FTu-vi-miM" id="bFI-6I-U1I"/>
+                        <outlet property="mapView" destination="HD0-lN-Ezu" id="aS9-F6-R1v"/>
+                        <outlet property="navBar" destination="tuB-ka-U47" id="66T-WA-BeI"/>
+                        <outlet property="tableView" destination="e5T-Zk-f4j" id="Vhu-88-ek2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RRt-2i-Hrz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3556" y="-431.33433283358323"/>
         </scene>
         <!--Web-->
         <scene sceneID="rXs-wz-YyR">
@@ -273,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUu-PF-GgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3553" y="-419"/>
+            <point key="canvasLocation" x="4353" y="-431"/>
         </scene>
     </scenes>
     <resources>
