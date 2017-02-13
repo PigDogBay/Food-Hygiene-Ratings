@@ -35,7 +35,7 @@ class MainModel {
     var searchRadius : Int = 1
     var observersDictionary : [String : AppStateChangeObserver] = [:]
     
-    var dataProvider : DataProvider!
+    var dataProvider : IDataProvider!
 
     func addObserver(_ name: String, observer : AppStateChangeObserver)
     {
