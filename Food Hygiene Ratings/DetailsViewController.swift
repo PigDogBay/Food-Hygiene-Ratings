@@ -32,6 +32,9 @@ class DetailsViewController: UIViewController,MKMapViewDelegate {
         // Do any additional setup after loading the view.
         
         navBar.title = establishment.business.name
+        adBanner.adUnitID = Ads.bannerAdId
+        adBanner.rootViewController = self
+        adBanner.load(Ads.createRequest())
         setUpMap()
     }
     
