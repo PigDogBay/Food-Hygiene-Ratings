@@ -100,6 +100,13 @@ struct Address {
     }
 }
 
+struct LocalAuthority {
+    let email : String
+    let web : String
+    let name : String
+    let code : String
+}
+
 
 struct Business {
     static let all = -1
@@ -145,12 +152,14 @@ class Establishment {
     let rating : Rating
     let distance : Double
     let address : Address
+    let localAuthority : LocalAuthority
     
-    init(business : Business, rating : Rating, distance : Double, address : Address){
+    init(business : Business, rating : Rating, distance : Double, address : Address, localAuthority : LocalAuthority){
         self.business = business
         self.rating = rating
         self.distance = distance
         self.address = address
+        self.localAuthority = localAuthority
     }
     
 }

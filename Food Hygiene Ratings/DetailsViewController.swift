@@ -145,11 +145,11 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
         case SECTION_LOCAL_AUTHORITY:
             switch indexPath.row{
             case ROW_LA_NAME:
-                cell.textLabel?.text = "moo"
+                cell.textLabel?.text = establishment.localAuthority.name
             case ROW_LA_EMAIL:
-                cell.textLabel?.text = "boo"
+                cell.textLabel?.text = establishment.localAuthority.email
             case ROW_LA_WEBSITE:
-                cell.textLabel?.text = "hoo"
+                cell.textLabel?.text = establishment.localAuthority.web
             default:
                 break
             }

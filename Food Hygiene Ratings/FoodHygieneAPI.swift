@@ -97,6 +97,10 @@ struct FoodHygieneAPI {
             let addressLine3 = json["AddressLine3"] as? String,
             let addressLine4 = json["AddressLine4"] as? String,
             let postcode = json["PostCode"] as? String,
+            let authorityName = json["LocalAuthorityName"] as? String,
+            let authorityEmail = json["LocalAuthorityWebSite"] as? String,
+            let authorityWeb = json["LocalAuthorityEmailAddress"] as? String,
+            let authorityCode = json["LocalAuthorityCode"] as? String,
             let geocode = json["geocode"] as? [String : String],
             let longitudeString = geocode["longitude"],
             let latitudeString = geocode["latitude"],
@@ -117,7 +121,9 @@ struct FoodHygieneAPI {
         
         let business = Business(name: name, type: businessType, typeId: businessTypeId, fhrsId: fhrsId)
         
-        return Establishment(business: business, rating: rating, distance: distance, address: address)
+        let localAuthority = LocalAuthority(email: authorityEmail, web: authorityWeb, name: authorityName, code: authorityCode)
+        
+        return Establishment(business: business, rating: rating, distance: distance, address: address, localAuthority: localAuthority)
     }
     
     private static func parseRating(fromString ratingString: String) -> RatingValue {
