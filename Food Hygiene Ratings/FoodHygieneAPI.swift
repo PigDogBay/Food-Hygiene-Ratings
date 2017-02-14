@@ -90,6 +90,7 @@ struct FoodHygieneAPI {
             let ratingDateString = json["RatingDate"] as? String,
             let ratingDate = dateFormatter.date(from: ratingDateString),
             let newRatingPending = json["NewRatingPending"] as? Bool,
+            let ratingsKey = json["RatingKey"] as? String,
             let scoresJson = json["scores"] as? [String : Any],
             let distance = json["Distance"] as? Double,
             let addressLine1 = json["AddressLine1"] as? String,
@@ -117,7 +118,7 @@ struct FoodHygieneAPI {
         let structuralScore = scoresJson["Structural"] as? Int ?? 0
         let confidenceScore = scoresJson["ConfidenceInManagement"] as? Int ?? 0
         let scores = Scores(hygiene: hygieneScore, structural: structuralScore, confidenceInManagement: confidenceScore)
-        let rating = Rating(value: ratingValue, ratingString: ratingString, date: ratingDate, scores: scores, newRatingPending: newRatingPending)
+        let rating = Rating(value: ratingValue, ratingString: ratingString, awardedDate: ratingDate, newRatingPending: newRatingPending, scores: scores, ratingsKey : ratingsKey)
         
         let business = Business(name: name, type: businessType, typeId: businessTypeId, fhrsId: fhrsId)
         

@@ -42,14 +42,8 @@ struct Rating {
     let awardedDate : Date
     let newRatingPending : Bool
     let scores : Scores
+    let ratingsKey : String
     
-    init(value : RatingValue,ratingString : String, date : Date, scores : Scores, newRatingPending : Bool){
-        self.value = value
-        self.ratingString = ratingString
-        self.awardedDate = date
-        self.newRatingPending = newRatingPending
-        self.scores = scores
-    }
     
     func getIconName() -> String {
         
