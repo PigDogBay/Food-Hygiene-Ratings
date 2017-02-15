@@ -307,13 +307,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XON-fW-e67">
-                                                    <rect key="frame" x="8" y="3" width="100" height="49"/>
+                                                    <rect key="frame" x="16" y="3" width="100" height="49"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="ju2-BA-lVb"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pay-oD-RlW">
-                                                    <rect key="frame" x="113" y="3" width="254" height="21"/>
+                                                    <rect key="frame" x="136" y="10" width="231" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="vIu-EL-SU9"/>
                                                     </constraints>
@@ -322,7 +322,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PP1-Ld-FhP">
-                                                    <rect key="frame" x="113" y="20" width="254" height="21"/>
+                                                    <rect key="frame" x="136" y="26" width="231" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Jp4-XR-gDY"/>
                                                     </constraints>
@@ -332,13 +332,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="PP1-Ld-FhP" firstAttribute="top" secondItem="n3L-iu-TGB" secondAttribute="topMargin" constant="12" id="7lv-dv-jml"/>
+                                                <constraint firstItem="PP1-Ld-FhP" firstAttribute="top" secondItem="n3L-iu-TGB" secondAttribute="topMargin" constant="18" id="7lv-dv-jml"/>
                                                 <constraint firstItem="PP1-Ld-FhP" firstAttribute="trailing" secondItem="n3L-iu-TGB" secondAttribute="trailingMargin" id="DVE-QS-DfU"/>
-                                                <constraint firstItem="Pay-oD-RlW" firstAttribute="top" secondItem="n3L-iu-TGB" secondAttribute="top" constant="3" id="LWP-Dj-fo3"/>
+                                                <constraint firstItem="Pay-oD-RlW" firstAttribute="top" secondItem="n3L-iu-TGB" secondAttribute="top" constant="10" id="LWP-Dj-fo3"/>
                                                 <constraint firstAttribute="bottom" secondItem="XON-fW-e67" secondAttribute="bottom" constant="3" id="XtY-TV-Aeu"/>
-                                                <constraint firstItem="XON-fW-e67" firstAttribute="leading" secondItem="n3L-iu-TGB" secondAttribute="leading" constant="8" id="f9F-IU-UB2"/>
-                                                <constraint firstItem="Pay-oD-RlW" firstAttribute="leading" secondItem="XON-fW-e67" secondAttribute="trailing" constant="5" id="glf-4I-WAc"/>
-                                                <constraint firstItem="PP1-Ld-FhP" firstAttribute="leading" secondItem="XON-fW-e67" secondAttribute="trailing" constant="5" id="lrM-f7-MI5"/>
+                                                <constraint firstItem="XON-fW-e67" firstAttribute="leading" secondItem="n3L-iu-TGB" secondAttribute="leading" constant="16" id="f9F-IU-UB2"/>
+                                                <constraint firstItem="Pay-oD-RlW" firstAttribute="leading" secondItem="XON-fW-e67" secondAttribute="trailing" constant="20" id="glf-4I-WAc"/>
+                                                <constraint firstItem="PP1-Ld-FhP" firstAttribute="leading" secondItem="XON-fW-e67" secondAttribute="trailing" constant="20" id="lrM-f7-MI5"/>
                                                 <constraint firstItem="XON-fW-e67" firstAttribute="top" secondItem="n3L-iu-TGB" secondAttribute="top" constant="3" id="p2V-sH-XFh"/>
                                                 <constraint firstAttribute="trailing" secondItem="Pay-oD-RlW" secondAttribute="trailing" constant="8" id="zJe-DM-4oG"/>
                                             </constraints>

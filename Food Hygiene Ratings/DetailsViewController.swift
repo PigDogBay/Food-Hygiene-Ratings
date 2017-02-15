@@ -42,8 +42,9 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
     fileprivate let SECTION_LOCAL_AUTHORITY = 3
     fileprivate let SECTION_COUNT = 4
     
-    fileprivate let ROW_RATING_LOGO = 0
-    fileprivate let ROW_RATING_COUNT = 1
+    fileprivate let ROW_RATING_TITLE = 0
+    fileprivate let ROW_RATING_LOGO = 1
+    fileprivate let ROW_RATING_COUNT = 2
     
     fileprivate let ROW_SCORES_HYGIENE = 0
     fileprivate let ROW_SCORES_MANAGEMENT = 1
@@ -134,6 +135,9 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
         switch indexPath.section {
         case SECTION_RATING:
             switch indexPath.row {
+            case ROW_RATING_TITLE:
+                cell.textLabel?.text = establishment.business.name
+                cell.detailTextLabel?.text = establishment.business.type
             case ROW_RATING_LOGO:
                 if let ratingsCell = cell as? RatingsLogoCell{
                     let date = DetailsViewController.dateFormatter.string(from: establishment.rating.awardedDate)
@@ -206,6 +210,8 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
         switch indexPath.section {
         case SECTION_RATING:
             switch indexPath.row {
+            case ROW_RATING_TITLE:
+                return "cellSubtitle"
             case ROW_RATING_LOGO:
                 return "cellRatingsLogo"
             default:
