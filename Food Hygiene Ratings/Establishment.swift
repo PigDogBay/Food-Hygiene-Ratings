@@ -44,6 +44,15 @@ struct Scores {
     func getManagementDescription() -> String {
         return getDescription(score: confidenceInManagement)
     }
+    func getHygieneIconName() -> String {
+        return getIconImageName(score: hygiene)
+    }
+    func getStructuralIconName() -> String {
+        return getIconImageName(score: structural)
+    }
+    func getManagementIconName() -> String {
+        return getIconImageName(score: confidenceInManagement)
+    }
     
     //Taken from fhrsguidance.pdf
     fileprivate func getDescription(score : Int) -> String {
@@ -60,9 +69,33 @@ struct Scores {
             return "major improvement necessary"
         case 25:
             return "urgent improvement necessary"
+        case 30:
+            return "urgent improvement necessary"
         default:
             return ""
             
+        }
+    }
+    
+    fileprivate func getIconImageName(score : Int) ->String{
+        switch score
+        {
+        case 0:
+            return "iconScore5"
+        case 5:
+            return "iconScore5"
+        case 10:
+            return "iconScore10"
+        case 15:
+            return "iconScore15"
+        case 20:
+            return "iconScore20"
+        case 25:
+            return "iconScore20"
+        case 30:
+            return "iconScore20"
+        default:
+            return "iconScore10"
         }
     }
 }

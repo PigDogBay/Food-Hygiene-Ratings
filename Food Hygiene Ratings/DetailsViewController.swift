@@ -157,12 +157,15 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
             case ROW_SCORES_HYGIENE:
                 cell.textLabel?.text = "Hygiene: \(establishment.rating.scores.hygiene)"
                 cell.detailTextLabel?.text = establishment.rating.scores.getHygieneDescription()
+                cell.imageView?.image = UIImage(named: establishment.rating.scores.getHygieneIconName())
             case ROW_SCORES_MANAGEMENT:
                 cell.textLabel?.text = "Management: \(establishment.rating.scores.confidenceInManagement)"
                 cell.detailTextLabel?.text = establishment.rating.scores.getManagementDescription()
+                cell.imageView?.image = UIImage(named: establishment.rating.scores.getManagementIconName())
             case ROW_SCORES_STRUCTURAL:
                 cell.textLabel?.text = "Structural: \(establishment.rating.scores.structural)"
                 cell.detailTextLabel?.text = establishment.rating.scores.getStructuralDescription()
+                cell.imageView?.image = UIImage(named: establishment.rating.scores.getStructuralIconName())
             default:
                 break
             }
