@@ -51,13 +51,6 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
     fileprivate let ROW_SCORES_STRUCTURAL = 2
     fileprivate let ROW_SCORES_COUNT = 3
     
-    fileprivate let ROW_ADDRESS_LINE1 = 0
-    fileprivate let ROW_ADDRESS_LINE2 = 1
-    fileprivate let ROW_ADDRESS_LINE3 = 2
-    fileprivate let ROW_ADDRESS_LINE4 = 3
-    fileprivate let ROW_ADDRESS_POSTCODE = 4
-    fileprivate let ROW_ADDRESS_COUNT = 5
-
     fileprivate let ROW_LA_NAME = 0
     fileprivate let ROW_LA_EMAIL = 1
     fileprivate let ROW_LA_WEBSITE = 2
@@ -91,6 +84,8 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
             default:
                 return 44
             }
+        case SECTION_ADDRESS:
+            return 26
         default:
             return 44
         }
@@ -103,7 +98,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
         case SECTION_SCORES:
             return ROW_SCORES_COUNT
         case SECTION_ADDRESS:
-            return ROW_ADDRESS_COUNT
+            return establishment.address.address.count
         case SECTION_LOCAL_AUTHORITY:
             return ROW_LA_COUNT
         default:
@@ -166,35 +161,25 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
                 cell.textLabel?.text = "Management: \(establishment.rating.scores.confidenceInManagement)"
                 cell.detailTextLabel?.text = establishment.rating.scores.getManagementDescription()
             case ROW_SCORES_STRUCTURAL:
-                cell.textLabel?.text = "Structural: \(establishment.rating.scores.hygiene)"
+                cell.textLabel?.text = "Structural: \(establishment.rating.scores.structural)"
                 cell.detailTextLabel?.text = establishment.rating.scores.getStructuralDescription()
             default:
                 break
             }
             break
         case SECTION_ADDRESS:
-            switch indexPath.row {
-            case ROW_ADDRESS_LINE1:
-                cell.textLabel?.text = establishment.address.line1
-            case ROW_ADDRESS_LINE2:
-                cell.textLabel?.text = establishment.address.line2
-            case ROW_ADDRESS_LINE3:
-                cell.textLabel?.text = establishment.address.line3
-            case ROW_ADDRESS_LINE4:
-                cell.textLabel?.text = establishment.address.line4
-            case ROW_ADDRESS_POSTCODE:
-                cell.textLabel?.text = establishment.address.postcode
-            default:
-                break
-            }
+            cell.textLabel?.text = establishment.address.address[indexPath.row]
         case SECTION_LOCAL_AUTHORITY:
             switch indexPath.row{
             case ROW_LA_NAME:
                 cell.textLabel?.text = establishment.localAuthority.name
+                cell.imageView?.image = UIImage(named: "iconAuthority")
             case ROW_LA_EMAIL:
                 cell.textLabel?.text = establishment.localAuthority.email
+                cell.imageView?.image = UIImage(named: "iconEmail")
             case ROW_LA_WEBSITE:
                 cell.textLabel?.text = establishment.localAuthority.web
+                cell.imageView?.image = UIImage(named: "iconWebpage")
             default:
                 break
             }

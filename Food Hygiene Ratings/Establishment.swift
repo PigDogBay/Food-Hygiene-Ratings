@@ -131,6 +131,7 @@ struct Address {
     let line4 : String
     let postcode : String
     let coordinate : Coordinate
+    let address : [String]
     
     init(line1 : String, line2 : String,line3 : String, line4 : String,postcode: String, coordinate : Coordinate){
         self.line1 = line1
@@ -139,7 +140,18 @@ struct Address {
         self.line4 = line4
         self.postcode = postcode
         self.coordinate = coordinate
+        
+        //Address fields may be missing
+        var address = [String]()
+        if line1 != "" { address.append(line1) }
+        if line2 != "" { address.append(line2) }
+        if line3 != "" { address.append(line3) }
+        if line4 != "" { address.append(line4) }
+        if postcode != "" { address.append(postcode) }
+        
+        self.address = address
     }
+    
 }
 
 struct LocalAuthority {
