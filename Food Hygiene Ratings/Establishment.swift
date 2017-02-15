@@ -34,6 +34,37 @@ struct Scores {
         self.structural = structural
         self.confidenceInManagement = confidenceInManagement
     }
+    
+    func getHygieneDescription() -> String {
+        return getDescription(score: hygiene)
+    }
+    func getStructuralDescription() -> String {
+        return getDescription(score: structural)
+    }
+    func getManagementDescription() -> String {
+        return getDescription(score: confidenceInManagement)
+    }
+    
+    //Taken from fhrsguidance.pdf
+    fileprivate func getDescription(score : Int) -> String {
+        switch score {
+        case 0:
+            return "very good"
+        case 5:
+            return "good"
+        case 10:
+            return "generally satisfactory"
+        case 15:
+            return "improvement necessary"
+        case 20:
+            return "major improvement necessary"
+        case 25:
+            return "urgent improvement necessary"
+        default:
+            return ""
+            
+        }
+    }
 }
 
 struct Rating {

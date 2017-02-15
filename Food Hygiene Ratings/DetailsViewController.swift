@@ -43,7 +43,6 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
     fileprivate let SECTION_COUNT = 4
     
     fileprivate let ROW_RATING_LOGO = 0
-    fileprivate let ROW_RATING_DATE = 1
     fileprivate let ROW_RATING_COUNT = 1
     
     fileprivate let ROW_SCORES_HYGIENE = 0
@@ -77,6 +76,8 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        //only show scores if there is a rating (TO DO do scotland have scores?)
+//        return establishment.rating.hasRating() ?  SECTION_COUNT : SECTION_COUNT - 1
         return SECTION_COUNT
     }
     
@@ -156,10 +157,13 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
             switch indexPath.row {
             case ROW_SCORES_HYGIENE:
                 cell.textLabel?.text = "Hygiene: \(establishment.rating.scores.hygiene)"
+                cell.detailTextLabel?.text = establishment.rating.scores.getHygieneDescription()
             case ROW_SCORES_MANAGEMENT:
                 cell.textLabel?.text = "Management: \(establishment.rating.scores.confidenceInManagement)"
+                cell.detailTextLabel?.text = establishment.rating.scores.getManagementDescription()
             case ROW_SCORES_STRUCTURAL:
                 cell.textLabel?.text = "Structural: \(establishment.rating.scores.hygiene)"
+                cell.detailTextLabel?.text = establishment.rating.scores.getStructuralDescription()
             default:
                 break
             }
@@ -204,11 +208,11 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
             switch indexPath.row {
             case ROW_RATING_LOGO:
                 return "cellRatingsLogo"
-            case ROW_RATING_DATE:
-                return "cellSubtitle"
             default:
                 return "cellBasic"
             }
+        case SECTION_SCORES:
+            return "cellScore"
         default:
             return "cellBasic"
         }
