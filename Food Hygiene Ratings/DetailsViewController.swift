@@ -11,7 +11,7 @@ import MapKit
 import GoogleMobileAds
 import CoreLocation
 
-class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDataSource {
+class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate {
 
     
     @IBOutlet weak var navBar: UINavigationItem!
@@ -24,27 +24,32 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
     @IBAction func shareActionClicked(_ sender: UIBarButtonItem) {
     }
     
+    private static let dateFormatter : DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter
+    }()
+    
     let mapRadius : CLLocationDistance = 500
     var establishment : Establishment!
     
     
     //Table structure
-    fileprivate let SECTION_BUSINESS = 0
-    fileprivate let SECTION_RATING = 1
+    fileprivate let SECTION_RATING = 0
+    fileprivate let SECTION_SCORES = 1
     fileprivate let SECTION_ADDRESS = 2
     fileprivate let SECTION_LOCAL_AUTHORITY = 3
     fileprivate let SECTION_COUNT = 4
     
-    fileprivate let ROW_BUSINESS_TITLE = 0
-    fileprivate let ROW_BUSINESS_COUNT = 1
-    
-    fileprivate let ROW_RATING_RATING = 0
+    fileprivate let ROW_RATING_LOGO = 0
     fileprivate let ROW_RATING_DATE = 1
-    fileprivate let ROW_RATING_PENDING = 2
-    fileprivate let ROW_RATING_HYGIENE_SCORE = 3
-    fileprivate let ROW_RATING_MANAGEMENT_SCORE = 4
-    fileprivate let ROW_RATING_STRUCTURAL_SCORE = 5
-    fileprivate let ROW_RATING_COUNT = 6
+    fileprivate let ROW_RATING_COUNT = 1
+    
+    fileprivate let ROW_SCORES_HYGIENE = 0
+    fileprivate let ROW_SCORES_MANAGEMENT = 1
+    fileprivate let ROW_SCORES_STRUCTURAL = 2
+    fileprivate let ROW_SCORES_COUNT = 3
     
     fileprivate let ROW_ADDRESS_LINE1 = 0
     fileprivate let ROW_ADDRESS_LINE2 = 1
@@ -67,6 +72,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
         adBanner.rootViewController = self
         adBanner.load(Ads.createRequest())
         tableView.dataSource = self
+        tableView.delegate = self
         setUpMap()
     }
     
@@ -74,12 +80,26 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
         return SECTION_COUNT
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case SECTION_RATING:
+            switch indexPath.row {
+            case ROW_RATING_LOGO:
+                return 55
+            default:
+                return 44
+            }
+        default:
+            return 44
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case SECTION_BUSINESS:
-            return ROW_BUSINESS_COUNT
         case SECTION_RATING:
             return ROW_RATING_COUNT
+        case SECTION_SCORES:
+            return ROW_SCORES_COUNT
         case SECTION_ADDRESS:
             return ROW_ADDRESS_COUNT
         case SECTION_LOCAL_AUTHORITY:
@@ -90,7 +110,18 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return ""
+        switch section {
+        case SECTION_RATING:
+            return ""
+        case SECTION_SCORES:
+            return "Hazard Points"
+        case SECTION_ADDRESS:
+            return "Business Address"
+        case SECTION_LOCAL_AUTHORITY:
+            return "Local Authority"
+        default:
+            return ""
+        }
     }
     
 
@@ -100,28 +131,34 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as UITableViewCell
         
         switch indexPath.section {
-        case SECTION_BUSINESS:
+        case SECTION_RATING:
             switch indexPath.row {
-            case ROW_BUSINESS_TITLE:
-                cell.textLabel?.text = establishment.business.name
-                cell.detailTextLabel?.text = establishment.business.type
-                cell.imageView?.image = UIImage(named: establishment.rating.getIconName())
+            case ROW_RATING_LOGO:
+                if let ratingsCell = cell as? RatingsLogoCell{
+                    let date = DetailsViewController.dateFormatter.string(from: establishment.rating.awardedDate)
+                    //To do logic for pending/exempt - not applicable
+                    if !establishment.rating.hasRating(){
+                        ratingsCell.subTitle.text = ""
+                        ratingsCell.titleLabel.text = ""
+                    } else if establishment.rating.newRatingPending{
+                        ratingsCell.subTitle.text = "\(date) - new rating pending"
+                        ratingsCell.titleLabel.text = "Date Awarded"
+                    } else {
+                        ratingsCell.subTitle.text = "\(date)"
+                        ratingsCell.titleLabel.text = "Date Awarded"
+                    }
+                    ratingsCell.ratingLogo.image = UIImage(named: establishment.rating.ratingsKey)
+                }
             default:
                 break
             }
-        case SECTION_RATING:
+        case SECTION_SCORES:
             switch indexPath.row {
-            case ROW_RATING_RATING:
-                cell.textLabel?.text = establishment.rating.ratingString
-            case ROW_RATING_DATE:
-                cell.textLabel?.text = "\(establishment.rating.awardedDate)"
-            case ROW_RATING_PENDING:
-                cell.textLabel?.text = "New Rating Pending \(establishment.rating.newRatingPending)"
-            case ROW_RATING_HYGIENE_SCORE:
+            case ROW_SCORES_HYGIENE:
                 cell.textLabel?.text = "Hygiene: \(establishment.rating.scores.hygiene)"
-            case ROW_RATING_MANAGEMENT_SCORE:
+            case ROW_SCORES_MANAGEMENT:
                 cell.textLabel?.text = "Management: \(establishment.rating.scores.confidenceInManagement)"
-            case ROW_RATING_STRUCTURAL_SCORE:
+            case ROW_SCORES_STRUCTURAL:
                 cell.textLabel?.text = "Structural: \(establishment.rating.scores.hygiene)"
             default:
                 break
@@ -163,15 +200,17 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
     }
     fileprivate func getCellId(indexPath : IndexPath) -> String {
         switch indexPath.section {
-        case SECTION_BUSINESS:
+        case SECTION_RATING:
             switch indexPath.row {
-            case ROW_BUSINESS_TITLE:
-                return "cellTitle"
+            case ROW_RATING_LOGO:
+                return "cellRatingsLogo"
+            case ROW_RATING_DATE:
+                return "cellSubtitle"
             default:
-                return "cellDetails"
+                return "cellBasic"
             }
         default:
-            return "cellDetails"
+            return "cellBasic"
         }
     }
     

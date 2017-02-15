@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -257,7 +258,7 @@
                                 <rect key="frame" x="0.0" y="230" width="375" height="387"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellDetails" textLabel="eYM-ES-ojF" style="IBUITableViewCellStyleDefault" id="iH2-kC-SVl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellBasic" textLabel="eYM-ES-ojF" style="IBUITableViewCellStyleDefault" id="iH2-kC-SVl">
                                         <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iH2-kC-SVl" id="CEE-1z-s1J">
@@ -274,7 +275,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellTitle" textLabel="Cd2-rg-XYY" detailTextLabel="SKU-8v-Uaw" style="IBUITableViewCellStyleSubtitle" id="kQB-xQ-kQa">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellSubtitle" textLabel="Cd2-rg-XYY" detailTextLabel="SKU-8v-Uaw" style="IBUITableViewCellStyleSubtitle" id="kQB-xQ-kQa">
                                         <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kQB-xQ-kQa" id="hc8-l2-RHS">
@@ -297,6 +298,56 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellRatingsLogo" rowHeight="55" id="AiP-h6-JVd" customClass="RatingsLogoCell" customModule="Food_Hygiene_Ratings" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="144" width="375" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AiP-h6-JVd" id="n3L-iu-TGB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XON-fW-e67">
+                                                    <rect key="frame" x="8" y="3" width="100" height="49"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="ju2-BA-lVb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pay-oD-RlW">
+                                                    <rect key="frame" x="113" y="3" width="254" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="vIu-EL-SU9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PP1-Ld-FhP">
+                                                    <rect key="frame" x="113" y="20" width="254" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Jp4-XR-gDY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PP1-Ld-FhP" firstAttribute="top" secondItem="n3L-iu-TGB" secondAttribute="topMargin" constant="12" id="7lv-dv-jml"/>
+                                                <constraint firstItem="PP1-Ld-FhP" firstAttribute="trailing" secondItem="n3L-iu-TGB" secondAttribute="trailingMargin" id="DVE-QS-DfU"/>
+                                                <constraint firstItem="Pay-oD-RlW" firstAttribute="top" secondItem="n3L-iu-TGB" secondAttribute="top" constant="3" id="LWP-Dj-fo3"/>
+                                                <constraint firstAttribute="bottom" secondItem="XON-fW-e67" secondAttribute="bottom" constant="3" id="XtY-TV-Aeu"/>
+                                                <constraint firstItem="XON-fW-e67" firstAttribute="leading" secondItem="n3L-iu-TGB" secondAttribute="leading" constant="8" id="f9F-IU-UB2"/>
+                                                <constraint firstItem="Pay-oD-RlW" firstAttribute="leading" secondItem="XON-fW-e67" secondAttribute="trailing" constant="5" id="glf-4I-WAc"/>
+                                                <constraint firstItem="PP1-Ld-FhP" firstAttribute="leading" secondItem="XON-fW-e67" secondAttribute="trailing" constant="5" id="lrM-f7-MI5"/>
+                                                <constraint firstItem="XON-fW-e67" firstAttribute="top" secondItem="n3L-iu-TGB" secondAttribute="top" constant="3" id="p2V-sH-XFh"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pay-oD-RlW" secondAttribute="trailing" constant="8" id="zJe-DM-4oG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ratingLogo" destination="XON-fW-e67" id="UUq-1K-e81"/>
+                                            <outlet property="subTitle" destination="PP1-Ld-FhP" id="bGa-lr-6Zd"/>
+                                            <outlet property="titleLabel" destination="Pay-oD-RlW" id="gj7-Zx-5xj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

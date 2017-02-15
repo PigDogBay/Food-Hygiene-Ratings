@@ -32,6 +32,7 @@
 		4D5C39131E521C5A00707D14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C39121E521C5A00707D14 /* GoogleService-Info.plist */; };
 		4D5C39151E521D9300707D14 /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C39141E521D9300707D14 /* Ads.swift */; };
 		4D5C39171E53B20100707D14 /* RatingsLogos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C39161E53B20100707D14 /* RatingsLogos.xcassets */; };
+		4D5C39191E5462BE00707D14 /* RatingsLogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C39181E5462BE00707D14 /* RatingsLogoCell.swift */; };
 		7BABF4157F21F7A5DBC91DAD /* Pods_FoodHygieneRatingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD130043F8E7BD7EF0121BA /* Pods_FoodHygieneRatingsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		4D5C39121E521C5A00707D14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D5C39141E521D9300707D14 /* Ads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
 		4D5C39161E53B20100707D14 /* RatingsLogos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RatingsLogos.xcassets; sourceTree = "<group>"; };
+		4D5C39181E5462BE00707D14 /* RatingsLogoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingsLogoCell.swift; sourceTree = "<group>"; };
 		CC5B583BA5627A3C28384D29 /* Pods-Food Hygiene Ratings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Hygiene Ratings.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food Hygiene Ratings/Pods-Food Hygiene Ratings.release.xcconfig"; sourceTree = "<group>"; };
 		CF1B74EDF2A19DE8CCEF55EA /* Pods-Food Hygiene Ratings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Hygiene Ratings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food Hygiene Ratings/Pods-Food Hygiene Ratings.debug.xcconfig"; sourceTree = "<group>"; };
 		EDD130043F8E7BD7EF0121BA /* Pods_FoodHygieneRatingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodHygieneRatingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +152,7 @@
 				4D3717CE1E4CCF4700644A0C /* SearchViewController.swift */,
 				4D5C390B1E507E6200707D14 /* WebViewController.swift */,
 				4D5C390D1E51DBBD00707D14 /* DetailsViewController.swift */,
+				4D5C39181E5462BE00707D14 /* RatingsLogoCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				4D3717B31E4C7ED100644A0C /* AppDelegate.swift in Sources */,
 				4D3717D41E4DC1FC00644A0C /* Establishment.swift in Sources */,
 				4D5C390E1E51DBBD00707D14 /* DetailsViewController.swift in Sources */,
+				4D5C39191E5462BE00707D14 /* RatingsLogoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,6 +44,21 @@ struct Rating {
     let scores : Scores
     let ratingsKey : String
     
+    func hasRating() -> Bool {
+        switch self.value {
+        case .rating(_):
+            return true
+        case .pass:
+            return true
+        case .passEatSafe:
+            return true
+        case .improvementRequired:
+            return true
+        default:
+            return false
+        
+        }
+    }
     
     func getIconName() -> String {
         
@@ -68,6 +83,8 @@ struct Rating {
         case .exempt:
             return "iconExempt"
         case .awaitingInspection:
+            return "iconPending"
+        case .awaitingPublication:
             return "iconPending"
         default:
             return "iconUnknown"
