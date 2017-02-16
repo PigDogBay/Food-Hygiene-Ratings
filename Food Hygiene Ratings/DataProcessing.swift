@@ -24,4 +24,9 @@ struct DataProcessing {
         return dictionary as [Int : NSArray] as! [Int : [Establishment]]
     }
     
+    static func createSortedIndex(fromDictionary dictionary : [Int : [Establishment]]) -> [Int] {
+        let sortOrder = Business.sortOrder
+        return dictionary.keys.sorted(by: {sortOrder[$0] ?? 1000 < sortOrder[$1] ?? 1000} )
+    }
+    
 }

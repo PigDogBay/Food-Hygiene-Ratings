@@ -47,7 +47,7 @@ class DataProcessingTest: XCTestCase {
         }
     }()
     
-    func testEstablishments1() {
+    func testCreateDictionary1() {
         
         let dictionary = DataProcessing.createDictionary(fromArray: establishments)
         XCTAssertEqual(dictionary.keys.count, 10)
@@ -55,40 +55,13 @@ class DataProcessingTest: XCTestCase {
         XCTAssertEqual(dictionary[Business.pubsBarsNightclubs]?.count, 13)
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    func testCreateSortedIndex() {
+        let dictionary = DataProcessing.createDictionary(fromArray: establishments)
+        let sortedIndex = DataProcessing.createSortedIndex(fromDictionary: dictionary)
+        XCTAssertEqual(sortedIndex.count, 10)
+        XCTAssertEqual(sortedIndex[0], Business.takeawaySandwichShop)
+        XCTAssertEqual(sortedIndex[1], Business.restaurantsCafeCanteen)
+        
+    }
+
 }

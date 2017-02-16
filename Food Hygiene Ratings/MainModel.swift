@@ -101,8 +101,7 @@ class MainModel {
     }
     
     func setLocalEstablishments(establishments : [Establishment]) {
-        let foodEst = establishments.filter({$0.business.isEatingPlace()})
-        let sorted = foodEst.sorted(by: {$0.distance < $1.distance})
+        let sorted = establishments.sorted(by: {$0.distance < $1.distance})
         self.localEstablishments.removeAll()
         self.localEstablishments.append(contentsOf: sorted)
     }

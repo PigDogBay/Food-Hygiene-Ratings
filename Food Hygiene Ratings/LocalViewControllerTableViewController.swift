@@ -14,7 +14,9 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
     private var model : MainModel {
         get { return MainModel.sharedInstance}
     }
-
+    private var groupedEstablishments : [Int : [Establishment]]!
+    private var sortedBusinessTypes : [Int]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -38,20 +40,34 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
+        if (model.state == .loaded){
+            return groupedEstablishments.keys.count
+        }
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (model.state == .loaded){
-            return model.localEstablishments.count
+            let businessTypeId = sortedBusinessTypes[section]
+            return groupedEstablishments[businessTypeId]!.count
         }
         return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if (model.state == .loaded){
+            let businessTypeId = sortedBusinessTypes[section]
+            let group = groupedEstablishments[businessTypeId]!
+            return group[0].business.type
+        }
+        return ""
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         
-        let est = model.localEstablishments[indexPath.row]
+        let businessTypeId = sortedBusinessTypes[indexPath.section]
+        let est = groupedEstablishments[businessTypeId]![indexPath.row]
         cell.textLabel?.text = est.business.name
         cell.detailTextLabel?.text = est.business.type
         cell.imageView?.image = UIImage(named: est.rating.getIconName())
@@ -67,21 +83,12 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
         if segue.identifier == "segueDetails" {
             if let detailsVC = segue.destination as? DetailsViewController {
                 if let indexPath = tableView.indexPathForSelectedRow {
-                    let est = model.localEstablishments[indexPath.row]
+                    let businessTypeId = sortedBusinessTypes[indexPath.section]
+                    let est = groupedEstablishments[businessTypeId]![indexPath.row]
                     detailsVC.establishment = est
                 }
             }
-        } else if segue.identifier == "segueWeb" {
-            if let webVC = segue.destination as? WebViewController {
-                if let indexPath = tableView.indexPathForSelectedRow {
-                    let est = model.localEstablishments[indexPath.row]
-                    webVC.navTitle = "FSA Web Page"
-                    webVC.url = FoodHygieneAPI.createBusinessUrl(fhrsId: est.business.fhrsId)
-                }
-            }
         }
-
-        
     }
 
     // MARK: - AppStateChangeObserver
@@ -105,6 +112,8 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
             print("state: loading")
         case .loaded:
             print("state: loaded")
+            self.groupedEstablishments = DataProcessing.createDictionary(fromArray: model.localEstablishments)
+            self.sortedBusinessTypes = DataProcessing.createSortedIndex(fromDictionary: self.groupedEstablishments)
             OperationQueue.main.addOperation {
                 self.tableView.reloadData()
             }
