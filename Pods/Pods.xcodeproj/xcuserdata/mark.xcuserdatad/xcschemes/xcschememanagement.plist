@@ -19,12 +19,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Food Hygiene Ratings.xcscheme</key>
+		<key>Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FoodHygieneRatingsTests.xcscheme</key>
+		<key>Pods-Food Hygiene Ratings.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,7 +37,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F01096F1E4E3E138E52B6A44E0CDDDF</key>
+		<key>6E9EBC6FFE0A9897B48BE544406E4C07</key>
 		<dict>
 			<key>primary</key>
 			<true/>

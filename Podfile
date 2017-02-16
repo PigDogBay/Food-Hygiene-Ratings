@@ -11,7 +11,7 @@ target 'Food Hygiene Ratings' do
   pod 'InAppSettingsKit'
 
   target 'FoodHygieneRatingsTests' do
-    inherit! :search_paths
+    inherit! :complete
     # Pods for testing
   end
 end
