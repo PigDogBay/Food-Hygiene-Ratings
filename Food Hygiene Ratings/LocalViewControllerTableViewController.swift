@@ -81,6 +81,14 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
         cell.tag = est.business.fhrsId
         return cell
     }
+    
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        
+        if (model.state == .loaded && sortedBusinessTypes != nil){
+            return (1 ... sortedBusinessTypes.count).map(){"\($0)"}
+        }
+        return nil
+    }
 
     // MARK: - Navigation
 
