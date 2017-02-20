@@ -17,6 +17,13 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
     private var groupedEstablishments : [Int : [Establishment]]!
     private var sortedBusinessTypes : [Int]!
     
+    private static let dateFormatter : DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -69,7 +76,7 @@ class LocalViewControllerTableViewController: UITableViewController, AppStateCha
         let businessTypeId = sortedBusinessTypes[indexPath.section]
         let est = groupedEstablishments[businessTypeId]![indexPath.row]
         cell.textLabel?.text = est.business.name
-        cell.detailTextLabel?.text = est.business.type
+        cell.detailTextLabel?.text = String(format: "%.1f miles", est.distance)
         cell.imageView?.image = UIImage(named: est.rating.getIconName())
         cell.tag = est.business.fhrsId
         return cell
