@@ -9,13 +9,15 @@
 import UIKit
 import GoogleMobileAds
 
-class LocalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AppStateChangeObserver {
+class LocalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, AppStateChangeObserver {
 
     
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loadingLabel: UILabel!
+
+    let searchController = UISearchController(searchResultsController: nil)
     
 
     private let cellId = "establishmentCell"
@@ -24,8 +26,6 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     private var groupedEstablishments : [Int : [Establishment]]!
     private var sortedBusinessTypes : [Int]!
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +35,15 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         bannerView.load(Ads.createRequest())
         tableView.dataSource = self
         tableView.delegate = self
-
+        tableView.keyboardDismissMode = .onDrag
+        
         loadingIndicator.startAnimating()
         loadingLabel.isHidden=false
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
         
     }
 
@@ -51,16 +57,37 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         let model = MainModel.sharedInstance
         model.removeObserver("localView")
     }
+    
+    fileprivate func loadTableData() {
+        if (model.state == .loaded) {
+            if searchController.isActive && searchController.searchBar.text! != "" {
+                let establishments = model.localEstablishments
+                let searchText = searchController.searchBar.text!
+                let filtered = DataProcessing.filter(establishments: establishments, containing: searchText	)
+                self.groupedEstablishments = DataProcessing.createDictionary(fromArray: filtered)
+                self.sortedBusinessTypes = DataProcessing.createSortedIndex(fromDictionary: self.groupedEstablishments)
+                
+            } else {
+                self.groupedEstablishments = DataProcessing.createDictionary(fromArray: model.localEstablishments)
+                self.sortedBusinessTypes = DataProcessing.createSortedIndex(fromDictionary: self.groupedEstablishments)
+            }
+            tableView.reloadData()
+        }
+    }
 
+    func updateSearchResults(for searchController: UISearchController) {
+        loadTableData()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        if (model.state == .loaded){
+        if (model.state == .loaded && groupedEstablishments != nil){
             return groupedEstablishments.keys.count
         }
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (model.state == .loaded){
+        if (model.state == .loaded && sortedBusinessTypes != nil){
             let businessTypeId = sortedBusinessTypes[section]
             return groupedEstablishments[businessTypeId]!.count
         }
@@ -68,7 +95,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if (model.state == .loaded){
+        if (model.state == .loaded && sortedBusinessTypes != nil){
             let businessTypeId = sortedBusinessTypes[section]
             let group = groupedEstablishments[businessTypeId]!
             return group[0].business.type
@@ -90,7 +117,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         
-        if (model.state == .loaded && sortedBusinessTypes != nil){
+        if (model.state == .loaded && sortedBusinessTypes != nil && sortedBusinessTypes.count>0){
             return (1 ... sortedBusinessTypes.count).map(){"\($0)"}
         }
         return nil
@@ -133,12 +160,10 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
             print("state: loading")
         case .loaded:
             print("state: loaded")
-            self.groupedEstablishments = DataProcessing.createDictionary(fromArray: model.localEstablishments)
-            self.sortedBusinessTypes = DataProcessing.createSortedIndex(fromDictionary: self.groupedEstablishments)
             OperationQueue.main.addOperation {
                 self.loadingIndicator.stopAnimating()
                 self.loadingLabel.isHidden=true
-                self.tableView.reloadData()
+                self.loadTableData()
             }
         case .error:
             print("state: error")

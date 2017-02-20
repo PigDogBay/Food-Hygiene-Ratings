@@ -10,6 +10,18 @@ import Foundation
 
 struct DataProcessing {
     
+    static func filter(establishments : [Establishment], containing : String) -> [Establishment] {
+
+        if "" == containing {
+            //nothing to do
+            return establishments
+        }
+        let subString = containing.lowercased()
+        return establishments.filter(){
+            $0.business.name.lowercased().contains(subString)
+        }
+    }
+    
     static func createDictionary(fromArray array : [Establishment]) -> [Int : [Establishment]] {
         var dictionary = [Int : NSMutableArray]()
         
