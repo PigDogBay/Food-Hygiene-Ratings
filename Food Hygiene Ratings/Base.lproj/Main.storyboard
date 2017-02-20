@@ -157,6 +157,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="g0c-4S-4AN">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="deviceRGB"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yQ-UZ-xdM">
+                                <rect key="frame" x="149" y="360" width="77" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="Zww-Jd-Ec2"/>
+                                    <constraint firstAttribute="height" constant="21" id="ovJ-MN-EBS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -166,6 +180,10 @@
                             <constraint firstItem="xxd-WT-rSm" firstAttribute="leading" secondItem="nif-KP-hlJ" secondAttribute="leading" id="Pqk-sq-UCb"/>
                             <constraint firstItem="r3f-Hz-cns" firstAttribute="centerX" secondItem="nif-KP-hlJ" secondAttribute="centerX" id="ShL-eX-S8a"/>
                             <constraint firstAttribute="trailing" secondItem="xxd-WT-rSm" secondAttribute="trailing" id="TDz-IJ-GNt"/>
+                            <constraint firstItem="9yQ-UZ-xdM" firstAttribute="top" secondItem="g0c-4S-4AN" secondAttribute="bottom" constant="8" id="bPP-sf-W7b"/>
+                            <constraint firstItem="9yQ-UZ-xdM" firstAttribute="centerX" secondItem="nif-KP-hlJ" secondAttribute="centerX" id="r6N-Qh-0FE"/>
+                            <constraint firstItem="g0c-4S-4AN" firstAttribute="centerX" secondItem="nif-KP-hlJ" secondAttribute="centerX" id="sMU-cZ-2HG"/>
+                            <constraint firstItem="g0c-4S-4AN" firstAttribute="centerY" secondItem="nif-KP-hlJ" secondAttribute="centerY" id="swX-1W-WYw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Near Me" id="vCV-QU-u9H">
@@ -178,12 +196,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bannerView" destination="r3f-Hz-cns" id="GQd-Zi-NUI"/>
+                        <outlet property="loadingIndicator" destination="g0c-4S-4AN" id="X0I-AR-lx9"/>
+                        <outlet property="loadingLabel" destination="9yQ-UZ-xdM" id="01Y-EN-eeY"/>
                         <outlet property="tableView" destination="xxd-WT-rSm" id="h5k-OF-bc0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bd-Zl-H3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2770" y="-591"/>
+            <point key="canvasLocation" x="2768.8000000000002" y="-591.45427286356824"/>
         </scene>
         <!--Map-->
         <scene sceneID="LiO-Of-Tyc">

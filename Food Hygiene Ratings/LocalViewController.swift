@@ -14,6 +14,8 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loadingLabel: UILabel!
     
 
     private let cellId = "establishmentCell"
@@ -33,6 +35,10 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         bannerView.load(Ads.createRequest())
         tableView.dataSource = self
         tableView.delegate = self
+
+        loadingIndicator.startAnimating()
+        loadingLabel.isHidden=false
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -130,6 +136,8 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.groupedEstablishments = DataProcessing.createDictionary(fromArray: model.localEstablishments)
             self.sortedBusinessTypes = DataProcessing.createSortedIndex(fromDictionary: self.groupedEstablishments)
             OperationQueue.main.addOperation {
+                self.loadingIndicator.stopAnimating()
+                self.loadingLabel.isHidden=true
                 self.tableView.reloadData()
             }
         case .error:
