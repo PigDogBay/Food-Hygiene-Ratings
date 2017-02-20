@@ -41,7 +41,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="2FY-mf-F5I" kind="show" identifier="segueNearMe" id="qKG-68-xRl"/>
+                                            <segue destination="TaL-GM-zMU" kind="show" id="fCe-xu-D47"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -158,6 +158,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjw-Me-hL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2764" y="-591"/>
+        </scene>
+        <!--Near Me-->
+        <scene sceneID="FNP-FP-yYW">
+            <objects>
+                <viewController id="TaL-GM-zMU" customClass="LocalViewController" customModule="Food_Hygiene_Ratings" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BjC-me-YM4"/>
+                        <viewControllerLayoutGuide type="bottom" id="FUf-a0-Fei"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nif-KP-hlJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3f-Hz-cns" customClass="GADBannerView">
+                                <rect key="frame" x="27.5" y="617" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Swa-Rh-7Bu"/>
+                                    <constraint firstAttribute="height" constant="50" id="fEN-Nd-KfU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FUf-a0-Fei" firstAttribute="top" secondItem="r3f-Hz-cns" secondAttribute="bottom" id="5Wp-gg-4zh"/>
+                            <constraint firstItem="r3f-Hz-cns" firstAttribute="centerX" secondItem="nif-KP-hlJ" secondAttribute="centerX" id="ShL-eX-S8a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Near Me" id="vCV-QU-u9H">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="UUx-PV-FZn"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bannerView" destination="r3f-Hz-cns" id="GQd-Zi-NUI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bd-Zl-H3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2761" y="-1252"/>
         </scene>
         <!--Map-->
         <scene sceneID="LiO-Of-Tyc">

@@ -11,6 +11,7 @@ import GoogleMobileAds
 struct Ads
 {
     static let bannerAdId = "ca-app-pub-3582986480189311/1490068786"
+    static let localBannerAdId = "ca-app-pub-3582986480189311/8489481588"
 
     static func createRequest() -> GADRequest
     {
