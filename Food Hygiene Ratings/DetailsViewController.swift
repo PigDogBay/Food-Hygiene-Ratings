@@ -194,6 +194,25 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
         
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case SECTION_SCORES:
+            switch indexPath.row
+            {
+            case ROW_SCORES_HYGIENE:
+                showAlert(title: Scores.hygienicTitle, msg: Scores.hygienicDescription)
+            case ROW_SCORES_STRUCTURAL:
+                showAlert(title: Scores.structuralTitle, msg: Scores.structuralDescription)
+            case ROW_SCORES_MANAGEMENT:
+                showAlert(title: Scores.managementTitle, msg: Scores.managementDescription)
+            default:
+                return
+            }
+        default:
+            return
+        }
+    }
+    
     fileprivate func getCellId(indexPath : IndexPath) -> String {
         switch indexPath.section {
         case SECTION_RATING:
@@ -258,6 +277,12 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
         }
         return nil
     }
-
+    fileprivate func showAlert(title: String, msg : String)
+    {
+        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        let controller = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
+        controller.addAction(action)
+        self.present(controller, animated: true, completion: nil)
+    }
     
 }

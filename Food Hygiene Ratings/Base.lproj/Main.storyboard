@@ -300,11 +300,11 @@
                                     <constraint firstAttribute="height" constant="50" id="BgJ-mc-st9"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="e5T-Zk-f4j">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="e5T-Zk-f4j">
                                 <rect key="frame" x="0.0" y="230" width="375" height="387"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellBasic" textLabel="eYM-ES-ojF" style="IBUITableViewCellStyleDefault" id="iH2-kC-SVl">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellBasic" textLabel="eYM-ES-ojF" style="IBUITableViewCellStyleDefault" id="iH2-kC-SVl">
                                         <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iH2-kC-SVl" id="CEE-1z-s1J">
@@ -321,7 +321,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellSubtitle" textLabel="Cd2-rg-XYY" detailTextLabel="SKU-8v-Uaw" style="IBUITableViewCellStyleSubtitle" id="kQB-xQ-kQa">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellSubtitle" textLabel="Cd2-rg-XYY" detailTextLabel="SKU-8v-Uaw" style="IBUITableViewCellStyleSubtitle" id="kQB-xQ-kQa">
                                         <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kQB-xQ-kQa" id="hc8-l2-RHS">
@@ -345,7 +345,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellRatingsLogo" rowHeight="55" id="AiP-h6-JVd" customClass="RatingsLogoCell" customModule="Food_Hygiene_Ratings" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellRatingsLogo" rowHeight="55" id="AiP-h6-JVd" customClass="RatingsLogoCell" customModule="Food_Hygiene_Ratings" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="144" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AiP-h6-JVd" id="n3L-iu-TGB">
