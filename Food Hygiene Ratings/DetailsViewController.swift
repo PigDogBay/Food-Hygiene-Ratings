@@ -80,7 +80,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, UITableViewDat
         case SECTION_RATING:
             switch indexPath.row {
             case ROW_RATING_LOGO:
-                return 55
+                return 92
             default:
                 return 44
             }
