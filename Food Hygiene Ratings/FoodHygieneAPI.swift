@@ -16,7 +16,16 @@ enum FoodHygieneError : Error
     case invalidJSONData
     case webError
 }
-
+extension FoodHygieneError : LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .invalidJSONData:
+            return NSLocalizedString("Invalid data format", comment: "invalid JSON")
+        default:
+            return NSLocalizedString("Unexpected error, check your internet connection", comment: "webError")
+        }
+    }
+}
 
 
 struct FoodHygieneAPI {
@@ -75,7 +84,7 @@ struct FoodHygieneAPI {
             }
             return .success(establishments)
             
-        } catch let Error {
+        } catch let Error {	
             return .failure(Error)
         }
     }

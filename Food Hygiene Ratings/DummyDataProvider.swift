@@ -29,11 +29,13 @@ class DummyDataProvider : IDataProvider {
         let url = Bundle.main.url(forResource: "stoke", withExtension: "json")
         let data = try! Data(contentsOf: url!)
         let estResult = FoodHygieneAPI.establishments(fromJSON: data)
+        
         switch estResult {
         case let .success(results):
             self.model.setLocalEstablishments(establishments: results)
             self.model.changeState(.loaded)
-        case .failure(_):
+        case let .failure(error):
+            self.model.error = error
             self.model.changeState(.error)
         }
     }
