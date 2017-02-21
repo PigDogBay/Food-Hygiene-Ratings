@@ -17,7 +17,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loadingLabel: UILabel!
 
-    let searchController = UISearchController(searchResultsController: nil)
+    var searchController : UISearchController!
     
 
     private let cellId = "establishmentCell"
@@ -40,12 +40,23 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         loadingIndicator.startAnimating()
         loadingLabel.isHidden=false
         
+        searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
         
     }
+    
+    deinit {
+        //Will get a warning if searchController is not removed
+        //http://stackoverflow.com/questions/32282401/attempting-to-load-the-view-of-a-view-controller-while-it-is-deallocating-uis
+        if let superView = searchController.view.superview
+        {
+            superView.removeFromSuperview()
+        }
+    }
+    
 
     override func viewWillAppear(_ animated: Bool) {
         let model = MainModel.sharedInstance
