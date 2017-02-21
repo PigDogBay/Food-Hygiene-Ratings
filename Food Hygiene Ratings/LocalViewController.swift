@@ -183,6 +183,12 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         case .error:
             print("state: error")
+            OperationQueue.main.addOperation {
+                self.loadingIndicator.stopAnimating()
+                self.loadingLabel.isHidden=true
+                let msg = self.model.error?.localizedDescription ?? "An error occurred, check your internet connection"
+                self.showErrorAlert(title: "Error", msg: msg)
+            }
         }
     }
     

@@ -36,6 +36,7 @@ class MainModel {
     var observersDictionary : [String : AppStateChangeObserver] = [:]
     
     var dataProvider : IDataProvider!
+    var error : Error?
 
     func addObserver(_ name: String, observer : AppStateChangeObserver)
     {

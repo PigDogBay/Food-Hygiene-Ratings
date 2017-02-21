@@ -75,7 +75,8 @@ class DataProvider : NSObject, IDataProvider, CLLocationManagerDelegate{
         self.webSerice.fetchEstablishments(longitude: model.location.longitude, latitude: model.location.latitude, radiusInMiles: model.searchRadius){
             (result) in
             switch result {
-            case .failure(_):
+            case let .failure(error):
+                self.model.error = error
                 self.model.changeState(.error)
             case let .success(establishments):
                 self.model.setLocalEstablishments(establishments: establishments)
