@@ -41,7 +41,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="TaL-GM-zMU" kind="show" id="fCe-xu-D47"/>
+                                            <segue destination="TaL-GM-zMU" kind="show" identifier="segueNearMe" id="fCe-xu-D47"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

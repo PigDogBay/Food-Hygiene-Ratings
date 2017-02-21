@@ -40,14 +40,15 @@ class DataProvider : NSObject, IDataProvider, CLLocationManagerDelegate{
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        let authStatus = CLLocationManager.authorizationStatus()
-        if authStatus == .authorizedWhenInUse || authStatus == .authorizedAlways {
-            self.model.changeState(.locating)
-            locationManager.distanceFilter = kCLDistanceFilterNone
-            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-            locationManager.startUpdatingLocation()
+        if model.state == .requestingLocationAuthorization{
+            let authStatus = CLLocationManager.authorizationStatus()
+            if authStatus == .authorizedWhenInUse || authStatus == .authorizedAlways {
+                self.model.changeState(.locating)
+                locationManager.distanceFilter = kCLDistanceFilterNone
+                locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+                locationManager.startUpdatingLocation()
+            }
         }
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -70,6 +71,7 @@ class DataProvider : NSObject, IDataProvider, CLLocationManagerDelegate{
     }
     
     func fetchEstablishments(){
+        self.model.changeState(.loading)
         self.webSerice.fetchEstablishments(longitude: model.location.longitude, latitude: model.location.latitude, radiusInMiles: model.searchRadius){
             (result) in
             switch result {
