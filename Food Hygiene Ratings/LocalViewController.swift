@@ -165,6 +165,11 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
             print("state: found location \(model.location.latitude) \(model.location.longitude)")
         case .notAuthorizedForLocating:
             print("state: not authorized for locating")
+            OperationQueue.main.addOperation {
+                self.loadingIndicator.stopAnimating()
+                self.loadingLabel.isHidden=true
+                self.showErrorAlert(title: "Authorisation Required", msg: "Please go to Settings, privacy, location and select While Using the App")
+            }
         case .errorLocating:
             print("state: error locating")
         case .loading:
@@ -180,4 +185,15 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
             print("state: error")
         }
     }
+    
+    fileprivate func showErrorAlert(title: String, msg : String)
+    {
+        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {_ in
+            self.navigationController!.popViewController(animated: true)
+        })
+        let controller = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
+        controller.addAction(action)
+        self.present(controller, animated: true, completion: nil)
+    }
+    
 }
