@@ -8,7 +8,28 @@
 
 import Foundation
 
+enum SearchFilter {
+    case all
+    case star1
+    case star5
+}
+
 struct DataProcessing {
+    
+    static func filter(establishments : [Establishment], filter : SearchFilter) -> [Establishment]{
+        switch filter {
+        case .all:
+                return establishments
+        case .star1:
+                return establishments.filter(){
+                    $0.rating.hasRating() && $0.rating.ratingString == "1"
+            }
+        case .star5:
+            return establishments.filter(){
+                $0.rating.hasRating() && $0.rating.ratingString == "5"
+            }
+        }
+    }
     
     static func filter(establishments : [Establishment], containing : String) -> [Establishment] {
 
