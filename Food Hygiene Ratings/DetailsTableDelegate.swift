@@ -150,7 +150,6 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
                 cell.imageView?.image = UIImage(named: "iconAuthority")
             case ROW_LA_EMAIL:
                 cell.textLabel?.text = establishment.localAuthority.email
-                cell.imageView?.image = UIImage(named: "iconEmail")
             case ROW_LA_WEBSITE:
                 cell.textLabel?.text = establishment.localAuthority.web
                 cell.imageView?.image = UIImage(named: "iconWebpage")
@@ -165,6 +164,22 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case SECTION_LOCAL_AUTHORITY:
+            switch indexPath.row
+            {
+            case ROW_LA_EMAIL:
+                viewController.mpdbSendEmail(recipients: [establishment.localAuthority.email], subject: "", body: "")
+            default:
+                return
+            }
+        default:
+            return
+        }
+    }
+    
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         switch indexPath.section {
         case SECTION_SCORES:
@@ -193,6 +208,13 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
     
     fileprivate func getCellId(indexPath : IndexPath) -> String {
         switch indexPath.section {
+        case SECTION_LOCAL_AUTHORITY:
+            switch indexPath.row {
+            case ROW_LA_EMAIL:
+                return "cellEmail"
+            default:
+                return "cellBasic"
+            }
         case SECTION_RATING:
             switch indexPath.row {
             case ROW_RATING_TITLE:

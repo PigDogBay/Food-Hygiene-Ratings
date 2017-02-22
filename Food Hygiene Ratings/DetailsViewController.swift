@@ -10,8 +10,9 @@ import UIKit
 import MapKit
 import GoogleMobileAds
 import CoreLocation
+import MessageUI
 
-class DetailsViewController: UIViewController, MKMapViewDelegate {
+class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeViewControllerDelegate {
 
     
     @IBOutlet weak var navBar: UINavigationItem!
@@ -102,4 +103,11 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
         }
         return nil
     }
+    // MARK:- MFMailComposeViewControllerDelegate
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
+    {
+        //dismiss on send
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
 }
