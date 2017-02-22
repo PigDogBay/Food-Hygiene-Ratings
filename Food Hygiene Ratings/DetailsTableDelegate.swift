@@ -150,6 +150,7 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
                 cell.imageView?.image = UIImage(named: "iconAuthority")
             case ROW_LA_EMAIL:
                 cell.textLabel?.text = establishment.localAuthority.email
+                cell.imageView?.image = UIImage(named: "iconEmail")
             case ROW_LA_WEBSITE:
                 cell.textLabel?.text = establishment.localAuthority.web
                 cell.imageView?.image = UIImage(named: "iconWebpage")
@@ -172,6 +173,12 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             {
             case ROW_LA_EMAIL:
                 viewController.mpdbSendEmail(recipients: [establishment.localAuthority.email], subject: "", body: "")
+            case ROW_LA_WEBSITE:
+                if #available(iOS 10.0, *) {
+                    if let url = URL(string: establishment.localAuthority.web) {
+                        UIApplication.shared.open(url, options: [:])
+                    }
+                }
             default:
                 return
             }
@@ -211,7 +218,9 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         case SECTION_LOCAL_AUTHORITY:
             switch indexPath.row {
             case ROW_LA_EMAIL:
-                return "cellEmail"
+                return "cellLocalAuthority"
+            case ROW_LA_WEBSITE:
+                return "cellLocalAuthority"
             default:
                 return "cellBasic"
             }

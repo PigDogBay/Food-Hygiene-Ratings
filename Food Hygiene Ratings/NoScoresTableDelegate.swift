@@ -143,6 +143,12 @@ class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelega
             {
             case ROW_LA_EMAIL:
                 viewController.mpdbSendEmail(recipients: [establishment.localAuthority.email], subject: "", body: "")
+            case ROW_LA_WEBSITE:
+                if #available(iOS 10.0, *) {
+                    if let url = URL(string: establishment.localAuthority.web) {
+                        UIApplication.shared.open(url, options: [:])
+                    }
+                }
             default:
                 return
             }
@@ -156,7 +162,9 @@ class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelega
         case SECTION_LOCAL_AUTHORITY:
             switch indexPath.row {
             case ROW_LA_EMAIL:
-                return "cellEmail"
+                return "cellLocalAuthority"
+            case ROW_LA_WEBSITE:
+                return "cellLocalAuthority"
             default:
                 return "cellBasic"
             }
