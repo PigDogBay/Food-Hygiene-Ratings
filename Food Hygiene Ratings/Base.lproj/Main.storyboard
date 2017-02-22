@@ -297,7 +297,7 @@
         <!--Title-->
         <scene sceneID="mXD-Eb-vnJ">
             <objects>
-                <viewController id="1fi-WT-Nub" customClass="DetailsViewController" customModule="Food_Hygiene_Ratings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="establishmentDetailsScene" id="1fi-WT-Nub" customClass="DetailsViewController" customModule="Food_Hygiene_Ratings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ni4-Xu-oPa"/>
                         <viewControllerLayoutGuide type="bottom" id="CcS-SK-mtq"/>
