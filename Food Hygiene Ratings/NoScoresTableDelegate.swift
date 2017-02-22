@@ -14,12 +14,13 @@ class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelega
     let establishment : Establishment
     //Strong reference cycle
     weak var viewController : UIViewController!
-    
+
     //Table structure
     fileprivate let SECTION_RATING = 0
     fileprivate let SECTION_ADDRESS = 1
     fileprivate let SECTION_LOCAL_AUTHORITY = 2
-    fileprivate let SECTION_COUNT = 3
+    fileprivate let SECTION_FSA_WEBSITE = 3
+    fileprivate let SECTION_COUNT = 4
     
     fileprivate let ROW_RATING_TITLE = 0
     fileprivate let ROW_RATING_LOGO = 1
@@ -64,6 +65,8 @@ class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelega
             return establishment.address.address.count
         case SECTION_LOCAL_AUTHORITY:
             return ROW_LA_COUNT
+        case SECTION_FSA_WEBSITE:
+            return 1
         default:
             return 0
         }
@@ -77,6 +80,8 @@ class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelega
             return "Business Address"
         case SECTION_LOCAL_AUTHORITY:
             return "Local Authority"
+        case SECTION_FSA_WEBSITE:
+            return "FSA Website"
         default:
             return ""
         }
@@ -122,6 +127,7 @@ class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelega
                 cell.imageView?.image = UIImage(named: "iconAuthority")
             case ROW_LA_EMAIL:
                 cell.textLabel?.text = establishment.localAuthority.email
+                cell.imageView?.image = UIImage(named: "iconEmail")
             case ROW_LA_WEBSITE:
                 cell.textLabel?.text = establishment.localAuthority.web
                 cell.imageView?.image = UIImage(named: "iconWebpage")
@@ -129,6 +135,8 @@ class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelega
                 break
             }
             break
+        case SECTION_FSA_WEBSITE:
+            cell.textLabel?.text = "View rating on the FSA website"
         default:
             break
         }
@@ -136,6 +144,7 @@ class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case SECTION_LOCAL_AUTHORITY:
@@ -152,6 +161,11 @@ class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelega
             default:
                 return
             }
+        case SECTION_FSA_WEBSITE:
+            if #available(iOS 10.0, *) {
+                let url = FoodHygieneAPI.createBusinessUrl(fhrsId: establishment.business.fhrsId)
+                UIApplication.shared.open(url, options: [:])
+            }
         default:
             return
         }
@@ -162,9 +176,9 @@ class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelega
         case SECTION_LOCAL_AUTHORITY:
             switch indexPath.row {
             case ROW_LA_EMAIL:
-                return "cellLocalAuthority"
+                return "cellSelectable"
             case ROW_LA_WEBSITE:
-                return "cellLocalAuthority"
+                return "cellSelectable"
             default:
                 return "cellBasic"
             }
@@ -177,10 +191,11 @@ class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelega
             default:
                 return "cellBasic"
             }
+        case SECTION_FSA_WEBSITE:
+            return "cellSelectable"
         default:
             return "cellBasic"
         }
     }
-    
     
 }

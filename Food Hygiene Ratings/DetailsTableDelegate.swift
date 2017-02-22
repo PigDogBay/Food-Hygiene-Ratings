@@ -20,7 +20,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
     fileprivate let SECTION_SCORES = 1
     fileprivate let SECTION_ADDRESS = 2
     fileprivate let SECTION_LOCAL_AUTHORITY = 3
-    fileprivate let SECTION_COUNT = 4
+    fileprivate let SECTION_FSA_WEBSITE = 4
+    fileprivate let SECTION_COUNT = 5
     
     fileprivate let ROW_RATING_TITLE = 0
     fileprivate let ROW_RATING_LOGO = 1
@@ -72,6 +73,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             return establishment.address.address.count
         case SECTION_LOCAL_AUTHORITY:
             return ROW_LA_COUNT
+        case SECTION_FSA_WEBSITE:
+            return 1
         default:
             return 0
         }
@@ -87,6 +90,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             return "Business Address"
         case SECTION_LOCAL_AUTHORITY:
             return "Local Authority"
+        case SECTION_FSA_WEBSITE:
+            return "FSA Website"
         default:
             return ""
         }
@@ -158,6 +163,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
                 break
             }
             break
+        case SECTION_FSA_WEBSITE:
+            cell.textLabel?.text = "View rating on the FSA website"
         default:
             break
         }
@@ -181,6 +188,11 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
                 }
             default:
                 return
+            }
+        case SECTION_FSA_WEBSITE:
+            if #available(iOS 10.0, *) {
+                let url = FoodHygieneAPI.createBusinessUrl(fhrsId: establishment.business.fhrsId)
+                UIApplication.shared.open(url, options: [:])
             }
         default:
             return
@@ -218,9 +230,9 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         case SECTION_LOCAL_AUTHORITY:
             switch indexPath.row {
             case ROW_LA_EMAIL:
-                return "cellLocalAuthority"
+                return "cellSelectable"
             case ROW_LA_WEBSITE:
-                return "cellLocalAuthority"
+                return "cellSelectable"
             default:
                 return "cellBasic"
             }
@@ -235,6 +247,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             }
         case SECTION_SCORES:
             return "cellScore"
+        case SECTION_FSA_WEBSITE:
+            return "cellSelectable"
         default:
             return "cellBasic"
         }

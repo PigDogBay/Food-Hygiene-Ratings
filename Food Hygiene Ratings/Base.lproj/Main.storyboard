@@ -419,7 +419,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellLocalAuthority" textLabel="Gcz-hn-3mi" style="IBUITableViewCellStyleDefault" id="deV-Gw-VSK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellSelectable" textLabel="Gcz-hn-3mi" style="IBUITableViewCellStyleDefault" id="deV-Gw-VSK">
                                         <rect key="frame" x="0.0" y="280" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="deV-Gw-VSK" id="Tu9-8O-lzB">
