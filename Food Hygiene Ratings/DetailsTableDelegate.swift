@@ -165,7 +165,7 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         switch indexPath.section {
         case SECTION_SCORES:
             switch indexPath.row
