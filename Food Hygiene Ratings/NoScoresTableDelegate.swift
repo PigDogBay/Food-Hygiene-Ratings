@@ -1,5 +1,5 @@
 //
-//  DetailsTableDelegate.swift
+//  NoScoresTableDelegate.swift
 //  Food Hygiene Ratings
 //
 //  Created by Mark Bailey on 22/02/2017.
@@ -9,33 +9,27 @@
 import Foundation
 import UIKit
 
-class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegate {
-
+class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegate {
+    
     let establishment : Establishment
     //Strong reference cycle
     weak var viewController : UIViewController!
-
+    
     //Table structure
     fileprivate let SECTION_RATING = 0
-    fileprivate let SECTION_SCORES = 1
-    fileprivate let SECTION_ADDRESS = 2
-    fileprivate let SECTION_LOCAL_AUTHORITY = 3
-    fileprivate let SECTION_COUNT = 4
+    fileprivate let SECTION_ADDRESS = 1
+    fileprivate let SECTION_LOCAL_AUTHORITY = 2
+    fileprivate let SECTION_COUNT = 3
     
     fileprivate let ROW_RATING_TITLE = 0
     fileprivate let ROW_RATING_LOGO = 1
     fileprivate let ROW_RATING_COUNT = 2
     
-    fileprivate let ROW_SCORES_HYGIENE = 0
-    fileprivate let ROW_SCORES_MANAGEMENT = 1
-    fileprivate let ROW_SCORES_STRUCTURAL = 2
-    fileprivate let ROW_SCORES_COUNT = 3
-    
     fileprivate let ROW_LA_NAME = 0
     fileprivate let ROW_LA_EMAIL = 1
     fileprivate let ROW_LA_WEBSITE = 2
     fileprivate let ROW_LA_COUNT = 3
-
+    
     
     init(establishment : Establishment, viewController : UIViewController){
         self.establishment = establishment
@@ -66,8 +60,6 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         switch section {
         case SECTION_RATING:
             return ROW_RATING_COUNT
-        case SECTION_SCORES:
-            return ROW_SCORES_COUNT
         case SECTION_ADDRESS:
             return establishment.address.address.count
         case SECTION_LOCAL_AUTHORITY:
@@ -81,8 +73,6 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         switch section {
         case SECTION_RATING:
             return ""
-        case SECTION_SCORES:
-            return "Hazard Points"
         case SECTION_ADDRESS:
             return "Business Address"
         case SECTION_LOCAL_AUTHORITY:
@@ -123,24 +113,6 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             default:
                 break
             }
-        case SECTION_SCORES:
-            switch indexPath.row {
-            case ROW_SCORES_HYGIENE:
-                cell.textLabel?.text = "Hygiene: \(establishment.rating.scores.hygiene)"
-                cell.detailTextLabel?.text = establishment.rating.scores.getHygieneDescription()
-                cell.imageView?.image = UIImage(named: establishment.rating.scores.getHygieneIconName())
-            case ROW_SCORES_MANAGEMENT:
-                cell.textLabel?.text = "Management: \(establishment.rating.scores.confidenceInManagement)"
-                cell.detailTextLabel?.text = establishment.rating.scores.getManagementDescription()
-                cell.imageView?.image = UIImage(named: establishment.rating.scores.getManagementIconName())
-            case ROW_SCORES_STRUCTURAL:
-                cell.textLabel?.text = "Structural: \(establishment.rating.scores.structural)"
-                cell.detailTextLabel?.text = establishment.rating.scores.getStructuralDescription()
-                cell.imageView?.image = UIImage(named: establishment.rating.scores.getStructuralIconName())
-            default:
-                break
-            }
-            break
         case SECTION_ADDRESS:
             cell.textLabel?.text = establishment.address.address[indexPath.row]
         case SECTION_LOCAL_AUTHORITY:
@@ -165,31 +137,6 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case SECTION_SCORES:
-            switch indexPath.row
-            {
-            case ROW_SCORES_HYGIENE:
-                showAlert(title: Scores.hygienicTitle, msg: Scores.hygienicDescription)
-            case ROW_SCORES_STRUCTURAL:
-                showAlert(title: Scores.structuralTitle, msg: Scores.structuralDescription)
-            case ROW_SCORES_MANAGEMENT:
-                showAlert(title: Scores.managementTitle, msg: Scores.managementDescription)
-            default:
-                return
-            }
-        default:
-            return
-        }
-    }
-    fileprivate func showAlert(title: String, msg : String)
-    {
-        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
-        let controller = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
-        controller.addAction(action)
-        self.viewController.present(controller, animated: true, completion: nil)
-    }
     
     fileprivate func getCellId(indexPath : IndexPath) -> String {
         switch indexPath.section {
@@ -202,12 +149,10 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             default:
                 return "cellBasic"
             }
-        case SECTION_SCORES:
-            return "cellScore"
         default:
             return "cellBasic"
         }
     }
     
-
+    
 }

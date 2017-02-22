@@ -43,10 +43,17 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
         adBanner.rootViewController = self
         adBanner.load(Ads.createRequest())
 
-        let detailsTableDel = DetailsTableDelegate(establishment: self.establishment, viewController: self)
-        self.tableDelegate = detailsTableDel
-        tableView.dataSource = detailsTableDel
-        tableView.delegate = detailsTableDel
+        if (establishment.rating.hasRating()){
+            let detailsTableDel = DetailsTableDelegate(establishment: self.establishment, viewController: self)
+            self.tableDelegate = detailsTableDel
+            tableView.dataSource = detailsTableDel
+            tableView.delegate = detailsTableDel
+        } else {
+            let detailsTableDel = NoScoresTableDelegate(establishment: self.establishment, viewController: self)
+            self.tableDelegate = detailsTableDel
+            tableView.dataSource = detailsTableDel
+            tableView.delegate = detailsTableDel
+        }
         
         setUpMap()
     }
