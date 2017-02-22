@@ -39,6 +39,7 @@
 		4D5C39271E5C49A800707D14 /* stoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C39261E5C49A800707D14 /* stoke.json */; };
 		4D5C39291E5C4A1A00707D14 /* DummyDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C39281E5C4A1A00707D14 /* DummyDataProvider.swift */; };
 		4D5C392D1E5C92E100707D14 /* Scores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C392C1E5C92E100707D14 /* Scores.swift */; };
+		4DB64E2B1E5D997D00D1321B /* DetailsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */; };
 		7BABF4157F21F7A5DBC91DAD /* Pods_FoodHygieneRatingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD130043F8E7BD7EF0121BA /* Pods_FoodHygieneRatingsTests.framework */; };
 		F80262D5D819C7604D226917 /* Pods_Food_Hygiene_Ratings_FoodHygieneRatingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74AB56E819946B89D461CB2 /* Pods_Food_Hygiene_Ratings_FoodHygieneRatingsTests.framework */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,7 @@
 		4D5C39261E5C49A800707D14 /* stoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stoke.json; sourceTree = "<group>"; };
 		4D5C39281E5C4A1A00707D14 /* DummyDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyDataProvider.swift; sourceTree = "<group>"; };
 		4D5C392C1E5C92E100707D14 /* Scores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scores.swift; sourceTree = "<group>"; };
+		4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableDelegate.swift; sourceTree = "<group>"; };
 		7FBD16ED9140BB09C083E32D /* Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food Hygiene Ratings-FoodHygieneRatingsTests/Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.release.xcconfig"; sourceTree = "<group>"; };
 		B74AB56E819946B89D461CB2 /* Pods_Food_Hygiene_Ratings_FoodHygieneRatingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Hygiene_Ratings_FoodHygieneRatingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5B583BA5627A3C28384D29 /* Pods-Food Hygiene Ratings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Hygiene Ratings.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food Hygiene Ratings/Pods-Food Hygiene Ratings.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				4D3717CE1E4CCF4700644A0C /* SearchViewController.swift */,
 				4D5C390B1E507E6200707D14 /* WebViewController.swift */,
 				4D5C390D1E51DBBD00707D14 /* DetailsViewController.swift */,
+				4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */,
 				4D5C39181E5462BE00707D14 /* RatingsLogoCell.swift */,
 			);
 			name = Controllers;
@@ -454,6 +457,7 @@
 				4D5C39291E5C4A1A00707D14 /* DummyDataProvider.swift in Sources */,
 				4D5C39091E50605600707D14 /* RootViewController.swift in Sources */,
 				4D3717CA1E4CCDA000644A0C /* SettingsViewController.swift in Sources */,
+				4DB64E2B1E5D997D00D1321B /* DetailsTableDelegate.swift in Sources */,
 				4D5C392D1E5C92E100707D14 /* Scores.swift in Sources */,
 				4D5C39231E5AFD5600707D14 /* LocalViewController.swift in Sources */,
 				4D3717CD1E4CCF0400644A0C /* MapViewController.swift in Sources */,
