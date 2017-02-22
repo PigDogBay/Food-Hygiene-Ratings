@@ -23,6 +23,15 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func shareActionClicked(_ sender: UIBarButtonItem) {
+        let firstActivityItem = shareText()
+        print(firstActivityItem)
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
+        //For iPads need to anchor the popover to the right bar button, crashes if not set
+        if let ppc = activityViewController.popoverPresentationController {
+            ppc.barButtonItem = navBar.rightBarButtonItem
+        }
+        
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     static let dateFormatter : DateFormatter = {
@@ -109,5 +118,28 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
         //dismiss on send
         controller.dismiss(animated: true, completion: nil)
     }
+    
+    
+    func shareText() -> String {
+        var builder = "Food Hygiene Rating\n\n"
+        builder.append("\(establishment.business.name)\n")
+        for line in establishment.address.address {
+            builder.append(line)
+            builder.append("\n")
+        }
+        builder.append("\nRating: \(establishment.rating.ratingString)\n")
+        if establishment.rating.hasRating(){
+            builder.append("Awarded: \(DetailsViewController.dateFormatter.string(from: establishment.rating.awardedDate))\n")
+            builder.append("Hygiene Points: \(establishment.rating.scores.hygiene)\n")
+            builder.append("Management Points: \(establishment.rating.scores.confidenceInManagement)\n")
+            builder.append("Structural Points: \(establishment.rating.scores.structural)\n")
+        }
+        builder.append("\nLocal Authority Details\n")
+        builder.append("\(establishment.localAuthority.name)\nEmail: \(establishment.localAuthority.email)\nWebsite: \(establishment.localAuthority.web)\n")
+        builder.append("\nFSA Website for this business\n")
+        builder.append("\(FoodHygieneAPI.createBusinessUrl(fhrsId: establishment.business.fhrsId).absoluteString)\n")
+        return builder
+    }
+    
     
 }
