@@ -24,7 +24,6 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     
     @IBAction func shareActionClicked(_ sender: UIBarButtonItem) {
         let firstActivityItem = shareText()
-        print(firstActivityItem)
         let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
         //For iPads need to anchor the popover to the right bar button, crashes if not set
         if let ppc = activityViewController.popoverPresentationController {

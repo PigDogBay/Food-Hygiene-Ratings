@@ -11,6 +11,8 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObserver {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loadingLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBAction func refreshClicked(_ sender: UIBarButtonItem) {
         let model = MainModel.sharedInstance
@@ -27,6 +29,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        activityIndicator.startAnimating()
+        loadingLabel.isHidden=false
+        
         // Do any additional setup after loading the view.
         mapView.delegate = self
     }
@@ -105,7 +110,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
     func modelToView(state : AppState){
         switch state {
         case .ready:
-            break
+            showActivityIndicator()
         case .requestingLocationAuthorization:
             break
         case .locating:
@@ -115,15 +120,24 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
         case .notAuthorizedForLocating:
             break
         case .errorLocating:
-            break
+            hideActivityIndicator()
         case .loading:
-            break
+            showActivityIndicator()
         case .loaded:
+            hideActivityIndicator()
             self.loadedState()
         case .error:
-            break
+            hideActivityIndicator()
         }
-        
+    }
+    
+    func showActivityIndicator(){
+        activityIndicator.startAnimating()
+        loadingLabel.isHidden=false
+    }
+    func hideActivityIndicator(){
+        activityIndicator.stopAnimating()
+        loadingLabel.isHidden=true
     }
     
     func centreMap(){
