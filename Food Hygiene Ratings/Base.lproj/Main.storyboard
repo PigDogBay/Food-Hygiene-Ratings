@@ -233,20 +233,60 @@
         <scene sceneID="bvf-8R-Y8r">
             <objects>
                 <tableViewController id="M80-KF-t2N" customClass="AdvancedSearchViewController" customModule="Food_Hygiene_Ratings" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zqf-w5-vgI">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Zqf-w5-vgI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="73R-Cr-JNz">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="73R-Cr-JNz" id="iIP-G3-Is6">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="XL0-T9-jsO">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="73R-Cr-JNz">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="73R-Cr-JNz" id="iIP-G3-Is6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Business name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nBq-iz-Bap">
+                                                    <rect key="frame" x="8" y="8" width="359" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nBq-iz-Bap" firstAttribute="leading" secondItem="iIP-G3-Is6" secondAttribute="leading" constant="8" id="HIa-Mx-jUQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="nBq-iz-Bap" secondAttribute="trailing" constant="8" id="HwY-c4-mnd"/>
+                                                <constraint firstAttribute="bottom" secondItem="nBq-iz-Bap" secondAttribute="bottom" constant="5" id="Jox-Ff-9Qk"/>
+                                                <constraint firstItem="nBq-iz-Bap" firstAttribute="top" secondItem="iIP-G3-Is6" secondAttribute="top" constant="8" id="KOY-w8-5V4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OpS-mZ-2JH">
+                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OpS-mZ-2JH" id="ApQ-GY-KJG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street, town or postcode" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lR4-UQ-BPM">
+                                                    <rect key="frame" x="8" y="5" width="359" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lR4-UQ-BPM" firstAttribute="top" secondItem="ApQ-GY-KJG" secondAttribute="top" constant="5" id="2c8-8D-SOI"/>
+                                                <constraint firstAttribute="trailing" secondItem="lR4-UQ-BPM" secondAttribute="trailing" constant="8" id="TqT-Io-HDE"/>
+                                                <constraint firstAttribute="bottom" secondItem="lR4-UQ-BPM" secondAttribute="bottom" constant="8" id="ddt-Pk-ReY"/>
+                                                <constraint firstItem="lR4-UQ-BPM" firstAttribute="leading" secondItem="ApQ-GY-KJG" secondAttribute="leading" constant="8" id="iiy-dV-lpb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="M80-KF-t2N" id="9Bm-9D-jBx"/>
                             <outlet property="delegate" destination="M80-KF-t2N" id="rcb-Qb-ICZ"/>
@@ -260,10 +300,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="businessNameTextField" destination="nBq-iz-Bap" id="ohY-eC-Iv8"/>
+                        <outlet property="placeNameTextField" destination="lR4-UQ-BPM" id="2r7-XT-DHW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wo0-cV-13k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1927" y="-613"/>
+            <point key="canvasLocation" x="1925.5999999999999" y="-613.04347826086962"/>
         </scene>
         <!--Map-->
         <scene sceneID="LiO-Of-Tyc">
