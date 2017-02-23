@@ -42,6 +42,7 @@
 		4DB64E2B1E5D997D00D1321B /* DetailsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */; };
 		4DB64E2D1E5DA34E00D1321B /* NoScoresTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB64E2C1E5DA34E00D1321B /* NoScoresTableDelegate.swift */; };
 		4DB64E331E5DB24E00D1321B /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB64E321E5DB24E00D1321B /* UIViewControllerExtensions.swift */; };
+		4DB64E3A1E5F1FB900D1321B /* AdvancedSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB64E391E5F1FB900D1321B /* AdvancedSearchViewController.swift */; };
 		7BABF4157F21F7A5DBC91DAD /* Pods_FoodHygieneRatingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD130043F8E7BD7EF0121BA /* Pods_FoodHygieneRatingsTests.framework */; };
 		F80262D5D819C7604D226917 /* Pods_Food_Hygiene_Ratings_FoodHygieneRatingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74AB56E819946B89D461CB2 /* Pods_Food_Hygiene_Ratings_FoodHygieneRatingsTests.framework */; };
 /* End PBXBuildFile section */
@@ -99,6 +100,7 @@
 		4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableDelegate.swift; sourceTree = "<group>"; };
 		4DB64E2C1E5DA34E00D1321B /* NoScoresTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoScoresTableDelegate.swift; sourceTree = "<group>"; };
 		4DB64E321E5DB24E00D1321B /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		4DB64E391E5F1FB900D1321B /* AdvancedSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedSearchViewController.swift; sourceTree = "<group>"; };
 		7FBD16ED9140BB09C083E32D /* Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food Hygiene Ratings-FoodHygieneRatingsTests/Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.release.xcconfig"; sourceTree = "<group>"; };
 		B74AB56E819946B89D461CB2 /* Pods_Food_Hygiene_Ratings_FoodHygieneRatingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Hygiene_Ratings_FoodHygieneRatingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5B583BA5627A3C28384D29 /* Pods-Food Hygiene Ratings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Hygiene Ratings.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food Hygiene Ratings/Pods-Food Hygiene Ratings.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				4D5C39081E50605600707D14 /* RootViewController.swift */,
 				4D3717D91E4DC23B00644A0C /* MapMarker.swift */,
+				4DB64E391E5F1FB900D1321B /* AdvancedSearchViewController.swift */,
 				4D5C39221E5AFD5600707D14 /* LocalViewController.swift */,
 				4D3717C91E4CCDA000644A0C /* SettingsViewController.swift */,
 				4D3717CC1E4CCF0400644A0C /* MapViewController.swift */,
@@ -480,6 +483,7 @@
 				4D3717F31E4DF0BB00644A0C /* MainModel.swift in Sources */,
 				4D5C39071E4E1D5500707D14 /* DataProvider.swift in Sources */,
 				4D5C390C1E507E6200707D14 /* WebViewController.swift in Sources */,
+				4DB64E3A1E5F1FB900D1321B /* AdvancedSearchViewController.swift in Sources */,
 				4D5C39151E521D9300707D14 /* Ads.swift in Sources */,
 				4D3717B31E4C7ED100644A0C /* AppDelegate.swift in Sources */,
 				4D3717D41E4DC1FC00644A0C /* Establishment.swift in Sources */,
