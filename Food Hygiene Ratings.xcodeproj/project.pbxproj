@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3931E92D62D159DC9BDB822F /* Pods_Food_Hygiene_Ratings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB31892E4493525EA21437E /* Pods_Food_Hygiene_Ratings.framework */; };
+		4D100DC91E61B0F6005EB6E9 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D100DC81E61B0F6005EB6E9 /* Query.swift */; };
 		4D3717B31E4C7ED100644A0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717B21E4C7ED100644A0C /* AppDelegate.swift */; };
 		4D3717B81E4C7ED100644A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717B61E4C7ED100644A0C /* Main.storyboard */; };
 		4D3717BA1E4C7ED100644A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717B91E4C7ED100644A0C /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		33986B8773B33D48AF71E46E /* Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food Hygiene Ratings-FoodHygieneRatingsTests/Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		37E52A130825E6AF7558607E /* Pods-FoodHygieneRatingsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodHygieneRatingsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodHygieneRatingsTests/Pods-FoodHygieneRatingsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3EB31892E4493525EA21437E /* Pods_Food_Hygiene_Ratings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Hygiene_Ratings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D100DC81E61B0F6005EB6E9 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		4D3717AF1E4C7ED100644A0C /* Food Hygiene Ratings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Hygiene Ratings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3717B21E4C7ED100644A0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3717B71E4C7ED100644A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				4D5C39281E5C4A1A00707D14 /* DummyDataProvider.swift */,
 				4D5C39141E521D9300707D14 /* Ads.swift */,
 				4D5C391A1E55CB9E00707D14 /* DataProcessing.swift */,
+				4D100DC81E61B0F6005EB6E9 /* Query.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				4D5C39071E4E1D5500707D14 /* DataProvider.swift in Sources */,
 				4D5C390C1E507E6200707D14 /* WebViewController.swift in Sources */,
 				4DB64E3A1E5F1FB900D1321B /* AdvancedSearchViewController.swift in Sources */,
+				4D100DC91E61B0F6005EB6E9 /* Query.swift in Sources */,
 				4D5C39151E521D9300707D14 /* Ads.swift in Sources */,
 				4D3717B31E4C7ED100644A0C /* AppDelegate.swift in Sources */,
 				4D3717D41E4DC1FC00644A0C /* Establishment.swift in Sources */,

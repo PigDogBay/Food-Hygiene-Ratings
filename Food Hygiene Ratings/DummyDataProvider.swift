@@ -39,5 +39,8 @@ class DummyDataProvider : IDataProvider {
             self.model.changeState(.error)
         }
     }
-    
+    func fetchEstablishments(query : Query){
+        fetchEstablishments()
+    }
+
 }

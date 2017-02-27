@@ -71,8 +71,14 @@ class DataProvider : NSObject, IDataProvider, CLLocationManagerDelegate{
     }
     
     func fetchEstablishments(){
+        let query = Query(longitude: model.location.longitude, latitude: model.location.latitude, radiusInMiles: model.searchRadius)
+        fetchEstablishments(query: query)
+    }
+    
+    func fetchEstablishments(query : Query) {
         self.model.changeState(.loading)
-        self.webSerice.fetchEstablishments(longitude: model.location.longitude, latitude: model.location.latitude, radiusInMiles: model.searchRadius){
+        let url = FoodHygieneAPI.createEstablishmentsUrl(query: query)
+        self.webSerice.fetchEstablishments(url: url){
             (result) in
             switch result {
             case let .failure(error):
@@ -83,5 +89,7 @@ class DataProvider : NSObject, IDataProvider, CLLocationManagerDelegate{
                 self.model.changeState(.loaded)
             }
         }
+        
     }
+
 }

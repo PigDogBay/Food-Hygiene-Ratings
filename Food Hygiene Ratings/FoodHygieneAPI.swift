@@ -44,14 +44,16 @@ struct FoodHygieneAPI {
         return URL(string: urlString)!
     }
     
-    private static func createUrl(category : FoodHygieneCategory, parameters: [String:String]? ) -> URL {
+    private static func createUrl(category : FoodHygieneCategory, parameters: [String:String?]? ) -> URL {
         var components = URLComponents(string: baseUrlString+category.rawValue)!
         var queryItems = [URLQueryItem]()
         
         if let additionalParameters = parameters {
             for (key, value) in additionalParameters {
-                let item = URLQueryItem(name: key, value: value)
-                queryItems.append(item)
+                if let actualValue = value {
+                    let item = URLQueryItem(name: key, value: actualValue)
+                    queryItems.append(item)
+                }
             }
         }
         components.queryItems = queryItems
@@ -64,6 +66,27 @@ struct FoodHygieneAPI {
             "longitude" : String(longitude),
             "maxDistanceLimit" :String(radiusInMiles)
         ]
+        return createUrl(category: .establishments, parameters: params)
+    }
+    static func createEstablishmentsUrl(query : Query) -> URL {
+        var latitudeString : String?
+        if let latitude = query.latitude{
+            latitudeString = String(latitude)
+        }
+        var longitudeString : String?
+        if let longitude = query.longitude{
+            longitudeString = String(longitude)
+        }
+        var radiusString : String?
+        if let radius = query.radiusInMiles {
+            radiusString = String(radius)
+        }
+        let params = [
+            "latitude" : latitudeString,
+            "longitude" : longitudeString,
+            "maxDistanceLimit" : radiusString,
+            "name" : query.businessName,
+            "address" : query.placeName]
         return createUrl(category: .establishments, parameters: params)
     }
     
