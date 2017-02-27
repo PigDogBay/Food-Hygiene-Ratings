@@ -18,8 +18,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
         let model = MainModel.sharedInstance
         if model.canFindEstablishments(){
             let mapCentre = mapView.region.center
-            model.location = Coordinate(longitude: mapCentre.longitude, latitude: mapCentre.latitude)
-            model.findEstablishments()
+            model.findEstablishments(longitude: mapCentre.longitude, latitude: mapCentre.latitude)
         }
     }
 

@@ -113,9 +113,10 @@ class MainModel {
         }
     }
     
-    func findEstablishments(){
+    func findEstablishments(longitude: Double, latitude: Double){
         if canFindEstablishments(){
-            let query = Query(longitude: location.longitude, latitude: location.latitude, radiusInMiles: searchRadius)
+            self.location = Coordinate(longitude: longitude, latitude: latitude)
+            let query = Query(longitude: longitude, latitude: latitude, radiusInMiles: searchRadius)
             dataProvider.fetchEstablishments(query: query)
         }
     }
