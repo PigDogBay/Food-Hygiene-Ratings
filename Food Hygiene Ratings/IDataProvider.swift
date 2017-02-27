@@ -11,6 +11,5 @@ import Foundation
 protocol IDataProvider {
     var model : MainModel! {get set}
     func findLocalEstablishments()
-    func fetchEstablishments()
     func fetchEstablishments(query : Query)
 }

@@ -21,10 +21,10 @@ class DummyDataProvider : IDataProvider {
         self.model.changeState(.locating)
         model.location = Coordinate(longitude: longitude, latitude: latitude)
         self.model.changeState(.foundLocation)
-        fetchEstablishments()
+        fetchEstablishments(query : Query(longitude: longitude, latitude: latitude, radiusInMiles: 1))
 
     }
-    func fetchEstablishments() {
+    func fetchEstablishments(query : Query){
         self.model.changeState(.loading)
         let url = Bundle.main.url(forResource: "stoke", withExtension: "json")
         let data = try! Data(contentsOf: url!)
@@ -38,9 +38,6 @@ class DummyDataProvider : IDataProvider {
             self.model.error = error
             self.model.changeState(.error)
         }
-    }
-    func fetchEstablishments(query : Query){
-        fetchEstablishments()
     }
 
 }

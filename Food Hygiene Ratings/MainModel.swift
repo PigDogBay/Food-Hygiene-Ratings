@@ -115,7 +115,8 @@ class MainModel {
     
     func findEstablishments(){
         if canFindEstablishments(){
-            dataProvider.fetchEstablishments()
+            let query = Query(longitude: location.longitude, latitude: location.latitude, radiusInMiles: searchRadius)
+            dataProvider.fetchEstablishments(query: query)
         }
     }
     

@@ -60,14 +60,6 @@ struct FoodHygieneAPI {
         return components.url!
     }
     
-    static func createEstablishmentsUrl(longitude : Double, latitude: Double, radiusInMiles : Int) -> URL {
-        let params = [
-            "latitude" : String(latitude),
-            "longitude" : String(longitude),
-            "maxDistanceLimit" :String(radiusInMiles)
-        ]
-        return createUrl(category: .establishments, parameters: params)
-    }
     static func createEstablishmentsUrl(query : Query) -> URL {
         var latitudeString : String?
         if let latitude = query.latitude{

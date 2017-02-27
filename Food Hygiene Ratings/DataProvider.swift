@@ -57,7 +57,8 @@ class DataProvider : NSObject, IDataProvider, CLLocationManagerDelegate{
             if model.state == .locating {
                 self.model.changeState(.foundLocation)
                 self.model.location = Coordinate(longitude: locations[0].coordinate.longitude, latitude: locations[0].coordinate.latitude)
-                fetchEstablishments()
+                let query = Query(longitude: model.location.longitude, latitude: model.location.latitude, radiusInMiles: model.searchRadius)
+                fetchEstablishments(query: query)
             }
         }
     }
@@ -68,11 +69,6 @@ class DataProvider : NSObject, IDataProvider, CLLocationManagerDelegate{
         } else {
             self.model.changeState(.errorLocating)
         }
-    }
-    
-    func fetchEstablishments(){
-        let query = Query(longitude: model.location.longitude, latitude: model.location.latitude, radiusInMiles: model.searchRadius)
-        fetchEstablishments(query: query)
     }
     
     func fetchEstablishments(query : Query) {
