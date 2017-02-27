@@ -72,14 +72,14 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     fileprivate func loadTableData() {
         if (model.state == .loaded) {
             if searchController.isActive && searchController.searchBar.text! != "" {
-                let establishments = model.localEstablishments
+                let establishments = model.results
                 let searchText = searchController.searchBar.text!
                 let filtered = DataProcessing.filter(establishments: establishments, containing: searchText	)
                 self.groupedEstablishments = DataProcessing.createDictionary(fromArray: filtered)
                 self.sortedBusinessTypes = DataProcessing.createSortedIndex(fromDictionary: self.groupedEstablishments)
                 
             } else {
-                self.groupedEstablishments = DataProcessing.createDictionary(fromArray: model.localEstablishments)
+                self.groupedEstablishments = DataProcessing.createDictionary(fromArray: model.results)
                 self.sortedBusinessTypes = DataProcessing.createSortedIndex(fromDictionary: self.groupedEstablishments)
             }
             tableView.reloadData()
@@ -188,7 +188,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
             OperationQueue.main.addOperation {
                 self.loadingIndicator.stopAnimating()
                 self.loadingLabel.isHidden=true
-                if model.localEstablishments.count>0 {
+                if model.results.count>0 {
                     self.loadTableData()
                 } else {
                     self.showErrorAlert(title: "No Results", msg: "No matches were found")

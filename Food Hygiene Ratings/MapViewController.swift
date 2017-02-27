@@ -149,7 +149,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
         centreMap()
         //remove old annotations
         self.mapView.removeAnnotations(self.mapView.annotations)
-        let markers = MainModel.sharedInstance.localEstablishments.map(){
+        let markers = MainModel.sharedInstance.results.map(){
             return MapMarker(establishment: $0)
         }
         self.mapView.addAnnotations(markers)

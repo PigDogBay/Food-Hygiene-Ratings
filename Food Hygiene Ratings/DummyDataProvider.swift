@@ -32,7 +32,7 @@ class DummyDataProvider : IDataProvider {
         
         switch estResult {
         case let .success(results):
-            self.model.setLocalEstablishments(establishments: results)
+            self.model.setResults(establishments: results)
             self.model.changeState(.loaded)
         case let .failure(error):
             self.model.error = error

@@ -36,7 +36,7 @@ class MainModel {
     static let sharedInstance = MainModel()
 
     var state : AppState = .ready
-    var localEstablishments = [Establishment]()
+    var results = [Establishment]()
     var location : Coordinate = Coordinate(longitude: -2.204094, latitude: 52.984120)
     var searchRadius : Int = 1
     var searchType = SearchType.local
@@ -109,10 +109,14 @@ class MainModel {
         }
     }
     
-    func setLocalEstablishments(establishments : [Establishment]) {
-        let sorted = establishments.sorted(by: {$0.distance < $1.distance})
-        self.localEstablishments.removeAll()
-        self.localEstablishments.append(contentsOf: sorted)
+    func setResults(establishments : [Establishment]) {
+        self.results.removeAll()
+        if searchType == .local {
+            let sorted = establishments.sorted(by: {$0.distance < $1.distance})
+            self.results.append(contentsOf: sorted)
+        } else {
+            self.results.append(contentsOf: establishments)
+        }
     }
     
     func findLocalEstablishments(){

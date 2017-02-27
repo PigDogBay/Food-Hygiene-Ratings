@@ -81,7 +81,7 @@ class DataProvider : NSObject, IDataProvider, CLLocationManagerDelegate{
                 self.model.error = error
                 self.model.changeState(.error)
             case let .success(establishments):
-                self.model.setLocalEstablishments(establishments: establishments)
+                self.model.setResults(establishments: establishments)
                 self.model.changeState(.loaded)
             }
         }
