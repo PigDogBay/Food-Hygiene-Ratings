@@ -296,7 +296,7 @@
                         <barButtonItem key="backBarButtonItem" title="Search" id="LfX-mk-gWt"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="DST-we-uNi">
                             <connections>
-                                <segue destination="TaL-GM-zMU" kind="show" identifier="sequeAdvancedSearch" id="qQ9-pY-yJa"/>
+                                <segue destination="TaL-GM-zMU" kind="show" identifier="segueAdvancedSearch" id="qQ9-pY-yJa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

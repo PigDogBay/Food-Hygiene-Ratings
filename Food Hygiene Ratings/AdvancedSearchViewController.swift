@@ -11,6 +11,7 @@ import UIKit
 class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var businessNameTextField: UITextField!
     @IBOutlet weak var placeNameTextField: UITextField!
+    let segueSearchId = "segueAdvancedSearch"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,7 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
             placeNameTextField.becomeFirstResponder()
         } else if textField === placeNameTextField {
             placeNameTextField.resignFirstResponder()
-            print("SEARCH!")
+            performSegue(withIdentifier: segueSearchId, sender: self)
         }
         return true
     }
@@ -94,7 +95,7 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "sequeAdvancedSearch" {
+        if segue.identifier == segueSearchId {
             let query = createQuery()
             MainModel.sharedInstance.findEstablishments(query: query)
         }
