@@ -22,4 +22,8 @@ struct Query {
         self.radiusInMiles = radiusInMiles
     }
     
+    init(){
+        
+    }
+    
 }

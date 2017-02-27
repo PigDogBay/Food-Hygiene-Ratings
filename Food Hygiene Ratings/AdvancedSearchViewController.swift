@@ -11,7 +11,7 @@ import UIKit
 class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var businessNameTextField: UITextField!
     @IBOutlet weak var placeNameTextField: UITextField!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -90,14 +90,30 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "sequeAdvancedSearch" {
+            let query = createQuery()
+            MainModel.sharedInstance.findEstablishments(query: query)
+        }
     }
-    */
+    
+    fileprivate func createQuery() -> Query {
+        var query = Query()
+        if let name  = businessNameTextField.text {
+            if name != "" {
+                query.businessName = name
+            }
+        }
+        if let place = placeNameTextField.text {
+            if place != "" {
+                query.placeName = place
+            }
+        }
+        return query
+    
+    }
 
 }

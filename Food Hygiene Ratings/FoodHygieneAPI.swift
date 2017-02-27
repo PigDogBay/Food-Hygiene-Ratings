@@ -116,7 +116,6 @@ struct FoodHygieneAPI {
             let newRatingPending = json["NewRatingPending"] as? Bool,
             let ratingsKey = json["RatingKey"] as? String,
             let scoresJson = json["scores"] as? [String : Any],
-            let distance = json["Distance"] as? Double,
             let addressLine1 = json["AddressLine1"] as? String,
             let addressLine2 = json["AddressLine2"] as? String,
             let addressLine3 = json["AddressLine3"] as? String,
@@ -134,7 +133,9 @@ struct FoodHygieneAPI {
             else {
                 return nil
             }
-
+        
+        let distance = json["Distance"] as? Double ?? 0.0
+        
         let coordinate = Coordinate(longitude: longitude, latitude: latitude)
         let address = Address(line1: addressLine1, line2: addressLine2, line3: addressLine3, line4: addressLine4, postcode: postcode, coordinate: coordinate)
         let ratingValue = parseRating(fromString: ratingString)

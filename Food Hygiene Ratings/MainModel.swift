@@ -120,5 +120,11 @@ class MainModel {
             dataProvider.fetchEstablishments(query: query)
         }
     }
+    func findEstablishments(query : Query){
+        if canFindEstablishments(){
+            dataProvider.fetchEstablishments(query: query)
+        }
+        
+    }
     
 }
