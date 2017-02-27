@@ -179,7 +179,11 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
             OperationQueue.main.addOperation {
                 self.loadingIndicator.stopAnimating()
                 self.loadingLabel.isHidden=true
-                self.loadTableData()
+                if model.localEstablishments.count>0 {
+                    self.loadTableData()
+                } else {
+                    self.showErrorAlert(title: "No Results", msg: "No matches were found")
+                }
             }
         case .error:
             print("state: error")
