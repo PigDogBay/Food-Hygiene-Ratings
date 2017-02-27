@@ -24,6 +24,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
 
     //Just over a mile radius
     let mapRadius : CLLocationDistance = 1000
+    
+    //UK region, co-ordinates found by trial and error
+    private let ukregion : MKCoordinateRegion = {
+        let coords = CLLocationCoordinate2D(latitude: 55.0, longitude: -3.1)
+        let span = MKCoordinateSpan(latitudeDelta: 12, longitudeDelta: 6)
+        return MKCoordinateRegionMake(coords, span)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,11 +145,23 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
         loadingLabel.isHidden=true
     }
     
-    func centreMap(){
+    fileprivate func centreMap(){
         let model = MainModel.sharedInstance
-        let coordinates = CLLocationCoordinate2D(latitude: model.location.latitude, longitude: model.location.longitude)
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinates,mapRadius * 2.0, mapRadius * 2.0)
-        mapView.setRegion(coordinateRegion, animated: true)
+        switch model.searchType {
+        case .local:
+            //show map centred on users location
+            let coords2d = CLLocationCoordinate2D(latitude: model.location.latitude, longitude: model.location.longitude)
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(coords2d,mapRadius * 2.0, mapRadius * 2.0)
+            mapView.setRegion(coordinateRegion, animated: true)
+        case .advanced:
+            //show whole of the UK
+            mapView.setRegion(ukregion, animated: true)
+        case .map:
+            //zoom in
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(mapView.centerCoordinate,mapRadius * 2.0, mapRadius * 2.0)
+            mapView.setRegion(coordinateRegion, animated: true)
+            break
+        }
     }
     
     func loadedState(){
