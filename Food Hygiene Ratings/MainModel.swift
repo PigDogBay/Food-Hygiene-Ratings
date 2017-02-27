@@ -20,6 +20,12 @@ enum AppState {
     case error
 }
 
+enum SearchType {
+    case local
+    case advanced
+    case map
+}
+
 protocol AppStateChangeObserver
 {
     func stateChanged(_ newState : AppState)
@@ -33,6 +39,8 @@ class MainModel {
     var localEstablishments = [Establishment]()
     var location : Coordinate = Coordinate(longitude: -2.204094, latitude: 52.984120)
     var searchRadius : Int = 1
+    var searchType = SearchType.local
+    
     var observersDictionary : [String : AppStateChangeObserver] = [:]
     
     var dataProvider : IDataProvider!
@@ -109,12 +117,14 @@ class MainModel {
     
     func findLocalEstablishments(){
         if canFindLocalEstablishments(){
+            self.searchType = .local
             dataProvider.findLocalEstablishments()
         }
     }
     
     func findEstablishments(longitude: Double, latitude: Double){
         if canFindEstablishments(){
+            self.searchType = .map
             self.location = Coordinate(longitude: longitude, latitude: latitude)
             let query = Query(longitude: longitude, latitude: latitude, radiusInMiles: searchRadius)
             dataProvider.fetchEstablishments(query: query)
@@ -122,6 +132,7 @@ class MainModel {
     }
     func findEstablishments(query : Query){
         if canFindEstablishments(){
+            self.searchType = .advanced
             dataProvider.fetchEstablishments(query: query)
         }
         

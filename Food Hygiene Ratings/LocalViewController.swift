@@ -120,10 +120,19 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         let businessTypeId = sortedBusinessTypes[indexPath.section]
         let est = groupedEstablishments[businessTypeId]![indexPath.row]
         cell.textLabel?.text = est.business.name
-        cell.detailTextLabel?.text = String(format: "%.1f miles", est.distance)
+        cell.detailTextLabel?.text = getDetailsText(establishment: est)
         cell.imageView?.image = UIImage(named: est.rating.getIconName())
         cell.tag = est.business.fhrsId
         return cell
+    }
+    
+    func getDetailsText(establishment : Establishment) -> String {
+        switch MainModel.sharedInstance.searchType {
+        case .local:
+            return String(format: "%.1f miles", establishment.distance)
+        default:
+            return establishment.address.flatten()
+        }
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
