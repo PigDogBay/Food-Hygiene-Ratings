@@ -148,19 +148,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
     fileprivate func centreMap(){
         let model = MainModel.sharedInstance
         switch model.searchType {
-        case .local:
-            //show map centred on users location
-            let coords2d = CLLocationCoordinate2D(latitude: model.location.latitude, longitude: model.location.longitude)
-            let coordinateRegion = MKCoordinateRegionMakeWithDistance(coords2d,mapRadius * 2.0, mapRadius * 2.0)
-            mapView.setRegion(coordinateRegion, animated: true)
         case .advanced:
             //show whole of the UK
             mapView.setRegion(ukregion, animated: true)
-        case .map:
-            //zoom in
-            let coordinateRegion = MKCoordinateRegionMakeWithDistance(mapView.centerCoordinate,mapRadius * 2.0, mapRadius * 2.0)
+        default:
+            //show map centred on location in the model
+            let coords2d = CLLocationCoordinate2D(latitude: model.location.latitude, longitude: model.location.longitude)
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(coords2d,mapRadius * 2.0, mapRadius * 2.0)
             mapView.setRegion(coordinateRegion, animated: true)
-            break
         }
     }
     
