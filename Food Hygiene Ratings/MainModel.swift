@@ -26,6 +26,11 @@ enum SearchType {
     case map
 }
 
+struct Coordinate {
+    let longitude : Double
+    let latitude : Double
+}
+
 protocol AppStateChangeObserver
 {
     func stateChanged(_ newState : AppState)
