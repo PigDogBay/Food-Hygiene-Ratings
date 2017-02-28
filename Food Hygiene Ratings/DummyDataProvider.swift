@@ -13,8 +13,12 @@ class DummyDataProvider : IDataProvider {
     var model : MainModel!
     
     //Stoke
-    let latitude = 52.984120
-    let longitude = -2.204094
+//    let latitude = 52.984120
+//    let longitude = -2.204094
+    
+    //Glasgow
+    let latitude = 55.857455
+    let longitude = -4.248
     
     
     func findLocalEstablishments() {
@@ -26,7 +30,7 @@ class DummyDataProvider : IDataProvider {
     }
     func fetchEstablishments(query : Query){
         self.model.changeState(.loading)
-        let url = Bundle.main.url(forResource: "stoke", withExtension: "json")
+        let url = Bundle.main.url(forResource: "glasgow", withExtension: "json")
         let data = try! Data(contentsOf: url!)
         let estResult = FoodHygieneAPI.establishments(fromJSON: data)
         
