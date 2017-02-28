@@ -52,6 +52,12 @@ class MapMarker : NSObject, MKAnnotation {
                 color = MapMarker.fiveStarColor
                 
             }
+        case .improvementRequired:
+            color = MapMarker.oneStarColor
+        case .pass:
+            color = MapMarker.fourStarColor
+        case .passEatSafe:
+            color = MapMarker.fiveStarColor
         default:
             color = UIColor.blue
         }
