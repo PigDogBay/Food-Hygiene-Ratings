@@ -52,7 +52,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
         adBanner.rootViewController = self
         adBanner.load(Ads.createRequest())
 
-        if (establishment.rating.hasRating()){
+        if (establishment.rating.hasScores()){
             let detailsTableDel = DetailsTableDelegate(establishment: self.establishment, viewController: self)
             self.tableDelegate = detailsTableDel
             tableView.dataSource = detailsTableDel

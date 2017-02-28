@@ -29,6 +29,15 @@ struct Rating {
     let scores : Scores
     let ratingsKey : String
     
+    func hasScores()->Bool {
+        switch self.value {
+        case .rating(_):
+            return true
+        default:
+            return false
+        }
+    }
+    
     func hasRating() -> Bool {
         switch self.value {
         case .rating(_):
