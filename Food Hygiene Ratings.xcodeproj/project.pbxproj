@@ -42,6 +42,8 @@
 		4D5C39271E5C49A800707D14 /* stoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C39261E5C49A800707D14 /* stoke.json */; };
 		4D5C39291E5C4A1A00707D14 /* DummyDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C39281E5C4A1A00707D14 /* DummyDataProvider.swift */; };
 		4D5C392D1E5C92E100707D14 /* Scores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C392C1E5C92E100707D14 /* Scores.swift */; };
+		4D6619201E66DB0800724276 /* authorities.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D66191F1E66DB0800724276 /* authorities.json */; };
+		4D6619221E66DB7E00724276 /* businessTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D6619211E66DB7E00724276 /* businessTypes.json */; };
 		4DB0114A1E65929000B4F04B /* glasgow.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DB011491E65929000B4F04B /* glasgow.json */; };
 		4DB0114C1E65A24300B4F04B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0114B1E65A24300B4F04B /* Rating.swift */; };
 		4DB64E2B1E5D997D00D1321B /* DetailsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */; };
@@ -105,6 +107,8 @@
 		4D5C39261E5C49A800707D14 /* stoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stoke.json; sourceTree = "<group>"; };
 		4D5C39281E5C4A1A00707D14 /* DummyDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyDataProvider.swift; sourceTree = "<group>"; };
 		4D5C392C1E5C92E100707D14 /* Scores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scores.swift; sourceTree = "<group>"; };
+		4D66191F1E66DB0800724276 /* authorities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authorities.json; sourceTree = "<group>"; };
+		4D6619211E66DB7E00724276 /* businessTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = businessTypes.json; sourceTree = "<group>"; };
 		4DB011491E65929000B4F04B /* glasgow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = glasgow.json; sourceTree = "<group>"; };
 		4DB0114B1E65A24300B4F04B /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableDelegate.swift; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 				4D3717BE1E4C7ED100644A0C /* Info.plist */,
 				4D5C39261E5C49A800707D14 /* stoke.json */,
 				4DB011491E65929000B4F04B /* glasgow.json */,
+				4D66191F1E66DB0800724276 /* authorities.json */,
+				4D6619211E66DB7E00724276 /* businessTypes.json */,
 			);
 			name = Supporting;
 			sourceTree = "<group>";
@@ -367,8 +373,10 @@
 				4D5C39131E521C5A00707D14 /* GoogleService-Info.plist in Resources */,
 				4D3717BA1E4C7ED100644A0C /* Assets.xcassets in Resources */,
 				4D5C39271E5C49A800707D14 /* stoke.json in Resources */,
+				4D6619201E66DB0800724276 /* authorities.json in Resources */,
 				4D3717B81E4C7ED100644A0C /* Main.storyboard in Resources */,
 				4D5C39171E53B20100707D14 /* RatingsLogos.xcassets in Resources */,
+				4D6619221E66DB7E00724276 /* businessTypes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
