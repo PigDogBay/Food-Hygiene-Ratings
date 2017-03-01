@@ -77,6 +77,7 @@ struct FoodHygieneAPI {
             "latitude" : latitudeString,
             "longitude" : longitudeString,
             "maxDistanceLimit" : radiusString,
+            "ratingKey" : query.ratingValue,
             "name" : query.businessName,
             "address" : query.placeName]
         return createUrl(category: .establishments, parameters: params)

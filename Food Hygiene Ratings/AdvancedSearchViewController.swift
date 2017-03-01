@@ -11,7 +11,25 @@ import UIKit
 class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var businessNameTextField: UITextField!
     @IBOutlet weak var placeNameTextField: UITextField!
+
+    @IBOutlet weak var comparisonCell: UITableViewCell!
+    @IBOutlet weak var ratingsCell: UITableViewCell!
+    @IBAction func unwindWithSelectedListItem(segue:UIStoryboardSegue) {
+        if let vc = segue.source as? ListViewController {
+            if let selected = vc.selectedItem {
+                ratingValue = selected
+            }
+        }
+    }
+    
+    var ratingValue : String? {
+        didSet {
+            ratingsCell.detailTextLabel?.text = ratingValue
+        }
+    }
+    
     let segueSearchId = "segueAdvancedSearch"
+    let segueSelectRating = "segueRatingsValue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +116,12 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
         if segue.identifier == segueSearchId {
             let query = createQuery()
             MainModel.sharedInstance.findEstablishments(query: query)
+        } else if segue.identifier == segueSelectRating {
+            if let vc = segue.destination as? ListViewController {
+                vc.listItems = Rating.ratingsValues
+                let selected = ratingValue ?? Rating.ratingsValues[0]
+                vc.selectedItem = selected
+            }
         }
     }
     
@@ -112,6 +136,9 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
             if place != "" {
                 query.placeName = place
             }
+        }
+        if let rating = ratingValue {
+            query.ratingValue = rating
         }
         return query
     

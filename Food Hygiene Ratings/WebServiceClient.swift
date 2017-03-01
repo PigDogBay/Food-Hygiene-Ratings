@@ -29,8 +29,6 @@ class WebServiceClient {
             (data, response, error) -> Void in
             
             if let jsonData = data {
-                let s = String(data: jsonData, encoding: .utf8)!
-                print(s)
                 completion(FoodHygieneAPI.establishments(fromJSON: jsonData))
             } else if let requestError = error {
                 completion(.failure(requestError))

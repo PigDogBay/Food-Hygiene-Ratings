@@ -28,6 +28,7 @@ struct Rating {
     let newRatingPending : Bool
     let scores : Scores
     let ratingsKey : String
+    static let ratingsValues = ["All", "5", "4","3", "2","1","0"]
     
     func hasScores()->Bool {
         switch self.value {

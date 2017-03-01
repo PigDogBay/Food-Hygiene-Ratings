@@ -128,6 +128,48 @@
             </objects>
             <point key="canvasLocation" x="239" y="-98"/>
         </scene>
+        <!--Select Rating-->
+        <scene sceneID="d9B-y3-kdc">
+            <objects>
+                <tableViewController id="50m-vz-sNm" customClass="ListViewController" customModule="Food_Hygiene_Ratings" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7wq-f9-EdZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellListItem" textLabel="Hgs-In-gx6" style="IBUITableViewCellStyleDefault" id="B3x-fm-Rvd">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B3x-fm-Rvd" id="uZN-Ge-q0K">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hgs-In-gx6">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="gE4-2g-KTH" kind="unwind" unwindAction="unwindWithSelectedListItemWithSegue:" id="Zj6-fq-uQT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="50m-vz-sNm" id="4dm-F3-Fhr"/>
+                            <outlet property="delegate" destination="50m-vz-sNm" id="p3k-Yh-oc2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select Rating" id="xmJ-IF-vEg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ceW-HA-Zmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gE4-2g-KTH" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2782" y="-1330"/>
+        </scene>
         <!--Near Me-->
         <scene sceneID="FNP-FP-yYW">
             <objects>
@@ -227,13 +269,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bd-Zl-H3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2768.8000000000002" y="-591.45427286356824"/>
+            <point key="canvasLocation" x="2782" y="-592"/>
         </scene>
         <!--Advanced Search-->
         <scene sceneID="bvf-8R-Y8r">
             <objects>
                 <tableViewController id="M80-KF-t2N" customClass="AdvancedSearchViewController" customModule="Food_Hygiene_Ratings" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Zqf-w5-vgI">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Zqf-w5-vgI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -286,6 +328,61 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Rating" id="5wU-Kt-NEN">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="u9D-Lk-oWt" detailTextLabel="mGe-go-z8M" style="IBUITableViewCellStyleValue1" id="jqV-st-vks">
+                                        <rect key="frame" x="0.0" y="179" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jqV-st-vks" id="cFf-Dv-GQH">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Hygiene Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u9D-Lk-oWt">
+                                                    <rect key="frame" x="15" y="11" width="116" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="All" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mGe-go-z8M">
+                                                    <rect key="frame" x="321" y="11" width="19" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="50m-vz-sNm" kind="show" identifier="segueRatingsValue" id="OVE-iH-xF1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="XCV-qL-Xth" detailTextLabel="4Sv-8x-jPw" style="IBUITableViewCellStyleValue1" id="QQw-pO-M7p">
+                                        <rect key="frame" x="0.0" y="223" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QQw-pO-M7p" id="T50-e8-5UA">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Comparison" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XCV-qL-Xth">
+                                                    <rect key="frame" x="15" y="11" width="93" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Equal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Sv-8x-jPw">
+                                                    <rect key="frame" x="297" y="11" width="43" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="M80-KF-t2N" id="9Bm-9D-jBx"/>
@@ -302,7 +399,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="businessNameTextField" destination="nBq-iz-Bap" id="ohY-eC-Iv8"/>
+                        <outlet property="comparisonCell" destination="QQw-pO-M7p" id="nEv-q8-s0S"/>
                         <outlet property="placeNameTextField" destination="lR4-UQ-BPM" id="2r7-XT-DHW"/>
+                        <outlet property="ratingsCell" destination="jqV-st-vks" id="a6r-lD-mHm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wo0-cV-13k" userLabel="First Responder" sceneMemberID="firstResponder"/>
