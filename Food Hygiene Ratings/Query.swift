@@ -17,6 +17,7 @@ struct Query {
     var radiusInMiles : Int?
     var ratingValue : String?
     var ratingOperator : String?
+    var localAuthorityId : Int?
     
     init(longitude : Double, latitude: Double, radiusInMiles : Int){
         self.longitude = longitude

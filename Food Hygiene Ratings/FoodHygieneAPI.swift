@@ -76,10 +76,15 @@ struct FoodHygieneAPI {
         if let radius = query.radiusInMiles {
             radiusString = String(radius)
         }
+        var localAuthorityId : String?
+        if let laId = query.localAuthorityId {
+            localAuthorityId = String(laId)
+        }
         let params = [
             "latitude" : latitudeString,
             "longitude" : longitudeString,
             "maxDistanceLimit" : radiusString,
+            "localAuthorityId" : localAuthorityId,
             "ratingKey" : query.ratingValue,
             "ratingOperatorKey" : query.ratingOperator,
             "name" : query.businessName,

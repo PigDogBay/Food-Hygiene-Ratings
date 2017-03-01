@@ -12,8 +12,10 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var businessNameTextField: UITextField!
     @IBOutlet weak var placeNameTextField: UITextField!
 
+    @IBOutlet weak var localAuthorityCell: UITableViewCell!
     @IBOutlet weak var comparisonCell: UITableViewCell!
     @IBOutlet weak var ratingsCell: UITableViewCell!
+    
     @IBAction func unwindWithSelectedListItem(segue:UIStoryboardSegue) {
         if let vc = segue.source as? ListViewController {
             if let selected = vc.selectedItem {
@@ -22,6 +24,8 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
                     ratingValue = selected
                 case ratingOperatorListId:
                     ratingOperator = selected
+                case localAuthorityListId:
+                    localAuthority = selected
                 default:
                     break
                 }
@@ -39,12 +43,19 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
             comparisonCell.detailTextLabel?.text = ratingOperator
         }
     }
+    var localAuthority : String? {
+        didSet {
+            localAuthorityCell.detailTextLabel?.text = localAuthority
+        }
+    }
     
     let segueSearchId = "segueAdvancedSearch"
     let segueSelectRating = "segueRatingsValue"
     let segueSelectOperator = "segueRatingsOperator"
+    let segueLocalAuthority = "segueLocalAuthority"
     let ratingValueListId = 0
     let ratingOperatorListId = 1
+    let localAuthorityListId = 2
     
     
     override func viewDidLoad() {
@@ -147,6 +158,15 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
                 vc.id = ratingOperatorListId
                 vc.title = "Rating Comparison"
             }
+        } else if segue.identifier == segueLocalAuthority {
+            if let vc = segue.destination as? ListViewController {
+                vc.listItems = MainModel.sharedInstance.localAuthorities.map(){$0.name}
+                vc.listItems.insert("All", at: 0)
+                let selected = localAuthority ?? "All"
+                vc.selectedItem = selected
+                vc.id = localAuthorityListId
+                vc.title = "Local Authority"
+            }
         }
     
     }
@@ -168,6 +188,14 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
         }
         if let operatorKey = ratingOperator {
             query.ratingOperator = operatorKey
+        }
+        if let laName = localAuthority {
+            if laName != "All" {
+                let la = MainModel.sharedInstance.localAuthorities.first(){
+                    $0.name == laName
+                }
+                query.localAuthorityId = la?.searchCode
+            }
         }
         return query
     
