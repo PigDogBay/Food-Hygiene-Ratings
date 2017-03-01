@@ -8,13 +8,6 @@
 
 import Foundation
 
-struct LocalAuthority {
-    let email : String
-    let web : String
-    let name : String
-    let code : String
-}
-
 class Establishment {
     
     let business : Business

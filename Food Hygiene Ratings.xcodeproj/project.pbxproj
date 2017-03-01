@@ -45,6 +45,7 @@
 		4D6619201E66DB0800724276 /* authorities.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D66191F1E66DB0800724276 /* authorities.json */; };
 		4D6619221E66DB7E00724276 /* businessTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D6619211E66DB7E00724276 /* businessTypes.json */; };
 		4D6619261E66F6A600724276 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6619251E66F6A600724276 /* ListViewController.swift */; };
+		4D6619281E67526D00724276 /* LocalAuthority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6619271E67526D00724276 /* LocalAuthority.swift */; };
 		4DB0114A1E65929000B4F04B /* glasgow.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DB011491E65929000B4F04B /* glasgow.json */; };
 		4DB0114C1E65A24300B4F04B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0114B1E65A24300B4F04B /* Rating.swift */; };
 		4DB64E2B1E5D997D00D1321B /* DetailsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */; };
@@ -111,6 +112,7 @@
 		4D66191F1E66DB0800724276 /* authorities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authorities.json; sourceTree = "<group>"; };
 		4D6619211E66DB7E00724276 /* businessTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = businessTypes.json; sourceTree = "<group>"; };
 		4D6619251E66F6A600724276 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		4D6619271E67526D00724276 /* LocalAuthority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalAuthority.swift; sourceTree = "<group>"; };
 		4DB011491E65929000B4F04B /* glasgow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = glasgow.json; sourceTree = "<group>"; };
 		4DB0114B1E65A24300B4F04B /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				4D3717D71E4DC22000644A0C /* WebServiceClient.swift */,
 				4D3717D51E4DC21100644A0C /* FoodHygieneAPI.swift */,
 				4D3717D31E4DC1FC00644A0C /* Establishment.swift */,
+				4D6619271E67526D00724276 /* LocalAuthority.swift */,
 				4DB0114B1E65A24300B4F04B /* Rating.swift */,
 				4D5C39201E55D85B00707D14 /* Business.swift */,
 				4D100DCA1E644FB9005EB6E9 /* Address.swift */,
@@ -492,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3717DA1E4DC23B00644A0C /* MapMarker.swift in Sources */,
+				4D6619281E67526D00724276 /* LocalAuthority.swift in Sources */,
 				4D3717D81E4DC22000644A0C /* WebServiceClient.swift in Sources */,
 				4D3717CF1E4CCF4700644A0C /* SearchViewController.swift in Sources */,
 				4D5C39051E4E1D0A00707D14 /* IDataProvider.swift in Sources */,

@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum LocalAuthorityResult {
+    case success([LocalAuthority])
+    case failure(Error)
+}
 enum EstablishmentsResult {
     case success([Establishment])
     case failure(Error)

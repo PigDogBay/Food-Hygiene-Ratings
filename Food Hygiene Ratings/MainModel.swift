@@ -50,6 +50,18 @@ class MainModel {
     
     var dataProvider : IDataProvider!
     var error : Error?
+    
+    lazy var localAuthorities : [LocalAuthority] = {
+        let url = Bundle.main.url(forResource: "authorities", withExtension: "json")
+        let data = try! Data(contentsOf: url!)
+        let estResult = FoodHygieneAPI.authorities(fromJSON: data)
+        switch estResult {
+            case let .success(results):
+                return results
+        default:
+            return [LocalAuthority]()
+        }
+    }()
 
     func addObserver(_ name: String, observer : AppStateChangeObserver)
     {

@@ -194,6 +194,41 @@ struct FoodHygieneAPI {
         }
     }
     
+    static func authorities(fromJSON data: Data) -> LocalAuthorityResult{
+        do {
+            let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+            guard
+                let jsonDictionary = jsonObject as? [AnyHashable : Any],
+                let authoritiesArray = jsonDictionary["authorities"] as? [[String:Any]] else {
+                    return .failure(FoodHygieneError.invalidJSONData)
+            }
+            
+            var authorities = [LocalAuthority]()
+            for authJSON in authoritiesArray {
+                if let auth = localAuthority(fromJSON: authJSON){
+                    authorities.append(auth)
+                }
+            }
+            return .success(authorities)
+        } catch let Error {
+            return .failure(Error)
+        }
+    }
+
+    private static func localAuthority(fromJSON json: [String : Any]) -> LocalAuthority? {
+        guard
+            let name = json["Name"] as? String,
+            let establishmentCount = json["EstablishmentCount"] as? Int,
+            let schemeType = json["SchemeType"] as? Int,
+            let authorityId = json["LocalAuthorityId"] as? Int,
+            let authorityIdCode = json["LocalAuthorityIdCode"] as? String
+        else {
+            return nil
+        }
+        let localAuthority = LocalAuthority(name: name, searchCode: authorityId, establishmentCount: establishmentCount, schemeType: schemeType, code: authorityIdCode)
+        return localAuthority
+    }
+    
     
     
 }
