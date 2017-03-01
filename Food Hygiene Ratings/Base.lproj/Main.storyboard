@@ -380,6 +380,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="50m-vz-sNm" kind="show" identifier="segueRatingsOperator" id="FUg-Vk-YwS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -748,5 +751,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qQ9-pY-yJa"/>
+        <segue reference="FUg-Vk-YwS"/>
     </inferredMetricsTieBreakers>
 </document>

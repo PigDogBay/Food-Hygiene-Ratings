@@ -29,6 +29,9 @@ extension FoodHygieneError : LocalizedError {
 
 
 struct FoodHygieneAPI {
+
+    static let ratingsValues = ["All", "5", "4","3", "2","1","0"]
+    static let ratingsOperators = ["Equal","GreaterThanOrEqual","LessThanOrEqual"]
     
     private static let baseUrlString = "http://api.ratings.food.gov.uk/"
 
@@ -78,6 +81,7 @@ struct FoodHygieneAPI {
             "longitude" : longitudeString,
             "maxDistanceLimit" : radiusString,
             "ratingKey" : query.ratingValue,
+            "ratingOperatorKey" : query.ratingOperator,
             "name" : query.businessName,
             "address" : query.placeName]
         return createUrl(category: .establishments, parameters: params)

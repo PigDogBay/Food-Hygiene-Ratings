@@ -10,6 +10,7 @@ import UIKit
 
 class ListViewController: UITableViewController {
 
+    var id = 0
     var listItems : [String]!
     var selectedIndex : Int?
     var selectedItem : String? {

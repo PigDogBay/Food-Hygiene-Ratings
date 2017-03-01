@@ -17,7 +17,14 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
     @IBAction func unwindWithSelectedListItem(segue:UIStoryboardSegue) {
         if let vc = segue.source as? ListViewController {
             if let selected = vc.selectedItem {
-                ratingValue = selected
+                switch vc.id {
+                case ratingValueListId:
+                    ratingValue = selected
+                case ratingOperatorListId:
+                    ratingOperator = selected
+                default:
+                    break
+                }
             }
         }
     }
@@ -27,9 +34,18 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
             ratingsCell.detailTextLabel?.text = ratingValue
         }
     }
+    var ratingOperator : String? {
+        didSet {
+            comparisonCell.detailTextLabel?.text = ratingOperator
+        }
+    }
     
     let segueSearchId = "segueAdvancedSearch"
     let segueSelectRating = "segueRatingsValue"
+    let segueSelectOperator = "segueRatingsOperator"
+    let ratingValueListId = 0
+    let ratingOperatorListId = 1
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,11 +134,22 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
             MainModel.sharedInstance.findEstablishments(query: query)
         } else if segue.identifier == segueSelectRating {
             if let vc = segue.destination as? ListViewController {
-                vc.listItems = Rating.ratingsValues
-                let selected = ratingValue ?? Rating.ratingsValues[0]
+                vc.listItems = FoodHygieneAPI.ratingsValues
+                let selected = ratingValue ?? FoodHygieneAPI.ratingsValues[0]
                 vc.selectedItem = selected
+                vc.id = ratingValueListId
+                vc.title = "Rating"
+            }
+        } else if segue.identifier == segueSelectOperator {
+            if let vc = segue.destination as? ListViewController {
+                vc.listItems = FoodHygieneAPI.ratingsOperators
+                let selected = ratingValue ?? FoodHygieneAPI.ratingsOperators[0]
+                vc.selectedItem = selected
+                vc.id = ratingOperatorListId
+                vc.title = "Rating Comparison"
             }
         }
+    
     }
     
     fileprivate func createQuery() -> Query {
@@ -139,6 +166,9 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
         }
         if let rating = ratingValue {
             query.ratingValue = rating
+        }
+        if let operatorKey = ratingOperator {
+            query.ratingOperator = operatorKey
         }
         return query
     
