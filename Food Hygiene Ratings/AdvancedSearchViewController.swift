@@ -15,7 +15,9 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var localAuthorityCell: UITableViewCell!
     @IBOutlet weak var comparisonCell: UITableViewCell!
     @IBOutlet weak var ratingsCell: UITableViewCell!
-    
+    @IBOutlet weak var businessTypeCell: UITableViewCell!
+    @IBOutlet weak var scottishRatingCell: UITableViewCell!
+
     @IBAction func unwindWithSelectedListItem(segue:UIStoryboardSegue) {
         if let vc = segue.source as? ListViewController {
             if let selected = vc.selectedItem {
@@ -26,6 +28,10 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
                     ratingOperator = selected
                 case localAuthorityListId:
                     localAuthority = selected
+                case businessTypeListId:
+                    businessType = selected
+                case scottishRatingListId:
+                    scottishRating = selected
                 default:
                     break
                 }
@@ -48,14 +54,28 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
             localAuthorityCell.detailTextLabel?.text = localAuthority
         }
     }
+    var businessType : String? {
+        didSet{
+            businessTypeCell.detailTextLabel?.text = businessType
+        }
+    }
+    var scottishRating : String? {
+        didSet{
+            scottishRatingCell.detailTextLabel?.text = scottishRating
+        }
+    }
     
     let segueSearchId = "segueAdvancedSearch"
     let segueSelectRating = "segueRatingsValue"
     let segueSelectOperator = "segueRatingsOperator"
     let segueLocalAuthority = "segueLocalAuthority"
+    let segueBusinessType = "segueBusinessType"
+    let segueScottishRating = "segueScottishRating"
     let ratingValueListId = 0
     let ratingOperatorListId = 1
     let localAuthorityListId = 2
+    let businessTypeListId = 3
+    let scottishRatingListId = 4
     
     
     override func viewDidLoad() {
@@ -70,14 +90,9 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
         businessNameTextField.delegate = self
         placeNameTextField.delegate = self
     }
-    override func viewDidAppear(_ animated: Bool) {
-        businessNameTextField.becomeFirstResponder()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        businessNameTextField.becomeFirstResponder()
+//    }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField === businessNameTextField {
@@ -89,60 +104,16 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
         }
         return true
     }
-    
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == segueSearchId {
+        switch segue.identifier! {
+        case segueSearchId:
             let query = createQuery()
             MainModel.sharedInstance.findEstablishments(query: query)
-        } else if segue.identifier == segueSelectRating {
+        case segueSelectRating:
             if let vc = segue.destination as? ListViewController {
                 vc.listItems = FoodHygieneAPI.ratingsValues
                 let selected = ratingValue ?? FoodHygieneAPI.ratingsValues[0]
@@ -150,7 +121,7 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
                 vc.id = ratingValueListId
                 vc.title = "Rating"
             }
-        } else if segue.identifier == segueSelectOperator {
+        case segueSelectOperator:
             if let vc = segue.destination as? ListViewController {
                 vc.listItems = FoodHygieneAPI.ratingsOperators
                 let selected = ratingValue ?? FoodHygieneAPI.ratingsOperators[0]
@@ -158,7 +129,7 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
                 vc.id = ratingOperatorListId
                 vc.title = "Rating Comparison"
             }
-        } else if segue.identifier == segueLocalAuthority {
+        case segueLocalAuthority:
             if let vc = segue.destination as? ListViewController {
                 vc.listItems = MainModel.sharedInstance.localAuthorities.map(){$0.name}
                 vc.listItems.insert("All", at: 0)
@@ -167,6 +138,24 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
                 vc.id = localAuthorityListId
                 vc.title = "Local Authority"
             }
+        case segueBusinessType:
+            if let vc = segue.destination as? ListViewController {
+                vc.listItems = Business.businessNames
+                let selected = localAuthority ?? vc.listItems[0]
+                vc.selectedItem = selected
+                vc.id = businessTypeListId
+                vc.title = "Business Type"
+            }
+        case segueScottishRating:
+            if let vc = segue.destination as? ListViewController {
+                vc.listItems = Rating.scottishRatingNames
+                let selected = localAuthority ?? vc.listItems[0]
+                vc.selectedItem = selected
+                vc.id = scottishRatingListId
+                vc.title = "Rating Status"
+            }
+        default:
+            break
         }
     
     }
@@ -196,6 +185,19 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
                 }
                 query.localAuthorityId = la?.searchCode
             }
+        }
+        if let busType = businessType {
+            if busType != "All"
+            {
+                let busTypeIndex = Business.businessNames.index(of: busType)
+                if let index = busTypeIndex {
+                    query.businessType = Business.businessTypes[index]
+                }
+            }
+        }
+        if let rating = scottishRating {
+            let ratingKey = rating.replacingOccurrences(of: " ", with: "")
+            query.ratingValue = ratingKey
         }
         return query
     

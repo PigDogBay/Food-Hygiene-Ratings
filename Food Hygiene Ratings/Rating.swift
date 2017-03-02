@@ -29,6 +29,9 @@ struct Rating {
     let scores : Scores
     let ratingsKey : String
     
+    static let scottishRatingNames = [
+     "All", "Pass", "Improvement Required",  "Awaiting Publication", "Awaiting Inspection", "Exempt"]
+    
     func hasScores()->Bool {
         switch self.value {
         case .rating(_):

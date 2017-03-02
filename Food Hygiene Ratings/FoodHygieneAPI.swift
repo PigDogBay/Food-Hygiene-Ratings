@@ -80,6 +80,11 @@ struct FoodHygieneAPI {
         if let laId = query.localAuthorityId {
             localAuthorityId = String(laId)
         }
+        var businessTypeId : String?
+        if let busId = query.businessType {
+            businessTypeId = String(busId)
+        }
+        
         let params = [
             "latitude" : latitudeString,
             "longitude" : longitudeString,
@@ -87,6 +92,7 @@ struct FoodHygieneAPI {
             "localAuthorityId" : localAuthorityId,
             "ratingKey" : query.ratingValue,
             "ratingOperatorKey" : query.ratingOperator,
+            "businessTypeId" : businessTypeId,
             "name" : query.businessName,
             "address" : query.placeName]
         return createUrl(category: .establishments, parameters: params)

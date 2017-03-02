@@ -26,6 +26,42 @@ struct Business {
     static let  distributorsTransporters = 7
     static let  manufacturers = 7839
     
+    //using a dictionary messes with the ordering
+    static let businessNames = [
+        "All",
+        "Takeaway/sandwich shop",
+        "Restaurant/Cafe/Canteen",
+        "Pub/bar/nightclub",
+        "Mobile caterer",
+        "Other catering premises",
+        "Hotel/bed & breakfast/guest house",
+        "Retailers - supermarkets/hypermarkets",
+        "Retailers - other",
+        "Hospitals/Childcare/Caring Premises",
+        "School/college/university",
+        "Importers/Exporters",
+        "Farmers/growers",
+        "Distributors/Transporters",
+        "Manufacturers/packers"
+    ]
+    static let businessTypes = [
+        Business.all,
+        Business.takeawaySandwichShop,
+        Business.restaurantsCafeCanteen,
+        Business.pubsBarsNightclubs,
+        Business.mobileCaters,
+        Business.otherCaters,
+        Business.hotel,
+        Business.supermarkets,
+        Business.retailersOther,
+        Business.hospitals,
+        Business.school,
+        Business.importersExporters,
+        Business.farmersGrowers,
+        Business.distributorsTransporters,
+        Business.manufacturers
+    ]
+    
     static let sortOrder : [Int : Int] = [
         Business.takeawaySandwichShop : 0,
         Business.restaurantsCafeCanteen : 1,
