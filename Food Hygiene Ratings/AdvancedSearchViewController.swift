@@ -124,7 +124,7 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
         case segueSelectOperator:
             if let vc = segue.destination as? ListViewController {
                 vc.listItems = FoodHygieneAPI.ratingsOperators
-                let selected = ratingValue ?? FoodHygieneAPI.ratingsOperators[0]
+                let selected = ratingOperator ?? FoodHygieneAPI.ratingsOperators[0]
                 vc.selectedItem = selected
                 vc.id = ratingOperatorListId
                 vc.title = "Rating Comparison"
@@ -141,7 +141,7 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
         case segueBusinessType:
             if let vc = segue.destination as? ListViewController {
                 vc.listItems = Business.businessNames
-                let selected = localAuthority ?? vc.listItems[0]
+                let selected = businessType ?? vc.listItems[0]
                 vc.selectedItem = selected
                 vc.id = businessTypeListId
                 vc.title = "Business Type"
@@ -149,7 +149,7 @@ class AdvancedSearchViewController: UITableViewController, UITextFieldDelegate {
         case segueScottishRating:
             if let vc = segue.destination as? ListViewController {
                 vc.listItems = Rating.scottishRatingNames
-                let selected = localAuthority ?? vc.listItems[0]
+                let selected = scottishRating ?? vc.listItems[0]
                 vc.selectedItem = selected
                 vc.id = scottishRatingListId
                 vc.title = "Rating Status"
