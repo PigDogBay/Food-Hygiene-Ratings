@@ -30,4 +30,16 @@ struct Query {
         
     }
     
+    func isEmpty()->Bool {
+        return  businessName == nil &&
+                placeName == nil &&
+                longitude == nil &&
+                latitude == nil &&
+                radiusInMiles == nil &&
+                ratingValue == nil &&
+                ratingOperator == nil &&
+                localAuthorityId == nil &&
+                businessType == nil
+    }
+    
 }
