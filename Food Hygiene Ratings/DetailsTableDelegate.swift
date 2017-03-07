@@ -28,8 +28,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
     fileprivate let ROW_RATING_COUNT = 2
     
     fileprivate let ROW_SCORES_HYGIENE = 0
-    fileprivate let ROW_SCORES_MANAGEMENT = 1
-    fileprivate let ROW_SCORES_STRUCTURAL = 2
+    fileprivate let ROW_SCORES_STRUCTURAL = 1
+    fileprivate let ROW_SCORES_MANAGEMENT = 2
     fileprivate let ROW_SCORES_COUNT = 3
     
     fileprivate let ROW_LA_NAME = 0
@@ -134,14 +134,14 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
                 cell.textLabel?.text = "Hygiene: \(establishment.rating.scores.hygiene)"
                 cell.detailTextLabel?.text = establishment.rating.scores.getHygieneDescription()
                 cell.imageView?.image = UIImage(named: establishment.rating.scores.getHygieneIconName())
-            case ROW_SCORES_MANAGEMENT:
-                cell.textLabel?.text = "Management: \(establishment.rating.scores.confidenceInManagement)"
-                cell.detailTextLabel?.text = establishment.rating.scores.getManagementDescription()
-                cell.imageView?.image = UIImage(named: establishment.rating.scores.getManagementIconName())
             case ROW_SCORES_STRUCTURAL:
                 cell.textLabel?.text = "Structural: \(establishment.rating.scores.structural)"
                 cell.detailTextLabel?.text = establishment.rating.scores.getStructuralDescription()
                 cell.imageView?.image = UIImage(named: establishment.rating.scores.getStructuralIconName())
+            case ROW_SCORES_MANAGEMENT:
+                cell.textLabel?.text = "Management: \(establishment.rating.scores.confidenceInManagement)"
+                cell.detailTextLabel?.text = establishment.rating.scores.getManagementDescription()
+                cell.imageView?.image = UIImage(named: establishment.rating.scores.getManagementIconName())
             default:
                 break
             }
@@ -206,10 +206,10 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             {
             case ROW_SCORES_HYGIENE:
                 showAlert(title: Scores.hygienicTitle, msg: Scores.hygienicDescription)
-            case ROW_SCORES_STRUCTURAL:
-                showAlert(title: Scores.structuralTitle, msg: Scores.structuralDescription)
             case ROW_SCORES_MANAGEMENT:
                 showAlert(title: Scores.managementTitle, msg: Scores.managementDescription)
+            case ROW_SCORES_STRUCTURAL:
+                showAlert(title: Scores.structuralTitle, msg: Scores.structuralDescription)
             default:
                 return
             }
