@@ -80,7 +80,6 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
                 let filtered = DataProcessing.filter(establishments: scopeFiltered, containing: searchText	)
                 self.groupedEstablishments = DataProcessing.createDictionary(fromArray: filtered)
                 self.sortedBusinessTypes = DataProcessing.createSortedIndex(fromDictionary: self.groupedEstablishments)
-                
             } else {
                 self.groupedEstablishments = DataProcessing.createDictionary(fromArray: model.results)
                 self.sortedBusinessTypes = DataProcessing.createSortedIndex(fromDictionary: self.groupedEstablishments)
@@ -214,6 +213,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
                 self.loadingIndicator.stopAnimating()
                 self.loadingLabel.isHidden=true
                 if model.results.count>0 {
+                    self.title = "\(model.results.count) Results"
                     self.loadTableData()
                 } else {
                     self.showErrorAlert(title: "No Results", msg: "No matches were found")
