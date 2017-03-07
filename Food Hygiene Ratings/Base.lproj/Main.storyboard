@@ -16,7 +16,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="6ro-Sc-j95">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Quick Search" footerTitle="Enter name and place, then press the search icon top right" id="NR6-dD-5ig">
                                 <cells>
@@ -53,6 +53,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="mbE-j0-zaq" secondAttribute="bottom" constant="5" id="p6A-xx-B3t"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94509803921568625" green="0.97254901960784312" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="c4p-IL-gvn">
                                         <rect key="frame" x="0.0" y="100" width="375" height="44"/>
@@ -87,6 +88,7 @@
                                                 <constraint firstItem="cVu-vR-Vck" firstAttribute="top" secondItem="6M1-xy-dJX" secondAttribute="top" constant="8" id="tfw-gt-OCK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94509803921568625" green="0.97254901960784312" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -112,6 +114,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94509803921568625" green="0.97254901960784312" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="TaL-GM-zMU" kind="show" identifier="segueNearMe" id="fCe-xu-D47"/>
                                         </connections>
@@ -130,12 +133,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="iconNearMe" id="YjP-TW-ffB">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="iconAdvancedSearch" id="YjP-TW-ffB">
                                                     <rect key="frame" x="15" y="6" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94509803921568625" green="0.97254901960784312" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="M80-KF-t2N" kind="show" id="JwE-ng-8Mn"/>
                                         </connections>
@@ -164,6 +168,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94509803921568625" green="0.97254901960784312" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="ZhE-Ct-674" kind="show" id="Nq1-QS-e0Y"/>
                                         </connections>
@@ -179,6 +184,7 @@
                     <navigationItem key="navigationItem" title="Food Hygiene" id="C1I-G7-rvC">
                         <barButtonItem key="backBarButtonItem" title="Back" id="drI-mb-CiT"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="jMt-2H-fzB">
+                            <color key="tintColor" red="0.20000000000000001" green="0.41176470588235292" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="TaL-GM-zMU" kind="show" identifier="segueQuickSearch" id="ZAC-Yk-4Et"/>
                             </connections>
@@ -429,7 +435,7 @@
                             <tableViewSection headerTitle="Location" id="6nV-x1-A8j">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OpS-mZ-2JH">
-                                        <rect key="frame" x="0.0" y="200" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="201" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OpS-mZ-2JH" id="ApQ-GY-KJG">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -463,7 +469,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="34p-ON-gdz" detailTextLabel="UJG-9E-UVi" style="IBUITableViewCellStyleValue1" id="Zla-OV-Xak">
-                                        <rect key="frame" x="0.0" y="244" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="245" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zla-OV-Xak" id="kse-df-E8y">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
@@ -494,7 +500,7 @@
                             <tableViewSection headerTitle="Rating" id="5wU-Kt-NEN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="u9D-Lk-oWt" detailTextLabel="mGe-go-z8M" style="IBUITableViewCellStyleValue1" id="jqV-st-vks">
-                                        <rect key="frame" x="0.0" y="344" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="346" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jqV-st-vks" id="cFf-Dv-GQH">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
@@ -521,7 +527,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="XCV-qL-Xth" detailTextLabel="4Sv-8x-jPw" style="IBUITableViewCellStyleValue1" id="QQw-pO-M7p">
-                                        <rect key="frame" x="0.0" y="388" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="390" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QQw-pO-M7p" id="T50-e8-5UA">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
@@ -552,7 +558,7 @@
                             <tableViewSection headerTitle="Rating Status - Scotland" id="HRG-uN-AqO">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="P5b-cT-3Fp" detailTextLabel="eDp-jg-bNW" style="IBUITableViewCellStyleValue1" id="OZI-IS-p7k">
-                                        <rect key="frame" x="0.0" y="488" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="491" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OZI-IS-p7k" id="fmK-xm-kbO">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
@@ -681,7 +687,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ngr-fC-sMG" id="YA6-lR-CCU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -957,11 +963,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iconAdvancedSearch" width="30" height="30"/>
         <image name="iconNearMe" width="30" height="30"/>
         <image name="iconSettings" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qQ9-pY-yJa"/>
+        <segue reference="fCe-xu-D47"/>
         <segue reference="Gl5-Az-lUO"/>
     </inferredMetricsTieBreakers>
 </document>
