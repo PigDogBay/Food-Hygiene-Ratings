@@ -30,7 +30,7 @@ class DummyDataProvider : IDataProvider {
     }
     func fetchEstablishments(query : Query){
         self.model.changeState(.loading)
-        let url = Bundle.main.url(forResource: "glasgow", withExtension: "json")
+        let url = Bundle.main.url(forResource: "stoke", withExtension: "json")
         let data = try! Data(contentsOf: url!)
         let estResult = FoodHygieneAPI.establishments(fromJSON: data)
         

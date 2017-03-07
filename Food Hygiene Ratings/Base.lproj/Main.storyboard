@@ -791,7 +791,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PP1-Ld-FhP">
-                                                    <rect key="frame" x="174" y="26" width="193" height="21"/>
+                                                    <rect key="frame" x="174" y="28" width="193" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Jp4-XR-gDY"/>
                                                     </constraints>
@@ -799,14 +799,27 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhh-0C-amj">
+                                                    <rect key="frame" x="174" y="44" width="193" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="1PL-4d-aN8"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Eyl-ou-GQe"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="PP1-Ld-FhP" firstAttribute="top" secondItem="n3L-iu-TGB" secondAttribute="topMargin" constant="18" id="7lv-dv-jml"/>
+                                                <constraint firstItem="PP1-Ld-FhP" firstAttribute="top" secondItem="n3L-iu-TGB" secondAttribute="topMargin" constant="20" id="7lv-dv-jml"/>
                                                 <constraint firstItem="PP1-Ld-FhP" firstAttribute="trailing" secondItem="n3L-iu-TGB" secondAttribute="trailingMargin" id="DVE-QS-DfU"/>
+                                                <constraint firstItem="mhh-0C-amj" firstAttribute="top" secondItem="Pay-oD-RlW" secondAttribute="bottom" constant="13" id="Gv2-fu-O0S"/>
                                                 <constraint firstItem="Pay-oD-RlW" firstAttribute="top" secondItem="n3L-iu-TGB" secondAttribute="top" constant="10" id="LWP-Dj-fo3"/>
+                                                <constraint firstItem="mhh-0C-amj" firstAttribute="trailing" secondItem="n3L-iu-TGB" secondAttribute="trailingMargin" id="Uoi-yC-aFG"/>
                                                 <constraint firstAttribute="bottom" secondItem="XON-fW-e67" secondAttribute="bottom" constant="8" id="XtY-TV-Aeu"/>
                                                 <constraint firstItem="XON-fW-e67" firstAttribute="leading" secondItem="n3L-iu-TGB" secondAttribute="leading" constant="16" id="f9F-IU-UB2"/>
                                                 <constraint firstItem="Pay-oD-RlW" firstAttribute="leading" secondItem="XON-fW-e67" secondAttribute="trailing" constant="8" id="glf-4I-WAc"/>
+                                                <constraint firstItem="mhh-0C-amj" firstAttribute="leading" secondItem="XON-fW-e67" secondAttribute="trailing" constant="8" id="hQp-A7-I3Q"/>
                                                 <constraint firstItem="PP1-Ld-FhP" firstAttribute="leading" secondItem="XON-fW-e67" secondAttribute="trailing" constant="8" id="lrM-f7-MI5"/>
                                                 <constraint firstItem="XON-fW-e67" firstAttribute="top" secondItem="n3L-iu-TGB" secondAttribute="top" constant="8" id="p2V-sH-XFh"/>
                                                 <constraint firstAttribute="trailing" secondItem="Pay-oD-RlW" secondAttribute="trailing" constant="8" id="zJe-DM-4oG"/>
@@ -815,6 +828,7 @@
                                         <connections>
                                             <outlet property="ratingLogo" destination="XON-fW-e67" id="UUq-1K-e81"/>
                                             <outlet property="subTitle" destination="PP1-Ld-FhP" id="bGa-lr-6Zd"/>
+                                            <outlet property="subTitle2" destination="mhh-0C-amj" id="Bn5-We-FM4"/>
                                             <outlet property="titleLabel" destination="Pay-oD-RlW" id="gj7-Zx-5xj"/>
                                         </connections>
                                     </tableViewCell>

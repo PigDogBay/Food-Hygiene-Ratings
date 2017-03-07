@@ -100,21 +100,7 @@ class NoScoresTableDelegate : NSObject, UITableViewDataSource, UITableViewDelega
                 cell.textLabel?.text = establishment.business.name
                 cell.detailTextLabel?.text = establishment.business.type
             case ROW_RATING_LOGO:
-                if let ratingsCell = cell as? RatingsLogoCell{
-                    let date = DetailsViewController.dateFormatter.string(from: establishment.rating.awardedDate)
-                    //To do logic for pending/exempt - not applicable
-                    if !establishment.rating.hasRating(){
-                        ratingsCell.subTitle.text = ""
-                        ratingsCell.titleLabel.text = ""
-                    } else if establishment.rating.newRatingPending{
-                        ratingsCell.subTitle.text = "\(date) - new rating pending"
-                        ratingsCell.titleLabel.text = "Date Awarded"
-                    } else {
-                        ratingsCell.subTitle.text = "\(date)"
-                        ratingsCell.titleLabel.text = "Date Awarded"
-                    }
-                    ratingsCell.ratingLogo.image = UIImage(named: establishment.rating.ratingsKey)
-                }
+                DetailsViewController.setupRatingsCell(cell: cell, establishment: establishment)
             default:
                 break
             }

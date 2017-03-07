@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         let model = MainModel.sharedInstance
-        let dataProvider = DataProvider()
-//        let dataProvider = DummyDataProvider()
+//        let dataProvider = DataProvider()
+        let dataProvider = DummyDataProvider()
         dataProvider.model = model
         model.dataProvider = dataProvider
         return true

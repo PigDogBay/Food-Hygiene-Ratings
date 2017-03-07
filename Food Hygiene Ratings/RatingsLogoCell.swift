@@ -14,7 +14,8 @@ class RatingsLogoCell: UITableViewCell {
     @IBOutlet weak var ratingLogo: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitle: UILabel!
-    
+    @IBOutlet weak var subTitle2: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
