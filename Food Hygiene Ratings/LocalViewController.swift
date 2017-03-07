@@ -9,9 +9,8 @@
 import UIKit
 import GoogleMobileAds
 
-class LocalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, AppStateChangeObserver {
+class LocalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate, AppStateChangeObserver {
 
-    
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
@@ -43,6 +42,9 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.scopeButtonTitles = ["All","5", "4", "3", "2", "1", "0"]
+        searchController.searchBar.delegate = self
+        searchController.searchBar.sizeToFit()
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
         
@@ -71,10 +73,11 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     fileprivate func loadTableData() {
         if (model.state == .loaded) {
-            if searchController.isActive && searchController.searchBar.text! != "" {
+            if searchController.isActive {
                 let establishments = model.results
                 let searchText = searchController.searchBar.text!
-                let filtered = DataProcessing.filter(establishments: establishments, containing: searchText	)
+                let scopeFiltered = DataProcessing.filter(establishments: establishments, filter: getSearchFilter())
+                let filtered = DataProcessing.filter(establishments: scopeFiltered, containing: searchText	)
                 self.groupedEstablishments = DataProcessing.createDictionary(fromArray: filtered)
                 self.sortedBusinessTypes = DataProcessing.createSortedIndex(fromDictionary: self.groupedEstablishments)
                 
@@ -84,6 +87,28 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             tableView.reloadData()
         }
+    }
+    func getSearchFilter() -> SearchFilter {
+        switch searchController.searchBar.selectedScopeButtonIndex {
+        case 1:
+            return .star5
+        case 2:
+            return .star4
+        case 3:
+            return .star3
+        case 4:
+            return .star2
+        case 5:
+            return .star1
+        case 6:
+            return .star0
+        default:
+            return .all
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        loadTableData()
     }
 
     func updateSearchResults(for searchController: UISearchController) {

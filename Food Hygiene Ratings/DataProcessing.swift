@@ -10,7 +10,11 @@ import Foundation
 
 enum SearchFilter {
     case all
+    case star0
     case star1
+    case star2
+    case star3
+    case star4
     case star5
 }
 
@@ -20,9 +24,25 @@ struct DataProcessing {
         switch filter {
         case .all:
                 return establishments
+        case .star0:
+            return establishments.filter(){
+                $0.rating.hasRating() && $0.rating.ratingString == "0"
+            }
         case .star1:
-                return establishments.filter(){
-                    $0.rating.hasRating() && $0.rating.ratingString == "1"
+            return establishments.filter(){
+                $0.rating.hasRating() && $0.rating.ratingString == "1"
+            }
+        case .star2:
+            return establishments.filter(){
+                $0.rating.hasRating() && $0.rating.ratingString == "2"
+            }
+        case .star3:
+            return establishments.filter(){
+                $0.rating.hasRating() && $0.rating.ratingString == "3"
+            }
+        case .star4:
+            return establishments.filter(){
+                $0.rating.hasRating() && $0.rating.ratingString == "4"
             }
         case .star5:
             return establishments.filter(){
