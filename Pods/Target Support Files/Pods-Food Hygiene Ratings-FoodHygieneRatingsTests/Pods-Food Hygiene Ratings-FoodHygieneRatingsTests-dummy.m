@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Food_Hygiene_Ratings_FoodHygieneRatingsTests : NSObject
+@end
+@implementation PodsDummy_Pods_Food_Hygiene_Ratings_FoodHygieneRatingsTests
+@end
