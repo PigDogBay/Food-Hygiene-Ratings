@@ -40,6 +40,15 @@ class MainModel {
     //Use the singleton within the application
     static let sharedInstance = MainModel()
 
+    class func getAppUrl()->String
+    {
+        return "itms-apps://itunes.apple.com/app/id1213783338"
+    }
+    class func getAppWebUrl()->String
+    {
+        return "https://itunes.apple.com/app/id1213783338"
+    }
+
     var state : AppState = .ready
     var results = [Establishment]()
     var location : Coordinate = Coordinate(longitude: -2.204094, latitude: 52.984120)
