@@ -121,7 +121,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
         case .locating:
             break
         case .foundLocation:
-            centreMap()
+            break
         case .notAuthorizedForLocating:
             break
         case .errorLocating:
@@ -145,28 +145,34 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
         loadingLabel.isHidden=true
     }
     
-    fileprivate func centreMap(){
+   
+    func loadedState(){
         let model = MainModel.sharedInstance
+
+        //remove old annotations
+        self.mapView.removeAnnotations(self.mapView.annotations)
+        
+        let markers = model.results.map(){
+            return MapMarker(establishment: $0)
+        }
+        
+        if markers.count==0 {
+            mapView.setRegion(ukregion, animated: true)
+            return
+        }
+
         switch model.searchType {
         case .advanced:
-            //show whole of the UK
-            mapView.setRegion(ukregion, animated: true)
-        default:
+            self.mapView.showAnnotations(markers, animated: true)
+        case .map:
+            self.mapView.showAnnotations(markers, animated: true)
+        case .local:
+            self.mapView.addAnnotations(markers)
             //show map centred on location in the model
             let coords2d = CLLocationCoordinate2D(latitude: model.location.latitude, longitude: model.location.longitude)
             let coordinateRegion = MKCoordinateRegionMakeWithDistance(coords2d,mapRadius * 2.0, mapRadius * 2.0)
             mapView.setRegion(coordinateRegion, animated: true)
         }
-    }
-    
-    func loadedState(){
-        centreMap()
-        //remove old annotations
-        self.mapView.removeAnnotations(self.mapView.annotations)
-        let markers = MainModel.sharedInstance.results.map(){
-            return MapMarker(establishment: $0)
-        }
-        self.mapView.addAnnotations(markers)
         
     }
     
