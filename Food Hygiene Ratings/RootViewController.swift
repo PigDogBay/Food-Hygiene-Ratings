@@ -87,7 +87,7 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 3 {
+        if indexPath.section == 2 {
             switch indexPath.row {
             case 0:
                 UIApplication.shared.openURL(URL(string: MainModel.getAppUrl())!)

@@ -15,7 +15,6 @@
 		4D3717B81E4C7ED100644A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717B61E4C7ED100644A0C /* Main.storyboard */; };
 		4D3717BA1E4C7ED100644A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717B91E4C7ED100644A0C /* Assets.xcassets */; };
 		4D3717BD1E4C7ED100644A0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717BB1E4C7ED100644A0C /* LaunchScreen.storyboard */; };
-		4D3717CA1E4CCDA000644A0C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717C91E4CCDA000644A0C /* SettingsViewController.swift */; };
 		4D3717CD1E4CCF0400644A0C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717CC1E4CCF0400644A0C /* MapViewController.swift */; };
 		4D3717CF1E4CCF4700644A0C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717CE1E4CCF4700644A0C /* SearchViewController.swift */; };
 		4D3717D21E4CD84F00644A0C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717D11E4CD84F00644A0C /* Settings.bundle */; };
@@ -80,7 +79,6 @@
 		4D3717B91E4C7ED100644A0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D3717BC1E4C7ED100644A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D3717BE1E4C7ED100644A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D3717C91E4CCDA000644A0C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4D3717CC1E4CCF0400644A0C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4D3717CE1E4CCF4700644A0C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4D3717D11E4CD84F00644A0C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 				4D3717D91E4DC23B00644A0C /* MapMarker.swift */,
 				4DB64E391E5F1FB900D1321B /* AdvancedSearchViewController.swift */,
 				4D5C39221E5AFD5600707D14 /* LocalViewController.swift */,
-				4D3717C91E4CCDA000644A0C /* SettingsViewController.swift */,
 				4D3717CC1E4CCF0400644A0C /* MapViewController.swift */,
 				4D3717CE1E4CCF4700644A0C /* SearchViewController.swift */,
 				4D5C390B1E507E6200707D14 /* WebViewController.swift */,
@@ -505,7 +502,6 @@
 				4D5C39291E5C4A1A00707D14 /* DummyDataProvider.swift in Sources */,
 				4D6619261E66F6A600724276 /* ListViewController.swift in Sources */,
 				4D5C39091E50605600707D14 /* RootViewController.swift in Sources */,
-				4D3717CA1E4CCDA000644A0C /* SettingsViewController.swift in Sources */,
 				4DB64E2B1E5D997D00D1321B /* DetailsTableDelegate.swift in Sources */,
 				4DB64E331E5DB24E00D1321B /* UIViewControllerExtensions.swift in Sources */,
 				4D5C392D1E5C92E100707D14 /* Scores.swift in Sources */,
