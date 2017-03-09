@@ -9,16 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>InAppSettingsKit-InAppSettingsKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>InAppSettingsKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,22 +27,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E9EBC6FFE0A9897B48BE544406E4C07</key>
+		<key>9CE04F7C3DCACB7A9FE3939C01ACE4B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CB67190F0A60F7A033A3E515965C86F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AE0222BA5923E972E85190CDCA2D6C69</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FA416ED70FC7E091F479F65D981FE8FC</key>
+		<key>CBD3C31AE67BB300958A6A6F70715B60</key>
 		<dict>
 			<key>primary</key>
 			<true/>

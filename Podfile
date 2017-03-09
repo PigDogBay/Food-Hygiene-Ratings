@@ -8,7 +8,6 @@ target 'Food Hygiene Ratings' do
   # Pods for Food Hygiene Ratings
   pod 'Firebase/Core'
   pod 'Firebase/AdMob'
-  pod 'InAppSettingsKit'
 
   target 'FoodHygieneRatingsTests' do
     inherit! :complete

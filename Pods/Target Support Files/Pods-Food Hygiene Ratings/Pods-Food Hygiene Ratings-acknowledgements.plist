@@ -24,7 +24,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2016 Google</string>
+			<string>Copyright 2017 Google</string>
 			<key>License</key>
 			<string>Copyright</string>
 			<key>Title</key>
@@ -34,7 +34,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2016 Google</string>
+			<string>Copyright 2017 Google</string>
 			<key>License</key>
 			<string>Copyright</string>
 			<key>Title</key>
@@ -44,7 +44,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2016 Google</string>
+			<string>Copyright 2017 Google</string>
 			<key>License</key>
 			<string>Copyright</string>
 			<key>Title</key>
@@ -59,26 +59,6 @@
 			<string>Copyright</string>
 			<key>Title</key>
 			<string>Google-Mobile-Ads-SDK</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>Copyright 2016 Google</string>
-			<key>License</key>
-			<string>Copyright</string>
-			<key>Title</key>
-			<string>GoogleInterchangeUtilities</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>Copyright 2016 Google</string>
-			<key>License</key>
-			<string>Copyright</string>
-			<key>Title</key>
-			<string>GoogleSymbolUtilities</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
@@ -291,30 +271,6 @@
 			<string>Apache</string>
 			<key>Title</key>
 			<string>GoogleToolboxForMac</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>Copyright (c) 2009-2014:
-Luc Vandal, Edovia Inc., http://www.edovia.com
-Ortwin Gentz, FutureTap GmbH, http://www.futuretap.com
-All rights reserved.
-
-It is appreciated but not required that you give credit to Luc Vandal and Ortwin Gentz, 
-as the original authors of this code. You can give credit in a blog post, a tweet or on 
-a info page of your app. Also, the original authors appreciate letting them know if you
-use this code.
-
-The above copyright notice and this permission notice shall be included in all copies
-or substantial portions of the Software.
-
-This code is licensed under the BSD license that is available at: &lt;http://www.opensource.org/licenses/bsd-license.php&gt;
-</string>
-			<key>License</key>
-			<string>BSD</string>
-			<key>Title</key>
-			<string>InAppSettingsKit</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
