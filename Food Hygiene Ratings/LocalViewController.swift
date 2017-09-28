@@ -45,7 +45,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         searchController.searchBar.scopeButtonTitles = ["All","5", "4", "3", "2", "1", "0"]
         searchController.searchBar.delegate = self
         searchController.searchBar.sizeToFit()
-        searchController.searchBar.tintColor = UIColor(colorLiteralRed: 0.20, green: 0.41, blue: 0.12, alpha: 1.0)
+        searchController.searchBar.tintColor = UIColor(red: 0.20, green: 0.41, blue: 0.12, alpha: 1.0)
         
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar

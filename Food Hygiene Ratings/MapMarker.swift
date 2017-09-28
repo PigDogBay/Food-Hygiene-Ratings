@@ -11,13 +11,13 @@ import MapKit
 
 class MapMarker : NSObject, MKAnnotation {
     
-    static let fiveStarColor = UIColor(colorLiteralRed: 0.0, green: 0.8, blue: 0, alpha: 1.0)
-    static let fourStarColor = UIColor(colorLiteralRed: 0.4, green: 0.8, blue: 0, alpha: 1.0)
-    static let threeStarColor = UIColor(colorLiteralRed: 0.8, green: 0.8, blue: 0.0, alpha: 1.0)
+    static let fiveStarColor = UIColor(red: 0.0, green: 0.8, blue: 0, alpha: 1.0)
+    static let fourStarColor = UIColor(red: 0.4, green: 0.8, blue: 0, alpha: 1.0)
+    static let threeStarColor = UIColor(red: 0.8, green: 0.8, blue: 0.0, alpha: 1.0)
 
-    static let twoStarColor = UIColor(colorLiteralRed: 0.8, green: 0.4, blue: 0.0, alpha: 1.0)
-    static let oneStarColor = UIColor(colorLiteralRed: 0.8, green: 0.0, blue: 0.0, alpha: 1.0)
-    static let zeroStarColor = UIColor(colorLiteralRed: 0.4, green: 0.0, blue: 0.0, alpha: 1.0)
+    static let twoStarColor = UIColor(red: 0.8, green: 0.4, blue: 0.0, alpha: 1.0)
+    static let oneStarColor = UIColor(red: 0.8, green: 0.0, blue: 0.0, alpha: 1.0)
+    static let zeroStarColor = UIColor(red: 0.4, green: 0.0, blue: 0.0, alpha: 1.0)
 
     let coordinate: CLLocationCoordinate2D
     let title : String?

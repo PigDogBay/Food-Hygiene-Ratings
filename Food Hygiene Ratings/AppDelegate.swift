@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dataProvider.model = model
         model.dataProvider = dataProvider
         
-        UINavigationBar.appearance().tintColor = UIColor(colorLiteralRed: 0.20, green: 0.41, blue: 0.12, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor(red: 0.20, green: 0.41, blue: 0.12, alpha: 1.0)
         return true
     }
 
