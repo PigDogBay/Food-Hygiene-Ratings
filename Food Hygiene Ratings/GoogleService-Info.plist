@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>292005016329-c2rco1sgdukv5cul56dvneeuili6r4hq.apps.googleusercontent.com</string>
+	<string>292005016329-7541karmlj7abh5h8sic1oku35a7fdh0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.292005016329-c2rco1sgdukv5cul56dvneeuili6r4hq</string>
+	<string>com.googleusercontent.apps.292005016329-7541karmlj7abh5h8sic1oku35a7fdh0</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDbFPnlPJeYUxEdC7E6beFnFh7q6LF3BFA</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,23 +17,23 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.pigdogbay.Food-Hygiene-Ratings</string>
+	<string>com.pigdogbay.FoodHygieneRatings</string>
 	<key>PROJECT_ID</key>
 	<string>admob-app-id-6146792389</string>
 	<key>STORAGE_BUCKET</key>
 	<string>admob-app-id-6146792389.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:292005016329:ios:c112a7e85c2701f0</string>
+	<string>1:292005016329:ios:30236bc4ed9d7afb</string>
 	<key>DATABASE_URL</key>
 	<string>https://admob-app-id-6146792389.firebaseio.com</string>
 </dict>
