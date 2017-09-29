@@ -140,18 +140,23 @@ struct FoodHygieneAPI {
             let authorityName = json["LocalAuthorityName"] as? String,
             let authorityWeb = json["LocalAuthorityWebSite"] as? String,
             let authorityEmail = json["LocalAuthorityEmailAddress"] as? String,
-            let authorityCode = json["LocalAuthorityCode"] as? String,
-            let geocode = json["geocode"] as? [String : String],
-            let longitudeString = geocode["longitude"],
-            let latitudeString = geocode["latitude"],
-            let longitude = Double(longitudeString),
-            let latitude = Double(latitudeString)
+            let authorityCode = json["LocalAuthorityCode"] as? String
             else {
                 return nil
             }
         
+        //Burntwood returns 662 for web, only 646 for iOS
+        //Swan Island Fish Bar has null for longitude/latitude
+        var longitude = 0.0
+        var latitude = 0.0
+        if let geocode = json["geocode"] as? [String : String] {
+            let longitudeString = geocode["longitude"] ?? "0"
+            let latitudeString = geocode["latitude"] ?? "0"
+            longitude = Double(longitudeString) ?? 0.0
+            latitude = Double(latitudeString) ?? 0.0
+        }
         let distance = json["Distance"] as? Double ?? 0.0
-        
+
         let coordinate = Coordinate(longitude: longitude, latitude: latitude)
         let address = Address(line1: addressLine1, line2: addressLine2, line3: addressLine3, line4: addressLine4, postcode: postcode, coordinate: coordinate)
         let ratingValue = parseRating(fromString: ratingString)
