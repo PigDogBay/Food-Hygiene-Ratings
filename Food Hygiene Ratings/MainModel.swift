@@ -27,8 +27,17 @@ enum SearchType {
 }
 
 struct Coordinate {
+    let ukEast = 1.46
+    let ukWest = -8.638
+    let ukNorth = 60.51
+    let ukSouth = 49.53
+    
     let longitude : Double
     let latitude : Double
+
+    func isWithinUK()->Bool {
+       return latitude>=ukSouth && latitude<=ukNorth && longitude>=ukWest && longitude<=ukEast
+    }
 }
 
 protocol AppStateChangeObserver

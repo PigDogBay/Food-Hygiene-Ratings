@@ -152,9 +152,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
         //remove old annotations
         self.mapView.removeAnnotations(self.mapView.annotations)
         
-        let markers = model.results.map(){
-            return MapMarker(establishment: $0)
-        }
+        let markers = model.results
+            .filter(){$0.address.coordinate.isWithinUK()}
+            .map(){MapMarker(establishment: $0)}
         
         if markers.count==0 {
             mapView.setRegion(ukregion, animated: true)
