@@ -12,6 +12,7 @@
 		4D100DC91E61B0F6005EB6E9 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D100DC81E61B0F6005EB6E9 /* Query.swift */; };
 		4D100DCB1E644FB9005EB6E9 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D100DCA1E644FB9005EB6E9 /* Address.swift */; };
 		4D100DCD1E645103005EB6E9 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D100DCC1E645103005EB6E9 /* AddressTests.swift */; };
+		4D17D4A91F7FD79E00A0A0BE /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */; };
 		4D3717B31E4C7ED100644A0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717B21E4C7ED100644A0C /* AppDelegate.swift */; };
 		4D3717B81E4C7ED100644A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717B61E4C7ED100644A0C /* Main.storyboard */; };
 		4D3717BA1E4C7ED100644A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717B91E4C7ED100644A0C /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		4D100DC81E61B0F6005EB6E9 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		4D100DCA1E644FB9005EB6E9 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		4D100DCC1E645103005EB6E9 /* AddressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
+		4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
 		4D3717AF1E4C7ED100644A0C /* Food Hygiene Ratings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Hygiene Ratings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3717B21E4C7ED100644A0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3717B71E4C7ED100644A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				4D5C39141E521D9300707D14 /* Ads.swift */,
 				4D5C391A1E55CB9E00707D14 /* DataProcessing.swift */,
 				4D100DC81E61B0F6005EB6E9 /* Query.swift */,
+				4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D17D4A91F7FD79E00A0A0BE /* Formatting.swift in Sources */,
 				4D3717DA1E4DC23B00644A0C /* MapMarker.swift in Sources */,
 				4D6619281E67526D00724276 /* LocalAuthority.swift in Sources */,
 				4D3717D81E4DC22000644A0C /* WebServiceClient.swift in Sources */,

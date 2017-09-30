@@ -165,7 +165,7 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             switch indexPath.row
             {
             case ROW_LA_EMAIL:
-                viewController.mpdbSendEmail(recipients: [establishment.localAuthority.email], subject: "", body: "")
+                viewController.mpdbSendEmail(recipients: [establishment.localAuthority.email], subject: "Food Hygiene Rating", body: Formatting.format(establishment: establishment))
             case ROW_LA_WEBSITE:
                 if #available(iOS 10.0, *) {
                     if let url = URL(string: establishment.localAuthority.web) {
