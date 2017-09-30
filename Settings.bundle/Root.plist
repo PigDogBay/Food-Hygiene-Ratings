@@ -10,6 +10,22 @@
                 <key>Type</key>
                 <string>PSGroupSpecifier</string>
                 <key>Title</key>
+                <string>Debugging</string>
+            </dict>
+            <dict>
+                <key>Type</key>
+                <string>PSToggleSwitchSpecifier</string>
+                <key>Title</key>
+                <string>Enable logging</string>
+                <key>Key</key>
+                <string>enableLogging</string>
+                <key>DefaultValue</key>
+                <false/>
+            </dict>
+            <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>Title</key>
                 <string>Information</string>
             </dict>
             <dict>
