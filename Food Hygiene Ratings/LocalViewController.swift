@@ -217,6 +217,9 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
                 if model.results.count>0 {
                     self.title = "\(model.results.count) Results"
                     self.loadTableData()
+                } else if Logging.enabled {
+                    //TO DO show action sheet
+                    self.showErrorAlert(title: "No Results", msg: "Email Log To Developer")
                 } else {
                     self.showErrorAlert(title: "No Results", msg: "No matches were found")
                 }

@@ -14,6 +14,7 @@
 		4D100DCD1E645103005EB6E9 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D100DCC1E645103005EB6E9 /* AddressTests.swift */; };
 		4D17D4A91F7FD79E00A0A0BE /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */; };
 		4D17D4AB1F7FE2F900A0A0BE /* CoordinateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4AA1F7FE2F900A0A0BE /* CoordinateTest.swift */; };
+		4D17D4AD1F7FEE7400A0A0BE /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4AC1F7FEE7400A0A0BE /* Logging.swift */; };
 		4D3717B31E4C7ED100644A0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717B21E4C7ED100644A0C /* AppDelegate.swift */; };
 		4D3717B81E4C7ED100644A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717B61E4C7ED100644A0C /* Main.storyboard */; };
 		4D3717BA1E4C7ED100644A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717B91E4C7ED100644A0C /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		4D100DCC1E645103005EB6E9 /* AddressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
 		4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
 		4D17D4AA1F7FE2F900A0A0BE /* CoordinateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTest.swift; sourceTree = "<group>"; };
+		4D17D4AC1F7FEE7400A0A0BE /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		4D3717AF1E4C7ED100644A0C /* Food Hygiene Ratings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Hygiene Ratings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3717B21E4C7ED100644A0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3717B71E4C7ED100644A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				4DB64E321E5DB24E00D1321B /* UIViewControllerExtensions.swift */,
+				4D17D4AC1F7FEE7400A0A0BE /* Logging.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				4DB64E3A1E5F1FB900D1321B /* AdvancedSearchViewController.swift in Sources */,
 				4D100DC91E61B0F6005EB6E9 /* Query.swift in Sources */,
 				4D5C39151E521D9300707D14 /* Ads.swift in Sources */,
+				4D17D4AD1F7FEE7400A0A0BE /* Logging.swift in Sources */,
 				4D3717B31E4C7ED100644A0C /* AppDelegate.swift in Sources */,
 				4D3717D41E4DC1FC00644A0C /* Establishment.swift in Sources */,
 				4D5C390E1E51DBBD00707D14 /* DetailsViewController.swift in Sources */,
