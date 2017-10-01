@@ -8,8 +8,9 @@
 
 import UIKit
 import GoogleMobileAds
+import MessageUI
 
-class LocalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate, AppStateChangeObserver {
+class LocalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate, AppStateChangeObserver, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tableView: UITableView!
@@ -218,8 +219,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
                     self.title = "\(model.results.count) Results"
                     self.loadTableData()
                 } else if Logging.enabled {
-                    //TO DO show action sheet
-                    self.showErrorAlert(title: "No Results", msg: "Email Log To Developer")
+                    self.showLogAlert()
                 } else {
                     self.showErrorAlert(title: "No Results", msg: "No matches were found")
                 }
@@ -235,6 +235,32 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
+    fileprivate func showLogAlert(){
+        let controller = UIAlertController(title: "No Results Found", message: nil, preferredStyle: .actionSheet)
+        let emailLogAction = UIAlertAction(title: "Email Log To Developer", style: .default, handler: {action in self.sendLogEmail()})
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        controller.addAction(emailLogAction)
+        controller.addAction(cancelAction)
+        //Anchor popover to button for iPads
+        if let ppc = controller.popoverPresentationController{
+            ppc.sourceView = self.tableView
+        }
+        present(controller, animated: true, completion: nil)
+    }
+    fileprivate func sendLogEmail(){
+        if !MFMailComposeViewController.canSendMail()
+        {
+            self.mpdbShowErrorAlert("No Email", msg: "This device is not configured for sending emails.")
+            return
+        }
+        let mailVC = MFMailComposeViewController()
+        mailVC.mailComposeDelegate = self
+        mailVC.setSubject("FHR iOS v1.01 Log File")
+        mailVC.setToRecipients(["pigdogbay@yahoo.co.uk"])
+        mailVC.setMessageBody(Logging.log, isHTML: false)
+        present(mailVC, animated: true, completion: nil)
+    }
+    
     fileprivate func showErrorAlert(title: String, msg : String)
     {
         let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {_ in
@@ -244,5 +270,13 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         controller.addAction(action)
         self.present(controller, animated: true, completion: nil)
     }
+
+    // MARK:- MFMailComposeViewControllerDelegate
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
+    {
+        //dismiss on send
+        controller.dismiss(animated: true, completion: nil)
+    }
+
     
 }
