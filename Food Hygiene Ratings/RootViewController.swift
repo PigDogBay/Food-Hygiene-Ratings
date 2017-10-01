@@ -59,8 +59,10 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
         // Get the new view controller using segue.destinationViewController.
         switch segue.identifier ?? "" {
         case segueIdNearMe:
+            Logging.clear()
             MainModel.sharedInstance.findLocalEstablishments()
         case segueIdQuickSearch:
+            Logging.clear()
             let query = createQuery()
             MainModel.sharedInstance.findEstablishments(query: query)
         default:

@@ -155,9 +155,13 @@ class MainModel {
     }
     
     func findLocalEstablishments(){
+        Logging.append(msg: "Finding local establishments")
         if canFindLocalEstablishments(){
             self.searchType = .local
             dataProvider.findLocalEstablishments()
+        } else {
+            Logging.append(msg: "Unable to find local establishments")
+            Logging.append(msg: "State is \(self.state)")
         }
     }
     
@@ -170,9 +174,13 @@ class MainModel {
         }
     }
     func findEstablishments(query : Query){
+        Logging.append(msg: "Finding establishments")
         if canFindEstablishments(){
             self.searchType = .advanced
             dataProvider.fetchEstablishments(query: query)
+        } else {
+            Logging.append(msg: "Unable to find establishments")
+            Logging.append(msg: "State is \(self.state)")
         }
         
     }

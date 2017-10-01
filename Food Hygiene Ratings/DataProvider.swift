@@ -26,12 +26,15 @@ class DataProvider : NSObject, IDataProvider, CLLocationManagerDelegate{
     func findLocalEstablishments() {
         let authStatus = CLLocationManager.authorizationStatus()
         if authStatus == .notDetermined {
+            Logging.append(msg: "Location authority is not determined")
             self.model.changeState(.requestingLocationAuthorization)
             self.locationManager.requestWhenInUseAuthorization()
         } else if authStatus == .denied {
+            Logging.append(msg: "Location authority is denied")
             self.model.changeState(.notAuthorizedForLocating)
             return
         } else {
+            Logging.append(msg: "Locating...")
             self.model.changeState(.locating)
             locationManager.distanceFilter = kCLDistanceFilterNone
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
@@ -74,13 +77,16 @@ class DataProvider : NSObject, IDataProvider, CLLocationManagerDelegate{
     func fetchEstablishments(query : Query) {
         self.model.changeState(.loading)
         let url = FoodHygieneAPI.createEstablishmentsUrl(query: query)
+        Logging.append(msg: "Query url: \(url)")
         self.webSerice.fetchEstablishments(url: url){
             (result) in
             switch result {
             case let .failure(error):
+                Logging.append(msg: "fetch failed \(error)")
                 self.model.error = error
                 self.model.changeState(.error)
             case let .success(establishments):
+                Logging.append(msg: "fetch success found \(establishments.count) establishments")
                 self.model.setResults(establishments: establishments)
                 self.model.changeState(.loaded)
             }
