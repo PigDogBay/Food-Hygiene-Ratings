@@ -109,7 +109,7 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
         }
         let mailVC = MFMailComposeViewController()
         mailVC.mailComposeDelegate = self
-        mailVC.setSubject("FHR iOS v1.00")
+        mailVC.setSubject("FHR iOS v1.01")
         mailVC.setToRecipients(["pigdogbay@yahoo.co.uk"])
         mailVC.setMessageBody("Your feedback is most welcome\n *Report Bugs\n *Suggest new features\n *Ask for help\n\n\nHi Mark,\n\n", isHTML: false)
         present(mailVC, animated: true, completion: nil)
