@@ -101,6 +101,12 @@
       "idiom" : "ipad",
       "filename" : "icon_83_2.png",
       "scale" : "2x"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "fhrIcon.png",
+      "scale" : "1x"
     }
   ],
   "info" : {
