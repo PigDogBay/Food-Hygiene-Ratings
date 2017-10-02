@@ -136,7 +136,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         if (model.state == .loaded && sortedBusinessTypes != nil){
             let businessTypeId = sortedBusinessTypes[section]
             let group = groupedEstablishments[businessTypeId]!
-            return group[0].business.type
+            return "\(group[0].business.type) (\(group.count))"
         }
         return ""
     }

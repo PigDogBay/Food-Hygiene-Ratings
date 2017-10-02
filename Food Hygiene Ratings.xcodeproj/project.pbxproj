@@ -183,18 +183,18 @@
 		4D3717C81E4CCCF200644A0C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4D5C39081E50605600707D14 /* RootViewController.swift */,
-				4D3717D91E4DC23B00644A0C /* MapMarker.swift */,
 				4DB64E391E5F1FB900D1321B /* AdvancedSearchViewController.swift */,
-				4D5C39221E5AFD5600707D14 /* LocalViewController.swift */,
-				4D3717CC1E4CCF0400644A0C /* MapViewController.swift */,
-				4D3717CE1E4CCF4700644A0C /* SearchViewController.swift */,
-				4D5C390B1E507E6200707D14 /* WebViewController.swift */,
-				4D5C390D1E51DBBD00707D14 /* DetailsViewController.swift */,
 				4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */,
+				4D5C390D1E51DBBD00707D14 /* DetailsViewController.swift */,
+				4D6619251E66F6A600724276 /* ListViewController.swift */,
+				4D5C39221E5AFD5600707D14 /* LocalViewController.swift */,
+				4D3717D91E4DC23B00644A0C /* MapMarker.swift */,
+				4D3717CC1E4CCF0400644A0C /* MapViewController.swift */,
 				4DB64E2C1E5DA34E00D1321B /* NoScoresTableDelegate.swift */,
 				4D5C39181E5462BE00707D14 /* RatingsLogoCell.swift */,
-				4D6619251E66F6A600724276 /* ListViewController.swift */,
+				4D5C39081E50605600707D14 /* RootViewController.swift */,
+				4D3717CE1E4CCF4700644A0C /* SearchViewController.swift */,
+				4D5C390B1E507E6200707D14 /* WebViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
