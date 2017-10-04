@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Hygiene Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="73F-5z-kwG">
-                                <rect key="frame" x="16" y="201" width="343" height="43"/>
+                                <rect key="frame" x="16" y="278.5" width="343" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,22 +36,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rRK-oQ-nq4">
-                                <rect key="frame" x="163" y="260" width="48" height="43"/>
+                                <rect key="frame" x="163" y="337.5" width="48" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageTitle" translatesAutoresizingMaskIntoConstraints="NO" id="qqS-ac-LHa">
+                                <rect key="frame" x="105.5" y="182.5" width="164" height="80"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.97254901959999995" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="GsW-Er-jmk" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="16" id="8Gt-nn-L9n"/>
+                            <constraint firstItem="73F-5z-kwG" firstAttribute="top" secondItem="qqS-ac-LHa" secondAttribute="bottom" constant="16" id="J68-5i-a9g"/>
+                            <constraint firstItem="qqS-ac-LHa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OYA-Ti-X94"/>
                             <constraint firstItem="73F-5z-kwG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="SIh-R6-yW7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="73F-5z-kwG" secondAttribute="trailing" id="Wac-cP-FLR"/>
                             <constraint firstItem="rRK-oQ-nq4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Xi8-gt-vs7"/>
-                            <constraint firstItem="73F-5z-kwG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="2/3" id="aXP-KR-dnx"/>
                             <constraint firstItem="rRK-oQ-nq4" firstAttribute="top" secondItem="73F-5z-kwG" secondAttribute="bottom" constant="16" id="bzL-Bd-XFw"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="GsW-Er-jmk" secondAttribute="bottom" constant="16" id="ep3-He-Icv"/>
                             <constraint firstItem="73F-5z-kwG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="j9E-kc-hcr"/>
+                            <constraint firstItem="qqS-ac-LHa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="2/3" id="vps-YH-Uss"/>
                             <constraint firstAttribute="trailing" secondItem="GsW-Er-jmk" secondAttribute="trailing" constant="16" id="wpt-tu-9K4"/>
                         </constraints>
                     </view>
@@ -61,4 +66,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="imageTitle" width="164" height="80"/>
+    </resources>
 </document>
