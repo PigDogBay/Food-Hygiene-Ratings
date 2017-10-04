@@ -311,7 +311,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3f-Hz-cns" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3f-Hz-cns">
                                 <rect key="frame" x="27.5" y="617" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -393,7 +393,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bannerView" destination="r3f-Hz-cns" id="GQd-Zi-NUI"/>
+                        <outlet property="bannerContainer" destination="r3f-Hz-cns" id="PGh-Nh-lmX"/>
                         <outlet property="loadingIndicator" destination="g0c-4S-4AN" id="X0I-AR-lx9"/>
                         <outlet property="loadingLabel" destination="9yQ-UZ-xdM" id="01Y-EN-eeY"/>
                         <outlet property="tableView" destination="xxd-WT-rSm" id="h5k-OF-bc0"/>

@@ -6,6 +6,7 @@
 //  Copyright © 2017 MPD Bailey Technology. All rights reserved.
 //
 
+import UIKit
 import GoogleMobileAds
 
 struct Ads
@@ -13,6 +14,8 @@ struct Ads
     static let bannerAdId = "ca-app-pub-3582986480189311/1490068786"
     static let localBannerAdId = "ca-app-pub-3582986480189311/8489481588"
 
+    let bannerView : GADBannerView
+    
     static func createRequest() -> GADRequest
     {
         let request = GADRequest()
@@ -23,4 +26,12 @@ struct Ads
         ]
         return request
     }
+    
+    init (vc : UIViewController){
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        bannerView.adUnitID = Ads.localBannerAdId
+        bannerView.rootViewController = vc
+        bannerView.load(Ads.createRequest())
+    }
+    
 }

@@ -14,6 +14,8 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
     @IBOutlet weak var businessNameTextField: UITextField!
     @IBOutlet weak var placeNameTextField: UITextField!
 
+    static var ads : Ads!
+    
     let segueIdNearMe = "segueNearMe"
     let segueIdQuickSearch = "segueQuickSearch"
     
@@ -21,6 +23,9 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
         super.viewDidLoad()
         businessNameTextField.delegate = self
         placeNameTextField.delegate = self
+        if RootViewController.ads == nil {
+            RootViewController.ads = Ads(vc: self)
+        }
     }
 
     override func didReceiveMemoryWarning() {
