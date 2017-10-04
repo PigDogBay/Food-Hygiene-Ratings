@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Hygiene Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="73F-5z-kwG">
-                                <rect key="frame" x="19" y="201" width="337.5" height="43"/>
+                                <rect key="frame" x="16" y="201" width="343" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,6 +45,8 @@
                         <color key="backgroundColor" red="0.94509803920000002" green="0.97254901959999995" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="GsW-Er-jmk" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="16" id="8Gt-nn-L9n"/>
+                            <constraint firstItem="73F-5z-kwG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="SIh-R6-yW7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="73F-5z-kwG" secondAttribute="trailing" id="Wac-cP-FLR"/>
                             <constraint firstItem="rRK-oQ-nq4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Xi8-gt-vs7"/>
                             <constraint firstItem="73F-5z-kwG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="2/3" id="aXP-KR-dnx"/>
                             <constraint firstItem="rRK-oQ-nq4" firstAttribute="top" secondItem="73F-5z-kwG" secondAttribute="bottom" constant="16" id="bzL-Bd-XFw"/>
