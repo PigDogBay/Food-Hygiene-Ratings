@@ -20,7 +20,7 @@
 			<key>Key</key>
 			<string>loggingEnabled</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>
