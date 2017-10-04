@@ -11,6 +11,7 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObserver {
 
+    @IBOutlet weak var bannerContainer: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loadingLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
@@ -46,6 +47,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
         let model = MainModel.sharedInstance
         modelToView(state: model.state)
         model.addObserver("mapView", observer: self)
+        bannerContainer.addSubview(RootViewController.ads.bannerView)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
