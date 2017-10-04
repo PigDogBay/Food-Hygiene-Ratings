@@ -121,17 +121,16 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
         mailVC.setMessageBody("Your feedback is most welcome\n *Report Bugs\n *Suggest new features\n *Ask for help\n\n\nHi Mark,\n\n", isHTML: false)
         present(mailVC, animated: true, completion: nil)
     }
+    
     func tellFriends(){
-        if !MFMailComposeViewController.canSendMail()
-        {
-            self.mpdbShowErrorAlert("No Email", msg: "This device is not configured for sending emails.")
-            return
+        let shareText = "Food Hygiene Ratings UK - a free app for iOS and Android\n\nSearch the UK\'s Food Standards Agency database for your favourite restaurants hygiene ratings\n\n iOS\n  https://itunes.apple.com/app/id1213783338\n\n Android\n  https://play.google.com/store/apps/details?id=com.pigdogbay.foodhygieneratings\n\n"
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
+        if let ppc = activityViewController.popoverPresentationController {
+            ppc.sourceView = self.view
+            ppc.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            ppc.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
         }
-        let mailVC = MFMailComposeViewController()
-        mailVC.mailComposeDelegate = self
-        mailVC.setSubject("Food Hygiene Ratings UK")
-        mailVC.setMessageBody("Check out this free app for iPhone and iPad<br/><br/><b>Food Hygiene Ratings UK</b> Quickly check out an establishement's food hygiene rating, show ratings of establishments near you and perform powerful searches on the latest data from the UK's Food Standards Agency<br/><br/><a href=\""+MainModel.getAppWebUrl()+"\">Available on the App Store</a><br/><br/>Thanks", isHTML: true)
-        present(mailVC, animated: true, completion: nil)
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     // MARK:- MFMailComposeViewControllerDelegate
