@@ -241,7 +241,9 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         controller.addAction(cancelAction)
         //Anchor popover to button for iPads
         if let ppc = controller.popoverPresentationController{
-            ppc.sourceView = self.tableView
+            ppc.sourceView = self.view
+            ppc.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            ppc.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
         }
         present(controller, animated: true, completion: nil)
     }
