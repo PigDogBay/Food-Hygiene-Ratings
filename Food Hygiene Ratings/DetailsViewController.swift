@@ -17,9 +17,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var mapView: MKMapView!
-    
-    @IBOutlet weak var adBanner: GADBannerView!
-    
+    @IBOutlet weak var bannerContainer: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func shareActionClicked(_ sender: UIBarButtonItem) {
@@ -41,9 +39,6 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
         super.viewDidLoad()
         
         navBar.title = establishment.business.name
-        adBanner.adUnitID = Ads.bannerAdId
-        adBanner.rootViewController = self
-        adBanner.load(Ads.createRequest())
 
         if (establishment.rating.hasScores()){
             let detailsTableDel = DetailsTableDelegate(establishment: self.establishment, viewController: self)
@@ -58,6 +53,10 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
         }
         
         setUpMap()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        bannerContainer.addSubview(RootViewController.ads.bannerView)
     }
     
     func setUpMap(){

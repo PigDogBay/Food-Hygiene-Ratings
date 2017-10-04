@@ -743,7 +743,7 @@
                                     <constraint firstAttribute="height" constant="166" id="M6y-3f-eF1"/>
                                 </constraints>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-vi-miM" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-vi-miM">
                                 <rect key="frame" x="27" y="617" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -927,7 +927,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="adBanner" destination="FTu-vi-miM" id="bFI-6I-U1I"/>
+                        <outlet property="bannerContainer" destination="FTu-vi-miM" id="wmf-4K-1R7"/>
                         <outlet property="mapView" destination="HD0-lN-Ezu" id="aS9-F6-R1v"/>
                         <outlet property="navBar" destination="tuB-ka-U47" id="66T-WA-BeI"/>
                         <outlet property="tableView" destination="e5T-Zk-f4j" id="Vhu-88-ek2"/>
