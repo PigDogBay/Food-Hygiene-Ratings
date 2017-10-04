@@ -28,10 +28,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fhrs_5_en-gb" translatesAutoresizingMaskIntoConstraints="NO" id="oPJ-VQ-gqv">
-                                                    <rect key="frame" x="107.5" y="0.0" width="160" height="80"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageTitle" translatesAutoresizingMaskIntoConstraints="NO" id="oPJ-VQ-gqv">
+                                                    <rect key="frame" x="105.5" y="0.0" width="164" height="80"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="160" id="ADA-Im-PDY"/>
+                                                        <constraint firstAttribute="width" constant="164" id="ADA-Im-PDY"/>
                                                         <constraint firstAttribute="height" constant="80" id="eqb-Jl-ipF"/>
                                                     </constraints>
                                                 </imageView>
@@ -1005,12 +1005,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fhrs_5_en-gb" width="96" height="49"/>
         <image name="iconAdvancedSearch" width="30" height="30"/>
         <image name="iconFeedback" width="30" height="30"/>
         <image name="iconHeart" width="30" height="30"/>
         <image name="iconLike" width="30" height="30"/>
         <image name="iconNearMe" width="30" height="30"/>
+        <image name="imageTitle" width="164" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fCe-xu-D47"/>
