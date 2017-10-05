@@ -70,8 +70,10 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
             if error != nil {
                 //use FSA co-ordinates
                 let coords = self.establishment.address.coordinate
-                let coordinates = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
-                self.setMapCoordinates(coordinates: coordinates)
+                if coords.isWithinUK(){
+                    let coordinates = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
+                    self.setMapCoordinates(coordinates: coordinates)
+                }
             } else if let placemark = placemarks?.first {
                 self.setMapCoordinates(coordinates: (placemark.location?.coordinate)!)
             }
