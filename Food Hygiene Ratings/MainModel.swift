@@ -146,7 +146,7 @@ class MainModel {
     
     func setResults(establishments : [Establishment]) {
         self.results.removeAll()
-        if searchType == .local {
+        if searchType == .local || searchType == .map{
             let sorted = establishments.sorted(by: {$0.distance < $1.distance})
             self.results.append(contentsOf: sorted)
         } else {
