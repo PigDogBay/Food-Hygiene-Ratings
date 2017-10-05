@@ -154,7 +154,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     func getDetailsText(establishment : Establishment) -> String {
         switch MainModel.sharedInstance.searchType {
         case .local:
-            return String(format: "%.1f miles", establishment.distance)
+            return String(format: "%.1f miles, ", establishment.distance) + establishment.address.flatten()
         default:
             return establishment.address.flatten()
         }
