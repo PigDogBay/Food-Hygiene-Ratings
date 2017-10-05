@@ -23,9 +23,7 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
         super.viewDidLoad()
         businessNameTextField.delegate = self
         placeNameTextField.delegate = self
-        if RootViewController.ads == nil {
-            RootViewController.ads = Ads(vc: self)
-        }
+        Ads.createBannerView(vc: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -139,14 +137,4 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
         //dismiss on send
         dismiss(animated: true, completion: nil)
     }
-    
-    class func addAdView(container : UIView){
-        container.addSubview(RootViewController.ads.bannerView)
-        RootViewController.ads.bannerView.alpha = 0.0
-        UIView.animate(withDuration: 2){
-            RootViewController.ads.bannerView.alpha = 1.0
-        }
-
-    }
-    
 }

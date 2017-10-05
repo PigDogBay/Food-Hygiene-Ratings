@@ -64,7 +64,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         let model = MainModel.sharedInstance
         stateChanged(model.state)
         model.addObserver("localView", observer: self)
-        RootViewController.addAdView(container: bannerContainer)
+        Ads.addAdView(container: bannerContainer)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

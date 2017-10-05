@@ -14,7 +14,7 @@ struct Ads
     static let bannerAdId = "ca-app-pub-3582986480189311/1490068786"
     static let localBannerAdId = "ca-app-pub-3582986480189311/8489481588"
 
-    let bannerView : GADBannerView
+    static var bannerView : GADBannerView?
     
     static func createRequest() -> GADRequest
     {
@@ -27,11 +27,24 @@ struct Ads
         return request
     }
     
-    init (vc : UIViewController){
-        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        bannerView.adUnitID = Ads.localBannerAdId
-        bannerView.rootViewController = vc
-        bannerView.load(Ads.createRequest())
+    static func createBannerView(vc : UIViewController){
+        if nil == bannerView {
+            bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+            bannerView!.adUnitID = Ads.localBannerAdId
+            bannerView!.rootViewController = vc
+            bannerView!.load(Ads.createRequest())
+        }
     }
     
+    static func addAdView(container : UIView){
+        if let banner = bannerView
+        {
+            container.addSubview(banner)
+            banner.alpha = 0.0
+            UIView.animate(withDuration: 2){
+                banner.alpha = 1.0
+            }
+        }
+    }
+
 }

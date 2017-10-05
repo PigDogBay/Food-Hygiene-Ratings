@@ -203,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				4D100DCA1E644FB9005EB6E9 /* Address.swift */,
-				4D5C39141E521D9300707D14 /* Ads.swift */,
 				4D5C39201E55D85B00707D14 /* Business.swift */,
 				4D5C391A1E55CB9E00707D14 /* DataProcessing.swift */,
 				4D5C39061E4E1D5500707D14 /* DataProvider.swift */,
@@ -254,6 +253,7 @@
 		4DB64E2F1E5DB18D00D1321B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4D5C39141E521D9300707D14 /* Ads.swift */,
 				4DB64E321E5DB24E00D1321B /* UIViewControllerExtensions.swift */,
 				4D17D4AC1F7FEE7400A0A0BE /* Logging.swift */,
 			);
