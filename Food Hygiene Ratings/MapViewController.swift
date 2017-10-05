@@ -47,7 +47,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
         let model = MainModel.sharedInstance
         modelToView(state: model.state)
         model.addObserver("mapView", observer: self)
-        bannerContainer.addSubview(RootViewController.ads.bannerView)
+        RootViewController.addAdView(container: bannerContainer)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

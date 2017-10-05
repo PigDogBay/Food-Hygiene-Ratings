@@ -56,7 +56,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        bannerContainer.addSubview(RootViewController.ads.bannerView)
+        RootViewController.addAdView(container: bannerContainer)
     }
     
     func setUpMap(){

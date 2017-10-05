@@ -140,4 +140,13 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
         dismiss(animated: true, completion: nil)
     }
     
+    class func addAdView(container : UIView){
+        container.addSubview(RootViewController.ads.bannerView)
+        RootViewController.ads.bannerView.alpha = 0.0
+        UIView.animate(withDuration: 2){
+            RootViewController.ads.bannerView.alpha = 1.0
+        }
+
+    }
+    
 }
