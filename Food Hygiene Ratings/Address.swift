@@ -34,6 +34,10 @@ struct Address {
         if line4 != "" { address.append(line4) }
         if postcode != "" { address.append(postcode) }
         
+        if address.count==0 {
+            address.append("Not Specified")
+        }
+        
         self.address = address
     }
     
