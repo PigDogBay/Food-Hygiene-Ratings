@@ -103,6 +103,9 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
             default:
                 break
             }
+        } else if indexPath.section == 3 && indexPath.row == 0 {
+            //User guide
+            UIApplication.shared.openURL(URL(string: MainModel.getUserGuideUrl())!)
         }
     }
     

@@ -57,6 +57,10 @@ class MainModel {
     {
         return "https://itunes.apple.com/app/id1213783338"
     }
+    class func getUserGuideUrl()->String
+    {
+        return "https://pigdogbay.blogspot.co.uk/2017/10/food-hygiene-ratings-ios-guide.html"
+    }
 
     var state : AppState = .ready
     var results = [Establishment]()
