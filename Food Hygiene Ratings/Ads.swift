@@ -41,7 +41,7 @@ struct Ads
         {
             container.addSubview(banner)
             banner.alpha = 0.0
-            UIView.animate(withDuration: 2){
+            UIView.animate(withDuration: 1){
                 banner.alpha = 1.0
             }
         }
