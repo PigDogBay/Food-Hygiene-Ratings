@@ -26,8 +26,8 @@ class WebServiceClient {
     func fetchEstablishments(url : URL, completion: @escaping (EstablishmentsResult)->Void){
         var request = URLRequest(url: url)
         request.addValue("2", forHTTPHeaderField: "x-api-version")
-        request.addValue("application/json", forHTTPHeaderField: "accept")
-        request.addValue("application/json", forHTTPHeaderField: "content-type")
+        request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "accept")
+        request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "content-type")
         request.httpMethod = "GET"
         let task = session.dataTask(with: request){
             (data, response, error) -> Void in
