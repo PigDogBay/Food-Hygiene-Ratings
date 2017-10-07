@@ -79,12 +79,12 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
         var query = Query()
         if let name  = businessNameTextField.text {
             if name != "" {
-                query.businessName = name
+                query.businessName = name.trimmingCharacters(in: .whitespacesAndNewlines)
             }
         }
         if let place = placeNameTextField.text {
             if place != "" {
-                query.placeName = place
+                query.placeName = place.trimmingCharacters(in: .whitespacesAndNewlines)
             }
         }
         return query
