@@ -249,7 +249,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="iconLike" id="PTp-ln-Vvi">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="iconInformation2" id="PTp-ln-Vvi">
                                                     <rect key="frame" x="16" y="7" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -1034,6 +1034,7 @@
         <image name="iconAdvancedSearch" width="30" height="30"/>
         <image name="iconFeedback" width="30" height="30"/>
         <image name="iconHeart" width="30" height="30"/>
+        <image name="iconInformation2" width="30" height="30"/>
         <image name="iconLike" width="30" height="30"/>
         <image name="iconNearMe" width="30" height="30"/>
         <image name="imageTitle" width="164" height="80"/>
