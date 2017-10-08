@@ -38,6 +38,9 @@ struct FoodHygieneAPI {
     //"RatingDate":"2015-06-25T00:00:00"
     private static let dateFormatter : DateFormatter = {
         let formatter = DateFormatter()
+        //24/12 Hr bug
+        //https://stackoverflow.com/questions/143075/nsdateformatter-am-i-doing-something-wrong-or-is-this-a-bug
+        formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         return formatter
     }()
