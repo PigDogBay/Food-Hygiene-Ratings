@@ -95,7 +95,11 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
         if indexPath.section == 2 {
             switch indexPath.row {
             case 0:
-                UIApplication.shared.openURL(URL(string: MainModel.getAppUrl())!)
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(URL(string: MainModel.getAppUrl())!, options: [:])
+                } else {
+                    UIApplication.shared.openURL(URL(string: MainModel.getAppUrl())!)
+                }
             case 1:
                 sendFeedback()
             case 2:
@@ -105,7 +109,11 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
             }
         } else if indexPath.section == 3 && indexPath.row == 0 {
             //User guide
-            UIApplication.shared.openURL(URL(string: MainModel.getUserGuideUrl())!)
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(URL(string: MainModel.getUserGuideUrl())!, options: [:])
+            } else {
+                UIApplication.shared.openURL(URL(string: MainModel.getUserGuideUrl())!)
+            }
         }
     }
     

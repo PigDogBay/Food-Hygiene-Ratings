@@ -167,18 +167,22 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             case ROW_LA_EMAIL:
                 viewController.mpdbSendEmail(recipients: [establishment.localAuthority.email], subject: "Food Hygiene Rating", body: Formatting.format(establishment: establishment))
             case ROW_LA_WEBSITE:
-                if #available(iOS 10.0, *) {
-                    if let url = URL(string: establishment.localAuthority.web) {
+                if let url = URL(string: establishment.localAuthority.web) {
+                    if #available(iOS 10.0, *) {
                         UIApplication.shared.open(url, options: [:])
+                    } else {
+                        UIApplication.shared.openURL(url)
                     }
                 }
             default:
                 return
             }
         case SECTION_FSA_WEBSITE:
+            let url = FoodHygieneAPI.createBusinessUrl(fhrsId: establishment.business.fhrsId)
             if #available(iOS 10.0, *) {
-                let url = FoodHygieneAPI.createBusinessUrl(fhrsId: establishment.business.fhrsId)
                 UIApplication.shared.open(url, options: [:])
+            } else {
+                UIApplication.shared.openURL(url)
             }
         default:
             return
