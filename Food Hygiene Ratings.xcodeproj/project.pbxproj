@@ -12,6 +12,7 @@
 		4D100DC91E61B0F6005EB6E9 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D100DC81E61B0F6005EB6E9 /* Query.swift */; };
 		4D100DCB1E644FB9005EB6E9 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D100DCA1E644FB9005EB6E9 /* Address.swift */; };
 		4D100DCD1E645103005EB6E9 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D100DCC1E645103005EB6E9 /* AddressTests.swift */; };
+		4D14D3621F8B9ED500FAE135 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D14D3611F8B9ED500FAE135 /* StoreKit.framework */; };
 		4D17D4A91F7FD79E00A0A0BE /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */; };
 		4D17D4AB1F7FE2F900A0A0BE /* CoordinateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4AA1F7FE2F900A0A0BE /* CoordinateTest.swift */; };
 		4D17D4AD1F7FEE7400A0A0BE /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4AC1F7FEE7400A0A0BE /* Logging.swift */; };
@@ -73,6 +74,7 @@
 		4D100DC81E61B0F6005EB6E9 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		4D100DCA1E644FB9005EB6E9 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		4D100DCC1E645103005EB6E9 /* AddressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
+		4D14D3611F8B9ED500FAE135 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
 		4D17D4AA1F7FE2F900A0A0BE /* CoordinateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTest.swift; sourceTree = "<group>"; };
 		4D17D4AC1F7FEE7400A0A0BE /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D14D3621F8B9ED500FAE135 /* StoreKit.framework in Frameworks */,
 				3F3171D5D771CCA9D9065A64 /* Pods_Food_Hygiene_Ratings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +266,7 @@
 		C0CEA94B6465DDD598BAD4D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D14D3611F8B9ED500FAE135 /* StoreKit.framework */,
 				9512809EDBCF19C0578F7934 /* Pods_Food_Hygiene_Ratings.framework */,
 				381B887A673C3D136AA2C6D1 /* Pods_Food_Hygiene_Ratings_FoodHygieneRatingsTests.framework */,
 			);
