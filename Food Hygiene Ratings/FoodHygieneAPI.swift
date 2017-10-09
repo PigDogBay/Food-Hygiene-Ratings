@@ -34,6 +34,8 @@ struct FoodHygieneAPI {
     static let ratingsOperators = ["Equal","GreaterThanOrEqual","LessThanOrEqual"]
     
     private static let baseUrlString = "http://api.ratings.food.gov.uk/"
+    
+    private static let defaultRatingsDate = Date(timeIntervalSince1970: 0)
 
     //"RatingDate":"2015-06-25T00:00:00"
     private static let dateFormatter : DateFormatter = {
@@ -133,7 +135,6 @@ struct FoodHygieneAPI {
             let businessTypeId = json["BusinessTypeID"] as? Int,
             let ratingString = json["RatingValue"] as? String,
             let ratingDateString = json["RatingDate"] as? String,
-            let ratingDate = dateFormatter.date(from: ratingDateString),
             let newRatingPending = json["NewRatingPending"] as? Bool,
             let ratingsKey = json["RatingKey"] as? String,
             let scoresJson = json["scores"] as? [String : Any]
@@ -141,6 +142,7 @@ struct FoodHygieneAPI {
                 Logging.append(msg: "Failed parsing establishment")
                 return nil
             }
+        let ratingDate = dateFormatter.date(from: ratingDateString) ?? defaultRatingsDate
         let addressLine1 = json["AddressLine1"] as? String ?? ""
         let addressLine2 = json["AddressLine2"] as? String ?? ""
         let addressLine3 = json["AddressLine3"] as? String ?? ""
