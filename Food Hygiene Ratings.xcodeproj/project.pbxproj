@@ -13,6 +13,7 @@
 		4D100DCB1E644FB9005EB6E9 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D100DCA1E644FB9005EB6E9 /* Address.swift */; };
 		4D100DCD1E645103005EB6E9 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D100DCC1E645103005EB6E9 /* AddressTests.swift */; };
 		4D14D3621F8B9ED500FAE135 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D14D3611F8B9ED500FAE135 /* StoreKit.framework */; };
+		4D14D3641F8BB52200FAE135 /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D14D3631F8BB52200FAE135 /* Ratings.swift */; };
 		4D17D4A91F7FD79E00A0A0BE /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */; };
 		4D17D4AB1F7FE2F900A0A0BE /* CoordinateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4AA1F7FE2F900A0A0BE /* CoordinateTest.swift */; };
 		4D17D4AD1F7FEE7400A0A0BE /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4AC1F7FEE7400A0A0BE /* Logging.swift */; };
@@ -75,6 +76,7 @@
 		4D100DCA1E644FB9005EB6E9 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		4D100DCC1E645103005EB6E9 /* AddressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
 		4D14D3611F8B9ED500FAE135 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4D14D3631F8BB52200FAE135 /* Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
 		4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
 		4D17D4AA1F7FE2F900A0A0BE /* CoordinateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTest.swift; sourceTree = "<group>"; };
 		4D17D4AC1F7FEE7400A0A0BE /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				4D5C39141E521D9300707D14 /* Ads.swift */,
 				4DB64E321E5DB24E00D1321B /* UIViewControllerExtensions.swift */,
 				4D17D4AC1F7FEE7400A0A0BE /* Logging.swift */,
+				4D14D3631F8BB52200FAE135 /* Ratings.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D14D3641F8BB52200FAE135 /* Ratings.swift in Sources */,
 				4D17D4A91F7FD79E00A0A0BE /* Formatting.swift in Sources */,
 				4D3717DA1E4DC23B00644A0C /* MapMarker.swift in Sources */,
 				4D6619281E67526D00724276 /* LocalAuthority.swift in Sources */,

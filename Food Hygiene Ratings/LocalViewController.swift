@@ -9,7 +9,6 @@
 import UIKit
 import GoogleMobileAds
 import MessageUI
-import StoreKit
 
 class LocalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate, AppStateChangeObserver, MFMailComposeViewControllerDelegate {
 
@@ -78,9 +77,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         //Only do something when moving back to parent
         if parent == nil
         {
-            if #available( iOS 10.3,*){
-                SKStoreReviewController.requestReview()
-            }
+            Ratings.requestRating()
         }
     }
 

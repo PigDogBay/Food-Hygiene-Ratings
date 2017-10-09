@@ -95,11 +95,7 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
         if indexPath.section == 2 {
             switch indexPath.row {
             case 0:
-                if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(URL(string: MainModel.getAppUrl())!, options: [:])
-                } else {
-                    UIApplication.shared.openURL(URL(string: MainModel.getAppUrl())!)
-                }
+                Ratings.viewOnAppStore(itunesId : MainModel.getAppItunesId())
             case 1:
                 sendFeedback()
             case 2:
