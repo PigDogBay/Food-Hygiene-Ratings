@@ -95,7 +95,7 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
         if indexPath.section == 2 {
             switch indexPath.row {
             case 0:
-                Ratings.viewOnAppStore(itunesId : MainModel.getAppItunesId())
+                MainModel.sharedInstance.ratings.viewOnAppStore()
             case 1:
                 sendFeedback()
             case 2:

@@ -49,9 +49,8 @@ class MainModel {
     //Use the singleton within the application
     static let sharedInstance = MainModel()
 
-    class func getAppItunesId()->String {
-        return "id1213783338"
-    }
+    static let appId = "id1213783338"
+
     class func getAppWebUrl()->String
     {
         return "https://itunes.apple.com/app/id1213783338"
@@ -60,7 +59,9 @@ class MainModel {
     {
         return "https://pigdogbay.blogspot.co.uk/2017/10/food-hygiene-ratings-ios-guide.html"
     }
-
+    
+    let ratings = Ratings(appId: appId)
+    
     var state : AppState = .ready
     var results = [Establishment]()
     var location : Coordinate = Coordinate(longitude: -2.204094, latitude: 52.984120)

@@ -77,7 +77,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         //Only do something when moving back to parent
         if parent == nil
         {
-            Ratings.requestRating()
+            MainModel.sharedInstance.ratings.requestRating()
         }
     }
 

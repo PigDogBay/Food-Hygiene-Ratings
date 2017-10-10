@@ -10,29 +10,57 @@ import Foundation
 import UIKit
 import StoreKit
 
-struct Ratings {
+class Ratings {
     
-    private static func getAppUrl(_ itunesId : String)->String
-    {
-        return "itms-apps://itunes.apple.com/app/\(itunesId)"
+    fileprivate let countKey = "RatingsRequestCount"
+    fileprivate let maxCount = 5
+    fileprivate var appUrl : String
+    
+    
+    init(appId : String){
+        self.appUrl = "itms-apps://itunes.apple.com/app/\(appId)"
     }
 
-    static func viewOnAppStore(itunesId : String) {
+    fileprivate var count : Int {
+        get{
+            let defaults = UserDefaults.standard
+            let c = defaults.object(forKey: countKey) as? Int
+            if c == nil
+            {
+                defaults.set(0, forKey: countKey)
+                defaults.synchronize()
+                return 0
+            }
+            return c!
+        }
+        set(value){
+            let defaults = UserDefaults.standard
+            defaults.set(value, forKey: countKey)
+            defaults.synchronize()
+        }
+    }
+
+
+    func viewOnAppStore() {
         if #available(iOS 10.0, *) {
-            UIApplication.shared.open(URL(string: getAppUrl(itunesId))!, options: [:])
+            UIApplication.shared.open(URL(string: appUrl)!, options: [:])
         } else {
-            UIApplication.shared.openURL(URL(string: getAppUrl(itunesId))!)
+            UIApplication.shared.openURL(URL(string: appUrl)!)
         }
     }
     
-    static func requestRating() {
+    func requestRating() {
         if #available( iOS 10.3,*){
-            //todo some logic to measure time and requests
-            SKStoreReviewController.requestReview()
+            count = count + 1
+            if count>maxCount {
+                //todo some logic to measure time and requests
+                SKStoreReviewController.requestReview()
+            }
         }
     }
     
-    static func reset(){
+    func reset(){
         //todo reset timer/counters
+        count = 0
     }
 }
