@@ -23,7 +23,6 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
         super.viewDidLoad()
         businessNameTextField.delegate = self
         placeNameTextField.delegate = self
-        Ads.createBannerView(vc: self)
     }
 
     override func didReceiveMemoryWarning() {

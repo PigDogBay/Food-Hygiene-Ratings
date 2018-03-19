@@ -12,7 +12,7 @@ import MessageUI
 
 class LocalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate, AppStateChangeObserver, MFMailComposeViewControllerDelegate {
 
-    @IBOutlet weak var bannerContainer: UIView!
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loadingLabel: UILabel!
@@ -47,7 +47,11 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
-        
+
+        bannerView.adSize = kGADAdSizeBanner
+        bannerView.adUnitID = Ads.localBannerAdId
+        bannerView.rootViewController = self
+        bannerView.load(Ads.createRequest())
     }
     
     deinit {
@@ -64,7 +68,6 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         let model = MainModel.sharedInstance
         stateChanged(model.state)
         model.addObserver("localView", observer: self)
-        Ads.addAdView(container: bannerContainer)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
