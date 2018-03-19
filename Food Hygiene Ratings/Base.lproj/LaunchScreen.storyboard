@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,10 +16,6 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
-                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +26,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2017 MPD Bailey Technology. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GsW-Er-jmk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2018 MPD Bailey Technology. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GsW-Er-jmk">
                                 <rect key="frame" x="16" y="630" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -47,17 +44,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.97254901959999995" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="GsW-Er-jmk" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="16" id="8Gt-nn-L9n"/>
+                            <constraint firstItem="GsW-Er-jmk" firstAttribute="leading" secondItem="ab5-W7-z0L" secondAttribute="leading" constant="16" id="8Gt-nn-L9n"/>
                             <constraint firstItem="73F-5z-kwG" firstAttribute="top" secondItem="qqS-ac-LHa" secondAttribute="bottom" constant="16" id="J68-5i-a9g"/>
-                            <constraint firstItem="qqS-ac-LHa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OYA-Ti-X94"/>
+                            <constraint firstItem="qqS-ac-LHa" firstAttribute="centerX" secondItem="ab5-W7-z0L" secondAttribute="centerX" id="OYA-Ti-X94"/>
                             <constraint firstItem="73F-5z-kwG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="SIh-R6-yW7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="73F-5z-kwG" secondAttribute="trailing" id="Wac-cP-FLR"/>
-                            <constraint firstItem="rRK-oQ-nq4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Xi8-gt-vs7"/>
+                            <constraint firstItem="rRK-oQ-nq4" firstAttribute="centerX" secondItem="ab5-W7-z0L" secondAttribute="centerX" id="Xi8-gt-vs7"/>
                             <constraint firstItem="rRK-oQ-nq4" firstAttribute="top" secondItem="73F-5z-kwG" secondAttribute="bottom" constant="16" id="bzL-Bd-XFw"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="GsW-Er-jmk" secondAttribute="bottom" constant="16" id="ep3-He-Icv"/>
+                            <constraint firstItem="ab5-W7-z0L" firstAttribute="bottom" secondItem="GsW-Er-jmk" secondAttribute="bottom" constant="16" id="ep3-He-Icv"/>
                             <constraint firstItem="qqS-ac-LHa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="2/3" id="vps-YH-Uss"/>
-                            <constraint firstAttribute="trailing" secondItem="GsW-Er-jmk" secondAttribute="trailing" constant="16" id="wpt-tu-9K4"/>
+                            <constraint firstItem="ab5-W7-z0L" firstAttribute="trailing" secondItem="GsW-Er-jmk" secondAttribute="trailing" constant="16" id="wpt-tu-9K4"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="ab5-W7-z0L"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
