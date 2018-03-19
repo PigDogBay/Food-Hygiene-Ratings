@@ -17,7 +17,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var bannerContainer: UIView!
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func shareActionClicked(_ sender: UIBarButtonItem) {
@@ -51,12 +51,12 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
             tableView.dataSource = detailsTableDel
             tableView.delegate = detailsTableDel
         }
-        
+        bannerView.adSize = kGADAdSizeBanner
+        bannerView.adUnitID = Ads.bannerAdId
+        bannerView.rootViewController = self
+        bannerView.load(Ads.createRequest())
+
         setUpMap()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        Ads.addAdView(container: bannerContainer)
     }
     
     func setUpMap(){
