@@ -704,7 +704,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wnQ-mT-Pt1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="yVY-QX-I8S">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
@@ -719,26 +719,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8r-Jr-ZNd">
-                                <rect key="frame" x="27.5" y="617" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="HFk-kk-lbN"/>
-                                    <constraint firstAttribute="width" constant="320" id="UbM-FD-EOr"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="h8r-Jr-ZNd" firstAttribute="centerX" secondItem="nRJ-99-S91" secondAttribute="centerX" id="4aC-Hq-HEh"/>
-                            <constraint firstItem="h8r-Jr-ZNd" firstAttribute="top" secondItem="wnQ-mT-Pt1" secondAttribute="bottom" id="4lx-k0-WwK"/>
                             <constraint firstItem="nRJ-99-S91" firstAttribute="trailing" secondItem="wnQ-mT-Pt1" secondAttribute="trailing" id="D1r-IX-bEO"/>
                             <constraint firstItem="wnQ-mT-Pt1" firstAttribute="leading" secondItem="nRJ-99-S91" secondAttribute="leading" id="MGp-OQ-riI"/>
                             <constraint firstItem="5Zt-V4-AuW" firstAttribute="centerX" secondItem="nRJ-99-S91" secondAttribute="centerX" id="S6S-zf-PcY"/>
                             <constraint firstItem="wnQ-mT-Pt1" firstAttribute="top" secondItem="nRJ-99-S91" secondAttribute="top" id="b4X-m9-9YB"/>
                             <constraint firstItem="yVY-QX-I8S" firstAttribute="centerY" secondItem="0ka-Ez-l62" secondAttribute="centerY" id="dZy-kh-uIb"/>
+                            <constraint firstItem="wnQ-mT-Pt1" firstAttribute="bottom" secondItem="0ka-Ez-l62" secondAttribute="bottom" id="gp5-v7-OO3"/>
                             <constraint firstItem="yVY-QX-I8S" firstAttribute="centerX" secondItem="nRJ-99-S91" secondAttribute="centerX" id="sqw-EJ-0dM"/>
-                            <constraint firstItem="nRJ-99-S91" firstAttribute="bottom" secondItem="h8r-Jr-ZNd" secondAttribute="bottom" id="zK9-pu-1Nw"/>
                             <constraint firstItem="5Zt-V4-AuW" firstAttribute="top" secondItem="yVY-QX-I8S" secondAttribute="bottom" constant="8" id="zvR-vl-ijV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nRJ-99-S91"/>
@@ -756,7 +746,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="yVY-QX-I8S" id="h6G-MJ-381"/>
-                        <outlet property="bannerContainer" destination="h8r-Jr-ZNd" id="wRY-yP-ZqN"/>
                         <outlet property="loadingLabel" destination="5Zt-V4-AuW" id="ssA-oj-VaR"/>
                         <outlet property="mapView" destination="wnQ-mT-Pt1" id="cBq-WR-bUg"/>
                     </connections>
@@ -780,7 +769,7 @@
                                 </constraints>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-vi-miM">
-                                <rect key="frame" x="27" y="617" width="320" height="50"/>
+                                <rect key="frame" x="187.5" y="617" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="3ZF-IS-Xn7"/>
