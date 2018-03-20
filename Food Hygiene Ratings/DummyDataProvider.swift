@@ -43,5 +43,8 @@ class DummyDataProvider : IDataProvider {
             self.model.changeState(.error)
         }
     }
+    
+    func stop(){
+    }
 
 }

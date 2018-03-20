@@ -186,7 +186,11 @@ class MainModel {
             Logging.append(msg: "Unable to find establishments")
             Logging.append(msg: "State is \(self.state)")
         }
-        
+    }
+    
+    func stop(){
+        dataProvider.stop()
+        changeState(.ready)
     }
     
 }

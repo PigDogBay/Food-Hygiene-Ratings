@@ -93,5 +93,9 @@ class DataProvider : NSObject, IDataProvider, CLLocationManagerDelegate{
         }
         
     }
+    
+    func stop(){
+        locationManager.stopUpdatingLocation()
+    }
 
 }

@@ -12,4 +12,5 @@ protocol IDataProvider {
     var model : MainModel! {get set}
     func findLocalEstablishments()
     func fetchEstablishments(query : Query)
+    func stop()
 }
