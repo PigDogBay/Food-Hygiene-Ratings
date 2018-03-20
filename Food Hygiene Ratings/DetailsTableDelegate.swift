@@ -178,12 +178,7 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
                 return
             }
         case SECTION_FSA_WEBSITE:
-            let url = FoodHygieneAPI.createBusinessUrl(fhrsId: establishment.business.fhrsId)
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:])
-            } else {
-                UIApplication.shared.openURL(url)
-            }
+            viewController.performSegue(withIdentifier: "segueFSA", sender: viewController)
         default:
             return
         }

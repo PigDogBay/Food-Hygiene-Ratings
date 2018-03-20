@@ -772,7 +772,7 @@
                                 </constraints>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-vi-miM" customClass="GADBannerView">
-                                <rect key="frame" x="27.666666666666657" y="728" width="320" height="50"/>
+                                <rect key="frame" x="187.66666666666663" y="728" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="3ZF-IS-Xn7"/>
@@ -948,6 +948,7 @@
                         <viewLayoutGuide key="safeArea" id="Al0-uM-51Q"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="tuB-ka-U47">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="wPw-6l-0Ai"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="dNA-72-8iJ">
                             <color key="tintColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -960,6 +961,7 @@
                         <outlet property="mapView" destination="HD0-lN-Ezu" id="aS9-F6-R1v"/>
                         <outlet property="navBar" destination="tuB-ka-U47" id="66T-WA-BeI"/>
                         <outlet property="tableView" destination="e5T-Zk-f4j" id="Vhu-88-ek2"/>
+                        <segue destination="CfX-Oz-hDD" kind="show" identifier="segueFSA" id="976-LY-IW7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRt-2i-Hrz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1030,6 +1032,7 @@
         <image name="imageTitle" width="164" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="976-LY-IW7"/>
         <segue reference="fCe-xu-D47"/>
         <segue reference="OVE-iH-xF1"/>
     </inferredMetricsTieBreakers>
