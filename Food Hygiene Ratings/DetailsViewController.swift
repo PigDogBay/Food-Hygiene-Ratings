@@ -59,14 +59,6 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
         setUpMap()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueFSA" {
-            if let vc = segue.destination as? WebViewController {
-                vc.navTitle = "FSA"
-                vc.url = FoodHygieneAPI.createBusinessUrl(fhrsId: establishment.business.fhrsId)
-            }
-        }
-    }
     func setUpMap(){
         mapView.delegate = self
         
