@@ -13,13 +13,13 @@ struct Scores {
     let confidenceInManagement : Int
 
     static let hygienicTitle = "Hygienic food handling"
-    static let hygienicDescription = "Hygienic handling of food including preparation, cooking, re-heating, cooling and storage"
+    static let hygienicDescription = "Hygienic handling of food including preparation, cooking, re-heating, cooling and storage. The best score is 0, the worst is 30"
     
     static let structuralTitle = "Cleanliness and condition of facilities and building"
-    static let structuralDescription = "Cleanliness and condition of facilities and building (including having appropriate layout, ventilation, hand washing facilities and pest control) to enable good food hygiene"
+    static let structuralDescription = "Cleanliness and condition of facilities and building (including having appropriate layout, ventilation, hand washing facilities and pest control) to enable good food hygiene. The best score is 0, the worst is 30"
 
     static let managementTitle = "Management of food safety"
-    static let managementDescription = "System or checks in place to ensure that food sold or served is safe to eat, evidence that staff know about food safety, and the food safety officer has confidence that standards will be maintained in the future."
+    static let managementDescription = "System or checks in place to ensure that food sold or served is safe to eat, evidence that staff know about food safety, and the food safety officer has confidence that standards will be maintained in the future. The best score is 0, the worst is 30"
     
     
     init(hygiene : Int, structural : Int, confidenceInManagement : Int){
