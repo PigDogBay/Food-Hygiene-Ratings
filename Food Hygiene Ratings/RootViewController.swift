@@ -18,7 +18,8 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
     
     let segueIdNearMe = "segueNearMe"
     let segueIdQuickSearch = "segueQuickSearch"
-    
+    let segueUserGuide = "segueUserGuide"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         businessNameTextField.delegate = self
@@ -67,6 +68,11 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
             Logging.clear()
             let query = createQuery()
             MainModel.sharedInstance.findEstablishments(query: query)
+        case segueUserGuide:
+            if let vc = segue.destination as? WebViewController{
+                vc.url = URL(string: MainModel.getUserGuideUrl())
+                vc.navTitle = "User Guide"
+            }
         default:
             break
             
@@ -101,13 +107,6 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
                 tellFriends()
             default:
                 break
-            }
-        } else if indexPath.section == 3 && indexPath.row == 0 {
-            //User guide
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(URL(string: MainModel.getUserGuideUrl())!, options: [:])
-            } else {
-                UIApplication.shared.openURL(URL(string: MainModel.getUserGuideUrl())!)
             }
         }
     }

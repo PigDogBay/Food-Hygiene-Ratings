@@ -257,6 +257,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <connections>
+                                            <segue destination="CfX-Oz-hDD" kind="show" identifier="segueUserGuide" id="Tmf-pz-wHN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -971,6 +974,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HaK-pH-rvO">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ATy-d9-G5d">
                                 <rect key="frame" x="169" y="387.66666666666669" width="37" height="37"/>
                                 <color key="color" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="deviceRGB"/>
@@ -987,10 +994,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="HaK-pH-rvO" secondAttribute="bottom" id="ACj-pf-kq0"/>
                             <constraint firstItem="TA5-3p-VxY" firstAttribute="centerX" secondItem="R6k-pm-txJ" secondAttribute="centerX" id="BF6-EP-9aM"/>
                             <constraint firstItem="TA5-3p-VxY" firstAttribute="top" secondItem="ATy-d9-G5d" secondAttribute="bottom" constant="8" id="SAU-dz-BTX"/>
                             <constraint firstItem="ATy-d9-G5d" firstAttribute="centerX" secondItem="R6k-pm-txJ" secondAttribute="centerX" id="ZMn-nd-NXn"/>
+                            <constraint firstItem="HaK-pH-rvO" firstAttribute="top" secondItem="R6k-pm-txJ" secondAttribute="top" id="ZgO-F0-DlY"/>
                             <constraint firstItem="ATy-d9-G5d" firstAttribute="centerY" secondItem="0A6-81-yAh" secondAttribute="centerY" id="saw-Dz-TE2"/>
+                            <constraint firstItem="HaK-pH-rvO" firstAttribute="trailing" secondItem="R6k-pm-txJ" secondAttribute="trailing" id="tLs-yj-Rvg"/>
+                            <constraint firstItem="HaK-pH-rvO" firstAttribute="leading" secondItem="R6k-pm-txJ" secondAttribute="leading" id="zIY-ky-JG2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R6k-pm-txJ"/>
                     </view>
@@ -1001,11 +1012,12 @@
                         <outlet property="loadingIndicator" destination="ATy-d9-G5d" id="hAZ-GP-rCL"/>
                         <outlet property="loadingLabel" destination="TA5-3p-VxY" id="6bn-ux-fpW"/>
                         <outlet property="navigationBar" destination="Beu-dV-via" id="WbL-HZ-Nvu"/>
+                        <outlet property="webContainer" destination="HaK-pH-rvO" id="Ibm-GO-8IL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUu-PF-GgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4353" y="-431"/>
+            <point key="canvasLocation" x="4352.8000000000002" y="-431.5270935960591"/>
         </scene>
     </scenes>
     <resources>

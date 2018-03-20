@@ -11,6 +11,7 @@ import WebKit
 
 class WebViewController: UIViewController, WKNavigationDelegate {
 
+    @IBOutlet weak var webContainer: UIView!
     @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loadingLabel: UILabel!
@@ -22,15 +23,24 @@ class WebViewController: UIViewController, WKNavigationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        webView = WKWebView(frame: view.bounds)
+        webView = WKWebView(frame: webContainer.frame)
         webView.navigationDelegate = self
-        view.insertSubview(webView, at: 0)
+        webContainer.addSubview(webView)
+        constrainView(view: webView, toView: webContainer)
         
         navigationBar.title = navTitle
         let request = URLRequest(url: url)
         webView.load(request)
     }
-    
+    //https://stackoverflow.com/questions/40856112/how-to-create-a-sized-wkwebview-in-swift-3-ios-10
+    func constrainView(view:UIView, toView contentView:UIView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        view.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         webView.stopLoading()
     }
