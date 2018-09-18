@@ -14,14 +14,14 @@ struct Scores {
     
     static let NO_SCORE = -1
 
-    static let hygienicTitle = "Hygienic food handling"
-    static let hygienicDescription = "Hygienic handling of food including preparation, cooking, re-heating, cooling and storage. The best score is 0, the worst is 30"
+    static let hygienicTitle = "Hygienic Food Handling"
+    static let hygienicDescription = "Hygienic handling of food including preparation, cooking, re-heating, cooling and storage."
     
-    static let structuralTitle = "Cleanliness and condition of facilities and building"
-    static let structuralDescription = "Cleanliness and condition of facilities and building (including having appropriate layout, ventilation, hand washing facilities and pest control) to enable good food hygiene. The best score is 0, the worst is 30"
+    static let structuralTitle = "Cleanliness and Condition of Facilities and Building"
+    static let structuralDescription = "Cleanliness and condition of facilities and building (including having appropriate layout, ventilation, hand washing facilities and pest control) to enable good food hygiene."
 
-    static let managementTitle = "Management of food safety"
-    static let managementDescription = "System or checks in place to ensure that food sold or served is safe to eat, evidence that staff know about food safety, and the food safety officer has confidence that standards will be maintained in the future. The best score is 0, the worst is 30"
+    static let managementTitle = "Management of Food Safety"
+    static let managementDescription = "System or checks in place to ensure that food sold or served is safe to eat, evidence that staff know about food safety, and the food safety officer has confidence that standards will be maintained in the future."
     
     
     init(hygiene : Int, structural : Int, confidenceInManagement : Int){
@@ -49,33 +49,23 @@ struct Scores {
         return getIconImageName(score: confidenceInManagement)
     }
     
-    func getHygieneScore() -> String {
-        return hygiene == Scores.NO_SCORE ? "N/A" : "\(hygiene)"
-    }
-    func getStructuralScore() -> String {
-        return structural == Scores.NO_SCORE ? "N/A" : "\(structural)"
-    }
-    func getManagementScore() -> String {
-        return confidenceInManagement == Scores.NO_SCORE ? "N/A" : "\(confidenceInManagement)"
-    }
-
     //Taken from fhrsguidance.pdf
     fileprivate func getDescription(score : Int) -> String {
         switch score {
         case 0:
-            return "very good"
+            return "Very Good"
         case 5:
-            return "good"
+            return "Good"
         case 10:
-            return "generally satisfactory"
+            return "Generally Satisfactory"
         case 15:
-            return "improvement necessary"
+            return "Improvement Necessary"
         case 20:
-            return "major improvement necessary"
+            return "Major Improvement Necessary"
         case 25:
-            return "urgent improvement necessary"
+            return "Urgent Improvement Necessary"
         case 30:
-            return "urgent improvement necessary"
+            return "Urgent Improvement Necessary"
         default:
             return "Not Available"
         }

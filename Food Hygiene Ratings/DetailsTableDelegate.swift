@@ -85,7 +85,7 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         case SECTION_RATING:
             return ""
         case SECTION_SCORES:
-            return "Hazard Points"
+            return "Scores"
         case SECTION_ADDRESS:
             return "Business Address"
         case SECTION_LOCAL_AUTHORITY:
@@ -117,16 +117,16 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         case SECTION_SCORES:
             switch indexPath.row {
             case ROW_SCORES_HYGIENE:
-                cell.textLabel?.text = "Hygiene: \(establishment.rating.scores.getHygieneScore())"
-                cell.detailTextLabel?.text = establishment.rating.scores.getHygieneDescription()
+                cell.textLabel?.text = establishment.rating.scores.getHygieneDescription()
+                cell.detailTextLabel?.text = "Food Hygiene and Safety"
                 cell.imageView?.image = UIImage(named: establishment.rating.scores.getHygieneIconName())
             case ROW_SCORES_STRUCTURAL:
-                cell.textLabel?.text = "Structural: \(establishment.rating.scores.getStructuralScore())"
-                cell.detailTextLabel?.text = establishment.rating.scores.getStructuralDescription()
+                cell.textLabel?.text = establishment.rating.scores.getStructuralDescription()
+                cell.detailTextLabel?.text = "Structural Compliance"
                 cell.imageView?.image = UIImage(named: establishment.rating.scores.getStructuralIconName())
             case ROW_SCORES_MANAGEMENT:
-                cell.textLabel?.text = "Management: \(establishment.rating.scores.getManagementScore())"
-                cell.detailTextLabel?.text = establishment.rating.scores.getManagementDescription()
+                cell.textLabel?.text = establishment.rating.scores.getManagementDescription()
+                cell.detailTextLabel?.text = "Confidence in Management"
                 cell.imageView?.image = UIImage(named: establishment.rating.scores.getManagementIconName())
             default:
                 break
