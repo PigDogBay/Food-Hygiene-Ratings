@@ -30,7 +30,11 @@ class WebServiceClient {
         request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "accept")
         request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "content-type")
         request.httpMethod = "GET"
-        request.timeoutInterval = TimeInterval(Settings.connectionTimeOut)
+        
+        let timeInterval = Double(Settings.connectionTimeOut)
+        request.timeoutInterval = timeInterval
+        session.configuration.timeoutIntervalForRequest = timeInterval
+        session.configuration.timeoutIntervalForResource = timeInterval
         let task = session.dataTask(with: request){
             (data, response, error) -> Void in
             

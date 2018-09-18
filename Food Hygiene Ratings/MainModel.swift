@@ -69,7 +69,9 @@ class MainModel {
     var state : AppState = .ready
     var results = [Establishment]()
     var location : Coordinate = Coordinate(longitude: -2.204094, latitude: 52.984120)
-    var searchRadius : Int = 1
+    var searchRadius : Int {
+        get {return Settings.searchRadius}
+    }
     var searchType = SearchType.local
     
     var observersDictionary : [String : AppStateChangeObserver] = [:]
