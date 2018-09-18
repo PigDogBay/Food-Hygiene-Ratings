@@ -89,6 +89,7 @@ class DataProvider : NSObject, IDataProvider, CLLocationManagerDelegate{
     }
     
     func stop(){
+        webSerice.stop()
         locationManager.stopUpdatingLocation()
     }
 

@@ -250,7 +250,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     fileprivate func showErrorAlert(title: String, msg : String)
     {
         let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {_ in
-            self.navigationController!.popViewController(animated: true)
+            self.navigationController?.popViewController(animated: true)
         })
         let controller = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
         controller.addAction(action)

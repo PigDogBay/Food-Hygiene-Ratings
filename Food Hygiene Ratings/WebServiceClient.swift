@@ -23,6 +23,8 @@ class WebServiceClient {
         return URLSession(configuration: config)
     }()
     
+    var task : URLSessionTask?
+    
     func fetchEstablishments(url : URL, completion: @escaping (EstablishmentsResult)->Void){
         var request = URLRequest(url: url)
         request.addValue("2", forHTTPHeaderField: "x-api-version")
@@ -35,7 +37,7 @@ class WebServiceClient {
         request.timeoutInterval = timeInterval
         session.configuration.timeoutIntervalForRequest = timeInterval
         session.configuration.timeoutIntervalForResource = timeInterval
-        let task = session.dataTask(with: request){
+        task = session.dataTask(with: request){
             (data, response, error) -> Void in
             
             if let jsonData = data {
@@ -45,7 +47,12 @@ class WebServiceClient {
             } else {
                 completion(.failure(FoodHygieneError.webError))
             }
+            self.task = nil
         }
-        task.resume()
+        task?.resume()
+    }
+    
+    func stop() {
+        task?.cancel()
     }
 }
