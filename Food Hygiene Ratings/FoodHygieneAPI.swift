@@ -169,9 +169,9 @@ struct FoodHygieneAPI {
         let coordinate = Coordinate(longitude: longitude, latitude: latitude)
         let address = Address(line1: addressLine1, line2: addressLine2, line3: addressLine3, line4: addressLine4, postcode: postcode, coordinate: coordinate)
         let ratingValue = parseRating(fromString: ratingString)
-        let hygieneScore = scoresJson["Hygiene"] as? Int ?? 0
-        let structuralScore = scoresJson["Structural"] as? Int ?? 0
-        let confidenceScore = scoresJson["ConfidenceInManagement"] as? Int ?? 0
+        let hygieneScore = scoresJson["Hygiene"] as? Int ?? Scores.NO_SCORE
+        let structuralScore = scoresJson["Structural"] as? Int ?? Scores.NO_SCORE
+        let confidenceScore = scoresJson["ConfidenceInManagement"] as? Int ?? Scores.NO_SCORE
         let scores = Scores(hygiene: hygieneScore, structural: structuralScore, confidenceInManagement: confidenceScore)
         let rating = Rating(value: ratingValue, ratingString: ratingString, awardedDate: ratingDate, newRatingPending: newRatingPending, scores: scores, ratingsKey : ratingsKey)
         

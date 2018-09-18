@@ -117,15 +117,15 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         case SECTION_SCORES:
             switch indexPath.row {
             case ROW_SCORES_HYGIENE:
-                cell.textLabel?.text = "Hygiene: \(establishment.rating.scores.hygiene)"
+                cell.textLabel?.text = "Hygiene: \(establishment.rating.scores.getHygieneScore())"
                 cell.detailTextLabel?.text = establishment.rating.scores.getHygieneDescription()
                 cell.imageView?.image = UIImage(named: establishment.rating.scores.getHygieneIconName())
             case ROW_SCORES_STRUCTURAL:
-                cell.textLabel?.text = "Structural: \(establishment.rating.scores.structural)"
+                cell.textLabel?.text = "Structural: \(establishment.rating.scores.getStructuralScore())"
                 cell.detailTextLabel?.text = establishment.rating.scores.getStructuralDescription()
                 cell.imageView?.image = UIImage(named: establishment.rating.scores.getStructuralIconName())
             case ROW_SCORES_MANAGEMENT:
-                cell.textLabel?.text = "Management: \(establishment.rating.scores.confidenceInManagement)"
+                cell.textLabel?.text = "Management: \(establishment.rating.scores.getManagementScore())"
                 cell.detailTextLabel?.text = establishment.rating.scores.getManagementDescription()
                 cell.imageView?.image = UIImage(named: establishment.rating.scores.getManagementIconName())
             default:
