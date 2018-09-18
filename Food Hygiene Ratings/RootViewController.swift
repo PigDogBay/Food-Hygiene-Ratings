@@ -127,7 +127,7 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
     }
     
     func tellFriends(){
-        let shareText = "Food Hygiene Ratings UK - a free app for iOS and Android\n\nSearch the UK\'s Food Standards Agency database for your favourite restaurants hygiene ratings\n\n iOS\n  https://itunes.apple.com/app/id1213783338\n\n Android\n  https://play.google.com/store/apps/details?id=com.pigdogbay.foodhygieneratings\n\n"
+        let shareText = "Take a look at Food Hygiene Ratings UK https://itunes.apple.com/app/id1213783338"
         let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
         if let ppc = activityViewController.popoverPresentationController {
             ppc.sourceView = self.view
