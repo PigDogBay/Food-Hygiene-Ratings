@@ -109,7 +109,6 @@ struct FoodHygieneAPI {
             guard
                 let jsonDictionary = jsonObject as? [AnyHashable : Any],
                 let establishmentsArray = jsonDictionary["establishments"] as? [[String:Any]] else {
-                    Logging.append(msg: "Failed parsing json data")
                     return .failure(FoodHygieneError.invalidJSONData)
             }
             
@@ -122,7 +121,6 @@ struct FoodHygieneAPI {
             return .success(establishments)
             
         } catch let Error {	
-            Logging.append(msg: "Exception parsing data \(Error)")
             return .failure(Error)
         }
     }
@@ -139,7 +137,6 @@ struct FoodHygieneAPI {
             let ratingsKey = json["RatingKey"] as? String,
             let scoresJson = json["scores"] as? [String : Any]
             else {
-                Logging.append(msg: "Failed parsing establishment")
                 return nil
             }
         let ratingDate = dateFormatter.date(from: ratingDateString) ?? defaultRatingsDate
@@ -153,7 +150,6 @@ struct FoodHygieneAPI {
         let authorityEmail = json["LocalAuthorityEmailAddress"] as? String ?? ""
         let authorityCode = json["LocalAuthorityCode"] as? String ?? ""
         
-        Logging.append(msg: "Parsed \(name)")
         //Burntwood returns 662 for web, only 646 for iOS
         //Swan Island Fish Bar has null for longitude/latitude
         var longitude = 0.0

@@ -39,19 +39,10 @@ class WebServiceClient {
             (data, response, error) -> Void in
             
             if let jsonData = data {
-                if Logging.enabled {
-                    Logging.append(msg: "Web Data:")
-                    jsonData.forEach { byte in
-                        Logging.log.append(String(format: "%2X ",byte))
-                    }
-                    Logging.append(msg: "\nWeb fetch ok, JSON")
-                }
                 completion(FoodHygieneAPI.establishments(fromJSON: jsonData))
             } else if let requestError = error {
-                Logging.append(msg: "Web fetch requestError, \(requestError)")
                 completion(.failure(requestError))
             } else {
-                Logging.append(msg: "Web fetch failed")
                 completion(.failure(FoodHygieneError.webError))
             }
         }

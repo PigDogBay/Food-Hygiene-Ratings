@@ -232,8 +232,6 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
                 if model.results.count>0 {
                     self.title = "\(model.results.count) Results"
                     self.loadTableData()
-                } else if Logging.enabled {
-                    self.showLogAlert()
                 } else {
                     self.showErrorAlert(title: "No Results", msg: "No matches were found")
                 }
@@ -247,34 +245,6 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
                 self.showErrorAlert(title: "Error", msg: msg)
             }
         }
-    }
-    
-    fileprivate func showLogAlert(){
-        let controller = UIAlertController(title: "No Results Found", message: nil, preferredStyle: .actionSheet)
-        let emailLogAction = UIAlertAction(title: "Email Log To Developer", style: .default, handler: {action in self.sendLogEmail()})
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        controller.addAction(emailLogAction)
-        controller.addAction(cancelAction)
-        //Anchor popover to button for iPads
-        if let ppc = controller.popoverPresentationController{
-            ppc.sourceView = self.view
-            ppc.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-            ppc.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
-        }
-        present(controller, animated: true, completion: nil)
-    }
-    fileprivate func sendLogEmail(){
-        if !MFMailComposeViewController.canSendMail()
-        {
-            self.mpdbShowErrorAlert("No Email", msg: "This device is not configured for sending emails.")
-            return
-        }
-        let mailVC = MFMailComposeViewController()
-        mailVC.mailComposeDelegate = self
-        mailVC.setSubject("FHR iOS v1.01 Log File")
-        mailVC.setToRecipients(["pigdogbay@yahoo.co.uk"])
-        mailVC.setMessageBody(Logging.log, isHTML: false)
-        present(mailVC, animated: true, completion: nil)
     }
     
     fileprivate func showErrorAlert(title: String, msg : String)
@@ -293,6 +263,4 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         //dismiss on send
         controller.dismiss(animated: true, completion: nil)
     }
-
-    
 }
