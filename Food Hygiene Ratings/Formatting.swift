@@ -27,9 +27,9 @@ class Formatting {
         builder.append("\nRating: \(establishment.rating.ratingString)\n")
         if establishment.rating.hasRating(){
             builder.append("Awarded: \(Formatting.dateFormatter.string(from: establishment.rating.awardedDate))\n")
-            builder.append("Hygiene Points: \(establishment.rating.scores.hygiene)\n")
-            builder.append("Management Points: \(establishment.rating.scores.confidenceInManagement)\n")
-            builder.append("Structural Points: \(establishment.rating.scores.structural)\n")
+            builder.append("Food Hygiene and Safety: \(establishment.rating.scores.getHygieneDescription())\n")
+            builder.append("Structural Compliance: \(establishment.rating.scores.getStructuralDescription())\n")
+            builder.append("Confidence in Management: \(establishment.rating.scores.getManagementDescription())\n")
         }
         builder.append("\nLocal Authority Details\n")
         builder.append("\(establishment.localAuthority.name)\nEmail: \(establishment.localAuthority.email)\nWebsite: \(establishment.localAuthority.web)\n")
