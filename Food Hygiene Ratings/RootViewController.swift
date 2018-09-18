@@ -91,27 +91,38 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 2 {
-            switch indexPath.row {
-            case 0:
-                MainModel.sharedInstance.ratings.viewOnAppStore()
-            case 1:
-                sendFeedback()
-            case 2:
-                tellFriends()
-            default:
-                break
-            }
-        } else if indexPath.section == 3 && indexPath.row == 0 {
-            //User guide
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(URL(string: MainModel.getUserGuideUrl())!, options: [:])
-            } else {
-                UIApplication.shared.openURL(URL(string: MainModel.getUserGuideUrl())!)
-            }
+        switch indexPath {
+        case [1,2]:
+            showSettings()
+        case [2,0]:
+            openUrl(url: MainModel.getUserGuideUrl())
+        case [2,1]:
+            openUrl(url: MainModel.getPrivacyPolicyUrl())
+        case [3,0]:
+            MainModel.sharedInstance.ratings.viewOnAppStore()
+        case [3,1]:
+            sendFeedback()
+        case [3,2]:
+            tellFriends()
+        default:
+            break
         }
     }
-    
+    fileprivate func openUrl(url : String){
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: url)!, options: [:])
+        } else {
+            UIApplication.shared.openURL(URL(string: url)!)
+        }
+    }
+    func showSettings(){
+        let application = UIApplication.shared
+        let url = URL(string: UIApplicationOpenSettingsURLString)! as URL
+        if application.canOpenURL(url){
+            application.openURL(url)
+        }
+    }
+
     func sendFeedback(){
         if !MFMailComposeViewController.canSendMail()
         {

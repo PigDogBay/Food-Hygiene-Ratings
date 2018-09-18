@@ -59,7 +59,11 @@ class MainModel {
     {
         return "https://pigdogbay.blogspot.co.uk/2017/10/food-hygiene-ratings-ios-guide.html"
     }
-    
+    class func getPrivacyPolicyUrl()->String
+    {
+        return "https://pigdogbay.blogspot.com/2018/06/privacy-policy-food-hygiene-ratings.html"
+    }
+
     let ratings = Ratings(appId: appId)
     
     var state : AppState = .ready
