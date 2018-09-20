@@ -140,5 +140,15 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     
     func fetchStatusUpdate(status : FetchStatus){
         print("Fetch Status \(status)")
+        switch status {
+        case .uninitialized:
+            break
+        case .fetching:
+            break
+        case .ready:
+            placeFetcher.mbPlace?.images[0].fetchBitmap()
+        case .error:
+            break
+        }
     }
 }

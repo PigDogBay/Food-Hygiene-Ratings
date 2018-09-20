@@ -18,10 +18,7 @@ class GooglePlaceFetcher : IPlaceFetcher {
         let bounds = createBounds(establishment: establishment)
         let filter = GMSAutocompleteFilter()
         filter.type = .establishment
-        GMSPlacesClient.shared().autocompleteQuery(establishment.business.name, bounds: bounds, boundsMode: .restrict, filter: filter) { results,error in
-            if let error = error {
-                print("Autocomplete error \(error)")
-            }
+        GMSPlacesClient.shared().autocompleteQuery(establishment.business.name, bounds: bounds, boundsMode: .restrict, filter: filter) { results,_ in
             if let results = results {
                 if results.count>0 {
                     if let placeId = results[0].placeID{
@@ -34,10 +31,7 @@ class GooglePlaceFetcher : IPlaceFetcher {
         }
     }
     private func fetchPlace(placeId : String){
-        GMSPlacesClient.shared().lookUpPlaceID(placeId) { result,error in
-            if let error = error {
-                print("Look up place by ID error \(error)")
-            }
+        GMSPlacesClient.shared().lookUpPlaceID(placeId) { result,_ in
             if let place = result {
                 self.fetchImageMetadata(place: place)
                 return
@@ -46,18 +40,17 @@ class GooglePlaceFetcher : IPlaceFetcher {
         }
     }
     private func fetchImageMetadata(place : GMSPlace){
-        GMSPlacesClient.shared().lookUpPhotos(forPlaceID: place.placeID){ results,error in
-            if let error = error {
-                print("Look up place photos error \(error)")
-            }
+        GMSPlacesClient.shared().lookUpPhotos(forPlaceID: place.placeID){ results,_ in
             if let results = results {
-                print("OK found \(results.results.count) pictures")
+                let placeImages = results.results.map({meta in
+                    GooglePlaceImage(metadata: meta)
+                })
+                self.mbPlace = self.createPlace(place: place, placeImages: placeImages)
                 self.observableStatus.value = .ready
                 return
             }
             self.observableStatus.value = .error
         }
-        
     }
     
     private func createPlace(place : GMSPlace, placeImages : [IPlaceImage]) -> MBPlace {
