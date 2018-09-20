@@ -123,8 +123,10 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             setupPictureCell(cell: cell as! PlaceImageCell, imageIndex: 0)
         case (SECTION_PLACES, ROW_PLACES_WEB):
             cell.textLabel?.text = getPlaceWeb()
+            cell.imageView?.image = UIImage(named: "iconWebpage")
         case (SECTION_PLACES, ROW_PLACES_PHONE):
             cell.textLabel?.text = getPlacePhone()
+            cell.imageView?.image = UIImage(named: "iconPhone")
         case (SECTION_SCORES,ROW_SCORES_HYGIENE):
             cell.textLabel?.text = establishment.rating.scores.getHygieneDescription()
             cell.detailTextLabel?.text = "Food Hygiene and Safety"
@@ -139,6 +141,7 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             cell.imageView?.image = UIImage(named: establishment.rating.scores.getManagementIconName())
         case (SECTION_ADDRESS, 0...3):
             cell.textLabel?.text = establishment.address.address[indexPath.row]
+            cell.imageView?.image = nil
         case (SECTION_LOCAL_AUTHORITY,ROW_LA_NAME):
             cell.textLabel?.text = establishment.localAuthority.name
             cell.imageView?.image = UIImage(named: "iconAuthority")
