@@ -34,6 +34,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     let mapRadius : CLLocationDistance = 500
     var establishment : Establishment!
     var tableDelegate : UITableViewDataSource!
+    let placeFetcher : IPlaceFetcher = GooglePlaceFetcher()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,14 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
         bannerView.load(Ads.createRequest())
 
         setUpMap()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        placeFetcher.observableStatus.addObserver(named: "detailsVC", observer: fetchStatusUpdate)
+        placeFetcher.fetch(establishment: establishment)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        placeFetcher.observableStatus.removeObserver(named: "detailsVC")
     }
     
     func setUpMap(){
@@ -127,5 +136,9 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
             }
             ratingsCell.ratingLogo.image = UIImage(named: establishment.rating.ratingsKey)
         }
+    }
+    
+    func fetchStatusUpdate(status : FetchStatus){
+        print("Fetch Status \(status)")
     }
 }
