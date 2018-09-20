@@ -223,7 +223,7 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
                         break
                     case .ready:
                         cell.picture.image = images[imageIndex].image
-                        cell.attribution.text = images[imageIndex].attribution
+                        cell.attribution.attributedText = images[imageIndex].attribution ?? NSAttributedString(string:"")
                     case .error:
                         break
                     }

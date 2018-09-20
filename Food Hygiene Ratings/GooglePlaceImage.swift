@@ -10,7 +10,7 @@ import Foundation
 import GooglePlaces
 
 class GooglePlaceImage : IPlaceImage {
-    private(set) var attribution: String = ""
+    private(set) var attribution: NSAttributedString? = nil
     private(set) var observableStatus: ObservableProperty<FetchStatus> = ObservableProperty<FetchStatus>(.uninitialized)
     private(set) var image: UIImage? = nil
     var index: Int = 0
@@ -19,6 +19,7 @@ class GooglePlaceImage : IPlaceImage {
 
     init(metadata : GMSPlacePhotoMetadata){
         self.metadata = metadata
+        self.attribution = metadata.attributions
     }
     
     func fetchBitmap() {

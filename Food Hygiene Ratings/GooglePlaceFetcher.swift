@@ -55,7 +55,7 @@ class GooglePlaceFetcher : IPlaceFetcher {
     
     private func createPlace(place : GMSPlace, placeImages : [IPlaceImage]) -> MBPlace {
         //convert the phone number from international format to UK
-        let phone = place.phoneNumber?.replacingOccurrences(of: "+44", with: "0") ?? ""
+        let phone = place.phoneNumber?.replacingOccurrences(of: "+44 ", with: "0") ?? ""
         let web = place.website?.absoluteString ?? ""
         return MBPlace(id: place.placeID, telephone: phone, web: web, images: placeImages)
     }

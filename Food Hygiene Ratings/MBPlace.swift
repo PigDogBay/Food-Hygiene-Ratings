@@ -13,7 +13,7 @@ enum FetchStatus {
     case uninitialized, fetching, ready, error
 }
 protocol IPlaceImage {
-    var attribution : String {get}
+    var attribution : NSAttributedString? {get}
     var observableStatus : ObservableProperty<FetchStatus> {get}
     var image : UIImage? {get}
     var index : Int {get}
