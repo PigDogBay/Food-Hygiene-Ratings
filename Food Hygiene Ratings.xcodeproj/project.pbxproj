@@ -56,6 +56,7 @@
 		4D81725F2153A5E2007681A9 /* ObservablePropertyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81725E2153A5E2007681A9 /* ObservablePropertyTest.swift */; };
 		4D8172622153C60A007681A9 /* GooglePlaceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8172612153C60A007681A9 /* GooglePlaceFetcher.swift */; };
 		4D8172642153C69D007681A9 /* GooglePlaceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8172632153C69D007681A9 /* GooglePlaceImage.swift */; };
+		4D8172662153FF20007681A9 /* PlaceImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8172652153FF20007681A9 /* PlaceImageCell.swift */; };
 		4DB0114A1E65929000B4F04B /* glasgow.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DB011491E65929000B4F04B /* glasgow.json */; };
 		4DB0114C1E65A24300B4F04B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0114B1E65A24300B4F04B /* Rating.swift */; };
 		4DB64E2B1E5D997D00D1321B /* DetailsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */; };
@@ -127,6 +128,7 @@
 		4D81725E2153A5E2007681A9 /* ObservablePropertyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservablePropertyTest.swift; sourceTree = "<group>"; };
 		4D8172612153C60A007681A9 /* GooglePlaceFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceFetcher.swift; sourceTree = "<group>"; };
 		4D8172632153C69D007681A9 /* GooglePlaceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceImage.swift; sourceTree = "<group>"; };
+		4D8172652153FF20007681A9 /* PlaceImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceImageCell.swift; sourceTree = "<group>"; };
 		4DB011491E65929000B4F04B /* glasgow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = glasgow.json; sourceTree = "<group>"; };
 		4DB0114B1E65A24300B4F04B /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				4D5C39221E5AFD5600707D14 /* LocalViewController.swift */,
 				4D3717D91E4DC23B00644A0C /* MapMarker.swift */,
 				4D3717CC1E4CCF0400644A0C /* MapViewController.swift */,
+				4D8172652153FF20007681A9 /* PlaceImageCell.swift */,
 				4D5C39181E5462BE00707D14 /* RatingsLogoCell.swift */,
 				4D5C39081E50605600707D14 /* RootViewController.swift */,
 				4D3717CE1E4CCF4700644A0C /* SearchViewController.swift */,
@@ -548,6 +551,7 @@
 				4D17D4A91F7FD79E00A0A0BE /* Formatting.swift in Sources */,
 				4D81725D21539F6F007681A9 /* ObservableProperty.swift in Sources */,
 				4D3717DA1E4DC23B00644A0C /* MapMarker.swift in Sources */,
+				4D8172662153FF20007681A9 /* PlaceImageCell.swift in Sources */,
 				4D6619281E67526D00724276 /* LocalAuthority.swift in Sources */,
 				4D3717D81E4DC22000644A0C /* WebServiceClient.swift in Sources */,
 				4D3717CF1E4CCF4700644A0C /* SearchViewController.swift in Sources */,

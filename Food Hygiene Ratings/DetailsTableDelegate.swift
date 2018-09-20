@@ -56,15 +56,12 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case SECTION_RATING:
-            switch indexPath.row {
-            case ROW_RATING_LOGO:
-                return 92
-            default:
-                return 44
-            }
-        case SECTION_ADDRESS:
+        switch (indexPath.section, indexPath.row ){
+        case (SECTION_RATING, ROW_RATING_LOGO):
+            return 92
+        case (SECTION_PLACES, ROW_PLACES_IMAGE):
+            return tableView.bounds.width
+        case (SECTION_ADDRESS,_):
             return 26
         default:
             return 44
@@ -121,6 +118,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             cell.detailTextLabel?.text = establishment.business.type
         case (SECTION_RATING,ROW_RATING_LOGO):
             setupRatingsCell(cell: cell)
+        case (SECTION_PLACES, ROW_PLACES_IMAGE):
+            setupPictureCell(cell: cell as! PlaceImageCell, imageIndex: 0)
         case (SECTION_PLACES, ROW_PLACES_WEB):
             cell.textLabel?.text = getPlaceWeb()
         case (SECTION_PLACES, ROW_PLACES_PHONE):
@@ -194,6 +193,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
     
     fileprivate func getCellId(indexPath : IndexPath) -> String {
         switch (indexPath.section, indexPath.row) {
+        case (SECTION_PLACES, ROW_PLACES_IMAGE):
+            return "cellPlaceImage"
         case (SECTION_LOCAL_AUTHORITY,ROW_LA_EMAIL):
             return "cellSelectable"
         case (SECTION_LOCAL_AUTHORITY,ROW_LA_WEBSITE):
@@ -208,6 +209,26 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             return "cellSelectable"
         default:
             return "cellBasic"
+        }
+    }
+    
+    func setupPictureCell(cell : PlaceImageCell, imageIndex : Int){
+        if placeFetcher.observableStatus.value == .ready {
+            if let images = placeFetcher.mbPlace?.images {
+                if images.count > 0 && imageIndex <= images.count {
+                    switch images[imageIndex].observableStatus.value {
+                    case .uninitialized:
+                        images[imageIndex].fetchBitmap()
+                    case .fetching:
+                        break
+                    case .ready:
+                        cell.picture.image = images[imageIndex].image
+                        cell.attribution.text = images[imageIndex].attribution
+                    case .error:
+                        break
+                    }
+                }
+            }
         }
     }
 

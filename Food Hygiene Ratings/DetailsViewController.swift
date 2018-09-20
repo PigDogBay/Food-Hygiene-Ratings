@@ -61,6 +61,11 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     }
     override func viewWillDisappear(_ animated: Bool) {
         placeFetcher.observableStatus.removeObserver(named: "detailsVC")
+        if let images = placeFetcher.mbPlace?.images {
+            for im in images{
+                im.observableStatus.removeObserver(named: "detailsVC")
+            }
+        }
     }
     
     func setUpMap(){
@@ -117,6 +122,25 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     }
     
     func fetchStatusUpdate(status : FetchStatus){
+        switch status {
+        case .uninitialized:
+            break
+        case .fetching:
+            break
+        case .ready:
+            if let images = placeFetcher.mbPlace?.images {
+                for im in images{
+                    im.observableStatus.addObserver(named: "detailsVC", observer: fetchImageStatusUpdate)
+                }
+            }
+            break
+        case .error:
+            break
+        }
+        tableView.reloadData()
+    }
+    func fetchImageStatusUpdate(status : FetchStatus){
+        print("Image update \(status)")
         tableView.reloadData()
     }
 }
