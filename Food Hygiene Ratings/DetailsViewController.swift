@@ -34,7 +34,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     let mapRadius : CLLocationDistance = 500
     var establishment : Establishment!
     var tableDelegate : UITableViewDataSource!
-    let placeFetcher : IPlaceFetcher = GooglePlaceFetcher()
+    var placeFetcher : IPlaceFetcher = GooglePlaceFetcher()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +46,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
             self.tableDelegate = detailsTableDel
             tableView.dataSource = detailsTableDel
             tableView.delegate = detailsTableDel
+            detailsTableDel.placeFetcher = self.placeFetcher
         } else {
             let detailsTableDel = NoScoresTableDelegate(establishment: self.establishment, viewController: self)
             self.tableDelegate = detailsTableDel
@@ -139,16 +140,6 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     }
     
     func fetchStatusUpdate(status : FetchStatus){
-        print("Fetch Status \(status)")
-        switch status {
-        case .uninitialized:
-            break
-        case .fetching:
-            break
-        case .ready:
-            placeFetcher.mbPlace?.images[0].fetchBitmap()
-        case .error:
-            break
-        }
+        tableView.reloadData()
     }
 }

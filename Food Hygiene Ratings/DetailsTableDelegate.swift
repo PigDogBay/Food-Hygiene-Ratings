@@ -12,17 +12,25 @@ import UIKit
 class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegate {
 
     let establishment : Establishment
+    var placeFetcher : IPlaceFetcher! = nil
+    
     //Strong reference cycle
     weak var viewController : UIViewController!
 
     //Table structure
     fileprivate let SECTION_RATING = 0
-    fileprivate let SECTION_SCORES = 1
-    fileprivate let SECTION_ADDRESS = 2
-    fileprivate let SECTION_LOCAL_AUTHORITY = 3
-    fileprivate let SECTION_FSA_WEBSITE = 4
-    fileprivate let SECTION_COUNT = 5
+    fileprivate let SECTION_PLACES = 1
+    fileprivate let SECTION_SCORES = 2
+    fileprivate let SECTION_ADDRESS = 3
+    fileprivate let SECTION_LOCAL_AUTHORITY = 4
+    fileprivate let SECTION_FSA_WEBSITE = 5
+    fileprivate let SECTION_COUNT = 6
     
+    fileprivate let ROW_PLACES_IMAGE = 0
+    fileprivate let ROW_PLACES_PHONE = 1
+    fileprivate let ROW_PLACES_WEB = 2
+    fileprivate let ROW_PLACES_COUNT = 3
+
     fileprivate let ROW_RATING_TITLE = 0
     fileprivate let ROW_RATING_LOGO = 1
     fileprivate let ROW_RATING_COUNT = 2
@@ -42,7 +50,7 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         self.establishment = establishment
         self.viewController = viewController
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return SECTION_COUNT
     }
@@ -67,6 +75,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         switch section {
         case SECTION_RATING:
             return ROW_RATING_COUNT
+        case SECTION_PLACES:
+            return ROW_PLACES_COUNT
         case SECTION_SCORES:
             return ROW_SCORES_COUNT
         case SECTION_ADDRESS:
@@ -84,6 +94,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         switch section {
         case SECTION_RATING:
             return ""
+        case SECTION_PLACES:
+            return "Google Places Information"
         case SECTION_SCORES:
             return "Scores"
         case SECTION_ADDRESS:
@@ -103,110 +115,75 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         let cellId = getCellId(indexPath: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as UITableViewCell
         
-        switch indexPath.section {
-        case SECTION_RATING:
-            switch indexPath.row {
-            case ROW_RATING_TITLE:
-                cell.textLabel?.text = establishment.business.name
-                cell.detailTextLabel?.text = establishment.business.type
-            case ROW_RATING_LOGO:
-                DetailsViewController.setupRatingsCell(cell: cell, establishment: establishment)
-            default:
-                break
-            }
-        case SECTION_SCORES:
-            switch indexPath.row {
-            case ROW_SCORES_HYGIENE:
-                cell.textLabel?.text = establishment.rating.scores.getHygieneDescription()
-                cell.detailTextLabel?.text = "Food Hygiene and Safety"
-                cell.imageView?.image = UIImage(named: establishment.rating.scores.getHygieneIconName())
-            case ROW_SCORES_STRUCTURAL:
-                cell.textLabel?.text = establishment.rating.scores.getStructuralDescription()
-                cell.detailTextLabel?.text = "Structural Compliance"
-                cell.imageView?.image = UIImage(named: establishment.rating.scores.getStructuralIconName())
-            case ROW_SCORES_MANAGEMENT:
-                cell.textLabel?.text = establishment.rating.scores.getManagementDescription()
-                cell.detailTextLabel?.text = "Confidence in Management"
-                cell.imageView?.image = UIImage(named: establishment.rating.scores.getManagementIconName())
-            default:
-                break
-            }
-            break
-        case SECTION_ADDRESS:
+        switch (indexPath.section, indexPath.row) {
+        case (SECTION_RATING,ROW_RATING_TITLE):
+            cell.textLabel?.text = establishment.business.name
+            cell.detailTextLabel?.text = establishment.business.type
+        case (SECTION_RATING,ROW_RATING_LOGO):
+            DetailsViewController.setupRatingsCell(cell: cell, establishment: establishment)
+        case (SECTION_PLACES, ROW_PLACES_WEB):
+            cell.textLabel?.text = getPlaceWeb()
+        case (SECTION_PLACES, ROW_PLACES_PHONE):
+            cell.textLabel?.text = getPlacePhone()
+        case (SECTION_SCORES,ROW_SCORES_HYGIENE):
+            cell.textLabel?.text = establishment.rating.scores.getHygieneDescription()
+            cell.detailTextLabel?.text = "Food Hygiene and Safety"
+            cell.imageView?.image = UIImage(named: establishment.rating.scores.getHygieneIconName())
+        case (SECTION_SCORES,ROW_SCORES_STRUCTURAL):
+            cell.textLabel?.text = establishment.rating.scores.getStructuralDescription()
+            cell.detailTextLabel?.text = "Structural Compliance"
+            cell.imageView?.image = UIImage(named: establishment.rating.scores.getStructuralIconName())
+        case (SECTION_SCORES,ROW_SCORES_MANAGEMENT):
+            cell.textLabel?.text = establishment.rating.scores.getManagementDescription()
+            cell.detailTextLabel?.text = "Confidence in Management"
+            cell.imageView?.image = UIImage(named: establishment.rating.scores.getManagementIconName())
+        case (SECTION_ADDRESS, 0...3):
             cell.textLabel?.text = establishment.address.address[indexPath.row]
-        case SECTION_LOCAL_AUTHORITY:
-            switch indexPath.row{
-            case ROW_LA_NAME:
-                cell.textLabel?.text = establishment.localAuthority.name
-                cell.imageView?.image = UIImage(named: "iconAuthority")
-            case ROW_LA_EMAIL:
-                cell.textLabel?.text = establishment.localAuthority.email
-                cell.imageView?.image = UIImage(named: "iconEmail")
-            case ROW_LA_WEBSITE:
-                cell.textLabel?.text = establishment.localAuthority.web
-                cell.imageView?.image = UIImage(named: "iconWebpage")
-            default:
-                break
-            }
-            break
-        case SECTION_FSA_WEBSITE:
+        case (SECTION_LOCAL_AUTHORITY,ROW_LA_NAME):
+            cell.textLabel?.text = establishment.localAuthority.name
+            cell.imageView?.image = UIImage(named: "iconAuthority")
+        case (SECTION_LOCAL_AUTHORITY,ROW_LA_EMAIL):
+            cell.textLabel?.text = establishment.localAuthority.email
+            cell.imageView?.image = UIImage(named: "iconEmail")
+        case (SECTION_LOCAL_AUTHORITY,ROW_LA_WEBSITE):
+            cell.textLabel?.text = establishment.localAuthority.web
+            cell.imageView?.image = UIImage(named: "iconWebpage")
+        case (SECTION_FSA_WEBSITE,0):
             cell.textLabel?.text = "View rating on the FSA website"
         default:
             break
         }
-        
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case SECTION_LOCAL_AUTHORITY:
-            switch indexPath.row
-            {
-            case ROW_LA_EMAIL:
-                viewController.mpdbSendEmail(recipients: [establishment.localAuthority.email], subject: "Food Hygiene Rating", body: Formatting.format(establishment: establishment))
-            case ROW_LA_WEBSITE:
-                if let url = URL(string: establishment.localAuthority.web) {
-                    if #available(iOS 10.0, *) {
-                        UIApplication.shared.open(url, options: [:])
-                    } else {
-                        UIApplication.shared.openURL(url)
-                    }
-                }
-            default:
-                return
+        switch indexPath {
+        case [SECTION_LOCAL_AUTHORITY,ROW_LA_EMAIL]:
+            viewController.mpdbSendEmail(recipients: [establishment.localAuthority.email], subject: "Food Hygiene Rating", body: Formatting.format(establishment: establishment))
+        case [SECTION_LOCAL_AUTHORITY,ROW_LA_WEBSITE]:
+            if let url = URL(string: establishment.localAuthority.web) {
+                openWeb(url: url)
             }
-        case SECTION_FSA_WEBSITE:
-            let url = FoodHygieneAPI.createBusinessUrl(fhrsId: establishment.business.fhrsId)
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:])
-            } else {
-                UIApplication.shared.openURL(url)
-            }
+        case [SECTION_FSA_WEBSITE,0]:
+            openWeb(url: FoodHygieneAPI.createBusinessUrl(fhrsId: establishment.business.fhrsId))
         default:
             return
         }
     }
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        switch indexPath.section {
-        case SECTION_SCORES:
-            switch indexPath.row
-            {
-            case ROW_SCORES_HYGIENE:
-                showAlert(title: Scores.hygienicTitle, msg: Scores.hygienicDescription)
-            case ROW_SCORES_MANAGEMENT:
-                showAlert(title: Scores.managementTitle, msg: Scores.managementDescription)
-            case ROW_SCORES_STRUCTURAL:
-                showAlert(title: Scores.structuralTitle, msg: Scores.structuralDescription)
-            default:
-                return
-            }
+        switch indexPath {
+        case [SECTION_SCORES,ROW_SCORES_HYGIENE]:
+            showAlert(title: Scores.hygienicTitle, msg: Scores.hygienicDescription)
+        case [SECTION_SCORES,ROW_SCORES_MANAGEMENT]:
+            showAlert(title: Scores.managementTitle, msg: Scores.managementDescription)
+        case [SECTION_SCORES,ROW_SCORES_STRUCTURAL]:
+            showAlert(title: Scores.structuralTitle, msg: Scores.structuralDescription)
         default:
             return
         }
     }
+
     fileprivate func showAlert(title: String, msg : String)
     {
         let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
@@ -216,33 +193,54 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
     }
     
     fileprivate func getCellId(indexPath : IndexPath) -> String {
-        switch indexPath.section {
-        case SECTION_LOCAL_AUTHORITY:
-            switch indexPath.row {
-            case ROW_LA_EMAIL:
-                return "cellSelectable"
-            case ROW_LA_WEBSITE:
-                return "cellSelectable"
-            default:
-                return "cellBasic"
-            }
-        case SECTION_RATING:
-            switch indexPath.row {
-            case ROW_RATING_TITLE:
-                return "cellSubtitle"
-            case ROW_RATING_LOGO:
-                return "cellRatingsLogo"
-            default:
-                return "cellBasic"
-            }
-        case SECTION_SCORES:
+        switch (indexPath.section, indexPath.row) {
+        case (SECTION_LOCAL_AUTHORITY,ROW_LA_EMAIL):
+            return "cellSelectable"
+        case (SECTION_LOCAL_AUTHORITY,ROW_LA_WEBSITE):
+            return "cellSelectable"
+        case (SECTION_RATING,ROW_RATING_TITLE):
+            return "cellSubtitle"
+        case (SECTION_RATING,ROW_RATING_LOGO):
+            return "cellRatingsLogo"
+        case (SECTION_SCORES, _):
             return "cellScore"
-        case SECTION_FSA_WEBSITE:
+        case (SECTION_FSA_WEBSITE, 0):
             return "cellSelectable"
         default:
             return "cellBasic"
         }
     }
     
-
+    private func openWeb(url : URL){
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:])
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
+    private func getPlaceWeb() -> String{
+        switch placeFetcher.observableStatus.value {
+        case .uninitialized:
+            return "Loading..."
+        case .fetching:
+            return "Loading..."
+        case .ready:
+            return placeFetcher.mbPlace!.web
+        case .error:
+            return "Not available"
+        }
+    }
+    private func getPlacePhone() -> String{
+        switch placeFetcher.observableStatus.value {
+        case .uninitialized:
+            return "Loading..."
+        case .fetching:
+            return "Loading..."
+        case .ready:
+            return placeFetcher.mbPlace!.telephone
+        case .error:
+            return "Not available"
+        }
+    }
 }
