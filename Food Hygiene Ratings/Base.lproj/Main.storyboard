@@ -979,10 +979,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8E7-a9-vLC">
-                                                    <rect key="frame" x="23" y="19" width="329" height="162"/>
+                                                    <rect key="frame" x="15" y="11" width="345" height="178"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZO-PH-00r">
-                                                    <rect key="frame" x="310" y="160" width="42" height="21"/>
+                                                    <rect key="frame" x="318" y="168" width="42" height="21"/>
                                                     <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
@@ -990,12 +990,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="8E7-a9-vLC" secondAttribute="bottom" constant="8" id="13u-CY-8Og"/>
-                                                <constraint firstItem="8E7-a9-vLC" firstAttribute="top" secondItem="rvk-zW-YU3" secondAttribute="topMargin" constant="8" id="2t8-G4-Az3"/>
-                                                <constraint firstItem="8E7-a9-vLC" firstAttribute="leading" secondItem="rvk-zW-YU3" secondAttribute="leadingMargin" constant="8" id="3uo-9P-6ym"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="8E7-a9-vLC" secondAttribute="trailing" constant="8" id="4x6-CF-HQ2"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="eZO-PH-00r" secondAttribute="bottom" constant="8" id="DVL-2n-vt2"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eZO-PH-00r" secondAttribute="trailing" constant="8" id="gLB-rO-trN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8E7-a9-vLC" secondAttribute="bottom" id="13u-CY-8Og"/>
+                                                <constraint firstItem="8E7-a9-vLC" firstAttribute="top" secondItem="rvk-zW-YU3" secondAttribute="topMargin" id="2t8-G4-Az3"/>
+                                                <constraint firstItem="8E7-a9-vLC" firstAttribute="leading" secondItem="rvk-zW-YU3" secondAttribute="leadingMargin" id="3uo-9P-6ym"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8E7-a9-vLC" secondAttribute="trailing" id="4x6-CF-HQ2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eZO-PH-00r" secondAttribute="bottom" id="DVL-2n-vt2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eZO-PH-00r" secondAttribute="trailing" id="gLB-rO-trN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

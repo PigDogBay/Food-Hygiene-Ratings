@@ -219,22 +219,39 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
     }
     
     func setupPictureCell(cell : PlaceImageCell, imageIndex : Int){
-        if placeFetcher.observableStatus.value == .ready {
+        cell.attribution.attributedText = NSAttributedString(string:"")
+        switch placeFetcher.observableStatus.value {
+        case .uninitialized:
+            cell.picture.image = UIImage(named: "iconCamera")
+        case .fetching:
+            cell.picture.image = UIImage(named: "iconCamera")
+        case .ready:
             if let images = placeFetcher.mbPlace?.images {
                 if images.count > 0 && imageIndex <= images.count {
                     switch images[imageIndex].observableStatus.value {
                     case .uninitialized:
                         images[imageIndex].fetchBitmap()
+                        cell.picture.image = UIImage(named: "iconCamera")
                     case .fetching:
+                        cell.picture.image = UIImage(named: "iconCamera")
                         break
                     case .ready:
                         cell.picture.image = images[imageIndex].image
                         cell.attribution.attributedText = images[imageIndex].attribution ?? NSAttributedString(string:"")
                     case .error:
+                        cell.picture.image = UIImage(named: "iconNoCamera")
                         break
                     }
                 }
+                else {
+                    cell.picture.image = UIImage(named: "iconNoCamera")
+                }
             }
+            else {
+                cell.picture.image = UIImage(named: "iconNoCamera")
+            }
+        case .error:
+            cell.picture.image = UIImage(named: "iconNoCamera")
         }
     }
 
