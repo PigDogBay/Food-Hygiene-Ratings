@@ -825,7 +825,7 @@
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.97254901959999995" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellBasic" textLabel="eYM-ES-ojF" style="IBUITableViewCellStyleDefault" id="iH2-kC-SVl">
-                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iH2-kC-SVl" id="CEE-1z-s1J">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1003,6 +1003,23 @@
                                             <outlet property="picture" destination="8E7-a9-vLC" id="LIi-S2-15e"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPoweredByGoogle" rowHeight="26" id="SxT-r4-4ly" customClass="PlaceImageCell" customModule="Food_Hygiene_Ratings" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="523.33333333333337" width="375" height="26"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SxT-r4-4ly" id="qs5-kk-yqu" customClass="Please">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="26"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poweredByGoogle" translatesAutoresizingMaskIntoConstraints="NO" id="8qj-3K-82m">
+                                                    <rect key="frame" x="223" y="73" width="144" height="18"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8qj-3K-82m" secondAttribute="bottom" id="djx-Pr-9AI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8qj-3K-82m" secondAttribute="trailing" id="h7q-UH-ANl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -1104,6 +1121,7 @@
         <image name="iconPrivacy" width="30" height="30"/>
         <image name="iconSettings" width="30" height="30"/>
         <image name="imageTitle" width="164" height="80"/>
+        <image name="poweredByGoogle" width="144" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fCe-xu-D47"/>

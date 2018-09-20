@@ -29,7 +29,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
     fileprivate let ROW_PLACES_IMAGE = 0
     fileprivate let ROW_PLACES_PHONE = 1
     fileprivate let ROW_PLACES_WEB = 2
-    fileprivate let ROW_PLACES_COUNT = 3
+    fileprivate let ROW_PLACES_POWERED_BY_GOOGLE = 3
+    fileprivate let ROW_PLACES_COUNT = 4
 
     fileprivate let ROW_RATING_TITLE = 0
     fileprivate let ROW_RATING_LOGO = 1
@@ -92,11 +93,11 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         case SECTION_RATING:
             return ""
         case SECTION_PLACES:
-            return "Google Places Information"
+            return "Place"
         case SECTION_SCORES:
             return "Scores"
         case SECTION_ADDRESS:
-            return "Business Address"
+            return "Address"
         case SECTION_LOCAL_AUTHORITY:
             return "Local Authority"
         case SECTION_FSA_WEBSITE:
@@ -195,6 +196,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         switch (indexPath.section, indexPath.row) {
         case (SECTION_PLACES, ROW_PLACES_IMAGE):
             return "cellPlaceImage"
+        case (SECTION_PLACES, ROW_PLACES_POWERED_BY_GOOGLE):
+            return "cellPoweredByGoogle"
         case (SECTION_LOCAL_AUTHORITY,ROW_LA_EMAIL):
             return "cellSelectable"
         case (SECTION_LOCAL_AUTHORITY,ROW_LA_WEBSITE):
