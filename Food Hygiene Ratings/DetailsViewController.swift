@@ -41,18 +41,12 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
         
         navBar.title = establishment.business.name
 
-        if (establishment.rating.hasScores()){
-            let detailsTableDel = DetailsTableDelegate(establishment: self.establishment, viewController: self)
-            self.tableDelegate = detailsTableDel
-            tableView.dataSource = detailsTableDel
-            tableView.delegate = detailsTableDel
-            detailsTableDel.placeFetcher = self.placeFetcher
-        } else {
-            let detailsTableDel = NoScoresTableDelegate(establishment: self.establishment, viewController: self)
-            self.tableDelegate = detailsTableDel
-            tableView.dataSource = detailsTableDel
-            tableView.delegate = detailsTableDel
-        }
+        let detailsTableDel = DetailsTableDelegate(establishment: self.establishment, viewController: self)
+        self.tableDelegate = detailsTableDel
+        tableView.dataSource = detailsTableDel
+        tableView.delegate = detailsTableDel
+        detailsTableDel.placeFetcher = self.placeFetcher
+
         bannerView.adSize = kGADAdSizeBanner
         bannerView.adUnitID = Ads.bannerAdId
         bannerView.rootViewController = self
@@ -120,23 +114,6 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     {
         //dismiss on send
         controller.dismiss(animated: true, completion: nil)
-    }
-    
-    static func setupRatingsCell(cell : UITableViewCell, establishment : Establishment) {
-        if let ratingsCell = cell as? RatingsLogoCell{
-            let date = Formatting.dateFormatter.string(from: establishment.rating.awardedDate)
-            ratingsCell.subTitle2.text = ""
-            ratingsCell.subTitle.text = ""
-            ratingsCell.titleLabel.text = ""
-            if establishment.rating.hasRating(){
-                ratingsCell.subTitle.text = "Date Awarded"
-                ratingsCell.titleLabel.text = "\(date)"
-            }
-            if establishment.rating.newRatingPending{
-                ratingsCell.subTitle2.text = "New rating pending"
-            }
-            ratingsCell.ratingLogo.image = UIImage(named: establishment.rating.ratingsKey)
-        }
     }
     
     func fetchStatusUpdate(status : FetchStatus){

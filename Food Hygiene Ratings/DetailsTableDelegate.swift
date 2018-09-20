@@ -120,7 +120,7 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             cell.textLabel?.text = establishment.business.name
             cell.detailTextLabel?.text = establishment.business.type
         case (SECTION_RATING,ROW_RATING_LOGO):
-            DetailsViewController.setupRatingsCell(cell: cell, establishment: establishment)
+            setupRatingsCell(cell: cell)
         case (SECTION_PLACES, ROW_PLACES_WEB):
             cell.textLabel?.text = getPlaceWeb()
         case (SECTION_PLACES, ROW_PLACES_PHONE):
@@ -210,7 +210,24 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             return "cellBasic"
         }
     }
-    
+
+    func setupRatingsCell(cell : UITableViewCell) {
+        if let ratingsCell = cell as? RatingsLogoCell{
+            let date = Formatting.dateFormatter.string(from: establishment.rating.awardedDate)
+            ratingsCell.subTitle2.text = ""
+            ratingsCell.subTitle.text = ""
+            ratingsCell.titleLabel.text = ""
+            if establishment.rating.hasRating(){
+                ratingsCell.subTitle.text = "Date Awarded"
+                ratingsCell.titleLabel.text = "\(date)"
+            }
+            if establishment.rating.newRatingPending{
+                ratingsCell.subTitle2.text = "New rating pending"
+            }
+            ratingsCell.ratingLogo.image = UIImage(named: establishment.rating.ratingsKey)
+        }
+    }
+
     private func openWeb(url : URL){
         if #available(iOS 10.0, *) {
             UIApplication.shared.open(url, options: [:])
