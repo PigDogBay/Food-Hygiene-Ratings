@@ -54,6 +54,8 @@
 		4D81725A2153987A007681A9 /* MBPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8172592153987A007681A9 /* MBPlace.swift */; };
 		4D81725D21539F6F007681A9 /* ObservableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81725C21539F6F007681A9 /* ObservableProperty.swift */; };
 		4D81725F2153A5E2007681A9 /* ObservablePropertyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81725E2153A5E2007681A9 /* ObservablePropertyTest.swift */; };
+		4D8172622153C60A007681A9 /* GooglePlaceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8172612153C60A007681A9 /* GooglePlaceFetcher.swift */; };
+		4D8172642153C69D007681A9 /* GooglePlaceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8172632153C69D007681A9 /* GooglePlaceImage.swift */; };
 		4DB0114A1E65929000B4F04B /* glasgow.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DB011491E65929000B4F04B /* glasgow.json */; };
 		4DB0114C1E65A24300B4F04B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0114B1E65A24300B4F04B /* Rating.swift */; };
 		4DB64E2B1E5D997D00D1321B /* DetailsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */; };
@@ -124,6 +126,8 @@
 		4D8172592153987A007681A9 /* MBPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlace.swift; sourceTree = "<group>"; };
 		4D81725C21539F6F007681A9 /* ObservableProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableProperty.swift; sourceTree = "<group>"; };
 		4D81725E2153A5E2007681A9 /* ObservablePropertyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservablePropertyTest.swift; sourceTree = "<group>"; };
+		4D8172612153C60A007681A9 /* GooglePlaceFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceFetcher.swift; sourceTree = "<group>"; };
+		4D8172632153C69D007681A9 /* GooglePlaceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceImage.swift; sourceTree = "<group>"; };
 		4DB011491E65929000B4F04B /* glasgow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = glasgow.json; sourceTree = "<group>"; };
 		4DB0114B1E65A24300B4F04B /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 		4D3717D01E4CD43300644A0C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4D8172602153C5D4007681A9 /* Places */,
 				4D100DCA1E644FB9005EB6E9 /* Address.swift */,
 				4D5C39201E55D85B00707D14 /* Business.swift */,
 				4D5C391A1E55CB9E00707D14 /* DataProcessing.swift */,
@@ -224,7 +229,6 @@
 				4D5C39041E4E1D0A00707D14 /* IDataProvider.swift */,
 				4D6619271E67526D00724276 /* LocalAuthority.swift */,
 				4D3717F21E4DF0BB00644A0C /* MainModel.swift */,
-				4D8172592153987A007681A9 /* MBPlace.swift */,
 				4D100DC81E61B0F6005EB6E9 /* Query.swift */,
 				4DB0114B1E65A24300B4F04B /* Rating.swift */,
 				4D5C392C1E5C92E100707D14 /* Scores.swift */,
@@ -262,6 +266,16 @@
 				4D6619211E66DB7E00724276 /* businessTypes.json */,
 			);
 			name = Supporting;
+			sourceTree = "<group>";
+		};
+		4D8172602153C5D4007681A9 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				4D8172592153987A007681A9 /* MBPlace.swift */,
+				4D8172612153C60A007681A9 /* GooglePlaceFetcher.swift */,
+				4D8172632153C69D007681A9 /* GooglePlaceImage.swift */,
+			);
+			name = Places;
 			sourceTree = "<group>";
 		};
 		4DB64E2F1E5DB18D00D1321B /* Utils */ = {
@@ -550,6 +564,7 @@
 				4D5C39091E50605600707D14 /* RootViewController.swift in Sources */,
 				4DB64E2B1E5D997D00D1321B /* DetailsTableDelegate.swift in Sources */,
 				4DB64E331E5DB24E00D1321B /* UIViewControllerExtensions.swift in Sources */,
+				4D8172642153C69D007681A9 /* GooglePlaceImage.swift in Sources */,
 				4D5C392D1E5C92E100707D14 /* Scores.swift in Sources */,
 				4D5C39231E5AFD5600707D14 /* LocalViewController.swift in Sources */,
 				4D3717CD1E4CCF0400644A0C /* MapViewController.swift in Sources */,
@@ -565,6 +580,7 @@
 				4D3717B31E4C7ED100644A0C /* AppDelegate.swift in Sources */,
 				4D3717D41E4DC1FC00644A0C /* Establishment.swift in Sources */,
 				4D5C390E1E51DBBD00707D14 /* DetailsViewController.swift in Sources */,
+				4D8172622153C60A007681A9 /* GooglePlaceFetcher.swift in Sources */,
 				4D5C39191E5462BE00707D14 /* RatingsLogoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
