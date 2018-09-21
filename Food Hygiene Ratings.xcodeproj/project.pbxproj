@@ -16,6 +16,7 @@
 		4D14D3641F8BB52200FAE135 /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D14D3631F8BB52200FAE135 /* Ratings.swift */; };
 		4D17D4A91F7FD79E00A0A0BE /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */; };
 		4D17D4AB1F7FE2F900A0A0BE /* CoordinateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4AA1F7FE2F900A0A0BE /* CoordinateTest.swift */; };
+		4D1EB2ED215528CB00184663 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EB2EC215528CB00184663 /* MapCell.swift */; };
 		4D3717B31E4C7ED100644A0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717B21E4C7ED100644A0C /* AppDelegate.swift */; };
 		4D3717B81E4C7ED100644A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717B61E4C7ED100644A0C /* Main.storyboard */; };
 		4D3717BA1E4C7ED100644A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717B91E4C7ED100644A0C /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		4D14D3631F8BB52200FAE135 /* Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
 		4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
 		4D17D4AA1F7FE2F900A0A0BE /* CoordinateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTest.swift; sourceTree = "<group>"; };
+		4D1EB2EC215528CB00184663 /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
 		4D3717AF1E4C7ED100644A0C /* Food Hygiene Ratings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Hygiene Ratings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3717B21E4C7ED100644A0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3717B71E4C7ED100644A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				4D5C390D1E51DBBD00707D14 /* DetailsViewController.swift */,
 				4D6619251E66F6A600724276 /* ListViewController.swift */,
 				4D5C39221E5AFD5600707D14 /* LocalViewController.swift */,
+				4D1EB2EC215528CB00184663 /* MapCell.swift */,
 				4D3717D91E4DC23B00644A0C /* MapMarker.swift */,
 				4D3717CC1E4CCF0400644A0C /* MapViewController.swift */,
 				4D8172652153FF20007681A9 /* PlaceImageCell.swift */,
@@ -568,6 +571,7 @@
 				4D8172642153C69D007681A9 /* GooglePlaceImage.swift in Sources */,
 				4D5C392D1E5C92E100707D14 /* Scores.swift in Sources */,
 				4D5C39231E5AFD5600707D14 /* LocalViewController.swift in Sources */,
+				4D1EB2ED215528CB00184663 /* MapCell.swift in Sources */,
 				4D3717CD1E4CCF0400644A0C /* MapViewController.swift in Sources */,
 				4D3717F31E4DF0BB00644A0C /* MainModel.swift in Sources */,
 				4D5C39071E4E1D5500707D14 /* DataProvider.swift in Sources */,

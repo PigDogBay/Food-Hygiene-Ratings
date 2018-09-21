@@ -42,6 +42,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
         navBar.title = establishment.business.name
 
         let detailsTableDel = DetailsTableDelegate(establishment: self.establishment, viewController: self)
+        detailsTableDel.observer = updateTable
         self.tableDelegate = detailsTableDel
         tableView.dataSource = detailsTableDel
         tableView.delegate = detailsTableDel
@@ -51,6 +52,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
         bannerView.adUnitID = Ads.bannerAdId
         bannerView.rootViewController = self
         bannerView.load(Ads.createRequest())
+        detailsTableDel.setUpMap()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -117,6 +119,10 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
     {
         //dismiss on send
         controller.dismiss(animated: true, completion: nil)
+    }
+    
+    private func updateTable(section : Int){
+        tableView.reloadData()
     }
     
     func fetchStatusUpdate(status : FetchStatus){

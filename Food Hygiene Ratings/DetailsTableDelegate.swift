@@ -8,12 +8,16 @@
 
 import Foundation
 import UIKit
+import CoreLocation
+import MapKit
 
 class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegate {
 
+    let mapRadius : CLLocationDistance = 500
     let establishment : Establishment
     var placeFetcher : IPlaceFetcher! = nil
-    
+    var mapImage : UIImage? = nil
+
     //Strong reference cycle
     weak var viewController : UIViewController!
 
@@ -41,16 +45,61 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
     fileprivate let ROW_SCORES_MANAGEMENT = 2
     fileprivate let ROW_SCORES_COUNT = 3
     
+    fileprivate let ROW_ADDRESS_MAP = 0
+    fileprivate let ROW_ADDRESS_LINE_1 = 1
+    fileprivate let ROW_ADDRESS_LINE_2 = 2
+    fileprivate let ROW_ADDRESS_LINE_3 = 3
+    fileprivate let ROW_ADDRESS_LINE_4 = 4
+
     fileprivate let ROW_LA_NAME = 0
     fileprivate let ROW_LA_EMAIL = 1
     fileprivate let ROW_LA_WEBSITE = 2
     fileprivate let ROW_LA_COUNT = 3
 
+    typealias TableDataObserver = (Int) -> Void
+    var observer : TableDataObserver?
     
     init(establishment : Establishment, viewController : UIViewController){
         self.establishment = establishment
         self.viewController = viewController
     }
+    
+    func setUpMap(){
+        
+        //Find more accurate co-ordinates for the business
+        let address = "\(establishment.address.line1),\(establishment.address.line2),\(establishment.address.line3),\(establishment.address.line4),\(establishment.address.postcode)"
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address) {
+            (placemarks, error) -> Void in
+            if error != nil {
+                //use FSA co-ordinates
+                let coords = self.establishment.address.coordinate
+                if coords.isWithinUK(){
+                    let coordinates = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
+                    self.createSnapShot(coordinates: coordinates)
+                }
+            } else if let placemark = placemarks?.first {
+                self.createSnapShot(coordinates: (placemark.location?.coordinate)!)
+            }
+        }
+    }
+    func createSnapShot(coordinates : CLLocationCoordinate2D) {
+        let region = MKCoordinateRegionMakeWithDistance(coordinates ,mapRadius * 2.0, mapRadius * 2.0)
+        let mapSnapshotOptions = MKMapSnapshotOptions()
+        mapSnapshotOptions.region = region
+        mapSnapshotOptions.scale = UIScreen.main.scale
+        mapSnapshotOptions.size = CGSize(width: 300.0, height: 300.0)
+        mapSnapshotOptions.showsBuildings = true
+        mapSnapshotOptions.showsPointsOfInterest = true
+        let snapShotter = MKMapSnapshotter(options: mapSnapshotOptions)
+        snapShotter.start{snapshot,error in
+            self.mapImage = snapshot?.image
+            if let obs = self.observer{
+                obs(self.SECTION_ADDRESS)
+            }
+        }
+    }
+
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return SECTION_COUNT
@@ -62,7 +111,9 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             return 92
         case (SECTION_PLACES, ROW_PLACES_IMAGE):
             return tableView.bounds.width
-        case (SECTION_ADDRESS,_):
+        case (SECTION_ADDRESS,0):
+            return 300
+        case (SECTION_ADDRESS,1...4):
             return 26
         default:
             return 44
@@ -78,7 +129,7 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         case SECTION_SCORES:
             return ROW_SCORES_COUNT
         case SECTION_ADDRESS:
-            return establishment.address.address.count
+            return establishment.address.address.count + 1
         case SECTION_LOCAL_AUTHORITY:
             return ROW_LA_COUNT
         case SECTION_FSA_WEBSITE:
@@ -91,7 +142,7 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case SECTION_RATING:
-            return ""
+            return "Rating"
         case SECTION_PLACES:
             return "Place"
         case SECTION_SCORES:
@@ -139,8 +190,13 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
             cell.textLabel?.text = establishment.rating.scores.getManagementDescription()
             cell.detailTextLabel?.text = "Confidence in Management"
             cell.imageView?.image = UIImage(named: establishment.rating.scores.getManagementIconName())
-        case (SECTION_ADDRESS, 0...3):
-            cell.textLabel?.text = establishment.address.address[indexPath.row]
+        case (SECTION_ADDRESS, 0):
+            let mapCell = cell as! MapCell
+            if let mapImage = mapImage{
+                mapCell.showMap(mapImage: mapImage)
+            }
+        case (SECTION_ADDRESS, 1...4):
+            cell.textLabel?.text = establishment.address.address[indexPath.row-1]
             cell.imageView?.image = nil
         case (SECTION_LOCAL_AUTHORITY,ROW_LA_NAME):
             cell.textLabel?.text = establishment.localAuthority.name
@@ -199,6 +255,8 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         switch (indexPath.section, indexPath.row) {
         case (SECTION_PLACES, ROW_PLACES_IMAGE):
             return "cellPlaceImage"
+        case (SECTION_ADDRESS, ROW_ADDRESS_MAP):
+            return "cellMap"
         case (SECTION_PLACES, ROW_PLACES_POWERED_BY_GOOGLE):
             return "cellPoweredByGoogle"
         case (SECTION_LOCAL_AUTHORITY,ROW_LA_EMAIL):
