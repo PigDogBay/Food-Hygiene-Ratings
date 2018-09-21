@@ -60,7 +60,6 @@
 		4D8172662153FF20007681A9 /* PlaceImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8172652153FF20007681A9 /* PlaceImageCell.swift */; };
 		4DB0114A1E65929000B4F04B /* glasgow.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DB011491E65929000B4F04B /* glasgow.json */; };
 		4DB0114C1E65A24300B4F04B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0114B1E65A24300B4F04B /* Rating.swift */; };
-		4DB64E2B1E5D997D00D1321B /* DetailsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */; };
 		4DB64E331E5DB24E00D1321B /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB64E321E5DB24E00D1321B /* UIViewControllerExtensions.swift */; };
 		4DB64E3A1E5F1FB900D1321B /* AdvancedSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB64E391E5F1FB900D1321B /* AdvancedSearchViewController.swift */; };
 /* End PBXBuildFile section */
@@ -133,7 +132,6 @@
 		4D8172652153FF20007681A9 /* PlaceImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceImageCell.swift; sourceTree = "<group>"; };
 		4DB011491E65929000B4F04B /* glasgow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = glasgow.json; sourceTree = "<group>"; };
 		4DB0114B1E65A24300B4F04B /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
-		4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableDelegate.swift; sourceTree = "<group>"; };
 		4DB64E321E5DB24E00D1321B /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		4DB64E391E5F1FB900D1321B /* AdvancedSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedSearchViewController.swift; sourceTree = "<group>"; };
 		7FBD16ED9140BB09C083E32D /* Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food Hygiene Ratings-FoodHygieneRatingsTests/Pods-Food Hygiene Ratings-FoodHygieneRatingsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				4DB64E391E5F1FB900D1321B /* AdvancedSearchViewController.swift */,
-				4DB64E2A1E5D997D00D1321B /* DetailsTableDelegate.swift */,
 				4D5C390D1E51DBBD00707D14 /* DetailsViewController.swift */,
 				4D6619251E66F6A600724276 /* ListViewController.swift */,
 				4D5C39221E5AFD5600707D14 /* LocalViewController.swift */,
@@ -566,7 +563,6 @@
 				4D5C39291E5C4A1A00707D14 /* DummyDataProvider.swift in Sources */,
 				4D6619261E66F6A600724276 /* ListViewController.swift in Sources */,
 				4D5C39091E50605600707D14 /* RootViewController.swift in Sources */,
-				4DB64E2B1E5D997D00D1321B /* DetailsTableDelegate.swift in Sources */,
 				4DB64E331E5DB24E00D1321B /* UIViewControllerExtensions.swift in Sources */,
 				4D8172642153C69D007681A9 /* GooglePlaceImage.swift in Sources */,
 				4D5C392D1E5C92E100707D14 /* Scores.swift in Sources */,
