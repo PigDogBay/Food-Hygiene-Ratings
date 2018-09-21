@@ -95,7 +95,6 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
         {
             //strong reference cycle currently exists
             //TODO need to make the observers weak links
-            //TODO memory still leaking!!!
             placeFetcher.observableStatus.removeAllObservers()
             if let images = placeFetcher.mbPlace?.images{
                 for im in images{
