@@ -71,12 +71,6 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
 
     deinit {
         print("DetailsVC DEINIT")
-        placeFetcher.observableStatus.removeAllObservers()
-        if let images = placeFetcher.mbPlace?.images{
-            for im in images{
-                im.observableStatus.removeAllObservers()
-            }
-        }
     }
 
     override func viewDidLoad() {
@@ -90,6 +84,27 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
         bannerView.load(Ads.createRequest())
         startLoadingData()
     }
+    //
+    // This function is called twice, first when child view is added to parent
+    // then secondly when it is removed, in this case parent is nil
+    //
+    override func willMove(toParentViewController parent: UIViewController?)
+    {
+        //Only do something when moving back to parent
+        if parent == nil
+        {
+            //strong reference cycle currently exists
+            //TODO need to make the observers weak links
+            //TODO memory still leaking!!!
+            placeFetcher.observableStatus.removeAllObservers()
+            if let images = placeFetcher.mbPlace?.images{
+                for im in images{
+                    im.observableStatus.removeAllObservers()
+                }
+            }
+        }
+    }
+
     
     // MARK:- MFMailComposeViewControllerDelegate
     public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
