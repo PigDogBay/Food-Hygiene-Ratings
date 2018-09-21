@@ -51,8 +51,6 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, MFMailComposeV
         bannerView.adUnitID = Ads.bannerAdId
         bannerView.rootViewController = self
         bannerView.load(Ads.createRequest())
-
-        setUpMap()
     }
     
     override func viewWillAppear(_ animated: Bool) {

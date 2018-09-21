@@ -806,12 +806,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HD0-lN-Ezu">
-                                <rect key="frame" x="0.0" y="88" width="375" height="166"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="166" id="M6y-3f-eF1"/>
-                                </constraints>
-                            </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-vi-miM" customClass="GADBannerView">
                                 <rect key="frame" x="27.666666666666657" y="728" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -821,11 +815,11 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="e5T-Zk-f4j">
-                                <rect key="frame" x="0.0" y="254" width="375" height="474"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="640"/>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.97254901959999995" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellBasic" textLabel="eYM-ES-ojF" style="IBUITableViewCellStyleDefault" id="iH2-kC-SVl">
-                                        <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iH2-kC-SVl" id="CEE-1z-s1J">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1011,7 +1005,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poweredByGoogle" translatesAutoresizingMaskIntoConstraints="NO" id="8qj-3K-82m">
-                                                    <rect key="frame" x="223" y="73" width="144" height="18"/>
+                                                    <rect key="frame" x="223" y="-0.3333333333333286" width="144" height="18"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -1025,13 +1019,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HD0-lN-Ezu" firstAttribute="top" secondItem="Al0-uM-51Q" secondAttribute="top" id="Ivj-j3-pif"/>
-                            <constraint firstItem="e5T-Zk-f4j" firstAttribute="top" secondItem="HD0-lN-Ezu" secondAttribute="bottom" id="UgL-Wm-SDa"/>
+                            <constraint firstItem="e5T-Zk-f4j" firstAttribute="top" secondItem="Al0-uM-51Q" secondAttribute="top" id="2Oz-ma-Gde"/>
                             <constraint firstItem="Al0-uM-51Q" firstAttribute="trailing" secondItem="e5T-Zk-f4j" secondAttribute="trailing" id="d2V-wC-kXr"/>
-                            <constraint firstItem="HD0-lN-Ezu" firstAttribute="leading" secondItem="Al0-uM-51Q" secondAttribute="leading" id="erz-np-uDO"/>
                             <constraint firstItem="FTu-vi-miM" firstAttribute="centerX" secondItem="Al0-uM-51Q" secondAttribute="centerX" id="nK1-5K-ozI"/>
                             <constraint firstItem="FTu-vi-miM" firstAttribute="top" secondItem="e5T-Zk-f4j" secondAttribute="bottom" id="oXn-nG-8ir"/>
-                            <constraint firstItem="Al0-uM-51Q" firstAttribute="trailing" secondItem="HD0-lN-Ezu" secondAttribute="trailing" id="r70-gj-4qh"/>
                             <constraint firstItem="Al0-uM-51Q" firstAttribute="bottom" secondItem="FTu-vi-miM" secondAttribute="bottom" id="rR3-te-hR8"/>
                             <constraint firstItem="e5T-Zk-f4j" firstAttribute="leading" secondItem="Al0-uM-51Q" secondAttribute="leading" id="vBw-7V-9m7"/>
                         </constraints>
@@ -1048,7 +1039,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bannerView" destination="FTu-vi-miM" id="B5S-bJ-jsa"/>
-                        <outlet property="mapView" destination="HD0-lN-Ezu" id="aS9-F6-R1v"/>
                         <outlet property="navBar" destination="tuB-ka-U47" id="66T-WA-BeI"/>
                         <outlet property="tableView" destination="e5T-Zk-f4j" id="Vhu-88-ek2"/>
                     </connections>
