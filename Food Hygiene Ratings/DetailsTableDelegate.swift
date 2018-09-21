@@ -93,7 +93,33 @@ class DetailsTableDelegate : NSObject, UITableViewDataSource, UITableViewDelegat
         mapSnapshotOptions.showsPointsOfInterest = true
         let snapShotter = MKMapSnapshotter(options: mapSnapshotOptions)
         snapShotter.start{snapshot,error in
-            self.mapImage = snapshot?.image
+            guard let snapshot = snapshot, error == nil else {
+                return
+            }
+            //draw marker on image
+            UIGraphicsBeginImageContextWithOptions(mapSnapshotOptions.size, true, mapSnapshotOptions.scale)
+            snapshot.image.draw(at: .zero)
+            
+            let pinView = MKPinAnnotationView(annotation: nil, reuseIdentifier: nil)
+            let pinImage = pinView.image
+            var point = snapshot.point(for: coordinates)
+            
+            let rect = CGRect(x: 0, y: 0, width: 300, height: 300)
+
+            if rect.contains(point) {
+                let pinCenterOffset = pinView.centerOffset
+                point.x -= pinView.bounds.size.width / 2
+                point.y -= pinView.bounds.size.height / 2
+                point.x += pinCenterOffset.x
+                point.y += pinCenterOffset.y
+                pinImage?.draw(at: point)
+            }
+            
+//            self.mapImage = snapshot.image
+
+            self.mapImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+
             if let obs = self.observer{
                 obs(self.SECTION_ADDRESS)
             }
