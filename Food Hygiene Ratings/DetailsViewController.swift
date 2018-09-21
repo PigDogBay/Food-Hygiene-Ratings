@@ -126,10 +126,14 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
                 }
             }
         }
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     func fetchImageStatusUpdate(status : FetchStatus){
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     
@@ -184,8 +188,9 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
             }
             self.mapImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-            
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 
