@@ -347,10 +347,14 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
         switch (indexPath.section, indexPath.row) {
         case (SECTION_PLACES, ROW_PLACES_IMAGE):
             return "cellPlaceImage"
-        case (SECTION_ADDRESS, ROW_ADDRESS_MAP):
-            return "cellMap"
+        case (SECTION_PLACES, ROW_PLACES_WEB):
+            return "cellSelectable"
+        case (SECTION_PLACES, ROW_PLACES_PHONE):
+            return "cellSelectable"
         case (SECTION_PLACES, ROW_PLACES_POWERED_BY_GOOGLE):
             return "cellPoweredByGoogle"
+        case (SECTION_ADDRESS, ROW_ADDRESS_MAP):
+            return "cellMap"
         case (SECTION_LOCAL_AUTHORITY,ROW_LA_EMAIL):
             return "cellSelectable"
         case (SECTION_LOCAL_AUTHORITY,ROW_LA_WEBSITE):
