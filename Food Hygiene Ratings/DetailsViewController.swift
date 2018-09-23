@@ -350,6 +350,12 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
             }
         case [SECTION_FSA_WEBSITE,0]:
             openWeb(url: FoodHygieneAPI.createBusinessUrl(fhrsId: establishment.business.fhrsId))
+        case [SECTION_PLACES, ROW_PLACES_WEB]:
+            if placeFetcherUtils.isWebAvailable(){
+                if let url = URL(string: placeFetcherUtils.web){
+                    openWeb(url: url)
+                }
+            }
         default:
             return
         }
