@@ -75,7 +75,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         model.removeObserver("localView")
     }
     
-    override func willMove(toParentViewController parent: UIViewController?)
+    override func willMove(toParent parent: UIViewController?)
     {
         //Only do something when moving back to parent
         if parent == nil
@@ -249,10 +249,10 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     fileprivate func showErrorAlert(title: String, msg : String)
     {
-        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {_ in
+        let action = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
             self.navigationController?.popViewController(animated: true)
         })
-        let controller = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
+        let controller = UIAlertController(title: title, message: msg, preferredStyle: UIAlertController.Style.alert)
         controller.addAction(action)
         self.present(controller, animated: true, completion: nil)
     }

@@ -115,7 +115,7 @@ class RootViewController: UITableViewController, UITextFieldDelegate, MFMailComp
     }
     func showSettings(){
         let application = UIApplication.shared
-        let url = URL(string: UIApplicationOpenSettingsURLString)! as URL
+        let url = URL(string: UIApplication.openSettingsURLString)! as URL
         if application.canOpenURL(url){
             application.openURL(url)
         }

@@ -29,7 +29,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
     private let ukregion : MKCoordinateRegion = {
         let coords = CLLocationCoordinate2D(latitude: 55.0, longitude: -3.1)
         let span = MKCoordinateSpan(latitudeDelta: 12, longitudeDelta: 6)
-        return MKCoordinateRegionMake(coords, span)
+        return MKCoordinateRegion(center: coords, span: span)
     }()
 
     override func viewDidLoad() {
@@ -170,7 +170,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, AppStateChangeObse
             self.mapView.addAnnotations(markers)
             //show map centred on location in the model
             let coords2d = CLLocationCoordinate2D(latitude: model.location.latitude, longitude: model.location.longitude)
-            let coordinateRegion = MKCoordinateRegionMakeWithDistance(coords2d,mapRadius * 2.0, mapRadius * 2.0)
+            let coordinateRegion = MKCoordinateRegion(center: coords2d,latitudinalMeters: mapRadius * 2.0, longitudinalMeters: mapRadius * 2.0)
             mapView.setRegion(coordinateRegion, animated: true)
         }
         

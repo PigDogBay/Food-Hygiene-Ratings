@@ -88,7 +88,7 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     // This function is called twice, first when child view is added to parent
     // then secondly when it is removed, in this case parent is nil
     //
-    override func willMove(toParentViewController parent: UIViewController?)
+    override func willMove(toParent parent: UIViewController?)
     {
         //Only do something when moving back to parent
         if parent == nil
@@ -156,8 +156,8 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
         }
     }
     private func createSnapShot(coordinates : CLLocationCoordinate2D) {
-        let region = MKCoordinateRegionMakeWithDistance(coordinates ,mapRadius * 2.0, mapRadius * 2.0)
-        let mapSnapshotOptions = MKMapSnapshotOptions()
+        let region = MKCoordinateRegion(center: coordinates ,latitudinalMeters: mapRadius * 2.0, longitudinalMeters: mapRadius * 2.0)
+        let mapSnapshotOptions = MKMapSnapshotter.Options()
         mapSnapshotOptions.region = region
         mapSnapshotOptions.scale = UIScreen.main.scale
         mapSnapshotOptions.size = CGSize(width: 300.0, height: 300.0)
@@ -337,8 +337,8 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     
     fileprivate func showAlert(title: String, msg : String)
     {
-        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
-        let controller = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        let controller = UIAlertController(title: title, message: msg, preferredStyle: UIAlertController.Style.alert)
         controller.addAction(action)
         present(controller, animated: true, completion: nil)
     }
