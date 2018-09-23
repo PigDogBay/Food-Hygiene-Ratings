@@ -21,6 +21,12 @@ class PlaceFetcherUtils {
     var phone : String {
         get {return placeFetcher.mbPlace?.telephone ?? ""}
     }
+    var phoneUrl : URL? {
+        get {
+            let removedSpaces = phone.replacingOccurrences(of: " ", with: "")
+            return URL(string: "tel://\(removedSpaces)")
+        }
+    }
 
     func isLoading() -> Bool {
         switch placeFetcher.observableStatus.value {

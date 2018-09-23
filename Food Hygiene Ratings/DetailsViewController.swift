@@ -356,6 +356,12 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
                     openWeb(url: url)
                 }
             }
+        case [SECTION_PLACES, ROW_PLACES_PHONE]:
+            if placeFetcherUtils.isPhoneAvailable(){
+                if let url = placeFetcherUtils.phoneUrl{
+                    openWeb(url: url)
+                }
+            }
         default:
             return
         }
