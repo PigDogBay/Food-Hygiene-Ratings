@@ -17,6 +17,7 @@
 		4D17D4A91F7FD79E00A0A0BE /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */; };
 		4D17D4AB1F7FE2F900A0A0BE /* CoordinateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17D4AA1F7FE2F900A0A0BE /* CoordinateTest.swift */; };
 		4D1EB2ED215528CB00184663 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EB2EC215528CB00184663 /* MapCell.swift */; };
+		4D25A66E2157AFC5005F86D6 /* PlaceFetcherUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D25A66D2157AFC5005F86D6 /* PlaceFetcherUtils.swift */; };
 		4D3717B31E4C7ED100644A0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3717B21E4C7ED100644A0C /* AppDelegate.swift */; };
 		4D3717B81E4C7ED100644A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717B61E4C7ED100644A0C /* Main.storyboard */; };
 		4D3717BA1E4C7ED100644A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3717B91E4C7ED100644A0C /* Assets.xcassets */; };
@@ -85,6 +86,7 @@
 		4D17D4A81F7FD79E00A0A0BE /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
 		4D17D4AA1F7FE2F900A0A0BE /* CoordinateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTest.swift; sourceTree = "<group>"; };
 		4D1EB2EC215528CB00184663 /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
+		4D25A66D2157AFC5005F86D6 /* PlaceFetcherUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFetcherUtils.swift; sourceTree = "<group>"; };
 		4D3717AF1E4C7ED100644A0C /* Food Hygiene Ratings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Hygiene Ratings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3717B21E4C7ED100644A0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3717B71E4C7ED100644A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				4D8172592153987A007681A9 /* MBPlace.swift */,
 				4D8172612153C60A007681A9 /* GooglePlaceFetcher.swift */,
 				4D8172632153C69D007681A9 /* GooglePlaceImage.swift */,
+				4D25A66D2157AFC5005F86D6 /* PlaceFetcherUtils.swift */,
 			);
 			name = Places;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				4D81725A2153987A007681A9 /* MBPlace.swift in Sources */,
 				4D17D4A91F7FD79E00A0A0BE /* Formatting.swift in Sources */,
 				4D81725D21539F6F007681A9 /* ObservableProperty.swift in Sources */,
+				4D25A66E2157AFC5005F86D6 /* PlaceFetcherUtils.swift in Sources */,
 				4D3717DA1E4DC23B00644A0C /* MapMarker.swift in Sources */,
 				4D8172662153FF20007681A9 /* PlaceImageCell.swift in Sources */,
 				4D6619281E67526D00724276 /* LocalAuthority.swift in Sources */,

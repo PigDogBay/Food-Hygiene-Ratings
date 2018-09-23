@@ -34,6 +34,7 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     let placeFetcher : IPlaceFetcher = GooglePlaceFetcher()
     var mapImage : UIImage? = nil
     var hasSetupMapDataBeenCalled = false
+    var placeFetcherUtils : PlaceFetcherUtils! = nil
     
     private var photographCount = 0
 
@@ -86,6 +87,7 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
         bannerView.adUnitID = Ads.bannerAdId
         bannerView.rootViewController = self
         bannerView.load(Ads.createRequest())
+        placeFetcherUtils = PlaceFetcherUtils(placeFetcher: placeFetcher)
         startLoadingData()
     }
     //
@@ -466,28 +468,16 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     
     private func getPlaceWeb() -> String{
-        switch placeFetcher.observableStatus.value {
-        case .uninitialized:
+        if placeFetcherUtils.isLoading(){
             return "Loading..."
-        case .fetching:
-            return "Loading..."
-        case .ready:
-            return placeFetcher.mbPlace!.web
-        case .error:
-            return "Not available"
         }
+        return placeFetcherUtils.isWebAvailable() ? placeFetcherUtils.web : "Not available"
     }
     private func getPlacePhone() -> String{
-        switch placeFetcher.observableStatus.value {
-        case .uninitialized:
+        if placeFetcherUtils.isLoading(){
             return "Loading..."
-        case .fetching:
-            return "Loading..."
-        case .ready:
-            return placeFetcher.mbPlace!.telephone
-        case .error:
-            return "Not available"
         }
+        return placeFetcherUtils.isWebAvailable() ? placeFetcherUtils.phone : "Not available"
     }
 
 }
