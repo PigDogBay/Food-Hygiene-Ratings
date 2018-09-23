@@ -33,6 +33,7 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     let mapRadius : CLLocationDistance = 500
     let placeFetcher : IPlaceFetcher = GooglePlaceFetcher()
     var mapImage : UIImage? = nil
+    var hasSetupMapDataBeenCalled = false
     
     private var photographCount = 0
 
@@ -118,7 +119,6 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     func startLoadingData(){
         placeFetcher.observableStatus.addObserver(named: "details", observer: fetchStatusUpdate)
         placeFetcher.fetch(establishment: establishment)
-        setUpMap()
     }
     func fetchStatusUpdate(owner : Any?,status : FetchStatus){
         if status == .ready {
@@ -154,6 +154,10 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     
     private func setUpMap(){
+        if hasSetupMapDataBeenCalled {
+            return
+        }
+        hasSetupMapDataBeenCalled = true
         //Find more accurate co-ordinates for the business
         let address = "\(establishment.address.line1),\(establishment.address.line2),\(establishment.address.line3),\(establishment.address.line4),\(establishment.address.postcode)"
         let geocoder = CLGeocoder()
@@ -308,6 +312,8 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
             let mapCell = cell as! MapCell
             if let mapImage = mapImage{
                 mapCell.showMap(mapImage: mapImage)
+            } else {
+                setUpMap()
             }
         case (SECTION_ADDRESS, 1...4):
             cell.textLabel?.text = establishment.address.address[indexPath.row-1]
