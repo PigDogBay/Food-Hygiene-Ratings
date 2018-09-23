@@ -33,6 +33,8 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     let mapRadius : CLLocationDistance = 500
     let placeFetcher : IPlaceFetcher = GooglePlaceFetcher()
     var mapImage : UIImage? = nil
+    
+    private var photographCount = 0
 
     //Table structure
     fileprivate let SECTION_RATING = 0
@@ -41,6 +43,7 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     fileprivate let SECTION_ADDRESS = 3
     fileprivate let SECTION_LOCAL_AUTHORITY = 4
     fileprivate let SECTION_FSA_WEBSITE = 5
+    fileprivate let SECTION_PHOTOS = 6
     fileprivate let SECTION_COUNT = 6
     
     fileprivate let ROW_PLACES_IMAGE = 0
@@ -119,12 +122,7 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     func fetchStatusUpdate(owner : Any?,status : FetchStatus){
         if status == .ready {
-            if let images = placeFetcher.mbPlace?.images {
-                for im in images{
-                    im.observableStatus.removeAllObservers()
-                    im.observableStatus.addObserver(named: "detailsVC", observer: fetchImageStatusUpdate)
-                }
-            }
+           addPhotographs()
         }
         DispatchQueue.main.async {
             self.tableView.reloadSections([self.SECTION_PLACES], with: .none)
@@ -132,10 +130,28 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     func fetchImageStatusUpdate(owner: Any?, status : FetchStatus){
         DispatchQueue.main.async {
-            self.tableView.reloadRows(at: [IndexPath(row: self.ROW_PLACES_IMAGE,section: self.SECTION_PLACES)], with: .none)
+            if let placeImage = owner as? IPlaceImage{
+                if placeImage.index == 0{
+                    self.tableView.reloadRows(at: [IndexPath(row: self.ROW_PLACES_IMAGE,section: self.SECTION_PLACES)], with: .none)
+                } else {
+                    self.tableView.reloadRows(at: [IndexPath(row: placeImage.index-1,section: self.SECTION_PHOTOS)], with: .none)
+                }
+            }
         }
     }
-    
+    //Got the photo meta-data, now tell the VC and table about them
+    func addPhotographs(){
+        if let images = placeFetcher.mbPlace?.images {
+            photographCount = images.count
+            for im in images {
+                im.observableStatus.removeAllObservers()
+                im.observableStatus.addObserver(named: "detailsVC", observer: fetchImageStatusUpdate)
+            }
+        }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
     
     private func setUpMap(){
         //Find more accurate co-ordinates for the business
@@ -196,7 +212,7 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
 
     //Table Functions
     func numberOfSections(in tableView: UITableView) -> Int {
-        return SECTION_COUNT
+        return photographCount>1 ? SECTION_COUNT + 1 : SECTION_COUNT
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -209,6 +225,8 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
             return 300
         case (SECTION_ADDRESS,1...4):
             return 26
+        case (SECTION_PHOTOS, _):
+            return tableView.bounds.width
         default:
             return 44
         }
@@ -228,6 +246,8 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
             return ROW_LA_COUNT
         case SECTION_FSA_WEBSITE:
             return 1
+        case SECTION_PHOTOS:
+            return photographCount - 1
         default:
             return 0
         }
@@ -247,6 +267,8 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
             return "Local Authority"
         case SECTION_FSA_WEBSITE:
             return "FSA Website"
+        case SECTION_PHOTOS:
+            return "Photos"
         default:
             return ""
         }
@@ -301,6 +323,8 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
             cell.imageView?.image = UIImage(named: "iconWebpage")
         case (SECTION_FSA_WEBSITE,0):
             cell.textLabel?.text = "View rating on the FSA website"
+        case (SECTION_PHOTOS, _):
+            setupPictureCell(cell: cell as! PlaceImageCell, imageIndex: indexPath.row+1)
         default:
             break
         }
@@ -367,6 +391,8 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
             return "cellScore"
         case (SECTION_FSA_WEBSITE, 0):
             return "cellSelectable"
+        case (SECTION_PHOTOS, _):
+            return "cellPlaceImage"
         default:
             return "cellBasic"
         }

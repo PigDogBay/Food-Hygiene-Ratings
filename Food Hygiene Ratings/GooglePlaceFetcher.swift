@@ -45,6 +45,11 @@ class GooglePlaceFetcher : IPlaceFetcher {
                 let placeImages = results.results.map({meta in
                     GooglePlaceImage(metadata: meta)
                 })
+                var index = 0
+                for pi in placeImages{
+                    pi.index = index
+                    index = index + 1
+                }
                 self.mbPlace = self.createPlace(place: place, placeImages: placeImages)
                 self.observableStatus.value = .ready
                 return
