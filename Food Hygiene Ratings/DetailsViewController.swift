@@ -123,18 +123,19 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     func fetchStatusUpdate(owner : Any?,status : FetchStatus){
         if status == .ready {
            addPhotographs()
-        }
-        DispatchQueue.main.async {
-            self.tableView.reloadSections([self.SECTION_PLACES], with: .none)
+        } else {
+            DispatchQueue.main.async {
+                self.tableView.reloadSections([self.SECTION_PLACES], with: .none)
+            }
         }
     }
     func fetchImageStatusUpdate(owner: Any?, status : FetchStatus){
         DispatchQueue.main.async {
             if let placeImage = owner as? IPlaceImage{
                 if placeImage.index == 0{
-                    self.tableView.reloadRows(at: [IndexPath(row: self.ROW_PLACES_IMAGE,section: self.SECTION_PLACES)], with: .none)
+                    self.tableView.reloadRows(at: [IndexPath(row: self.ROW_PLACES_IMAGE,section: self.SECTION_PLACES)], with: .fade)
                 } else {
-                    self.tableView.reloadRows(at: [IndexPath(row: placeImage.index-1,section: self.SECTION_PHOTOS)], with: .none)
+                    self.tableView.reloadRows(at: [IndexPath(row: placeImage.index-1,section: self.SECTION_PHOTOS)], with: .fade)
                 }
             }
         }
