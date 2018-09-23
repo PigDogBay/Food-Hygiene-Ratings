@@ -9,14 +9,14 @@
 import Foundation
 
 class ObservableProperty<T : Equatable> {
-    typealias Observer = (T) -> Void
+    typealias Observer = (Any?,T) -> Void
     
     private var observers = [String : Observer]()
-    
     //To synchronize functions, see
     //https://stackoverflow.com/questions/24045895/what-is-the-swift-equivalent-to-objective-cs-synchronized
     private var internalValue : T
     private let internalQueue : DispatchQueue = DispatchQueue(label: "lockingQueue")
+    var owner : Any? = nil
 
     var value : T {
         get {
@@ -27,7 +27,7 @@ class ObservableProperty<T : Equatable> {
                 if newValue != internalValue {
                     internalValue = newValue
                     for (_, ob) in observers {
-                        ob(internalValue)
+                        ob(owner, internalValue)
                     }
                 }
             }

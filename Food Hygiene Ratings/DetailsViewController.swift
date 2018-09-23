@@ -117,7 +117,7 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
         placeFetcher.fetch(establishment: establishment)
         setUpMap()
     }
-    func fetchStatusUpdate(status : FetchStatus){
+    func fetchStatusUpdate(owner : Any?,status : FetchStatus){
         if status == .ready {
             if let images = placeFetcher.mbPlace?.images {
                 for im in images{
@@ -130,7 +130,7 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
             self.tableView.reloadSections([self.SECTION_PLACES], with: .none)
         }
     }
-    func fetchImageStatusUpdate(status : FetchStatus){
+    func fetchImageStatusUpdate(owner: Any?, status : FetchStatus){
         DispatchQueue.main.async {
             self.tableView.reloadRows(at: [IndexPath(row: self.ROW_PLACES_IMAGE,section: self.SECTION_PLACES)], with: .none)
         }

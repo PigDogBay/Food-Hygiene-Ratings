@@ -20,6 +20,7 @@ class GooglePlaceImage : IPlaceImage {
     init(metadata : GMSPlacePhotoMetadata){
         self.metadata = metadata
         self.attribution = metadata.attributions
+        observableStatus.owner = self
     }
     
     func fetchBitmap() {
