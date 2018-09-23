@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V5Q-WJ-DUO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V5Q-WJ-DUO">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -84,7 +83,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street, town or postcode" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="cVu-vR-Vck">
-                                                    <rect key="frame" x="75" y="8" width="292" height="30"/>
+                                                    <rect key="frame" x="75" y="8.0000000000000018" width="292" height="30.666666666666671"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
@@ -288,14 +287,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tell Your Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XnQ-HP-WZC">
-                                                    <rect key="frame" x="53" y="0.0" width="287" height="43.666666666666664"/>
+                                                    <rect key="frame" x="60" y="0.0" width="280" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="iconHeart" id="Yvz-Yu-d3g">
-                                                    <rect key="frame" x="8" y="6" width="30" height="30"/>
+                                                    <rect key="frame" x="15" y="6" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -505,7 +504,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter business name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="nBq-iz-Bap">
-                                                    <rect key="frame" x="77" y="8" width="290" height="30"/>
+                                                    <rect key="frame" x="77" y="8.0000000000000018" width="290" height="30.666666666666671"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -567,7 +566,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street, town or postcode" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="lR4-UQ-BPM">
-                                                    <rect key="frame" x="76" y="8.0000000000000018" width="291" height="30.666666666666671"/>
+                                                    <rect key="frame" x="76" y="7.9999999999999982" width="291" height="30.333333333333329"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
@@ -982,6 +981,10 @@
                                                     <color key="textColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ObH-J0-sdd">
+                                                    <rect key="frame" x="169" y="81.666666666666671" width="37" height="37"/>
+                                                    <color key="color" red="0.20000000000000001" green="0.41176470590000003" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="8E7-a9-vLC" secondAttribute="bottom" id="13u-CY-8Og"/>
@@ -989,10 +992,13 @@
                                                 <constraint firstItem="8E7-a9-vLC" firstAttribute="leading" secondItem="rvk-zW-YU3" secondAttribute="leadingMargin" id="3uo-9P-6ym"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="8E7-a9-vLC" secondAttribute="trailing" id="4x6-CF-HQ2"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="eZO-PH-00r" secondAttribute="bottom" id="DVL-2n-vt2"/>
+                                                <constraint firstItem="ObH-J0-sdd" firstAttribute="centerX" secondItem="rvk-zW-YU3" secondAttribute="centerX" id="cGM-77-s45"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="eZO-PH-00r" secondAttribute="trailing" id="gLB-rO-trN"/>
+                                                <constraint firstItem="ObH-J0-sdd" firstAttribute="centerY" secondItem="rvk-zW-YU3" secondAttribute="centerY" id="phc-8N-92Q"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="ObH-J0-sdd" id="VbN-mq-5xJ"/>
                                             <outlet property="attribution" destination="eZO-PH-00r" id="auU-Se-7Lo"/>
                                             <outlet property="picture" destination="8E7-a9-vLC" id="LIi-S2-15e"/>
                                         </connections>

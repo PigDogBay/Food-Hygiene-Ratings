@@ -409,36 +409,34 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
         cell.attribution.attributedText = NSAttributedString(string:"")
         switch placeFetcher.observableStatus.value {
         case .uninitialized:
-            cell.picture.image = UIImage(named: "iconCamera")
+            break
         case .fetching:
-            cell.picture.image = UIImage(named: "iconCamera")
+            break
         case .ready:
             if let images = placeFetcher.mbPlace?.images {
                 if images.count > 0 && imageIndex <= images.count {
                     switch images[imageIndex].observableStatus.value {
                     case .uninitialized:
                         images[imageIndex].fetchBitmap()
-                        cell.picture.image = UIImage(named: "iconCamera")
                     case .fetching:
-                        cell.picture.image = UIImage(named: "iconCamera")
                         break
                     case .ready:
-                        cell.picture.image = images[imageIndex].image
+                        cell.show(photo: images[imageIndex].image!)
                         cell.attribution.attributedText = images[imageIndex].attribution ?? NSAttributedString(string:"")
                     case .error:
-                        cell.picture.image = UIImage(named: "iconNoCamera")
+                        cell.showBroken()
                         break
                     }
                 }
                 else {
-                    cell.picture.image = UIImage(named: "iconNoCamera")
+                    cell.showBroken()
                 }
             }
             else {
-                cell.picture.image = UIImage(named: "iconNoCamera")
+                cell.showBroken()
             }
         case .error:
-            cell.picture.image = UIImage(named: "iconNoCamera")
+            cell.showBroken()
         }
     }
     

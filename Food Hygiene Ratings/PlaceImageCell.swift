@@ -12,6 +12,7 @@ class PlaceImageCell: UITableViewCell {
 
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var attribution: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +23,16 @@ class PlaceImageCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func show(photo : UIImage){
+        picture.image = photo
+        activityIndicator.stopAnimating()
+    }
+    func showBroken(){
+        picture.image = UIImage(named: "iconNoCamera")
+        picture.contentMode = .center
+        activityIndicator.stopAnimating()
     }
 
 }
