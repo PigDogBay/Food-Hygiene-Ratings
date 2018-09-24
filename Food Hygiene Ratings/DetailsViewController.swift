@@ -489,7 +489,7 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
         if placeFetcherUtils.isLoading(){
             return "Loading..."
         }
-        return placeFetcherUtils.isWebAvailable() ? placeFetcherUtils.phone : "Not available"
+        return placeFetcherUtils.isPhoneAvailable() ? placeFetcherUtils.phone : "Not available"
     }
 
 }
