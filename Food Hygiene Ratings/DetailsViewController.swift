@@ -179,11 +179,12 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
         }
     }
     private func createSnapShot(coordinates : CLLocationCoordinate2D) {
-        let region = MKCoordinateRegion(center: coordinates ,latitudinalMeters: mapRadius * 2.0, longitudinalMeters: mapRadius * 2.0)
+        let region = MKCoordinateRegion(center: coordinates ,latitudinalMeters: mapRadius, longitudinalMeters: mapRadius)
+        let width = tableView.bounds.width - 16
         let mapSnapshotOptions = MKMapSnapshotter.Options()
         mapSnapshotOptions.region = region
         mapSnapshotOptions.scale = UIScreen.main.scale
-        mapSnapshotOptions.size = CGSize(width: 300.0, height: 300.0)
+        mapSnapshotOptions.size = CGSize(width: width, height: 300.0)
         mapSnapshotOptions.showsBuildings = true
         mapSnapshotOptions.showsPointsOfInterest = true
         let snapShotter = MKMapSnapshotter(options: mapSnapshotOptions)
@@ -199,14 +200,18 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
             let pinImage = pinView.image
             var point = snapshot.point(for: coordinates)
             
-            let rect = CGRect(x: 0, y: 0, width: 300, height: 300)
+            let rect = CGRect(x: 0, y: 0, width: width, height: 300)
             
+            //Images are drawn down and to the right
             if rect.contains(point) {
                 let pinCenterOffset = pinView.centerOffset
+                //point to be at the center of image
                 point.x -= pinView.bounds.size.width / 2
                 point.y -= pinView.bounds.size.height / 2
+                //Add in offsets from the center, to put the bottom of the pin on the point
                 point.x += pinCenterOffset.x
                 point.y += pinCenterOffset.y
+                //point is top left corner
                 pinImage?.draw(at: point)
             }
             self.mapImage = UIGraphicsGetImageFromCurrentImageContext()
