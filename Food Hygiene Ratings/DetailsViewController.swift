@@ -420,7 +420,7 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     
     func setupPictureCell(cell : PlaceImageCell, imageIndex : Int){
-        cell.attribution.attributedText = NSAttributedString(string:"")
+        cell.reset()
         switch placeFetcher.observableStatus.value {
         case .uninitialized:
             break

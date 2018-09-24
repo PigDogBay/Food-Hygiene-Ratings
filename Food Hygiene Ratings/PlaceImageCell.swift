@@ -14,6 +14,8 @@ class PlaceImageCell: UITableViewCell {
     @IBOutlet weak var attribution: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    private static let emptyAttribution = NSAttributedString(string:"")
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,8 +27,16 @@ class PlaceImageCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func reset(){
+        picture.image = nil
+        activityIndicator.startAnimating()
+        attribution.attributedText = PlaceImageCell.emptyAttribution
+    }
+    
     func show(photo : UIImage){
         picture.image = photo
+        //fill the UIImage and maintain aspect by clipping the image if necessary
+        picture.contentMode = .scaleAspectFill
         activityIndicator.stopAnimating()
     }
     func showBroken(){
@@ -34,5 +44,4 @@ class PlaceImageCell: UITableViewCell {
         picture.contentMode = .center
         activityIndicator.stopAnimating()
     }
-
 }
