@@ -24,4 +24,10 @@ class Settings {
             return UserDefaults.standard.integer(forKey: Settings.connectionTimeOutKey)
         }
     }
+    class func registerDefaultSettings() {
+        let defaultSettings : [ String : Any] = [searchRadiusKey : 1,
+                                                 connectionTimeOutKey : 60]
+        UserDefaults.standard.register(defaults: defaultSettings)
+    }
+
 }

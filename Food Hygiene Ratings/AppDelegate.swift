@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        Settings.registerDefaultSettings()
         GMSPlacesClient.provideAPIKey("AIzaSyBT0jAib41UfT337euug5KUHE7waPQQeAE")
         let model = MainModel.sharedInstance
         let dataProvider = DataProvider()
