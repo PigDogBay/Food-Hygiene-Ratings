@@ -440,8 +440,7 @@ class DetailsViewController: UIViewController, MFMailComposeViewControllerDelega
                     case .fetching:
                         break
                     case .ready:
-                        cell.show(photo: images[imageIndex].image!)
-                        cell.attribution.attributedText = images[imageIndex].attribution ?? NSAttributedString(string:"")
+                        cell.show(placeImage: images[imageIndex])
                     case .error:
                         cell.showBroken()
                         break
