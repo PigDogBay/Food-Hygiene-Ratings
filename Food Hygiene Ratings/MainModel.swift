@@ -61,7 +61,7 @@ class MainModel {
     }
     class func getPrivacyPolicyUrl()->String
     {
-        return "https://pigdogbay.blogspot.com/2018/06/privacy-policy-food-hygiene-ratings.html"
+        return "https://pigdogbay.blogspot.com/2018/09/privacy-policy-food-hygiene-ratings-ios.html"
     }
 
     let ratings = Ratings(appId: appId)
