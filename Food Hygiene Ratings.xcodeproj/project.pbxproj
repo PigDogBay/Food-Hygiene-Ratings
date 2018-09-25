@@ -38,7 +38,6 @@
 		4D5C39091E50605600707D14 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C39081E50605600707D14 /* RootViewController.swift */; };
 		4D5C390C1E507E6200707D14 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C390B1E507E6200707D14 /* WebViewController.swift */; };
 		4D5C390E1E51DBBD00707D14 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C390D1E51DBBD00707D14 /* DetailsViewController.swift */; };
-		4D5C39131E521C5A00707D14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C39121E521C5A00707D14 /* GoogleService-Info.plist */; };
 		4D5C39151E521D9300707D14 /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C39141E521D9300707D14 /* Ads.swift */; };
 		4D5C39171E53B20100707D14 /* RatingsLogos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C39161E53B20100707D14 /* RatingsLogos.xcassets */; };
 		4D5C39191E5462BE00707D14 /* RatingsLogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C39181E5462BE00707D14 /* RatingsLogoCell.swift */; };
@@ -111,7 +110,6 @@
 		4D5C39081E50605600707D14 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		4D5C390B1E507E6200707D14 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4D5C390D1E51DBBD00707D14 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		4D5C39121E521C5A00707D14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D5C39141E521D9300707D14 /* Ads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
 		4D5C39161E53B20100707D14 /* RatingsLogos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RatingsLogos.xcassets; sourceTree = "<group>"; };
 		4D5C39181E5462BE00707D14 /* RatingsLogoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingsLogoCell.swift; sourceTree = "<group>"; };
@@ -260,7 +258,6 @@
 				4D3717B91E4C7ED100644A0C /* Assets.xcassets */,
 				4D5C39161E53B20100707D14 /* RatingsLogos.xcassets */,
 				4D3717BB1E4C7ED100644A0C /* LaunchScreen.storyboard */,
-				4D5C39121E521C5A00707D14 /* GoogleService-Info.plist */,
 				4D3717BE1E4C7ED100644A0C /* Info.plist */,
 				4D5C39261E5C49A800707D14 /* stoke.json */,
 				4DB011491E65929000B4F04B /* glasgow.json */,
@@ -409,7 +406,6 @@
 				4DB0114A1E65929000B4F04B /* glasgow.json in Resources */,
 				4D3717D21E4CD84F00644A0C /* Settings.bundle in Resources */,
 				4D3717BD1E4C7ED100644A0C /* LaunchScreen.storyboard in Resources */,
-				4D5C39131E521C5A00707D14 /* GoogleService-Info.plist in Resources */,
 				4D3717BA1E4C7ED100644A0C /* Assets.xcassets in Resources */,
 				4D5C39271E5C49A800707D14 /* stoke.json in Resources */,
 				4D6619201E66DB0800724276 /* authorities.json in Resources */,

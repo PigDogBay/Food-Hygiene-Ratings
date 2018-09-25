@@ -6,8 +6,7 @@ target 'Food Hygiene Ratings' do
   use_frameworks!
 
   # Pods for Food Hygiene Ratings
-  pod 'Firebase/Core'
-  pod 'Firebase/AdMob'
+  pod 'Google-Mobile-Ads-SDK'
   pod 'GooglePlaces'
 
   target 'FoodHygieneRatingsTests' do

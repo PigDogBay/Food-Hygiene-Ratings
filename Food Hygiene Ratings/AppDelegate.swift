@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import GoogleMobileAds
 import GooglePlaces
 
 @UIApplicationMain
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-3582986480189311~1629669585")
         Settings.registerDefaultSettings()
         GMSPlacesClient.provideAPIKey("AIzaSyBT0jAib41UfT337euug5KUHE7waPQQeAE")
         let model = MainModel.sharedInstance
