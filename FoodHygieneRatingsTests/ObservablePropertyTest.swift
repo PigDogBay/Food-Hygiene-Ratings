@@ -17,10 +17,10 @@ class ObservablePropertyTest: XCTestCase {
     var fruitNewValue : Fruit?
     var callbackCount = 0
 
-    private func intChanged(newValue : Int){
+    private func intChanged(owner : Any, newValue : Int){
         intNewValue = newValue
     }
-    private func fruitChanged(newValue : Fruit){
+    private func fruitChanged(owner : Any, newValue : Fruit){
         fruitNewValue = newValue
         callbackCount = callbackCount + 1
     }
